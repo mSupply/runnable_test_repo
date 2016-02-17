@@ -1,0 +1,331 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php if($crumbs && is_array($crumbs)): ?>
+<div class="col-xs-12 col-lg-12 col-sm-12 col-md-12">
+    <div class="well-tmt  breadcrumb-block">
+        
+<div class="breadcrumbs product-breadcrumb">
+    <ul class="col-xs-10 col-sm-10">
+	<div class="current-product"><b><?php if(Mage::registry('current_category')){
+        echo Mage::registry('current_category')->getName();
+     } ?></b></div>
+        <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
+            <li class="<?php echo $_crumbName ?>">
+            <?php if($_crumbInfo['link']): ?>
+               <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->escapeHtml($_crumbInfo['title']) ?>"><?php echo $this->escapeHtml($_crumbInfo['label']) ?></a>
+            <?php elseif($_crumbInfo['last']): ?>
+                <?php echo $this->escapeHtml($_crumbInfo['label']) ?>
+            <?php else: ?>
+                <?php echo $this->escapeHtml($_crumbInfo['label']) ?>
+            <?php endif; ?>
+            <?php if(!$_crumbInfo['last']): ?>
+                <span class="glyphicon glyphicon-menu-right"></span>
+            <?php endif; ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+    <ul class="col-xs-2 col-sm-2" style="list-style: none;">
+        <li class="pull-right mt1em"><a href="#" data-toggle="modal" data-target="#faqs">
+     <img src="<?php echo $this->getSkinUrl('images/buying_guide.jpg') ?>" alt="<?php echo $this->__('Buying Guide') ?>" class="bd-img img-responsive" />
+
+        </a><span class="buyg-txt">Buying Guide</span></li>
+		
+    </ul>
+</div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div id="faqs" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+    <!-- Modal content start-->
+	
+	
+	    <!-- Modal content-->
+			 <div class="modal-content">
+			 <button type="button" class="close" data-dismiss="modal">&times;</button>
+				   <h2>Buying Guide - TMT Steel</h2>
+				   <hr/>
+				   <section class="pop-section">
+					 <span class="color-blue">What is TMT Steel?</span>
+			<p>Thermo Mechanically Treated (TMT) steel is a type of steel that goes through a special heat treatment process which ensures greater strength and allows for enhanced bending and welding. TMT steel is usually available in the form of rods of fixed sizes. </p>
+
+			<span class="color-blue">Why buy TMT bars? </span>
+			<p>TMT bars must be purchased due to their strength and availability at low price. The features of TMT steel are: </p>
+			<div class="table-responsive">
+			<table class="table table-bordered">
+			   <tbody>
+				  <tr>
+					<td>Earthquake resistant</td>
+					<td>Has more strength to sustain fire</td>
+				  </tr>
+				  <tr>
+					<td>High tensile strength and flexibility</td>
+					<td>Bonds strongly with cement than other reinforcement bars</td>
+				 </tr>
+				  <tr>
+					<td>Less affected by rust</td>
+					<td>Has 4 % less weight per meter, than normal  steel bars</td>
+				 </tr>
+				 
+				  <tr>
+					<td colspan="2">Does not peel off the skin while working with it</td>
+				  </tr>
+				 </tbody>
+			  </table>
+			</div>
+
+			<span class="color-blue">What are the different types of TMT bars available? How do I choose the right type?</span>
+			<p>TMT bars available in 5 different grades as below:</p>
+			<div class="table-responsive">
+			<table class="table table-bordered">
+			  <thead>
+				  <tr>
+					<th>TMT steel grades</th>
+					<th>Usage/application</th>
+				  </tr>
+				</thead>
+			   <tbody>
+				  <tr>
+					<td>Fe 415</td>
+					<td>House construction up to ground plus two upper floors</td>
+				  </tr>
+				  <tr>
+					<td>Fe 500</td>
+					<td>Residential & commercial buildings</td>
+				 </tr>
+				  <tr>
+					<td>Fe 500D</td>
+					<td>Building constructions in Seismic zone or earthquake prone areas</td>
+				 </tr>
+				 
+				  <tr>
+					<td>Fe 550D</td>
+					<td>Is more ductile than the Fe500, can withstand the sudden load adsorption capacity, which is encountered during earthquakes, cyclones, Tsunami etc. providing higher safety. </td>
+				 </tr>
+				 <tr>
+					<td>Fe 600</td>
+					<td>Mega Industrial projects, Dams & Bridges</td>
+				 </tr>
+				 </tbody>
+			  </table>
+			</div>
+			<p> Grade of TMT Steel indicates the pulling resistance strength of a bar. Hence for Fe 500 grade TMT Steel, the yield strength is a minimum of 5000 Kgs/Cm2 conforming to the Indian Standard IS 1786.</br>
+			Fe 500 grade TMT steel is widely used in building construction owing to its strength and higher economic value. Other grade TMT Steel bars are also used for commercial and high-rise buildings, as per the design consultant’s recommendation.
+			</P>
+
+			<span class="color-blue">On what factors should I determine the thickness/diameter of TMT bar that would be appropriate for my construction?</span>
+			<p>TMT bars are available in different sizes ranging 8mm to 40mm in diameter. Generally, bars ranging from 8mm to 20mm in diameter are used in house/ building construction. The following chart provides the size of reinforcement which must be used according to the use.</p>
+			<div class="table-responsive">
+			<table class="table table-bordered">
+				<thead>
+				  <tr>
+					<th>No</th>
+					<th>Reinforcement cement concrete (RCC) Member</th>
+					<th>Quantity in kg/m3</th>
+					<th>Size of reinforcement required/th>
+				  </tr>
+				</thead>
+			   <tbody>
+				  <tr>
+					<td>Plain Cement Concrete (PCC)</td>
+					<td>1 part cement X 4 part jelly X 8 part sand</td>
+					 <td>1 part cement X 4 part jelly X 8 part sand</td>
+					  <td>1 part cement X 4 part jelly X 8 part sand</td>
+				  </tr>
+				  <tr>
+					<td>1</td>
+					<td>Column footings</td>
+					 <td>75</td>
+					  <td>10mm or 12mm</td>
+				 </tr>
+				  <tr>
+					<td>2</td>
+					<td>Grade beams</td>
+					 <td>100</td>
+					  <td>12mm, 16mm – 85% Stirrups – 6mm or 8mm– 15%</td>
+				 </tr>
+				 
+				  <tr>
+					<td>3</td>
+					<td>Plinth beams</td>
+					 <td>125</td>
+					  <td>18mm diameter – 85%, Stirrups 6mm – 15% </td>
+				 </tr>
+				 <tr>
+					<td>4</td>
+					<td>Columns</td>
+					 <td>225</td>
+					  <td>16mm, 20mm and 25mm – 90% Ties – 6mm or 8mm – 10%</td>
+				 </tr>
+				 <tr>
+					<td>5</td>
+					<td>Lintel beam</td>
+					 <td>125</td>
+					  <td>12mm, 16mm diameter – 85%, Stirrups – 6 mm or 8mm – 15%</td>
+				 </tr>
+				 <tr>
+					<td>6</td>
+					<td>Sunshades</td>
+					 <td>60</td>
+					  <td>8mm diameter – 75%, Distributer – 6mm – 25%</td>
+				 </tr>
+				 <tr>
+					<td>7</td>
+					<td>Canopy slab up to 2.0 m span</td>
+					 <td>125</td>
+					  <td>12mm, 16mm – 85% Stirrups – 6mm or 8mm– 15%</td>
+				 </tr>
+				 <tr>
+					<td>8</td>
+					<td>Staircase waist slab</td>
+					 <td>150</td>
+					  <td>12 or 16mm diameter – 80% Distributor 8mm diameter – 15%</td>
+				 </tr>
+				 <tr>
+				 <tr>
+					<td rowspan="4">9</td>
+					<td colspan="3">RoofSlab</td>
+				</tr>
+				 <tr>
+					<td>(a) One way slab</td>
+					<td>80</td>
+					<td>8mm diameter – 70% Distributor – 6mm – 30%</td>
+				 </tr>
+				 <tr>
+					<td>(b) Two way slab</td>
+					<td>100</td>
+					<td>8mm diameter – 100%</td>
+				 </tr>
+				 <tr>
+					<td>(c) Square slab – 4m to 6m size</td>
+					<td>150</td>
+					<td>10 – 12mm diameter – 100%</td>
+				 </tr>
+				 <tr>
+				 
+					<td>10</td>
+					<td>Main beams above 6m</td>
+					 <td>250</td>
+					  <td>20mm, 16mm, 12mm – 80 – 85%, Stirrups – 8mm – 15 – 20%</td>
+				 </tr>
+				 </tbody>
+			  </table>
+			</div>
+
+
+
+			<span class="color-blue">What is the length of TMT bar?</span>
+			<p>The length of a TMT bar is approx. 12 meters or 40 feet and is available in different sizes ranging 8mm to 40mm in diameter. The unit of sale & invoicing of TMT steel is by weight.</p>
+			<div class="table-responsive">
+			<table class="table table-bordered">
+				  <thead>
+				  <tr>
+					<th>TMT size(mm)</th>
+					<th>Weight of bundle(kg)</th>
+					<th>Number of pieces in a bundle</th>
+				  </tr>
+				</thead>
+			   <tbody>
+				  <tr>
+					<td>8</td>
+					<td>85.14</td>
+					<td>18</td>
+				  </tr>
+				  <tr>
+					<td>10</td>
+					<td>88.0</td>
+					<td>12</td>
+				 </tr>
+				  <tr>
+					<td>12</td>
+					<td>85.20</td>
+					<td>8</td>
+				 </tr>
+				 
+				  <tr>
+					<td>16</td>
+					<td>94.50</td>
+					<td>5</td>
+				 </tr>
+				 <tr>
+					<td>20</td>
+					<td>88.8</td>
+					<td>3</td>
+				 </tr>
+				 <tr>
+					<td>25</td>
+					<td>46.24</td>
+					<td>1</td>
+				 </tr>
+				 </tbody>
+			  </table>
+			</div>
+
+
+
+
+
+			<span class="color-blue">What precautions should I take while buying TMT bars?</span>
+			<p>The following things must be taken into consideration:</p>
+			<ul><li>Take a note of the identification, trademarks, logos, mark-grades from the manufacturing firm</li>
+			<li>Check Manufacturer’s test certificate conforming particular grade of steel as per IS 1786</li>
+			<li>TMT Bars should be free from rust and must look new</li>
+			<li>Ends of the each bundle should be of equal length</li>
+			<li>For big projects it is advised to check that only one type/grade of bars is brought to the site and is used in the project after conducting test for each lot. Do not use mixed, 2 or 3 types/grades bars in RCC work at one building</li>
+			</ul>
+
+
+			<span class="color-blue">Are there any thumb rules of storing and handling TMT bars at site?</span>
+			<p><ul><li>The bars must be stored in such a way as to avoid distortion and to prevent deterioration and corrosion</li>
+			<li>Steel bars should not be uneven. They must be free from loose mill scales, dust and loose rust coats of paints, oil or other coatings which may destroy or reduce bond strength </li>
+			<li>Steel bars should not be cleaned by oily substances to remove the rust</li>
+			</ul></p>
+
+
+			<span class="color-blue">How are TMT bars transported?</span>
+			<p>TMT steel of specified grade & brand will always be supplied in bundles. An order of 10 Metric Tons will be transported in a LPT Truck (Long Platform Truck) with a capacity of 1109 kgs or any other vehicle with a similar capacity. An order of 2-5 Metric Tons will be made through a Canter. </p>
+
+
+			<span class="color-blue">What is an MS binding wire?</span>
+			<p>MS Binding Wires or stirrups are binding wires made of mild steel used to bind two steel rods together. The use of mild steel ensures durability. M.S Binding Wires are available in 2 sizes (18 Gauge and 20 Gauge) and come in concealed compact packaging of 25 Kgs.</p>
+
+
+			<span class="color-blue">Where are Binding wires used?</span>
+			<p>MS Binding Wires are widely used in construction for tying of reinforcement steel in place before concrete is poured over it. Also care should be taken to ensure that the projecting ends of the binding wire do not encroach into the concrete cover. This is best achieved by turning the projecting ends inwards.</p>
+
+
+			</section>
+
+			</div>
+	
+	<!-- Modal content end -->
+ </div>
+ </div>			
+<?php endif; ?>

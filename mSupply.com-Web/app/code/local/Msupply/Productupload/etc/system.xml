@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <productupload translate="label">
+            <label>Product Upload Tool</label>
+            <tab>general</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>200</sort_order>
+			<show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <productupload_group translate="label">
+                    <label>Product Upload Tool</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					 <fields>
+                        <productuploadenableemail translate="label">
+                            <label>Enable Email Option</label>
+                            <frontend_type>Select</frontend_type>
+							<comment>Set yes to send email</comment>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </productuploadenableemail>
+                    </fields>
+					<fields>
+                        <productuploademailnotification translate="label">
+                            <label>Upload Notification Send To</label>
+                            <frontend_type>text</frontend_type>
+							<comment>Enter email Ids with comma(,) separated</comment>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </productuploademailnotification>
+                    </fields>
+					
+                    <fields>
+                        <productuploademailtosend translate="label">
+                            <label>Upload Status Send To</label>
+                            <frontend_type>text</frontend_type>							<comment>Enter email Ids with comma(,) separated</comment>                            <sort_order>110</sort_order>                            <show_in_default>1</show_in_default>                            <show_in_website>1</show_in_website>                            <show_in_store>1</show_in_store>
+                        </productuploademailtosend>
+                    </fields>
+					
+                </productupload_group>
+			</groups>            
+        </productupload>
+    </sections>
+</config>

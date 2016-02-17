@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:typens="urn:{{var wsdl.name}}" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/"
+    name="{{var wsdl.name}}" targetNamespace="urn:{{var wsdl.name}}">
+    <types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Magento">
+            <import namespace="http://schemas.xmlsoap.org/soap/encoding/" schemaLocation="http://schemas.xmlsoap.org/soap/encoding/" />
+            <complexType name="havequestionHavequestionListEntity">
+                <all>
+                    <element name="entity_id" type="xsd:string" minOccurs="1" />
+                    <element name="email" type="xsd:string" minOccurs="1" />
+                    <element name="question" type="xsd:string" minOccurs="1" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+
+                    <element name="created_at" type="xsd:string" minOccurs="1" />
+                    <element name="updated_at" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="havequestionHavequestionListEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:havequestionHavequestionListEntity[]" />
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="havequestionHavequestionAddEntity">
+                <all>
+                    <element name="email" type="xsd:string" minOccurs="1" />
+                    <element name="question" type="xsd:string" minOccurs="1" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+
+                </all>
+            </complexType>
+            <complexType name="havequestionHavequestionUpdateEntity">
+                <all>
+                    <element name="email" type="xsd:string" minOccurs="1" />
+                    <element name="question" type="xsd:string" minOccurs="1" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+
+                </all>
+            </complexType>
+            <complexType name="havequestionHavequestionInfoEntity">
+                <all>
+                    <element name="entity_id" type="xsd:string" minOccurs="1" />
+                    <element name="email" type="xsd:string" minOccurs="1" />
+                    <element name="question" type="xsd:string" minOccurs="1" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+
+                    <element name="created_at" type="xsd:string" minOccurs="1" />
+                    <element name="updated_at" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+                </schema>
+    </types>
+    <message name="havequestionHavequestionListRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="filters" type="typens:filters"/>
+    </message>
+    <message name="havequestionHavequestionListResponse">
+        <part name="result" type="typens:havequestionHavequestionListEntityArray" />
+    </message>
+    <message name="havequestionHavequestionInfoRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="havequestionId" type="xsd:string" />
+    </message>
+    <message name="havequestionHavequestionInfoResponse">
+        <part name="result" type="typens:havequestionHavequestionInfoEntity" />
+    </message>
+    <message name="havequestionHavequestionAddRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="data" type="typens:havequestionHavequestionAddEntity" />
+    </message>
+    <message name="havequestionHavequestionAddResponse">
+        <part name="result" type="xsd:int"/>
+    </message>
+    <message name="havequestionHavequestionUpdateRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="havequestionId" type="xsd:string" />
+        <part name="data" type="typens:havequestionHavequestionUpdateEntity" />
+    </message>
+    <message name="havequestionHavequestionUpdateResponse">
+        <part name="result" type="xsd:boolean" />
+    </message>
+    <message name="havequestionHavequestionRemoveRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="havequestionId" type="xsd:string" />
+    </message>
+    <message name="havequestionHavequestionRemoveResponse">
+        <part name="result" type="xsd:boolean" />
+    </message>
+        <portType name="{{var wsdl.handler}}PortType">
+        <operation name="havequestionHavequestionList">
+            <documentation>Retrieve list of havequestion</documentation>
+            <input message="typens:havequestionHavequestionListRequest" />
+            <output message="typens:havequestionHavequestionListResponse" />
+        </operation>
+        <operation name="havequestionHavequestionInfo">
+            <documentation>Retrieve havequestion info</documentation>
+            <input message="typens:havequestionHavequestionInfoRequest" />
+            <output message="typens:havequestionHavequestionInfoResponse" />
+        </operation>
+        <operation name="havequestionHavequestionAdd">
+            <documentation>Add havequestion</documentation>
+            <input message="typens:havequestionHavequestionAddRequest" />
+            <output message="typens:havequestionHavequestionAddResponse" />
+        </operation>
+        <operation name="havequestionHavequestionUpdate">
+            <documentation>Update havequestion</documentation>
+            <input message="typens:havequestionHavequestionUpdateRequest" />
+            <output message="typens:havequestionHavequestionUpdateResponse" />
+        </operation>
+        <operation name="havequestionHavequestionRemove">
+            <documentation>Remove havequestion</documentation>
+            <input message="typens:havequestionHavequestionRemoveRequest" />
+            <output message="typens:havequestionHavequestionRemoveResponse" />
+        </operation>
+        </portType>
+    <binding name="{{var wsdl.handler}}Binding" type="typens:{{var wsdl.handler}}PortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+        <operation name="havequestionHavequestionList">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="havequestionHavequestionInfo">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="havequestionHavequestionAdd">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="havequestionHavequestionUpdate">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="havequestionHavequestionRemove">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        </binding>
+    <service name="{{var wsdl.name}}Service">
+        <port name="{{var wsdl.handler}}Port" binding="typens:{{var wsdl.handler}}Binding">
+            <soap:address location="{{var wsdl.url}}" />
+        </port>
+    </service>
+</definitions>

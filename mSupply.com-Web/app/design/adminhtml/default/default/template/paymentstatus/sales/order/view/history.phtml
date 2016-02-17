@@ -1,0 +1,270 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<div id="order_history_block">
+    <?php if ($this->canAddComment()):?>
+    <div id="history_form" class="order-history-form">
+        <div><?php echo Mage::helper('sales')->__('Add Order Comments') ?></div>
+		<div class="historyform">
+		
+		<!-- Payment Option Change Start -->
+		
+		  <?php
+			$order = Mage::getModel('sales/order')->load($this->getOrder()->getId()); 
+			$payment_method_code = $order->getPayment()->getMethodInstance()->getCode(); 
+		  ?>
+		  
+		  <input type="hidden" name="history[orderid]" id="history_orderid"  value="<?php echo $this->getOrder()->getId() ?>">
+		  
+		  <?php /*if($payment_method_code == 'callmsupply') { ?>	
+		  <span class="field-row">
+            <label class="normal" for="history_payment"><?php echo Mage::helper('sales')->__('Payment Method') ?></label><br/>
+            <select name="history[payment]" class="select" id="history_payment" onchange="ChangePayment();">
+			    <option value="" >Select Payment Method</option>
+			    <option value="paymentmodulepackdd_checkout" <?php if($payment_method_code == 'paymentmodulepackdd_checkout'): ?> selected="selected"<?php endif; ?>>Cash</option>
+                <option value="paymentmodulepack" <?php if($payment_method_code == 'paymentmodulepack'): ?> selected="selected"<?php endif; ?>>Cheque Payment</option>
+				<option value="paymentmodulepackbankin" <?php if($payment_method_code == 'paymentmodulepackbankin'): ?> selected="selected"<?php endif; ?>>Demand Draft </option>
+				<!--<option value="cashondelivery" <?php if($payment_method_code == 'cashondelivery'): ?> selected="selected"<?php endif; ?>>CBD</option>-->
+            </select>
+          </span>
+		  <?php } */?>
+		  
+		<!-- Payment Option Change End -->
+		
+        <span class="field-row">
+            <label class="normal" for="history_status"><?php echo Mage::helper('sales')->__('Order Status') ?></label><br/>
+            <select name="history[status]" class="select" id="history_status">
+            <?php foreach ($this->getStatuses() as $_code=>$_label): ?>
+                <option value="<?php echo $_code ?>"<?php if($_code==$this->getOrder()->getStatus()): ?> selected="selected"<?php endif; ?>><?php echo $_label ?></option>
+            <?php endforeach; ?>
+            </select>
+        </span>
+		
+		
+		
+		
+		<!-- Payment Status Change Start -->
+		
+		 <?php /* $PaymentStatuscollection = Mage::getModel('paymentstatus/paymentstatus')->getCollection(); ?>
+		 <?php $current_payment_status = $this->getOrder()->getPaymentStatus(); ?>
+		  <span class="field-row">
+            <label class="normal" for="history_payment"><?php echo Mage::helper('sales')->__('Payment Status') ?></label><br/>
+            <select name="history[paymentstatus]" class="select" id="history_paymentstatus">
+            <?php foreach($PaymentStatuscollection as $collection): ?>
+                <option value="<?php echo $collection['payment_status'] ?>" <?php if($collection['payment_status'] == $current_payment_status): ?> selected="selected"<?php endif; ?>><?php echo $collection['payment_status'] ?></option>
+            <?php endforeach; ?>
+            </select>
+          </span>
+		  <?php */?>
+		  
+		  
+		  <?php if($payment_method_code == 'callmsupply') { ?>	
+		  
+		  <div class="cheque_dd_payment_details">
+		  <div id="cheque_details" style="display:none;">
+		  <ul>
+		  <li>
+		  <label>Cheque No</label>
+		  <input type="text" name="history[chequeno]" id="history_chequeno" />
+		  </li>
+		  <li>
+		  <label>Cheque Date</label>
+		  <input type="text" name="history[chequedate]" id="history_chequedate" />
+		  </li>
+		  <li>
+		  <label>Drawee Name</label>
+		  <input type="text" name="history[chequedraweename]" id="history_chequedraweename" />
+		  </li>
+		  <li>
+		  <label>Drawee Bank</label>
+		  <input type="text" name="history[chequedraweebank]" id="history_chequedraweebank" />
+		  </li>
+		  <li>
+		  <label>PAN Number</label>
+		  <input type="text" name="history[chequepannumber]" id="history_chequepannumber" />
+		  </li>
+		  </ul>
+		  </div>
+		  
+		  
+		  <div id="dd_details" style="display:none;">
+		  <ul>
+		  <li>
+		  <label>DD No</label>
+		  <input type="text" name="history[ddno]" id="history_ddno" />
+		  </li>
+		  <li>
+		  <label>DD Date</label>
+		  <input type="text" name="history[dddate]" id="history_dddate" />
+		  </li>
+		  <li>
+		  <label>Drawee Name</label>
+		  <input type="text" name="history[dddraweename]" id="history_dddraweename" />
+		  </li>
+		  <li>
+		  <label>Drawee Bank</label>
+		  <input type="text" name="history[dddraweebank]" id="history_dddraweebank" />
+		  </li>
+		  <li>
+		  <label>PAN Number</label>
+		  <input type="text" name="history[ddpannumber]" id="history_ddpannumber" />
+		  </li>
+		  </ul>
+		  </div>
+		  
+        <script>	
+		function ChangePayment()
+		{
+ 		var e = document.getElementById("history_payment");
+        var strUser = e.options[e.selectedIndex].text;
+		
+		if(strUser == 'Cash')
+		{
+		document.getElementById( 'dd_details' ).style.display = 'none';
+		document.getElementById( 'cheque_details' ).style.display = 'none';
+		document.getElementById('history_status').disabled = false;
+		document.getElementById('history_paymentstatus').disabled = false;
+		}
+		
+		if(strUser == 'Select Payment Method')
+		{
+		document.getElementById( 'dd_details' ).style.display = 'none';
+		document.getElementById( 'cheque_details' ).style.display = 'none';
+		document.getElementById('history_status').disabled = true;
+		document.getElementById('history_paymentstatus').disabled = true;
+		}
+		
+		if(strUser == 'Cheque Payment')
+		{
+		document.getElementById( 'dd_details' ).style.display = 'none';
+		document.getElementById( 'cheque_details' ).style.display = 'block';
+		document.getElementById('history_status').disabled = false;
+		document.getElementById('history_paymentstatus').disabled = false;
+		}
+		
+		if(strUser == 'Demand Draft')
+		{
+		document.getElementById( 'dd_details' ).style.display = 'block';
+		document.getElementById( 'cheque_details' ).style.display = 'none';
+		document.getElementById('history_status').disabled = false;
+		document.getElementById('history_paymentstatus').disabled = false;
+		}
+		
+		}
+
+
+        var e = document.getElementById("history_payment");
+        var strUser = e.options[e.selectedIndex].text;
+		
+		if(strUser == 'Select Payment Method')
+		{
+			document.getElementById('history_status').disabled = true;
+			document.getElementById('history_paymentstatus').disabled = true;
+		}	
+		
+		</script>	
+		</div>
+		
+		<?php } ?> 
+		  
+		  
+		  
+		  
+		  
+		  
+		 </div>
+		<!-- Payment Status Change End -->
+		
+        <span class="field-row">
+            <label class="normal" for="history_comment"><?php echo Mage::helper('sales')->__('Comment') ?></label>
+            <textarea name="history[comment]" rows="3" cols="5" style="height:6em; width:99%;" id="history_comment"></textarea>
+        </span>
+        <div class="f-left">
+            <?php if ($this->canSendCommentEmail()): ?>
+                <input name="history[is_customer_notified]" type="checkbox" id="history_notify" value="1" /><label class="normal" for="history_notify"> <?php echo Mage::helper('sales')->__('Notify Customer by Email') ?></label><br />
+            <?php endif; ?>
+            <input name="history[is_visible_on_front]" type="checkbox" id="history_visible" value="1" /><label class="normal" for="history_visible"> <?php echo Mage::helper('sales')->__('Visible on Frontend') ?></label>
+        </div>
+        <div class="f-right">
+            <?php echo $this->getChildHtml('submit_button') ?>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="divider"></div>
+    <?php endif;?>
+    <ul class="note-list">
+    <?php foreach ($this->getOrder()->getStatusHistoryCollection(true) as $_item): ?>
+        <li>
+            <strong><?php echo $this->helper('core')->formatDate($_item->getCreatedAtDate(), 'medium') ?></strong>
+            <?php echo $this->helper('core')->formatTime($_item->getCreatedAtDate(), 'medium') ?><span class="separator">|</span><strong><?php echo $_item->getStatusLabel() ?></strong><br/><small><?php echo $this->helper('sales')->__('Customer') ?>
+            <strong class="subdue">
+                <?php if ($this->isCustomerNotificationNotApplicable($_item)): ?>
+                <?php echo $this->helper('sales')->__('Notification Not Applicable') ?>
+                <?php elseif ($_item->getIsCustomerNotified()): ?>
+                <?php echo $this->helper('sales')->__('Notified') ?>
+                <img src="<?php echo $this->getSkinUrl('images/ico_success.gif') ?>" width="16" height="16" alt="" />
+                <?php else: ?>
+                <?php echo $this->helper('sales')->__('Not Notified') ?>
+                <?php endif; ?>
+            </strong></small>
+            <?php if ($_item->getComment()): ?>
+                <br/><?php echo $this->escapeHtml($_item->getComment(), array('b', 'br', 'strong', 'i', 'u', 'a')) ?>
+            <?php endif; ?>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+    <script type="text/javascript">
+    if($('order_status'))$('order_status').update('<?php echo $this->getOrder()->getStatusLabel() ?>')
+    </script>
+<style>
+	.historyform {
+		float: left;
+		width: 100%;
+		 padding: 15px 0;
+	}
+	.historyform .field-row {
+		float: left;
+		padding-right: 95px;
+	}
+	.historyform select {
+		width: 110%;
+	}
+	.historyform .normal {
+    padding: 4px 0;}
+	
+	
+   .cheque_dd_payment_details {float: left;width: 100%;}
+   #cheque_details {border: 1px solid #ccc;float: left;margin-top: 15px;padding: 5px 10px;width: 97%;}
+   #cheque_details li {margin: 10px 0;}
+   #cheque_details label {float: left;width: 15% !important;}
+   #cheque_details input {height: 24px;width: 50%;}
+   #dd_details {border: 1px solid #ccc;float: left;margin-top: 15px;padding: 5px 10px;width: 97%;}
+   #dd_details li {margin: 10px 0;}
+   #dd_details label {float: left;width: 15% !important;}
+   #dd_details input {height: 24px;width: 50%;}
+
+</style>
+</div>

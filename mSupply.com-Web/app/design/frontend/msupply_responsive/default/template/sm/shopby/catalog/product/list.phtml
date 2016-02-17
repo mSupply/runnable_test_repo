@@ -1,0 +1,542 @@
+<?php
+/*------------------------------------------------------------------------
+ # SM Shop By - Version 1.0
+ # Copyright (c) 2014 YouTech Company. All Rights Reserved.
+ # @license - Copyrighted Commercial Software
+ # Author: YouTech Company
+ # Websites: http://www.magentech.com
+-------------------------------------------------------------------------*/?>
+
+<?php
+    $_productCollection=$this->getLoadedProductCollection();
+    $_helper = $this->helper('catalog/output');
+?>
+<?php if(!$_productCollection->count()): ?>
+<p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+<?php else: ?>
+<?php if (!$this->getRequest()->isAjax()): ?>
+<div id="ajax-errors" style="display: none;">
+    <ul class="messages">
+        <li class="error-msg">
+            <ul>
+                <li><span><?php echo $this->__('An error occurred, please try again later.'); ?></span></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div id="loading" style="display: none; margin-bottom: 10px; text-align: center;">
+    <img class="v-middle" alt="" src="<?php echo $this->getSkinUrl('images/loader-shopby.gif'); ?>"> <?php echo $this->__('Loading, please wait...'); ?>
+</div>
+<div id="catalog-listing">
+<?php endif; ?>
+<div class="category-products">
+
+	<div class="toolbar-top">
+		<?php echo $this->getToolbarHtml() ?>
+	</div>
+	<div class="yt-products-container clearfix">
+		<?php if($this->getMode()!='grid'): ?>
+		<?php $_iterator = 0; ?>
+		<ol class="products-list">
+			<?php 
+			$count_input_qty = 0;
+			foreach ($_productCollection as $_product): 
+			$count_input_qty++;
+			$now = date("Y-m-d");
+			$newsFrom= substr($_product->getData('news_from_date'),0,10);
+			$newsTo=  substr($_product->getData('news_to_date'),0,10);
+			$specialprice = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialPrice();
+			$price = Mage::getModel('catalog/product')->load($_product->getId())->getPrice();
+			$saleoff= round(($price - $specialprice)/$price*100) ;
+			?>
+			<li class="item <?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
+				<div class="item-inner">
+					<div class="col-lg-5 col-md-5 col-sm-5 col-xs-4">
+                        <div class="product-image">
+							<a href="<?php echo $_product->getProductUrl() ?>" class="product-img" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
+							
+							  	<img class="img-responsive" id="product-collection-image-<?php echo $_product->getId(); ?>"
+								src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(170,230); ?>"
+								alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+ 							
+							</a>
+							
+							<?php if ( $now>=$newsFrom && $now<=$newsTo ){ ?>
+								<span class="new-product have-ico" id="list_grid"><?php echo $this->__('New'); ?></span>
+							<?php }
+                            $currentTime = Mage::getModel('core/date')->date('Y-m-d H:i:s');
+						    $price_prod = $_product->getPrice(); 
+							$spl_price_prod = $_product->getSpecialPrice();
+							$ProductToDate = $_product->getResource()->formatDate($_product->getspecial_to_date(), false); 
+							if ((strtotime($currentTime) < strtotime($ProductToDate . ' ' . $_product->getTime())) && ($price_prod != $spl_price_prod )) { 
+							?>
+								<span class="sale-product have-ico" id="list_grid"><?php echo $this->__('Sale'); ?></span>
+							<?php } ?>							
+						</div>
+					</div>
+					<div class="product-info col-lg-7 col-md-7 col-sm-7 col-xs-8">
+						<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>">
+							<div class="product-name">
+								<?php //if( strlen($_helper->productAttribute($_product, $_product->getName(), 'name')) > 30 ){
+						//echo substr($_helper->productAttribute($_product, $_product->getName(), 'name'), 0, 30). "...";
+                    //} else {
+                        echo $_product->getName();
+                    //}?>
+									
+							</div>               
+                        <div class="product-price">
+							<?php echo $this->getPriceHtml($_product, true) ?>
+						</div>		
+
+						<?php
+							// Provides extra blocks on which to hang some features for products in the list
+							// Features providing UI elements targeting this block will display directly below the product name
+							if ($this->getChild('name.after')) {
+								$_nameAfterChildren = $this->getChild('name.after')->getSortedChildren();
+								foreach ($_nameAfterChildren as $_nameAfterChildName) {
+									$_nameAfterChild = $this->getChild('name.after')->getChild($_nameAfterChildName);
+									$_nameAfterChild->setProduct($_product);
+									echo $_nameAfterChild->toHtml();
+								}
+							}
+						?>
+						
+						<?php if($_product->getshort_description()) { ?>
+						<div class="product-desciption">
+							<?php echo $_product->getshort_description();?>
+						</div>
+						<?php } ?>	
+                        
+                        <?php?>
+                        
+						</a>								
+					</div>															
+				</div>
+			</li>
+			<?php endforeach; ?>
+		</ol>
+		<script type="text/javascript">decorateList('products-list', 'none-recursive')</script>
+		
+		<?php else: ?>
+		<?php $_collectionSize = $_productCollection->count() ?>
+		<?php $_columnCount = $this->getColumnCount();?>
+		<?php $i=0; foreach ($_productCollection as $_product):?>
+		<?php 
+		$now = date("Y-m-d");
+			$newsFrom= substr($_product->getData('news_from_date'),0,10);
+			$newsTo=  substr($_product->getData('news_to_date'),0,10);
+			$specialprice = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialPrice();
+			$price = Mage::getModel('catalog/product')->load($_product->getId())->getPrice();
+			$saleoff= round(($price - $specialprice)/$price*100) ;
+		?>
+		<?php if ( $i++ == 0 ){ ?>
+		<div class="products-grid">
+				<?php if ($pageIdentifier == 'catalogsearch_result_index'){ ?>
+					<div class="myclass">
+				<?php } else { ?>
+					<div class="right_rooler">
+				<?php } ?>
+		<?php } ?>
+			
+				<?php if ($pageIdentifier == 'catalogsearch_result_index'){ ?>
+					<div class="item col-lg-3 col-md-3 col-sm-5 col-xs-6">
+				<?php } else { ?>
+					<div class="item col-lg-3 col-md-3 col-sm-5 col-xs-6">
+				<?php } ?>
+				<div class="item-inner c_itm">
+					
+						<div class="product-image">
+								<?php
+								$categories = $_product->getCategoryIds();
+								if(in_array(282,$categories)) {
+									$prod_url = Mage::getBaseUrl().'building-material/tmt-steel.html';
+								}else{
+									   
+       $_proId = $_product->getId();
+       
+       $produ = Mage::getModel('catalog/product')->load($_proId);
+       $cats = $produ->getCategoryIds();
+     
+            $_cat = Mage::getModel('catalog/category')->setStoreId(Mage::app()->getStore()->getId())->load($cats[0]);
+            $_catId = $_cat->getId();             
+        
+         $store = Mage::app()->getStore();
+         $path = Mage::getResourceModel('core/url_rewrite')
+          ->getRequestPathByIdPath("product/$_proId/$_catId", $store);
+        $prod_url = $store->getBaseUrl($store::URL_TYPE_WEB) . $path;
+   
+								}
+								
+								// Provides extra blocks on which to hang some features for products in the list
+								// Features providing UI elements targeting this block will display directly below the product name
+								if ($this->getChild('name.after')) {
+									$_nameAfterChildren = $this->getChild('name.after')->getSortedChildren();
+									foreach ($_nameAfterChildren as $_nameAfterChildName) {
+										$_nameAfterChild = $this->getChild('name.after')->getChild($_nameAfterChildName);
+										$_nameAfterChild->setProduct($_product);
+										echo $_nameAfterChild->toHtml();
+									}
+								}
+								?>
+								
+								<?php if ( $now>=$newsFrom && $now<=$newsTo ){ ?>
+									<span class="new-product have-ico"><?php echo $this->__('New'); ?></span>
+								<?php }
+	                            $currentTime = Mage::getModel('core/date')->date('Y-m-d H:i:s');
+								$price_prod = $_product->getPrice(); 
+								$spl_price_prod = $_product->getSpecialPrice();
+								$ProductToDate = $_product->getResource()->formatDate($_product->getspecial_to_date(), false); 
+								if ((strtotime($currentTime) < strtotime($ProductToDate . ' ' . $_product->getTime())) && ($price_prod != $spl_price_prod )) {?>
+								<!--	<span class="sale-product have-ico"><?php echo $this->__('Sale'); ?></span>-->
+									<div id="sale"> <img alt="" src="<?php //echo $this->getSkinUrl('images/sale.png'); ?>"></div>
+
+
+								<?php } ?>
+
+								<a href="<?php echo $prod_url; ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image  image-wrapper">
+								   
+									<img class="img-responsive" id="product-collection-image-<?php echo $_product->getId(); ?>"
+									src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(170,230); ?>"
+									alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+							
+							</a>
+							
+						</div>
+						
+						<div class="product-info product-name-info">
+							<div class="product-name">
+								<a href="<?php echo $prod_url ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>">
+								<?php //if( strlen($_helper->productAttribute($_product, $_product->getName(), 'name')) > 30 ){
+						//echo substr($_helper->productAttribute($_product, $_product->getName(), 'name'), 0, 30). "...";
+                    //} else {
+                        echo $_product->getName();
+                    //}?>
+								</a>
+							</div>
+							
+							<div class="product-price">
+								<?php  $catarr = $_product->getCategoryIds();
+								 $currentCatId = Mage::getModel('catalog/layer')->getCurrentCategory()->getId();
+								 if($currentCatId == '353' || $currentCatId == '354' || $currentCatId == '355' || $currentCatId == '356' || $currentCatId == '358'){
+									echo '<div class="price">
+									<span>Price / Sqft:</span>
+									<span class="sqftprice">'.Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol().'</span>
+									<span class="sqprice">'. number_format(Mage::getModel('catalog/product')->load($_product->getId())->getPriceSqft(),'0').'</span>
+									</div>';
+								}else{
+									//echo $this->getPriceHtml($_product, true);
+                             $currency_symbol=Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();   
+							if ($_product->getFinalPrice() < $_product->getPrice()) {
+								$price_prod = $_product->getPrice(); 
+								$spl_price_prod = $_product->getSpecialPrice();
+                                 $discount = (($price_prod - $spl_price_prod)/$price_prod)*100;
+                                ?>
+                                <div class="wishlist_price">
+									<div class="price-block">
+										<span class="old-price">
+											<span id="old-price-3753" class="price" style="display: inline;"><?php echo $currency_symbol.number_format($_product->getPrice(),0);?></span>
+										</span>
+										
+									</div>
+									<div class="disc-block">
+											<span class="dis-percent">(<?php echo number_format($discount,0);?>% Off)</span>
+										</div>
+									<span class="special-price">
+										<span id="product-price-3753" class="special-price">
+											<span class="price"><?php echo $currency_symbol.number_format($_product->getFinalPrice(),0);?> / <?php echo $_product->getWeightunit();?></span>
+											
+										</span>
+									</span>
+								
+								</div>
+                                <?php
+
+                            }else{
+								?>
+								<div class="wishlist_price">
+									<span id="product-price-3753" class="regular-price">
+										<span class="price"><?php echo $currency_symbol.number_format($_product->getPrice(),0);?> / <?php echo $_product->getWeightunit();?></span>
+									</span>
+									<div class="disc-block"></div>
+								</div>
+		                           <?php
+		                            }
+								}?>
+								
+							
+							</div>	
+						</div>
+						
+						<ul class="add-to-links">
+                        <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                            <li><a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
+                        <?php endif; ?>
+						<script>
+						jQuery('.link-compare').click(function(e){
+						e.preventDefault();
+						var url = jQuery(this).attr("href");
+                        jQuery(this).parent().html("Please wait...");
+                        window.location = url;					
+						})
+						</script>
+                        </ul>
+						
+				</div>
+				</div>
+					<?php if ( $i == $_collectionSize ){ ?>
+
+			
+			<?php if ($pageIdentifier != 'catalogsearch_result_index'){ ?>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div id="faqs" class="modal fade" role="dialog">
+                     <div class="modal-dialog">
+						<?php $cid = $this->getRequest()->getParam('id'); ?>
+					   <?php echo Mage::getModel('catalog/category')->load($cid)->getFaq(); ?>
+                     </div>
+                    </div>
+			</div>
+		</div>
+			<?php } ?>
+			<?php } ?>
+		<?php endforeach ?>
+		<script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+		<?php endif; ?>
+	</div>
+
+	<div class="toolbar-bottom">
+<?php echo $this->getToolbarHtml() ?>
+</div>	
+</div>    
+<?php if (!$this->getRequest()->isAjax()): ?>
+</div>
+
+
+<!--sticky start-->
+<div class="sticky" style="display:none;">
+		<!--<h2><span><img alt="" src="<?php echo $this->getSkinUrl('images/sticky-star_06.png'); ?>"></span> LOWEST PRICE <span><img alt="" src="<?php echo $this->getSkinUrl('images/sticky-star_06.png'); ?>"></span>
+	<button class="btn-minimize"><img alt="" src="<?php echo $this->getSkinUrl('images/yellow/del-minicart.png'); ?>"></button>
+	</h2>-->
+		<a href="<?php echo $_product->getProductUrl() ?>" class="product-img" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
+			<img id="product-collection-image-<?php echo $_product->getId(); ?>"
+				src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(300,300); ?>"
+				alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+		</a>
+	<div class="catalog-category-view">
+		<div class="product-info">
+			<div class="product-name">
+				<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>">
+					<?php //if( strlen($_helper->productAttribute($_product, $_product->getName(), 'name')) > 30 ){
+						//echo substr($_helper->productAttribute($_product, $_product->getName(), 'name'), 0, 30). "...";
+                    //} else {
+                        echo $_product->getName();
+                    //}?>
+				</a>
+			</div>
+			<div class="product-price">
+				<?php echo $this->getPriceHtml($_product, true) ?>
+				<!--<span class="unit">/ <?php echo $_product->getWeightunit(); ?></span>-->
+			</div>	
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+jQuery(".btn-minimize").click(function() {
+  	jQuery('.sticky').hide();
+});
+
+</script>
+
+<!--sticky end-->
+
+
+<?php endif; ?>
+<?php endif; ?>
+
+<?php if ($this->helper('sm_shopby')->isAjaxEnabled() && !$this->getRequest()->isAjax()): ?>
+<script type="text/javascript">
+    //<![CDATA[
+    function pushState(data, link, replace) {
+        var History = window.History;
+        if ( !History.enabled ) {
+            return false;
+        }
+
+        if (replace) {
+            History.replaceState(data, document.title, link);
+        } else {
+            History.pushState(data, document.title, link);
+        }
+    }
+    
+    function handleEvent(el, event) {
+        var url, fullUrl;
+        if (typeof el === 'string') {
+            url = el;
+        } else if (el.tagName.toLowerCase() === 'a') {
+            url = $(el).readAttribute('href');
+        } else if (el.tagName.toLowerCase() === 'select') {
+            url = $(el).getValue();
+        }
+
+        <?php // Add this to query string for full page caching systems ?>
+        if (url.indexOf('?') != -1) {
+            fullUrl = url + '&isLayerAjax=1';
+        } else {
+            fullUrl = url + '?isLayerAjax=1';
+        }
+        
+        $('loading').show();
+        $('ajax-errors').hide();
+        
+        pushState(null, url, false);
+        
+        new Ajax.Request(fullUrl, {
+            method: 'get',
+            onSuccess: function(transport) {
+
+   
+                if (transport.responseJSON) {         
+
+                    $('catalog-listing').update(transport.responseJSON.listing);
+                    $('layered-navigation').update(transport.responseJSON.layer);
+					
+					
+                    pushState({
+                        listing: transport.responseJSON.listing,
+                        layer: transport.responseJSON.layer
+                    }, url, true);
+                    ajaxListener();
+					jQuery(".side-bar-filter").each(function(){
+						if(jQuery(this).height() >= 300){
+							jQuery(this).css("height","300px");
+						}	
+					});
+					 if (jQuery(window).width() <= 320 || jQuery(window).width() <= 767) {  
+						jQuery(function(){
+						  jQuery(".product-name a").each(function(i){
+							len=jQuery(this).text().trim().length;
+							if(len>=47)
+							{
+							  jQuery(this).text(jQuery(this).text().trim().substr(0,47)+'...');
+							}
+						  });
+						});  
+					 }
+					 else  if (jQuery(window).width() <= 1050 ){
+						jQuery(function(){
+						  jQuery(".product-name a").each(function(i){
+							len=jQuery(this).text().trim().length;
+							if(len>=40)
+							{
+							  jQuery(this).text(jQuery(this).text().trim().substr(0,40)+'...');
+							}
+						  });
+						}); 
+					 }
+					 else{
+							jQuery(function(){
+						  jQuery(".product-name a").each(function(i){
+							len=jQuery(this).text().trim().length;
+							if(len>=54)
+							{
+							  jQuery(this).text(jQuery(this).text().trim().substr(0,52)+'...');
+							}
+						  });
+						});
+					 }	
+					
+					
+                } else {
+                    $('ajax-errors').show();
+                }
+                $('loading').hide();
+            }
+        });
+        
+        if (event) {
+            event.preventDefault();
+        }
+    }
+    function ajaxListener() {
+    	
+        var els;
+        els = $$('div.pager-wrapper a').concat(
+            $$('div.sort-by-wrap a'),
+			$$('div.view-mode-wrap a'),
+           $$('div.pager select'),
+            $$('div.sorter select'),
+            $$('div.block-layered-nav a')
+        );
+        els.each(function(el) {
+            if (el.tagName.toLowerCase() === 'a') {
+                $(el).observe('click', function(event) {
+                    handleEvent(this, event);
+                });
+            } else if (el.tagName.toLowerCase() === 'select') {
+                $(el).setAttribute('onchange', '');
+                $(el).observe('change', function(event) {
+                    handleEvent(this, event);
+                });
+            }
+        });
+    }
+    document.observe("dom:loaded", function() {
+        ajaxListener();
+        
+        (function(History) {
+            if ( !History.enabled ) {
+                return false;
+            }
+
+            pushState({
+                listing: $('catalog-listing').innerHTML,
+                layer: $('layered-navigation').innerHTML
+            }, document.location.href, true);
+
+            // Bind to StateChange Event
+            History.Adapter.bind(window, 'popstate', function(event) {
+                if (event.type == 'popstate') {
+                    var State = History.getState();
+                    $('catalog-listing').update(State.data.listing);
+                    $('layered-navigation').update(State.data.layer);
+                    ajaxListener();
+                }
+            });
+        })(window.History);
+    });
+    //]]>
+
+
+	     /*function load() {
+	      var element = $(this);
+	      var comment = element.contents().filter(function() {
+	        return this.nodeType === 8;
+	      }).get(0);
+	      var newElement = $(comment && comment.data);
+	      element.replaceWith(newElement);
+	      newElement.fadeOut(0, function() {
+	        newElement.fadeIn(1000);
+	      });
+	    }
+   	 $('.lazyload').bind('appear', load);*/
+</script>
+<?php endif; ?>
+
+<?php if ($this->getRequest()->isAjax()){ ?>
+
+
+<?php } ?>
+
+<?php
+// Provides a block where additional page components may be attached, primarily good for in-page JavaScript
+if ($this->getChild('after')) {
+    $_afterChildren = $this->getChild('after')->getSortedChildren();
+    foreach ($_afterChildren as $_afterChildName) {
+        $_afterChild = $this->getChild('after')->getChild($_afterChildName);
+        //set product collection on after blocks
+        $_afterChild->setProductCollection($_productCollection);
+        echo $_afterChild->toHtml();
+    }
+}
+?>

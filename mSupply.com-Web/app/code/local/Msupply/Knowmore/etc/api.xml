@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Msupply_Knowmore extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Msupply
+ * @package        Msupply_Knowmore
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <api>
+        <resources>
+            <knowmore_knowmore translate="title" module="msupply_knowmore">
+                <title>Knowmore API</title>
+                <model>msupply_knowmore/knowmore_api</model>
+                <acl>knowmore/knowmore</acl>
+                <methods>
+                    <list translate="title" module="msupply_knowmore">
+                        <title>Retrieve list of knowmores</title>
+                        <method>items</method>
+                        <acl>knowmore/knowmore/list</acl>
+                    </list>
+                    <info translate="title" module="msupply_knowmore">
+                        <title>Retrieve knowmore info</title>
+                        <acl>knowmore/knowmore/info</acl>
+                    </info>
+                    <add translate="title" module="msupply_knowmore">
+                        <title>Add knowmore</title>
+                        <acl>knowmore/knowmore/add</acl>
+                    </add>
+                    <update translate="title" module="msupply_knowmore">
+                        <title>Update knowmore</title>
+                        <acl>knowmore/knowmore/update</acl>
+                    </update>
+                    <remove translate="title" module="msupply_knowmore">
+                        <title>Remove knowmore</title>
+                        <acl>knowmore/knowmore/remove</acl>
+                    </remove>
+                </methods>
+                <faults module="msupply_knowmore">
+                    <knowmore_not_exists>
+                        <code>101</code>
+                        <message>Requested knowmore does not exist.</message>
+                    </knowmore_not_exists>
+                    <invalid_data>
+                        <code>102</code>
+                        <message>Provided data is invalid.</message>
+                    </invalid_data>
+                    <save_error>
+                        <code>103</code>
+                        <message>Error while saving knowmore. Details in error message.</message>
+                    </save_error>
+                    <remove_error>
+                        <code>104</code>
+                        <message>Error while removing knowmore. Details in error message.</message>
+                    </remove_error>
+                </faults>
+            </knowmore_knowmore>
+        </resources>
+        <resources_alias>
+            <knowmore>knowmore_knowmore</knowmore>
+        </resources_alias>
+        <v2>
+            <resources_function_prefix>
+                <knowmore>knowmoreKnowmore</knowmore>
+            </resources_function_prefix>
+        </v2>
+        <acl>
+            <resources>
+                <msupply_knowmore translate="title" module="msupply_knowmore">
+                    <title>Knowmore</title>
+                    <knowmore translate="title" module="msupply_knowmore">
+                        <title>Knowmore</title>
+                        <sort_order>0</sort_order>
+                        <list translate="title" module="msupply_knowmore">
+                            <title>List</title>
+                        </list>
+                        <info translate="title" module="msupply_knowmore">
+                            <title>Info</title>
+                        </info>
+                        <add translate="title" module="msupply_knowmore">
+                            <title>Add</title>
+                        </add>
+                        <update translate="title" module="msupply_knowmore">
+                            <title>Update</title>
+                        </update>
+                        <remove translate="title" module="msupply_knowmore">
+                            <title>Remove</title>
+                        </remove>
+                    </knowmore>
+                </msupply_knowmore>
+            </resources>
+        </acl>
+    </api>
+</config>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <models>
+            <callmsupply>
+                <class>Msupply_Callmsupply_Model</class>
+            </callmsupply>
+        </models>
+    </global>
+    <default>
+        <payment>
+            <callmsupply>
+                <active>1</active>
+                <model>callmsupply/paymentMethod</model>
+                <order_status>pending</order_status>
+                <title>Call Msupply</title>
+            </callmsupply>
+         </payment>
+    </default>
+</config>

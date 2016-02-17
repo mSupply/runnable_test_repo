@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+   <frontend> 
+        <routers> 
+          <catalog> 
+             <args> 
+             <modules> 
+                <Msupply_Catalog before="Mage_Catalog">Msupply_Catalog</Msupply_Catalog>
+             </modules> 
+             </args> 
+         </catalog> 
+       </routers> 
+   </frontend> 
+</config>

@@ -1,0 +1,405 @@
+﻿Red
+Yellow
+Green
+Blue
+Black
+Brown
+Mahogany
+Oxford Blue
+Rosewood
+Smoke Grey
+Teak
+Timber Golden Brown
+Rich Brown
+Rich Mahogany
+Special Teak
+Alabaster Pink
+Almond White
+Amethyst Shower 4
+Angel
+Aqua White
+Baby Pink
+Barley White
+Bianco
+Blue Moon 4
+Blue Bell White
+Calm Ocean
+Cascade
+Cloudy Blue
+Desiree
+Dolphin
+Glacier White
+Kingfisher
+Lavender White
+Lilac White
+Lily White
+Magnolia
+Mellow Heather 6
+Minth White
+Orchid
+Orchid White
+Pale coral
+Parchment
+Petal White
+Popcorn
+Purple Polka 5
+Seven Seas
+Strawberry Blonde
+Suede
+Summer Medley 5
+Sweet Sundae 5
+Touch Of Lime
+Violet Tinge
+Whitefield
+Atlantic Surf 4
+Candy
+Ginger
+Jamaican Bronze 3
+Lilac Lily
+Pale Peach
+Pine Cone
+Pink Barbie
+Pista
+Pretty Pink
+Ripple
+Starlit Night 4
+Tuscan Glade 3
+Dark Brown
+Cherry
+White
+Brilliant White
+Beige
+Gold
+Silver
+Copper
+Gray
+Brushed Nickel
+Brushed Steel
+Antique Copper
+Princess
+Mickey Mouse
+Spiderman
+Little Mermaid
+Ivory
+Topaz
+White/Blue
+Pearl
+Saphire
+Bronze
+P.Passion
+C.Fantasy
+Adoni Brown
+Angola Brown
+Antartica Gold
+Black Galaxy
+Black Pearl
+Blue Pearl
+China Pink
+Classic Beige
+Coffee Pearl
+Colonial Peach
+Crystal Yellow
+Emerald Pearl
+French White
+Giallo Alba
+Golden Giblee
+Green Flashes
+Himalayan Blue
+Ivory Giblee
+Jasmine White
+Latin Pink
+Lavender Blue
+May Flower
+Mokalsar Green
+Moon White
+Multi Red
+New Kashmir White
+Platinum Blue
+Premium Black
+Raw Silk
+Romantic Brown
+Royal Gold
+Saderhalli Grey
+Sahara Brown
+Sapphire Brown
+Seire Grey
+Steel Grey
+Strawberry Pink
+Surf Green
+Tan Brown
+Volcano Red/Lakha Red
+Volga Blue
+Black Marachini
+Luminere Green
+Half White
+Misty Grey
+NA
+White (86-1000)
+Always Blue
+Linwood Beach
+Snowbell
+Mid Cream
+Special Taj Grey
+Brilliant White (36-1000)
+Antique White
+ Blue Ice
+Bone White
+Buttercup Fool 6
+Champagne White
+Forget me not
+Marble Grey
+Pale Grey
+September Dawn
+Silver Streak
+Alliance
+Amber Queen 6
+Butter Milk
+Coral Canyon 4
+Gardenia
+Lingering Brew
+Mushroom
+Peach Bloom
+Red Spice
+Rhine Blue
+Soft Light
+Straw
+Sweet Honey
+Talc
+ Vanity
+Candy Pink
+Javan Dawn
+New Light Stone
+Olive Green
+Peach  
+Ragamuffin
+Rose Petal
+Starlit Night 5
+Light Biscuit
+Lunar Landscape 5
+Platinum Grey
+Waterside
+Brilliant White (27-1000)
+Atlantic Surf
+Rose White
+Starlit Night
+Tuscan Glade
+Velvet Ink
+Violet Rage
+Wild Purple
+Amethyst Shower
+Aqua
+Blue Moon
+Conifer White
+Lavender Basket
+Orion
+Petal
+Super White (56-1000)
+Super Almond White
+Super Apple White
+Super Ash Grey
+Super Baby Blue
+Super Baby Pink
+Super Bali Bamboo 5
+Super Barley White
+Super Blue Bell White
+Super Blush Noisette
+Super Bongo Jazz
+Super Brandy Brown
+Super Candy
+Super Celestial Cloud
+Super Coral Canyon
+Super Divine Blue
+Super Easter Morn 6
+Super Forest Green
+Super Fragrant Cloud 5
+Super Javan Dawn
+Super Khaki Mists 5
+Super Lily White
+Super Lime Zest
+Super Love
+Super Lunar Landscape
+Super Melody Pink
+Super Menth
+Super Off White
+Super Orchid White
+Super Oyster Cove 5
+Super P.O. Red
+Super Pebble Mozaic 5
+Super Petal
+Super Raw Silk
+Super Roasted Bracken
+Super Rock Candy 6
+Super Rose White
+Super Sandalwood
+Super Sandstone
+Super Satin Blue
+Super Suede
+Super Sundrenched Sand
+Super Tawny Crest
+Super Vanilla Cream
+Super Cherry
+Super Amethyst Shower
+Super Aquamarine
+Super Bermuda Cocktail
+Super Mahogany
+Super Mid Buff
+Super Mint Green
+Super Pale Cream
+Super Pista
+Super Portuguese Blue
+Super Royal Ivory
+Super Black
+Super Bus Green
+Super Brown
+Super Golden Brown
+Super Leaf Brown
+Super Oxford Blue
+Super Phiroza
+Super Smoke Grey
+Brilliant White 
+Blazing White 
+Aquamarine
+Brandy
+Cascade Green
+Dawn
+Dawn Glow
+Deep Green
+Deep Orange
+Light Grey
+Mint Green
+Nickel Grey
+Off White
+P.O. Red
+Pale Cream
+Pale Rose
+Royal Ivory
+Sandstone
+Satin Blue
+Signal Red
+Wild Lilac
+Golden Yellow
+Mid Buff
+Apple White
+Cornflower White
+Jade Green
+Ocean Spray
+Opaline Green
+Sandalwood
+Soft Mauve
+Tata Mimosa
+Bus Green
+DA Grey
+Golden Brown
+Leaf Brown
+Lt. Admiralty Grey
+Phiroza
+Sky Blue
+Dark Green
+Dark Milkado
+New Portland Stone
+Pine
+Terracotta
+Tile Red
+Downing Street
+Expresso Delight
+Green Gold
+Jealousy
+Mehendi
+Melissa's Mauve
+Nut Brown
+Nutmeg Cluster 1
+Peach
+Sap Green
+Blue Ice
+Cloud
+Forget-me-not
+Hedge
+Renaissance
+Spice Island
+Vanity
+Javan Dawn 4
+Maroon
+Cayman Lagoon 1
+Dove
+Electric Blue
+Expresso Delight 1
+Jazz Blue
+Mustard Seed
+Royal Robe
+Silent Night 
+Spa
+Twilight
+Valley
+Wild Waters
+Winter Grey
+Flame Red
+Sunrise
+Terracotta Red
+Brillliant White
+Amethyst Shower4
+Blue Maroon 4
+Mint White
+Violet Tinge Whitefield
+Bluebell White
+Satrlit Night 4
+Lavender Basket 4
+Liiac Lilly
+Antique Ivory
+Baked Bread
+Beautiful Bisque
+Candlelight
+City White
+Clear Skies
+Coconut White
+Coral White
+Creamy Pearl
+Daisy White
+Elegance
+English Fields
+English Mint
+English White
+Golden Sand
+Ice Ballet
+Lilac Mink
+Luxurious Beige
+Mink White
+Misted Lilac
+Morning Violet
+Old Rose
+Painters White
+Parisian White
+Party Purple
+Peach Purple
+Pink Poetry
+Quiet Light
+Romantic Mauve
+Soft Beige
+Soft Feather
+Starlet Gold
+Tinsel White
+Trendy Blue
+White Coffee
+White Swan
+Antique Bisque
+Beach Sand
+Blue Seas
+Blush Brown
+Calm Waters
+Chic Yellow
+Mountain Sky
+Ocean Turquoise
+Old Gold
+Exotic Pink
+French  Stone
+Gold Leaf
+Oscar Gold
+Paris Peach
+Purple Fashion
+Regal Rogue
+Soft Teal
+Vineyard Purple
+Jade Throne
+Mellow Heathers
+Strawberry white
+Black Rose
+Orion

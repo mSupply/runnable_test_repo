@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Msupply_Configuration>
+            <version>0.1.0</version>
+        </Msupply_Configuration>
+    </modules>
+    <frontend>
+        <routers>
+            <configuration>
+                <use>standard</use>
+                <args>
+                    <module>Msupply_Configuration</module>
+                    <frontName>configuration</frontName>
+                </args>
+            </configuration>
+        </routers>
+        <layout>
+            <updates>
+                <configuration>
+                    <file>configuration.xml</file>
+                </configuration>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <configuration>
+                <use>admin</use>
+                <args>
+                    <module>Msupply_Configuration</module>
+                    <frontName>configuration</frontName>
+                </args>
+            </configuration>
+        </routers>
+    </admin>
+    <adminhtml>
+        <!-- <menu>
+            <configuration module="configuration">
+                <title>Configuration</title>
+                <sort_order>71</sort_order>
+                <children>
+                    <items module="configuration">
+                        <title>Manage Items</title>
+                        <sort_order>0</sort_order>
+                        <action>configuration/adminhtml_configuration</action>
+                    </items>
+                </children>
+            </configuration>
+        </menu> -->
+        		
+		 <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <Msupply_Configuration>
+                            <title>Configuration Module</title>
+                            <sort_order>10</sort_order>
+                        </Msupply_Configuration>
+						
+						<system>
+                        <children>
+                            <config>
+                                <children>
+                                    <configuration>
+                                        <title>Configuration Module</title>
+                                    </configuration>
+                                </children>
+                            </config>
+                        </children>
+						</system>
+						
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+		
+        <layout>
+            <updates>
+                <configuration>
+                    <file>configuration.xml</file>
+                </configuration>
+            </updates>
+        </layout>
+    </adminhtml>
+    <global>
+        <models>
+            <configuration>
+                <class>Msupply_Configuration_Model</class>
+                <resourceModel>configuration_mysql4</resourceModel>
+            </configuration>
+            <configuration_mysql4>
+                <class>Msupply_Configuration_Model_Mysql4</class>
+                <entities>
+                    <configuration>
+                        <table>configuration</table>
+                    </configuration>
+                </entities>
+            </configuration_mysql4>
+        </models>
+        <resources>
+            <configuration_setup>
+                <setup>
+                    <module>Msupply_Configuration</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </configuration_setup>
+            <configuration_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </configuration_write>
+            <configuration_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </configuration_read>
+        </resources>
+        <blocks>
+            <configuration>
+                <class>Msupply_Configuration_Block</class>
+            </configuration>
+        </blocks>
+        <helpers>
+            <configuration>
+                <class>Msupply_Configuration_Helper</class>
+            </configuration>
+        </helpers>
+    </global>
+</config>

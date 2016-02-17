@@ -1,0 +1,279 @@
+<?php
+$servieProviderTypes = array(
+                            //"Apartment Association Representative",
+                            "Architect",
+                            "Carpentry Contractor",
+                            "Civil Contractor",
+                            "Civil Engineer",
+                            //"Corporate Representative",
+                            "Electrical Contractor",
+                            "Flooring Contractor",
+                            "Granite Layer",
+                            "Home Automation Consultant",
+                            "Interior Designer",
+                            "Landscaping Contractor/Consultant",
+                            "Legal Adviser",
+                            "Masonry Contractor",
+                            "Painting Contractor",
+                            "Plumbing Contractor",
+                            "Project Manager/Consultant/PMC",
+                            "Tile Layer",
+                            "Valuator",
+                            "Others");
+$defaultServiceProviderType = "Architect";
+
+?>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 seller-block">
+<img src="<?php echo $this->getSkinUrl('images/service_02.jpg'); ?>" alt="" class="bg-image-seller">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad0">
+		  <div class="service service_box">
+		  <div class="rounded-corner-image"><img src="<?php echo $this->getSkinUrl('images/profile.png'); ?>" alt="" class="labour"></div>
+				
+			<form action="<?php echo $this->getUrl('knowmore/index/knowmore') ?>" id="knowmoreForm" method="post">
+				<div class="half-width descri-sp">
+					<h4>Dear <span class="bold">Customer</span>,</h4>					
+					<p>Are you looking for Contractor, Architect, Plumber, Electrician or Carpenter?</p>				
+				</div>
+			<div class="half-width seller-form-block">				
+					<h1 class="mobile-display">Service & Solutions</h1>		
+				   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					 <input type="text" placeholder="Name" name="name" id="name" class="required-entry" />
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						 <input type="text" placeholder="Mobile Number" name="phone" id="phone" maxlength="10" class="required-entry validate-digits validate-length maximum-length-10 minimum-length-10" />
+					</div>
+					 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						  <input type="text" placeholder="Email" name="email" id="email" class="required-entry validate-email" />
+					</div>
+					
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				
+				<textarea title="Message" rows="1" placeholder="Message" name="message" id="comment" class="required-entry"></textarea>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<button type="submit" class="know_more_btn col-xs-8 ">Ask Now</button>
+					</div>	
+				</div>	
+				 <div id="formSuccess1" style="display:none;clear:both;"></div>
+			</form>
+          
+		   </div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad0">
+	       
+	      <div class="service service_box"><div class="rounded-corner-image"><img src="<?php echo $this->getSkinUrl('images/labour.png'); ?>" alt="" class="labour"></div>
+			<form id="serviceproviderForm1" action="<?php echo $this->getUrl('serviceproviders/index/save'); ?>" method="post">
+				
+				<div class="half-width descri-sp">				
+					<p>Are you an Architect, Interior Designer or Contractor?</p>	
+					<h4>Become a <br><span class="bold">Service Provider</span></h4>						
+				</div>
+			<div class="half-width seller-form-block"> 	
+					<h1 class="mobile-display">Become a Service Provider</h1>								
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<input type="text" placeholder="Name" name="sp1name" id="sp1name" class="required-entry"/>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<input type="text" placeholder="Mobile Number" name="sp1phone" id="sp1phone" maxlength="10" class="required-entry validate-digits validate-length maximum-length-10 minimum-length-10" />
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					  <select name="sp1service" id="sp1service" class="required-entry" >
+						<?php
+							foreach($servieProviderTypes as $serviceProvider)
+							{
+						?>
+							  <option value="<?php echo $serviceProvider; ?>" <?php if($defaultServiceProviderType==$serviceProvider) echo ' selected '; ?>>
+								<?php echo $serviceProvider; ?>
+							  </option>
+						<?php
+							}
+						?>
+					  </select>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad0" id="others-container">
+					<input type="text" placeholder="If Others, please specify" name="sp1others" id="sp1others"  class="input-text" disabled="disabled"/></div>
+					<button type="submit" class="know_more_btn col-xs-8">Register</button>
+				</div>
+				<div id="formSuccess2" style="display:none;color:#000;clear:both;"></div>		
+			</form>
+					
+		  </div>   
+		</div>
+   
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+	var serviceproviderForm1 = new VarienForm('serviceproviderForm1', false);
+//]]>
+	jQuery('#sp1service').on('change', function() {
+	 var currentValue = this.value; 
+	 if(currentValue  == 'Others')
+	 {
+		 jQuery("#sp1others").addClass("required-entry");
+		 jQuery("#others-container .validation-advice").css("display", "block");
+	 }	 
+	 else
+	 {
+		 jQuery("#sp1others").removeClass("required-entry");
+		 jQuery("#others-container .validation-advice").css("display", "none");
+	 } 	 
+	});
+//<![CDATA[
+	var formId2 = 'serviceproviderForm1';
+	var myForm2 = new VarienForm(formId2, false);
+	var postUrl2 = '<?php echo $this->getUrl('serviceproviders/index/save') ?>';
+	var postapiUrl2 = '<?php echo $this->getUrl('serviceproviders/index/senddatatoadjetter') ?>';
+	function doapicallAjax2() {
+		jQuery('#formSuccess2').html('');					
+		if (myForm2.validator.validate()) {
+		jQuery('#sp1').html('');
+		jQuery('#sp1').html('Please wait...');
+		 if(jQuery("#sp1service").val() == "Others")
+		 {
+			 jQuery("#sp1service option:selected").val(jQuery("#sp1others").val());
+		 }
+			new Ajax.Updater(
+				{ success:'formSuccess' }, postapiUrl2, {
+					method:'post',
+					asynchronous:true,
+					evalScripts:false,
+					onComplete:function(request, json) {
+						
+					},
+					onLoading:function(request, json){
+						Element.show('formLoader');
+					},
+					parameters: $(formId2).serialize(true),
+				}
+			);
+		}
+	}
+	function doAjax2() {
+		jQuery('#formSuccess2').html('');					
+		if (myForm2.validator.validate()) {
+		jQuery('#sp1').html('');
+		jQuery('#sp1').html('Please wait...');
+		 if(jQuery("#sp1service").val() == "Others")
+		 {
+			 jQuery("#sp1service option:selected").val(jQuery("#sp1others").val());
+		 }
+			new Ajax.Updater(
+				{ success:'formSuccess' }, postUrl2, {
+					method:'post',
+					asynchronous:true,
+					evalScripts:false,
+					onComplete:function(request, json) {
+						//Element.hide(formId);
+						document.getElementById(formId2).reset();
+						Element.show('formSuccess2');
+						var div = document.getElementById('formSuccess2');
+						jQuery('#formSuccess2').html('');
+						div.innerHTML = div.innerHTML + 'Thank You. Our expert will contact you.';
+						jQuery('#sp1').html('<button class="know_more_btn col-xs-4" type="submit">Register</button>');
+						jQuery('#sp1name').val('');
+						jQuery('#sp1phone').val('');
+						 jQuery("#sp1service option:last-child").val('Others');
+						//jQuery("#others-container").css('visibility','hidden');
+						// jQuery("#others-container").css('display','none');
+						//jQuery("#others-container > input[type='text']").attr('disabled', 'true');
+						
+					},
+					onLoading:function(request, json){
+						Element.show('formLoader');
+					},
+					parameters: $(formId2).serialize(true),
+				}
+			);
+		}
+	}
+	
+	new Event.observe(formId2, 'submit', function(e){
+		e.stop();
+		doapicallAjax2()
+		doAjax2();
+	});
+	
+	jQuery("#sp1service").change(function(){
+	   if(jQuery(this).val() == "Others")
+	   {
+		  // jQuery("#others-container").css('visibility','visible');
+		//   jQuery("#others-container > input").css('opacity','1');
+			jQuery("#others-container > input[type='text']").removeAttr('disabled');
+	   }
+		else
+		{
+			
+		//   jQuery("#others-container").css('visibility','hidden');
+	//	   jQuery("#others-container > input").css('opacity','0.5');
+		   jQuery("#others-container > input[type='text']").attr('disabled', 'true');
+		}
+	});
+//]]>
+//<![CDATA[
+    var knowmoreForm = new VarienForm('knowmoreForm', false);
+//]]>
+
+//<![CDATA[
+    var formId1 = 'knowmoreForm';
+    var myForm1 = new VarienForm(formId1, false);
+    var postUrl1 = '<?php echo $this->getUrl('knowmore/index/knowmore') ?>';
+	var postapi = '<?php echo $this->getUrl('knowmore/index/senddatatoadjetter') ?>';
+	 function doapiAjax1() {
+        jQuery('#formSuccess1').html('');
+        if (myForm1.validator.validate()) {
+            new Ajax.Updater(
+                { success:'formSuccess' }, postapi, {
+                    method:'post',
+                    asynchronous:true,
+                    evalScripts:false,
+                    onComplete:function(request, json) {
+                    },
+                    onLoading:function(request, json){
+                        Element.show('formLoader');
+                    },
+                    parameters: $(formId1).serialize(true),
+                }
+            );
+        }
+    }
+    function doAjax1() {
+        jQuery('#formSuccess1').html('');
+        if (myForm1.validator.validate()) {
+            new Ajax.Updater(
+                { success:'formSuccess' }, postUrl1, {
+                    method:'post',
+                    asynchronous:true,
+                    evalScripts:false,
+                    onComplete:function(request, json) {
+                        //Element.hide(formId);
+                        document.getElementById(formId1).reset();
+                        jQuery('#formSuccess1').html('');
+                        Element.show('formSuccess1');
+                        var div = document.getElementById('formSuccess1');
+                        div.innerHTML = div.innerHTML + 'Thank You. Our expert will contact you.';
+                        
+                    },
+                    onLoading:function(request, json){
+                        Element.show('formLoader');
+                    },
+                    parameters: $(formId1).serialize(true),
+                }
+            );
+        }
+    }
+    
+    new Event.observe(formId1, 'submit', function(e){
+        e.stop();
+		doapiAjax1();
+        doAjax1();
+    });
+//]]>
+
+</script>
+<!--mSupply Service Providers end-->
+
+
+ 

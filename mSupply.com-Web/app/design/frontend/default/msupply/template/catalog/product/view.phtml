@@ -1,0 +1,1203 @@
+
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct();
+$session = Mage::getSingleton("core/session",  array("name"=>"frontend"));
+$zip = $session->getData("zip");
+$cats = $_product->getCategoryIds();
+
+ ?>
+ <!-- Begin: Groovinads Behavioral-->
+<script type="text/javascript" src="http://ads01.groovinads.com/grv/track/bhpx.os?idc=286&sku=<?php echo $_product->getSku();?>&idcategory=<?php echo $cats[0];?>&fgjs=1"></script>
+<!--End: Groovinads Behavioral -->
+
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div class="wrapper-container">
+<form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form" <?php if($_product->getOptions()): ?> enctype="multipart/form-data" <?php endif; ?>>  
+<?php echo $this->getBlockHtml('formkey') ?>
+<div class="no-display">
+    <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+    <input type="hidden" name="related_product" id="related-products-field" value="" />
+    <input type="hidden" id="moffs" value="0" name="moffs">
+    <input type="hidden" id="shippingcost" value="0" name="shippingcost">
+    <input type="hidden" id="category" value="0" name="category">
+</div>
+
+<div class="row" onclick="void(0)">
+<!-- left side-->
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 padr5">
+
+<div class="well-block mh36">
+<span class="sale-topleft"></span>
+<div class="row">
+
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+  <div class="product-carousel">
+    <?php echo $this->getChildHtml('media') ?>
+  </div>
+ </div>
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+  
+
+      <div class="rating1">
+        <div class="product-price">
+          <div class="rating productpage">
+          <span class="ratingwidth" style="width:<?php echo (($_product->getData('rating')/5)*100).'%' ?>"><?php echo $_product->getData('rating') ?></span>
+          <span class="ratingblank"></span>
+          
+        </div>  
+        
+        <span class="wishlist"><?php echo $this->getChildHtml('addto') ?></span>  
+        </div>
+          
+      
+
+      <h1><?php echo $_helper->productAttribute($_product, $this->htmlEscape($_product->getName()), 'name') ?></h1>
+      <span>Product ID : <?php echo $_product->getSku() ?></span>
+
+
+     <?php if ($_product->getShortDescription()):?> 
+      <div class="pdt-desc"><?php echo $_helper->productAttribute($_product, $_product->getshort_description(), 'short_description'); ?></div>
+     <?php endif;?>  
+
+      <div class="sharepdt">
+      <h5><span class="fa fa-share-alt "></span>Share this product</h5>
+      <?php $productName = $_helper->productAttribute($_product, $_product->getName(), 'name'); ?>
+      <?php $productUrl = $_helper->productAttribute($_product, $_product->getProductUrl(), 'product_url'); ?>
+      <?php $productImage = $_product->getImageUrl() ?>
+<!--<div class=" col-lg-12 mt1em pad0">
+<a href="javascript:popWin('https://plus.google.com/share?url=<?php echo urlencode($productUrl); ?>', 'google', 'width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes');" title="<?php echo $this->__('Share on Google Plus') ?>"><i class="fa fa-google-plus-square gplus"></i></a>
+<a target="_blank" href="javascript:popWin('https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($productUrl); ?>&t=<?php echo urlencode($productName); ?>', 'facebook', 'width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes');" title="<?php echo $this->__('Share on Facebook') ?>"><i class="fa fa-facebook-square fbshare"></i></a>
+<a target="_blank" href="javascript:popWin('http://twitter.com/home/?status=<?php echo urlencode($productName . ' (' . $productUrl . ')'); ?>', 'twitter', 'width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes');" title="<?php echo $this->__('Tweet') ?>"><i class="fa fa-twitter-square twiitershare"></i></a>
+<a target="_blank" href="javascript:popWin('https://pinterest.com/pin/create/button/?url=<?php echo urlencode($productUrl); ?>&media=<?php echo urlencode($productImage); ?>&description=<?php echo urlencode($productName); ?>', 'pinterest', 'width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes');" title="<?php echo $this->__('Pin it') ?>"><i class="fa fa-pinterest-square pinshare"></i></a>
+</div>  --> 
+<div class=" col-lg-12 mt1em pad0">
+<span class='st_googleplus_large' displayText='Google +'></span>
+<span class='st_facebook_large' displayText='Facebook'></span>
+<span class='st_twitter_large' displayText='Tweet'></span>
+<span class='st_pinterest_large' displayText='Pinterest'></span>
+
+</div>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "31365615-d6b2-45ef-80f4-958b449754af", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</div>
+<div class="col-xs-12 mt2em pad0">
+		<span><img src="<?php echo $this->getSkinUrl('images/wtapp32.png'); ?>"></span>
+		<span class="whatsapptxt"><b>7899777078</b>.. &nbsp; WhatsApp to Order Now !</span>
+
+</div>
+    </div>
+
+  </div>
+ </div>
+
+</div>
+
+<div id="zipmsg" class="errmsg"></div>
+</div><!-- well block end-->
+
+
+
+
+<!-- left side end-->
+
+
+
+<!-- right side-->
+<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+
+<!-- choose brand-->
+<div class="well-block mb0 price-quantity">
+    <div class="pdt-rthead col-lg-12 col-md-12 col-sm-12 col-xs-12">Pricing & Quantity</div>
+
+    <div class="block">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 ppbag">Market Price <span class="unit">/ <?php echo $_product->getWeightunit(); ?></span></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pp-price">
+          <?php 
+            global $rp_price_flag;
+            $rp_price_flag = 0;
+            echo $this->getChildHtml('product_type_data');
+            $rp_price_flag = 1;
+          ?>
+          <?php  $currentCatId = Mage::getModel('catalog/layer')->getCurrentCategory()->getId(); ?>
+          <?php if(!$_product->getSpecialPrice()) { ?>
+          <?php if($currentCatId == '353' || $currentCatId == '354' || $currentCatId == '355' || $currentCatId == '356' || $currentCatId == '358'){
+            
+            echo '<div class="carp_price">
+              <span>(</span>
+              <span>Price/Sqft:</span>
+              
+              <span class="sqprice">'.Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol(). number_format(Mage::getModel('catalog/product')->load($_product->getId())->getPriceSqft(),'0').'</span>
+              <span>)</span>
+              </div>';
+          }?>  
+          <?php } ?>
+           
+        </div>   
+  </div>
+
+  <div class="block">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 ppbag hidden ofr-price" id="offer_price">Offer Price <span class="unit">/ <?php echo $_product->getWeightunit(); ?>&nbsp;</span><a class="toolTip" style="text-decoration:none; cursor: pointer;" data-toggle="tooltip" data-placement="top" container="body" title="The price may vary based on supplier and pincode"><i style="font-size:15px;" class="fa fa-info-circle"></i></a></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pp-price ofr-price-value">
+			<!-- some javascript will load here-->
+        </div>  
+		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"></div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pad0" style="color: #bd4931;">
+         <?php if($_product->getSpecialPrice()) { ?>
+          <?php if($currentCatId == '353' || $currentCatId == '354' || $currentCatId == '355' || $currentCatId == '356' || $currentCatId == '358'){
+            
+            echo '<div class="carp_price" style="color: #bd4931;">
+              <span>(</span>
+              <span>Price/Sqft:</span>
+              
+              <span class="sqprice">'.Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol(). number_format(Mage::getModel('catalog/product')->load($_product->getId())->getPriceSqft(),'0').'</span>
+              <span>)</span>
+              </div>';
+          }?>  
+          <?php } ?>
+		  </div>
+  </div>
+
+  <!-- <div class="block">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <div class="totalseller">
+            <a id="moreprice" href="#zipsearchresult"></a>
+          </div>  
+        </div>   
+  </div> -->
+   
+  <div class="block">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 ppbag">Quantity</div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ppbag">
+    
+            <?php if (!$this->hasOptions()):?>
+                <div class="add-to-box">
+                    <?php if($_product->isSaleable()): ?>
+                        <?php echo $this->getChildHtml('addtocart') ?>
+                    <?php endif; ?>
+                </div>
+
+            <?php echo $this->getChildHtml('extra_buttons') ?>
+            <?php elseif (!$_product->isSaleable()): ?>
+                <div class="add-to-box">
+                    <?php echo $this->getChildHtml('addto') ?>
+                </div>
+            <?php endif; ?>  
+    </div>
+  </div>
+
+  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 ppbag est-price pad0">
+    <input type="hidden" id="prodprice" value="<?php echo number_format($_product->getFinalPrice(),0);?>" />
+      <?php
+                $productTax = Mage::getModel('catalog/product')->load($_product->getId());
+                $taxClassId = $productTax->getData("tax_class_id");
+                $rateRequest = Mage::getSingleton('tax/calculation')->getRateRequest(null, null, null, 0);
+                $taxPercent = Mage::getSingleton('tax/calculation')->getRate($rateRequest->setProductClassId($taxClassId));
+               
+                 ?>
+    Estimated Subtotal <span id="vat-extra">(VAT <?php if($taxPercent !== '' && $taxPercent !==0) echo $taxPercent.'%'; ?> extra)</span>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ppbag est-price-val pad0">
+    <span id="estimated_price"></span>
+    <?php //echo $_product->getData('estimateddelivery');?>
+  </div>
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 moq-min-error"><span class="moqerror"></span></div>
+   
+</div><!-- well block end-->
+
+   <!-- seller block-->
+        <!--<div class="pdt-rthead col-lg-12 col-md-12 col-sm-12 col-xs-12">Seller</div>
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-selname"><h4>N.Srinivas Reddy</h4></div>
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-desp-time"><h5>(Dispatch in 2-3 days)</h5></div>-->
+     
+<div class="seller_choosen" id="seller_choosen" style="display:none;">
+  <div class="well-block-seller">
+    <div class="clearfix"></div>
+    <div class="selectmsg1">
+      <div class="disptable">
+        
+          <div class="pdt-rthead col-lg-12 col-md-12 col-sm-12 col-xs-12">Supplier</div>
+
+          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 top-selname pad0"><h4 id="seller"></h4></div>
+          <div class="totalseller col-lg-5 col-md-5 col-sm-5 col-xs-5 pad0"><h4><a href="#zipsearchresult" id="totalseller" style="text-transform:capitalize"></a></h4></div>
+          <div class="clearfix"></div>
+          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 top-desp-time pad0"><h5> Dispatch in <span id="estimate"></span></h5></div>
+          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 top-desp-time pad0" style="text-align:right;"><h5 class="seller-num"></h5></div>
+        
+      </div>
+        
+    </div>
+
+    <div class="col-lg-6 col-lg-offset-3 col-sm-offset-3 col-xs-12 col-md-offset-1 col-md-10 col-sm-6 list-btn">
+      <button type="button" id="product-addtocart-button"  class="saddtocartbtn addtocartdummy" ><span><span><?php echo "Add to List"; ?></span></span></button>
+      <button type="button" id="product-addtocart-button" title="<?php echo $buttonTitle ?>" class="saddtocartbtn addtocart">Add to List</button>
+    </div>
+  </div>
+</div>
+
+<!-- choose brand end-->
+</div>
+
+
+</div><!-- right side end-->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad0" id="zipsearchresult">
+
+<div class="well-block">
+<div class="csheading">Choose Seller</div>
+<div class="col-lg-12 rcustomline"><div class="csyellowline"></div></div>
+      
+        
+          
+			   <div class="col-lg-5 col-xs-12 col-md-6 col-sm-7 mt3em">
+            <div class="row">
+              <div class="col-lg-4 col-xs-12 col-sm-5 col-md-5 text-left mt10 rchkavail">
+                <span class="glyphicon glyphicon-map-marker stlyellow mr10"></span><span>Check Availability</span>
+              </div>
+              
+              <div class="col-lg-6 col-xs-12 col-sm-7 col-md-7 rcustompad pad0">
+              <div class="input-group customzipcode">
+            
+                    <input type="hidden" id="pro_sku" value="<?php echo $_product->getSku();?>">
+                    <input type="text" name="zip_input" class="pin_input form-control" id="zip_input" placeholder="Delivery Pincode"  value="<?php echo isset($zip)? $zip : '';?>">
+                    <span class="input-group-addon"><input type="button" value="CHECK" id="search_by_zip" class="customgo" name="search_by_zip" ></span>
+                    
+              </div>
+              <div class="errmsg"></div>
+              </div>
+              
+              
+                  
+            </div>
+              </div>
+               <div class="col-lg-7 col-xs-12 col-md-6 col-sm-5 mt3em text-right">
+                <div class="sellermsg1" id="wholeseller"></div>
+              </div>
+              
+          <?php $parentid = Mage::getModel('catalog/layer')->getCurrentCategory()->getParentCategory()->getId(); ?>
+          <?php $level = Mage::getModel('catalog/layer')->getCurrentCategory()->getParentCategory()->getLevel(); ?>
+            
+          <!-- col-4 end-->
+          <div class="col-lg-12 col-xs-12 mt1em table-responsive pad0">
+          <table class="table table-condensed n-sellertable steeltable">
+                <thead>
+                  <tr class="cust-trh zipsearchHeading">
+                    <th>Seller Name</th>
+                    <th>Rating</th>
+                    <th>Dispatch In</th>
+                    <!--<th>Free Shipping Above</th>-->
+                    <th>Min. Order Qty</th>
+                    <!--<th>Shippping Cost</th>-->
+                    <th>Unit Price</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody class="zipsearchHeadingResult bdseller" id="zipsearchHeadingResult">
+
+                </tbody>
+              
+              </table>
+            </div>  
+          </div></div>
+      
+      </div><!-- row end-->
+      
+<div id="shippingWarningPopup"></div>
+        <div class="clearfix"></div>
+        
+
+</div><!-- well block end-->
+
+
+<!-- desc area-->
+
+
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad0 rdesc-area">
+
+<div class="well-block">
+<div class="well-block border-grey">
+<ul class="nav nav-pills nav-stacked col-md-3 col-sm-4">
+ <?php if ($_description = $this->getChildHtml('description')):?> <li class="active"><a href="#tab_a" data-toggle="pill">Description</a></li><?php endif; ?>
+ <?php if ($_additional = $this->getChildHtml('additional')):?> <li><a href="#tab_b" data-toggle="pill">Specification</a></li><?php endif; ?>
+ <li><a href="#tab_c" data-toggle="pill">Quality Promise</a></li>   
+  <li><a href="#tab_d" data-toggle="pill">Returns</a></li>
+</ul>
+<div class="tab-content col-md-9 col-sm-8">
+        <div class="tab-pane active" id="tab_a">
+             <h2>Description</h2>
+             <hr>
+       <?php if ( $_description ):?>
+                           <p><?php echo $_description ?></p> 
+             <?php endif;?>
+            
+        </div>
+        <div class="tab-pane" id="tab_b">
+             <h2>Specification</h2>
+             <hr>
+       <?php if ( $_additional ) : ?>
+            <?php echo $_additional; ?>
+      <?php endif;?>
+        </div>
+    <!--googleoff: all--> 
+        <div class="tab-pane" id="tab_c">
+    
+             <h2>Quality Promise</h2>
+             <hr>
+       
+            <p>At mSupply, we ensure the best quality products are provided to our customers by meticulously selecting the vendors and continuously evaluating them to ensure minimal defects.</br>
+Our team of industry experts and domain specialist ensure the products delivered are of best in class quality.</br>
+Prior mystery visits are made to vendor sites and delivery locations to ensure superior quality.</br>
+In case you feel, there is any lag in the quality promised and received by you, we are here to help. </p>
+      
+        </div>
+        <div class="tab-pane" id="tab_d">
+             <h2>Returns</h2>
+             <hr>
+            <p>We stick to our committed timelines on delivery standards, in case of any delays due to any unforeseen circumstances; we would inform you regarding the same at the earliest.</br>
+If you are unhappy with the product received, we are here to help. Please get in touch within 24 hours of receipt of delivery.</br>
+Returns post 24 hours from receipt of delivery becomes difficult as there is no surety on the quantity of product still available on the site.</p>
+        </div>
+    <!--googleon: all-->
+</div><!-- tab content -->
+
+</div><!-- well block end-->
+
+</div><!-- well block end-->
+
+</div><!-- desc area end-->
+
+<?php echo $this->getChildHtml('recently_viewed') ?>
+<?php echo $this->getChildHtml('catalog.product.related') ?>
+
+<!-- for mobile device-->
+
+<div class="panel-group custom-panel-group" id="accordion">
+  <div class="panel panel-default">
+    <?php if ($_description = $this->getChildHtml('description')):?>
+      <h4 class="panel-title mc-tabs">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          <span class="glyphicon glyphicon-minus pull-right"></span>
+          Description
+        </a>
+      </h4>
+   <?php endif; ?>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+    <?php if ( $_description ):?>
+    <div class="mb-content"><?php echo $_description ?></div>        
+    <?php endif; ?>
+     </div>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <?php if ($_additional = $this->getChildHtml('additional')):?>
+     <h4 class="panel-title mc-tabs">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          <span class="glyphicon glyphicon-plus pull-right"></span>
+          Specification
+        </a>
+     </h4>
+   <?php endif; ?>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+      <?php if ( $_additional ) : ?>
+        <div class="mb-content">    <?php echo $_additional; ?></div>
+    <?php endif;?> 
+      </div>
+    </div>
+  </div>
+  <!--googleoff: all-->
+  <div class="panel panel-default">
+    
+      <h4 class="panel-title mc-tabs">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          <span class="glyphicon glyphicon-plus pull-right"></span>
+          Quality Promise
+        </a>
+    </h4>
+    
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+      <div class="mb-content">At msupply, we ensure the best quality products are provided to our customers by meticulously selecting the vendors and continuously evaluating them to ensure minimal defects.</br>
+Our team of industry experts and domain specialist ensure the products delivered are of best in class quality.</br>
+Prior mystery visits are made to vendor sites and delivery locations to ensure superior quality.</br>
+In case you feel, there is any lag in the quality promised and received by you, we are here to help. </div>  
+      </div>
+    </div>
+  </div>
+  
+   <div class="panel panel-default">
+    
+      <h4 class="panel-title mc-tabs">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsefour">
+          <span class="glyphicon glyphicon-plus pull-right"></span>
+         Returns
+        </a>
+  </h4>
+    
+    <div id="collapsefour" class="panel-collapse collapse">
+      <div class="panel-body">
+    <div class="mb-content">We stick to our committed timelines on delivery standards, in case of any delays due to any unforeseen circumstances; we would inform you regarding the same at the earliest.</br>
+If you are unhappy with the product received, we are here to help. Please get in touch within 24 hours of receipt of delivery.</br>
+Returns post 24 hours from receipt of delivery becomes difficult as there is no surety on the quantity of product still available on the site.</div>
+      </div>
+    </div>
+  </div>
+  <!--googleon: all-->
+  
+  
+</div>
+
+
+<script>
+jQuery('.collapse').on('shown.bs.collapse', function(){
+jQuery(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+}).on('hidden.bs.collapse', function(){
+jQuery(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+});
+</script>
+
+<!-- for mobile device end-->
+
+
+
+</div>
+</div>
+</div>
+</div><!-- wrapper end-->
+
+
+
+<!-- old-desidn-->
+
+
+
+                <!-- description tabs-->
+                 <?php                                               
+               /*  if($var_yttheme != null && $var_yttheme->getParam('show_related') == 1 && $this->getChildHtml('related_products') ){ ?>       
+                    <?php echo $this->getChildHtml('related_products'); ?>       
+                <?php } ?>
+                <!--Upsell products-->              
+                <?php if( $var_yttheme != null && $var_yttheme->getParam('show_upsell') == 1 && $this->getChildHtml('upsell_products')){
+                    echo $this->getChildHtml('upsell_products'); 
+                }*/?>
+     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>          
+                       <script type="text/javascript">
+        jQuery('.addtocart').attr('disabled',true).hide();
+        /*jQuery(window).scroll(function(){
+          var a = jQuery(window).scrollTop();
+          jQuery('.socials-wrap ul li a').html(a);
+        });*/
+        jQuery('.addtocartdummy').click(function(){
+          jQuery('.errmsg').html('');
+          var zip = jQuery('#zip_input').val();
+          var hasErr = false;
+          if(!zip){
+            hasErr = true;
+            jQuery('.errmsg').html('Please enter the pincode to purchase this product');
+          }
+          if(hasErr){
+            jQuery('#zip_input').css('border','1px solid #ff0000');
+          }
+        });
+        </script>
+        
+        <script type="text/javascript">
+        jQuery('.addtocart').click(function(e){
+          e.preventDefault();
+          
+        //moq validate  
+          var moq = jQuery('input[name=opinions]:checked').attr('data-moq');
+          var incrementquantity = jQuery('input[name=opinions]:checked').attr('data-incrementquantity');
+          var incrementmode = jQuery('input[name=opinions]:checked').attr('data-incrementmode');
+          var qty = jQuery.trim(jQuery('#qty').val());
+          jQuery('.moqerror').html('');
+
+          if((Number(qty) >= Number(moq)) && ((qty-moq)%incrementquantity)==0)
+          {
+            updateEstimatePrice();
+          }
+          else if(Number(qty) >= Number(moq) && ((qty-moq)%incrementquantity)!=0)
+          {
+            cal = (qty-moq)/incrementquantity;
+            max = Math.ceil(cal) ;
+            min = Math.floor(cal);
+            minval = Number((min * incrementquantity)) + Number(moq);
+            maxval = Number((max * incrementquantity)) + Number(moq);
+            jQuery('.moqerror').html("We are sorry. We don’t support buying of "+qty+" quantities. Your possible buying options are "+minval+" or "+maxval+".");
+            jQuery('#qty').focus();
+            updateEstimatePrice();
+            return false;
+          }
+          else
+          {
+            
+            if(typeof moq !== 'undefined')
+            {
+              jQuery('.moqerror').html("Minimum order quantity is "+moq);
+              jQuery('#qty').val(moq);
+              jQuery('#qty').focus();
+              updateEstimatePrice();
+            }
+            else
+            {
+              jQuery(".moqerror").html('Sorry there are no sellers serving this locality right now - please try different zip code in "Check Availability".');
+              jQuery('#offer_price').hide();
+              var currency = '<?php echo Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();?>';
+			  var parent_price = '<?php echo number_format($_product->getPrice(),0); ?>';
+				jQuery('.block .wishlist_price').html('<div class="wishlist_price"><span id="product-price-3753" class="regular-price"><span class="price">'+currency+parent_price+'</span></span></div>');  
+            }
+            return false;
+          }
+          //end moq validate
+          //var q = parseInt(jQuery('#qty').val());
+          var q = jQuery('#qty').val();
+          var m = parseInt(jQuery('#moffs').val());
+          var s = jQuery('#shippingcost').val();
+          var c = jQuery('#category').val();
+          //alert( m+"data"+s );
+          
+          
+        
+             if(jQuery.isNumeric(q) && q > 0 && Math.floor(q) == q)
+            {
+                var productOriginalqty = parseInt(jQuery('input[name=opinions]:checked').attr('data-productoriginalqty'));            
+			    var productEnterQty = parseInt(jQuery('#qty').val());
+				
+				if(productEnterQty <= 99999)
+				{	
+					if(productEnterQty <= productOriginalqty)
+					{	
+						jQuery('#product_addtocart_form').submit();
+						 jQuery('.addtocart').prop("disabled", true);
+					}
+					else
+					{
+						jQuery('.moqerror').html("Requested qty is not available");	
+						jQuery('.addtocart').prop("disabled", false);
+					}
+				}
+				else
+				{
+					jQuery('.moqerror').html("Maximum qty allowed to purchase is 99999");
+				}
+            }
+            else
+            {
+                jQuery('.moqerror').html("Please enter the positive integer value");
+            }
+            
+         
+          
+        });
+        </script>
+      
+        <script type="text/javascript">
+        var bod = 'body,html';
+        if(BrowserDetect.browser == 'Chrome'){
+          bod = 'body'; 
+        }
+        var onradioclick = function(){
+          var r = parseInt(jQuery(this).attr('data-rating'));
+          jQuery('.product-shop .rating.productpage .ratingwidth').css('width',((r/5)*100)+'%').html(r);
+          jQuery('.product-shop .price-box .old-price span').html(jQuery(this).attr('data-regularprice'));
+          jQuery('.product-shop .price-box .special-price .special-price span').html(jQuery(this).attr('data-specialprice'));
+          var currency = '<?php echo Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();?>';
+          //jQuery('#qty').val(jQuery(this).attr('data-moffs'));
+          var seller=jQuery(this).attr('data-seller');
+          var estimate = jQuery(this).attr('data-dispatch');
+          var prod_price=jQuery(this).attr('data-price');
+          var qty = jQuery(this).attr('data-moq');
+          var spl_price = jQuery(this).attr('data-specialprice');
+          var fixprice = prod_price.replace(",", "");
+          var disprice = spl_price.replace(",", "")
+          var dis_percent = parseFloat(((fixprice - disprice)/fixprice)*100).toFixed(0);
+
+          var sprice = jQuery(this).attr('data-sprice');
+          var pricesqft = jQuery(this).attr('data-pricesqft');
+          //alert(estimate);
+          jQuery('#seller_choosen').show();
+          jQuery('#seller').html(seller);
+          jQuery('#estimate').html(estimate);
+          //alert(prod_price+''+spl_price);
+          if(prod_price != spl_price)
+          {
+			jQuery('.block .wishlist_price').html('<div class="wishlist_price"><span class="old-price"><span id="old-price-3753" class="price" style="display: inline;">'+currency+prod_price+'</span></span></div>');
+            jQuery('.block .ofr-price').removeClass('hidden');
+            jQuery('.block .ofr-price-value').html('<div class="wishlist_price"><span class="special-price"><span id="product-price-3753" class="special-price"><span class="price">'+currency+spl_price+'</span><span></span><span class="dis-percent">('+dis_percent+'% Off)</span></span></span></div>');
+            jQuery('.ofr-price').show();
+            jQuery('.ofr-price-value').show();
+          }else if(prod_price > spl_price){
+			
+            jQuery('.block .wishlist_price').html('<div class="wishlist_price"><span id="product-price-3753" class="regular-price"><span class="price">'+currency+prod_price+'</span></span></div>');
+            jQuery('.ofr-price').hide();
+            jQuery('.ofr-price-value').hide();
+		  }
+          else
+          {
+			jQuery('.block .wishlist_price').html('<div class="wishlist_price"><span id="product-price-3753" class="regular-price"><span class="price">'+currency+prod_price+'</span></span></div>');
+			jQuery('.ofr-price').hide();
+            jQuery('.ofr-price-value').hide();
+          }
+          if(pricesqft !='')
+          {
+            jQuery('.sqprice').html(currency + pricesqft);
+          }
+          jQuery('#estimated_price').html(spl_price);
+          jQuery('#qty').val(qty);
+          jQuery('#min_qty_stock').val(0);
+          jQuery('#moffs').val(jQuery(this).attr('data-moffs'));
+          jQuery('#shippingcost').val(jQuery(this).attr('data-shippingcost'));
+          jQuery('#category').val(jQuery(this).attr('data-category'));
+          var p1 = jQuery('#product_addtocart_form').attr('action').split('product/')[0];
+          var p2 = jQuery('#product_addtocart_form').attr('action').split('product/')[1].split('/form_key')[1];
+          var pid = jQuery(this).attr('data-productid');
+          jQuery('#proId').val(pid);
+          jQuery('#product_addtocart_form').attr('action',p1+'product/'+pid+'/form_key'+p2);
+          jQuery('.addtocart').removeAttr('disabled').show();
+          jQuery('.addtocartdummy').hide();
+          jQuery('.zipsearchresult tr td').removeClass('selected');         
+          jQuery(this).addClass('selected');
+          //jQuery(bod).animate({scrollTop:200},400);
+        }
+        
+        jQuery('#search_by_zip').click( function (e, data){
+          if (typeof data == 'undefined') {
+                    //alert('no data passed');
+          var vandor = '0';
+                    //return;
+                    }else{
+            var vandor = data.vendor;
+          }
+          jQuery('.addtocart').attr('disabled',true);
+          jQuery('.errmsg').html('');
+          jQuery('.moqerror').html('');
+          jQuery('#seller_choosen').hide();
+          var zip = jQuery('#zip_input').val();
+		  var cartcount = '<?php echo Mage::helper('checkout/cart')->getItemsCount(); ?>';
+		 <?php 
+			$quote = Mage::getSingleton('checkout/session')->getQuote();
+			$cartItems = $quote->getAllVisibleItems();
+			foreach ($cartItems as $item) {
+				if($productZip == $item->getZipcode()){
+					$productZip = $item->getZipcode();
+				}else{
+					$productZip = $item->getZipcode();
+				}
+			}
+		 ?> 
+		  var zipvalidate = '<?php echo $productZip  ?>';
+           if(cartcount == 0)
+		  {
+			getVendor(zip,vandor);
+		  }
+		  else if(cartcount != '' || cartcount != null || cartcount != 'null')
+		  {
+			 
+			  if(zipvalidate != zip)
+			  {
+				 <?php $zipcodemsg =  Mage::getStoreConfig('configuration/configuration_cart_zipcode_validation/cartzipcode'); ?>
+				 var zipcodemsg = '<?php echo $zipcodemsg ?>';
+				 var finalmnsg =  zipcodemsg.replace('{{old_pincode}}',zipvalidate).replace('{{new_pincode}}',zip);
+				 jQuery('#zipmsg').html(finalmnsg);
+				 jQuery('.addtocart').attr('disabled',true);
+				 jQuery('.saddtocartbtn').css('background','#989898');
+				 jQuery('.selectvendor').attr('disabled',true);
+				 jQuery('#seller_choosen').css('display','block');
+			  }
+			  else
+			  {
+				getVendor(zip,vandor);
+				jQuery('.saddtocartbtn').css('background','#bd4931');
+			  }
+			  
+		  }
+		  else
+		  {
+			getVendor(zip,vandor);
+		  }          
+        });
+        
+        /************************/
+        
+        jQuery(document).ready(function(){
+          jQuery(function () {
+            jQuery('[data-toggle="tooltip"]').tooltip();
+          });
+
+          <?php
+            if(!isset($zip)){
+              ?>
+              var zip = '';
+              <?php 
+            }
+            else{
+              ?>
+              var zip = <?php echo trim($zip); ?>;
+              if(zip != ''){
+                var vandor = '0';
+                getVendor(zip,vandor);
+              }
+              <?php 
+            }
+          ?>
+        });
+        
+        function getVendor(zip,vandor){
+          jQuery('.addtocart').attr('disabled',true);
+          jQuery('.errmsg').html('');
+          jQuery('#moreprice').html('');
+          var zip = jQuery('#zip_input').val();
+          
+          var hasErr = false;
+          if(!zip){
+            hasErr = true;
+            jQuery('.errmsg').html('Please enter your Pincode');
+          }else{
+            if(zip.length != 6){
+              hasErr = true;
+              jQuery('.errmsg').html('Sorry enter a valid zip code');
+            }
+            if(!jQuery.isNumeric(zip)){
+              hasErr = true;
+              jQuery('.errmsg').html('Sorry enter a valid zip code');
+            }
+          }
+          if(hasErr){
+            jQuery('#zip_input').css('border','1px solid #ff0000');
+          }else{
+            jQuery('#zip_input').css('border','1px solid #e6e6e6');
+            jQuery('.main-container').append("<div class='blockseller' style='background:#000 none repeat scroll 0 0;height: 100%;opacity: 0.5;position:fixed;top:0;left:0; width:100%;z-index:10000;'></div>");
+            
+            var catid = '<?php echo Mage::getModel('catalog/layer')->getCurrentCategory()->getId();?>';
+            var level = '<?php echo Mage::getModel('catalog/layer')->getCurrentCategory()->getParentCategory()->getLevel(); ?>';
+            console.log(jQuery('#pro_sku').val()+'-'+jQuery('#qty').val()+'-'+zip+'-'+catid+'-'+level);
+            jQuery.ajax({
+              
+              url:'<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).'getvendorbyzip.php'?>',
+              type:'POST',
+              data:{'psku':jQuery('#pro_sku').val(),'qty':jQuery('#qty').val(),'zip':zip,'catid':catid,'level':level},
+              success:function(d){
+                //alert(d);
+                var str = '';
+                var arr = jQuery.parseJSON(d);
+                var sellerarr = new Array();
+                var small=0;
+                var sellercode =0;
+                var moqs = 0;
+                var count = 0;
+                jQuery.each(arr,function(i,v){  
+                  count++;
+                  var yourString = v['special_price'];
+                  //var result = yourString.substring(1, yourString.length);
+                  sellerarr[0] =  yourString;
+                  sellerarr[1] = v['offers'];
+                  sellerarr[2] = v['seller_code'];
+                  
+                  if(!jQuery(".block .wishlist_price").hasClass(".old-price" ) && v['specialdiv'] == 1)
+                  {
+                    jQuery('.block .wishlist_price').html('<div class="wishlist_price"><span class="old-price"><span id="old-price-3753" class="price" style="display: inline;"></span></span><span class="special-price"><span id="product-price-3753" class="special-price"><span class="price"></span></span></span></div>');
+                  }
+                  
+                  //console.log('dsd'+v['specialdiv']);
+                  var r = (v['rating']/5)*100+'%'; 
+                  var sysmbol = '<?php echo Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol() ?>';      
+                  str += '<tr class="clickmetoselect"><td>'+v['sellername']+'</td><td><span class="rating"><span style="width:'+r+'" class="ratingwidth">'+v['rating']+'</span><span class="ratingblank"></span></span></td><td>'+v['estimateddelivery']+'</td><td>'+v['offers']+'</td><td>'+sysmbol+''+v['special_price']+'</td><td><input id="button-'+v['seller_code']+'" type="button" value="select" class="selectvendor" for="radio-1"/><input class="clickmetoselect1"  data-category="'+v['category']+'" data-pricesqft="'+v['pricesqft']+'" data-seller="'+v['sellername']+'" data-dispatch="'+v['estimateddelivery']+'" data-rating="'+v['rating']+'" data-moffs="'+v['moffs']+'" data-shippingcost="'+v['shippingcost']+'" data-seller_code ="'+v['seller_code']+'" data-productid="'+v['product_id']+'"  data-sprice="'+v['sprice']+'" data-minorderqty="'+v['minorderqty']+'" data-regularprice="'+v['regular_price']+'"  data-specialprice="'+v['special_price']+'" data-price="'+v['price']+'"   data-moq="'+v['offers']+'" data-productoriginalqty="'+v['product_originalqty']+'"  data-incrementQuantity="'+v['incrementQuantity']+'"   data-incrementMode="'+v['incrementMode']+'"  style="display:none;margin:4px 7px 0 0" type="radio" name="opinions" id="radio-'+v['seller_code']+'" /></td></tr>';
+                  
+                  /*if(v['offers'] < moqs || moqs ==0 || v['offers'] == moqs)
+                  {
+                    if(v['offers'] == moqs)
+                    {
+                      if(yourString < small)
+                      {
+                        small = yourString;
+                        moqs = v['offers'];
+                        sellercode = v['seller_code'];
+                      }
+                      else
+                      {
+                        small = small
+                        moqs = moqs;
+                        sellercode = sellercode;
+                      }
+                    }
+                    else{
+                        small = yourString;
+                        moqs = v['offers'];
+                        sellercode = v['seller_code'];
+                    }
+                  }*/
+				  
+				  
+				  if(v['special_price'] < moqs || moqs ==0 || v['special_price'] == moqs)
+                  {
+                    if(v['special_price'] == moqs)
+                    {
+                      if(v['offers'] < small)
+                      {
+                        small = v['offers'];
+                        moqs = v['special_price'];
+                        sellercode = v['seller_code'];
+                      }
+                      else
+                      {
+                        small = small
+                        moqs = moqs;
+                        sellercode = sellercode;
+                      }
+                    }
+                    else{
+                        small = v['offers'];
+                        moqs = v['special_price'];
+                        sellercode = v['seller_code'];
+                    }
+                  }
+				  
+				  
+                  
+                });
+                
+                jQuery('.zipsearchHeading').show();
+                jQuery('.zipsearchresult').show();
+                jQuery('#zipsearchHeadingResult').html(str);
+                if(str == ''){
+                  
+                  jQuery('.zipsearchHeading').hide();
+                  jQuery('#zipsearchHeadingResult').html('<p>Sorry there are no sellers serving this locality right now - please check again in few days.</p>');
+                  
+                  var currency = '<?php echo Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();?>';
+                  var parent_price = '<?php echo number_format($_product->getPrice(),0); ?>';
+				  jQuery('.block .wishlist_price').html('<div class="wishlist_price"><span id="product-price-3753" class="regular-price"><span class="price">'+currency+parent_price+'</span></span></div>');  
+				  jQuery('.ofr-price').hide();
+                  jQuery('.ofr-price-value').hide();
+                                
+                }
+                jQuery('clickmetoselect .clickmetoselect1').unbind('click');
+                jQuery('.clickmetoselect .clickmetoselect1').bind('click',onradioclick);
+                var p =jQuery('#zipsearchresult').position();
+                //jQuery(bod).animate({scrollTop:(p.top-100)},400);
+                totalseller = parseInt(count -1);
+                if(totalseller > 0)
+                {
+                  jQuery('#totalseller').html('Change Supplier');
+                  if(totalseller == 1)
+                  {
+                    jQuery('.seller-num').html('(' + totalseller + ' more Supplier)');
+                    // jQuery('#moreprice').html(totalseller + ' More Price Below');
+                    // jQuery('.seller-num').html(totalseller + ' More Offer')
+                  }
+                  else{
+                    jQuery('.seller-num').html('(' + totalseller + ' more Suppliers)');
+                    // jQuery('#moreprice').html(totalseller + ' More Prices Below');
+                    // jQuery('.seller-num').html(totalseller + ' More Offers');
+                  }
+                  
+                   
+                }
+                else
+                {
+                  if(count == 0)
+                  {
+                    jQuery(".moqerror").html('Sorry there are no sellers serving this locality right now - please try different zip code in "Check Availability".');
+                      var currency = '<?php echo Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();?>';
+
+                      var parent_price = '<?php echo number_format($_product->getPrice(),0); ?>';
+					jQuery('.block .wishlist_price').html('<div class="wishlist_price"><span id="product-price-3753" class="regular-price"><span class="price">'+currency+parent_price+'</span></span></div>');  
+					jQuery('.ofr-price').hide();
+					jQuery('.ofr-price-value').hide();
+                    
+                  }
+                }
+                jQuery('#wholeseller').html(count + ' Seller(s) found in Pincode '+zip);
+                
+                if(vandor == '0'){
+                  jQuery('.selectvendor').removeClass('tick');
+                  jQuery('#radio-'+sellercode).trigger('click');
+                  jQuery('#button-'+sellercode).addClass('tick');
+                  var moq = jQuery('input[name=opinions]:checked').attr('data-moq');
+                  jQuery('#qty').val(moq);
+                  updateEstimatePrice();
+                  
+                }else{
+                  jQuery('.selectvendor').removeClass('tick');
+                  jQuery('#radio-'+vandor).trigger('click');
+                    jQuery('#button-'+vandor).addClass('tick');
+                  var moq = jQuery('input[name=opinions]:checked').attr('data-moq');
+                  jQuery('#qty').val(moq);
+                  updateEstimatePrice();
+                }
+                jQuery('.blockseller').hide();
+              }
+            });
+          }
+          return; 
+        }
+        
+        /*******************/
+        jQuery(document).on('click','.selectvendor',function(){
+          jQuery('.selectvendor').removeClass('tick');
+          jQuery(this).addClass('tick');
+          jQuery(this).attr('disable','disable');
+          jQuery(this).next().attr('checked','checked');
+          jQuery('.moqerror').html('');
+          //jQuery(this).next().prop("checked", true);
+          jQuery(this).next().trigger( "click" );
+          updateEstimatePrice();
+          
+        });
+        
+        function updateEstimatePrice()
+        {
+			
+          var currency = '<?php echo Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();?>';
+          var qty = jQuery('#qty').val();
+          if(qty !='')
+          {
+            var spl_price = jQuery('input[name=opinions]:checked').attr('data-specialprice').replace(/,/g,''); 
+            if(qty !='' && spl_price !='')
+            {
+              var total = parseFloat(spl_price * qty).toFixed(0);
+              jQuery('#estimated_price').html(currency + total);
+            }
+            else{
+              jQuery('#estimated_price').html('');
+            }
+          }
+          else{
+            jQuery('#estimated_price').html('');
+          }
+          return;
+        }
+      </script>
+
+        </div>
+    </div>
+</div>
+<div id="shippingWarningPopup"></div>
+
+<?php if(!isset($zip)){?>
+<div id="popup_box">    <!-- OUR PopupBox DIV-->
+    <h1>Enter a Zip Code</h1>
+    <div class="popcon">
+  
+  <div class="col-lg-8 col-xs-10 col-lg-offset-1 pad0">
+    <input type="text" name="popzip" class="inputnewseller" id="popzip" placeholder="Delivery Pincode"/>
+    </div>
+    <div class="col-lg-2 col-xs-2 pad0">
+    <input type="button" class="inputngoseller"  value="Go" id="go"/>
+  </div>
+  <span class="poperrmsg"></span>
+</div>
+</div>
+<div class="block blockui"></div>
+<style type="text/css">
+.inputnewseller{    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #FFF;
+    background-image: none;
+    border: 1px solid #CCC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.inputngoseller{ border: medium none;
+float: left;
+height: 34px;
+padding: 6px 12px;
+background: rgb(216, 216, 216) none repeat scroll 0% 0%;
+width: 100%;}
+/* popup_box DIV-Styles*/
+.blockui {
+    background-color: #000;
+    border: 1px solid;
+    display: block;
+    height: 100%;
+    left: 0;
+    margin: 0 auto;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+} 
+#popup_box {
+    display:block; /* Hide the DIV */
+    position:fixed;  
+    _position:absolute; /* hack for internet explorer 6 */  
+    height:160px;  
+    width:420px;  
+    background:#FFFFFF;  
+    left: 36%;
+    top: 190px;
+    z-index:100000; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
+    margin-left: 15px;  
+   
+    /* additional features, can be omitted */
+   
+    padding:15px;  
+    font-size:15px;  
+   
+}
+.poperrmsg{color: rgb(185, 53, 53);
+font-size: 12px;
+text-align: center;
+float: left;
+width: 100%;
+margin-top: 10px;}
+#popup_box h1{font-size: 18px;margin: 25px 0;
+color: #A4A4A4;
+text-align: center;}
+#container {
+    background: #d2d2d2; /*Sample*/
+    width:100%;
+    height:100%;
+}
+a{ 
+cursor: pointer; 
+text-decoration:none; 
+}
+/* This is for the positioning of the Close Link */
+#popupBoxClose {
+    font-size:20px;  
+    line-height:15px;  
+    right:5px;  
+    top:5px;  
+    position:absolute;  
+    color:#6fa5e2;  
+    font-weight:500;      
+}
+</style>    
+
+
+<script type="text/javascript">
+   
+    jQuery(document).ready( function() {
+   
+        // When site loaded, load the Popupbox First
+        loadPopupBox();
+   
+        jQuery('#popupBoxClose').click( function() {           
+            unloadPopupBox();
+        });
+       
+        jQuery('#container').click( function() {
+            unloadPopupBox();
+        });
+        function unloadPopupBox() {    // TO Unload the Popupbox
+            jQuery('#popup_box').fadeOut("slow");
+            jQuery("#container").css({ // this is just for style       
+                "opacity": "1" 
+            });
+        }   
+       
+        function loadPopupBox() {    // To Load the Popupbox
+            jQuery('#popup_box').fadeIn("slow");
+            jQuery("#container").css({ // this is just for style
+                "opacity": "0.3" 
+            });        
+        } 
+      jQuery(document).keypress(function(event) {
+      var keycode = (event.keyCode ? event.keyCode : event.which);
+      if (keycode == '13') {
+        jQuery('#go').click();
+      }
+    });
+    });
+  
+  jQuery('#go').click(function(){
+    var zip = jQuery('#popzip').val();
+    //alert(zip);
+    var hasErr = 0;
+    if(!zip){
+      hasErr = 1;
+      jQuery('.poperrmsg').html('Please enter your Pincode');
+    }else{
+      if(zip.length != 6){
+        hasErr = 1;
+        jQuery('.poperrmsg').html('Sorry enter a valid zip code');
+      }
+      if(!jQuery.isNumeric(zip)){
+        hasErr = 1;
+        jQuery('.poperrmsg').html('Sorry enter a valid zip code');
+      }
+    }
+    if(hasErr == 0){
+      jQuery('.block').removeClass('blockui');
+      jQuery('#popup_box').css('display','none');
+      jQuery('#zip_input').val(zip);
+      jQuery('#search_by_zip').trigger('click'); 
+    }
+     
+  });
+</script>    
+<?php }?>
+<style type="text/css">
+.carp_price{ font-size:13px;}
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+@media 
+only screen and (max-width: 360px)
+ {
+  /* Force table to not be like tables anymore */
+ .n-sellertable table,.n-sellertable thead,.n-sellertable tbody,.n-sellertable th,.n-sellertable td,.n-sellertable tr { 
+    display: block; 
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+ .n-sellertable thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+ .n-sellertable tr { border: 1px solid #ccc; margin-bottom: 10px; }
+ .n-sellertable tr { border: 1px solid #ccc; margin-bottom: 10px; }
+  
+ .n-sellertable td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+    text-align:right;
+    padding:15px !important;
+    font-size:12px;
+  }
+  .n-sellertable td:first-child , td:last-child{ text-align:center !important;}
+  .n-sellertable .table > tbody > tr > td{
+    text-align: right !important;
+}
+ .n-sellertable td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 16px;
+    left: 6px;
+    width: 50%; 
+    padding-right: 10px; 
+    text-align: right !important;
+    white-space: nowrap;
+    float: left;
+  }
+  .table-responsive{ border:none !important; overflow-x:inherit !important;}
+ /*
+  Label the data
+  */
+.n-sellertable td:nth-of-type(1):before { content: ""; }
+.n-sellertable td:nth-of-type(2):before { content: "Rating"; }
+.n-sellertable td:nth-of-type(3):before { content: "Dispatch In"; }
+
+.n-sellertable td:nth-of-type(4):before { content: "Min. Order Qty"; }
+
+.n-sellertable td:nth-of-type(5):before { content: "Unit Price"; }
+.n-sellertable td:nth-of-type(6):before { content: ""; }
+}
+</style>

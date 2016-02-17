@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <generatesku_adminhtml_generatesku_index>
+        <reference name="content">
+            <block type="generatesku/adminhtml_generatesku" name="generatesku" />
+        </reference>
+    </generatesku_adminhtml_generatesku_index>
+</layout>

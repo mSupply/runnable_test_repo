@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <serviceproviders_adminhtml_serviceproviders_index>
+        <reference name="content">
+            <block type="serviceproviders/adminhtml_serviceproviders" name="serviceproviders" />
+        </reference>
+    </serviceproviders_adminhtml_serviceproviders_index>
+</layout>

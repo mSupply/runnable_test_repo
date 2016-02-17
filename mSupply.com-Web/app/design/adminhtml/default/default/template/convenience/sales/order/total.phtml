@@ -1,0 +1,22 @@
+<?php
+/**
+ * Created by Magentix
+ * Based on Module from "Excellence Technologies" (excellencetechnologies.in)
+ *
+ * @category   Magentix
+ * @package    Magentix_Convenience
+ * @author     Matthieu Vion (http://www.magentix.fr)
+ * @license    This work is free software, you can redistribute it and/or modify it
+ */
+?>
+
+<?php $this->setPriceDataObject($this->getSource()) ?>
+
+<?php if ((float) $this->getSource()->getConvenienceAmount()): ?>
+    <tr>
+        <td class="label"><?php echo Mage::helper('convenience')->__('Service Charge (Including Service Tax & Other Charges)') ?></td>
+        <td>
+            <?php echo $this->displayPrices($this->getSource()->getBaseConvenienceAmount(), $this->getSource()->getConvenienceAmount()); ?>
+        </td>
+    </tr>
+<?php endif; ?>

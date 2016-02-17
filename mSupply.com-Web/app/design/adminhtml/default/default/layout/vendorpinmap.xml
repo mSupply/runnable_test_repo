@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <vendorpinmap_adminhtml_vendorpinmap_index>
+        <reference name="content">
+            <block type="vendorpinmap/adminhtml_vendorpinmap" name="vendorpinmap" />
+        </reference>
+    </vendorpinmap_adminhtml_vendorpinmap_index>
+</layout>

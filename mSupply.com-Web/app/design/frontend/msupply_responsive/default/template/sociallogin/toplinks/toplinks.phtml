@@ -1,0 +1,744 @@
+<?php
+/**
+ * @see rewite template page\template\links.phtml
+ */
+?>
+<?php
+       if(!isset($_SESSION))session_start();
+      // if(Mage::app()->getFrontController()->getAction()->getFullActionName() == 'checkout_cart_index'){
+		   Mage::getSingleton('core/session')->setSocialCurrentpage($this->getUrl('checkout/cart/')); 
+	   //}else{		   
+       //Mage::getSingleton('core/session')->setSocialCurrentpage(Mage::helper('core/url')->getCurrentUrl());
+       //}
+       ?>
+<?php $check = Mage::helper('sociallogin')->getShownPositions();?>
+<?php $arrayButton = $this->makeArrayButton(); $temp = $arrayButton; ?>
+<?php $numberShow = $this->getNumberShow();?>
+<?php $countAll = 0;?>
+<?php $countMain = 0;?>
+<?php $count = 0;?>	
+	<div id="magestore-popup" style="display: none; text-align: left;">
+            <div id="sociallogin-close-popup" title="Close" style="font-weight:bold;font-size:11px;color:#f18200"></div>
+            <div id="magestore-login-form" style="float: left">
+                
+                
+                <!-- formm Login -->
+                <form id="magestore-sociallogin-form" >
+					<div class="magestore-login-form-popup">
+						<h3 class="magestore-loign-h3"><?php echo $this->__("Sign in"); ?></h3>
+						<!-- email -->
+						<input id="magestore-sociallogin-popup-email" class="input-text mobile22" type="text" title="Email Address" maxlength="10" value="" name="socialogin_email" placeholder="Mobile Number">
+						<!-- password -->
+						<input type="password" id="magestore-sociallogin-popup-pass" class="input-text" title="Password" value="" name="socialogin_password" placeholder="Password">
+						<span class="rembr_me"><input type="checkbox" title="Remember me">Remember me</span>
+						<a id="magestore-forgot-password" href="javascript:void(0);"><?php echo $this->__('Forgot Password') ?></a>
+						<!-- image ajax -->
+						<div id="progress_image_login" class="ajax-login-image" style="display: none"></div>
+						<!-- error invalid email -->
+						<div id="magestore-invalid-email" class="magestore-invalid-email" style="display: none"></div>
+						<!-- sumbit -->
+					</div>
+                    <div class="magestore-login-popup-button">
+                        <button id="magestore-button-sociallogin" class="button popup_click_btn submit_btn" name="send" title="Login" type="button"><span><?php echo $this->__('Login')?></span></button>
+                            
+							<p><a id="magestore-sociallogin-create-new-customer" href="javascript:void(0);"><span class="not">Not a member?</span> <span class="magestore-sociallogin-create-new-customer"><?php echo $this->__('Register') ?></span></a></p>
+                    </div>
+                </form>
+                <!-- form forgot -->
+                <form id="magestore-sociallogin-form-forgot"  style="display: none">
+					
+					<div class="magestore-register-form-popup">
+						<h3 class="magestore-loign-h3"><?php echo $this->__("Forgot Password ?") ?></h3>
+						<div id="sociallogin-forgot" style="display: none">
+							<span class="sociallogin-forgot-content"><?php echo $this->__('Enter the mobile number associated with mSupply account. You will receive an SMS/email with the new password.');?></span>
+						</div>
+						<div class="magestore-login-input-box">
+							<input id="magestore-sociallogin-popup-email-forgot" maxlength = "10" class="input-text required-entry mobile3" type="text" title="Mobile Number" value="" name="socialogin_email_forgot" placeholder="Mobile Number">
+						</div>
+					
+						<div class="captcha_box">
+							<div id="imgdiv" class="captcha"><img id="img" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).'captcha.php'?>" /></div>
+							<a id="reload" href="#">Try a different image</a>
+							
+						</div>
+						<input id="" class="input-text_reg required-entry" name ="code" type="text" title="Type the above seen character here" value="" placeholder="Type the above seen character here">
+						<!-- sumbit -->
+							<!-- image ajax -->
+						<div id="progress_image_login_forgot" class="ajax-login-image" style="display: none">
+						</div>
+						<!-- error invalid email -->
+						<div id="magestore-invalid-email-forgot" class="magestore-invalid-email"></div>
+					</div>
+					<div class="magestore-login-popup-button">
+						<button id="magestore-button-sociallogin-forgot" class="button popup_click_btn forgot_val" style="margin-top:10px;" title="<?php echo $this->__('Continue');?>" type="button"><span><?php echo $this->__('Continue')?></span></button>
+						<p>Has your mobile number changed?</p>
+						<p><?php echo $this->__('Contact us at +91-7899901156 for further assistance') ?></p>
+					</div>
+                </form>
+                <div id="show_forgot_msg" style="display:none;">
+                	<div class="magestore-register-form-popup">
+                		<div class="msg_box">
+	                		<img src="<?php echo $this->getSkinUrl('css/magestore/sociallogin/success_icon_06.png') ?>" alt="" />
+	                    	<p>Your SMS/email has been sent successfully <br>If you don’t receive the sms/email, please retry or contact us at <br>+91-7899901156 for further assistance.</p>
+                    	</div>
+                    </div>
+                    <div class="magestore-login-popup-button" style="padding-top:40px;">
+                    	<a id="magestore-forgot-back" class="success_btn" href="javascript:void(0);">login</a>
+                    </div>
+                </div>
+            </div>
+            <!-- create new user -->
+            <div id="magestore-create-user" style="float: left; display: none" >
+                <div id="progress_image_login_create" class="ajax-login-image" style="display: none"></div>
+                <form id="magestore-sociallogin-form-create">
+					<div class="magestore-register-form-popup">
+						<h3 class="magestore-reg-h3"><?php echo $this->__("Create New Account") ?></h3>
+						<div id="magestore-invalid-create" class="magestore-invalid-email"></div>
+						<ul class="form-list">
+							<li class="form-inline">
+								<input id="socialogin.firstname" maxlength = "35" class="input-text_reg required-entry firstname" type="text" title="First Name" value="" name="firstname" placeholder="First Name">
+							</li>
+							<li class="form-inline">
+								<input id="socialogin.lastname" maxlength = "35" class="input-text_reg required-entry lastname" type="text" title="Last Name" value="" name="lastname" placeholder="Last Name">
+							</li>
+							<li class="form-inline">
+								<input maxlength="10" type="text" placeholder="Mobile Number" name="mobile" id="mobile" value="" title="<?php echo $this->__('Mobile No.') ?>" class="input-text_reg required-entry" />
+							</li>
+							<li class="form-inline">
+								<input type="text" placeholder="Email Address" name="email" id="email_address" value="" title="<?php echo $this->__('Email Address') ?>" class="input-text_reg validate-emai" />
+							</li>
+							<li class="form-inline">
+								<?php 
+								  $attributePrimary = Mage::getModel('eav/config')->getAttribute('customer', 'primary_select');
+								  $allOptionsPrimary = $attributePrimary->getSource()->getAllOptions(true, true); 
+								?>
+								<select id="primary_select" name="primary_select" value="" class="validate-select input-text_reg">
+									<option value="">Primarily, I am a .. (Select One)</option>
+									<?php foreach ($allOptionsPrimary as $instancePrimary): ?>
+									<?php if($instancePrimary['value']){ ?>
+									<option value="<?php echo $instancePrimary['value']; ?>"><?php echo $instancePrimary['label']; ?></option>
+									<?php } ?>
+									<?php endforeach; ?>
+									</select>
+									</li>
+									<li class="form-inline secondary_select_hole">
+										<?php 
+								  $attributeSecondary = Mage::getModel('eav/config')->getAttribute('customer', 'secondary_select');
+								  $allOptionsSecondary = $attributeSecondary->getSource()->getAllOptions(true, true); 
+								  $lastItem = end($allOptionsSecondary);
+								?>
+								 <dl class="dropdown-selection"> 
+									<dt>
+									<a>                                   
+									  <p class="multiSel"><span class="hida">I am also .. (Select Multiple)</span> </p>  
+									</a>
+									</dt>  
+									<dd>
+										<div class="mutliSelect">
+											<ul>
+												<?php foreach ($allOptionsSecondary as $instanceSecondary): ?>
+												<?php if($instanceSecondary['value']){ ?>
+												<li><label><input type="checkbox" class="removecheckox" id="<?php echo $instanceSecondary['label']; ?>" name="secondary[]" data-val="<?php echo $instanceSecondary['label']; ?>" value="<?php echo $instanceSecondary['value']; ?>" /><?php echo $instanceSecondary['label']; ?></label></li>
+												<?php } ?>
+												<?php endforeach; ?>
+											</ul>
+										</div>
+									</dd>
+								</dl> 
+								<input type="hidden" name="secondary_select" id="secondary_select" value="" class="" />
+							</li>
+							<li class="form-inline" id="builderSelect" style="display:none;">
+								<input type="text" placeholder="Name of builder Company" name="builder_company" id="builder_company" value="" class="input-text_reg" />
+							</li>
+							<li class="form-inline" id="otherSelect" style="display:none;">
+								<input type="text" placeholder="Others" name="others_customer" id="others_customer" value="" class="input-text_reg" />
+							</li>
+							<li class="form-inline" >
+								<input type="password" placeholder="Password .. (atleast 6 characters)" name="pass" id="password" title="<?php echo $this->__('Password .. (atleast 6 characters)') ?>" value="" class="input-text_reg required-entry validate-password" />
+							</li>
+							<li class="form-inline" >
+								<input type="password" placeholder="Confirm Password" name="passConfirm" title="<?php echo $this->__('Confirm Password') ?>" id="confirmation" value="" class="input-text_reg required-entry validate-cpassword" />
+							</li>
+							
+						</ul>
+					</div>
+                    <!-- image ajax -->
+                    
+                    <!-- error invalid create ACC -->
+                    
+					<div class="magestore-create_agree_area">
+						<span><input type="checkbox" name="terms" id="terms" class="required-entry exclusive_checkli checkbox_display" checked />I agree to <a href="<?php echo $this->getUrl('terms_and_conditions'); ?>" target="__blank" class="terms_conditions">Terms & Conditions</a></span>
+						<input type="hidden" name="termandcondition_accept" id="termandcondition_accept" value="Yes" checked />
+						<span><input type="checkbox" checked class="exclusive_check">I’d like to receive exclusive offers & news</span>
+					</div>
+                    <div class="magestore-create-popup-button">
+                        <button id="magestore-button-sociallogin-create" class="button popup_click_btn register" title="<?php echo $this->__('REGISTER');?>" type="button"><span><?php echo $this->__('REGISTER')?></span> </button>
+						<p>Already a member? <a id="magestore-create-back" href="javascript:void(0);"><?php echo $this->__('Login') ?></a></p>
+                        
+                    </div>
+                </form>
+            </div>
+            <!-- end code create account -->
+            <!-- social login -->
+            <!--<div id="magestore-login-social">
+                <h3 class="magestore-loign-h3"><?php echo $this->__("Sign in with");?></h3>
+                
+                <ul class="magestore-login-social">
+                <?php foreach($arrayButton as $key => $button):?>
+                    <?php $check =$button['check'];?>
+                    <?php if($check): unset($temp[$key]);?>
+                        <li class="button popup"> <?php echo $button['button']?> </li>
+                        <script type="text/javascript">
+                            if($('<?php echo $button['id'] ?>' ))
+                            $('<?php echo $button['id'] ?>').addClassName('visible');
+                        </script>
+                        <?php ++$countMain ;?>
+                    <?php endif;?>
+                    <?php if($countMain == $numberShow){break;} ?>
+                <?php endforeach;?>
+                </ul>
+                <a id="sociallogin-other-a-popup" style="text-decoration: none;">
+                    <span class="sociallogin-other-span-img-popup"></span>
+                    <span class="sociallogin-other-span" style="float: right"><?php echo $this->__('Other Login') ?></span>
+                </a>
+            </div>-->
+            <?php 
+			if(count($temp)):?>
+                <?php $noEmpty = false;?>
+                <?php foreach($temp as $tem):?>
+                <?php if($tem['check']):?>
+                <?php $noEmpty = true;?>
+                <?php endif;?>
+                <?php endforeach;?>
+                <?php if($noEmpty):?>
+                <!-- other login -->
+                <div class="sociallogin-other"  style="text-align: right;">
+                    <div id="sociallogin-other-div-popup">
+                        <div id="sociallogin-other-div-popup-hover" style="float: right; display: block;">
+                            <ul class="sociallogin-other-button-popup" id="sociallogin-other-button-popup" style="display:none;">
+                            <?php foreach($temp as $button):?>
+                                <?php $check = $button['check']; ?>
+                                <?php if($check): $count ++;?>
+                                    <li class="button other-button"> <?php echo $button['button'] ?> </li>
+                                    <script type="text/javascript">
+                                        $('<?php echo $button['id'] ?>').addClassName('non-visible');
+                                    </script>
+                                <?php endif;?>
+                            <?php endforeach;?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                    <script type="text/javascript">
+                        /*$("sociallogin-other-a-popup").observe('click', function() {
+                            if(this.hasClassName('active')){
+                                this.removeClassName('active');
+                                $('sociallogin-other-button-popup').style.display = 'none';
+                            }else{
+                                this.addClassName('active');
+                                $('sociallogin-other-button-popup').style.display = 'block';
+                            }
+                        });*/
+                    </script>
+                <?php endif; ?>
+                <?php endif; ?>
+
+	</div>
+
+	<script type="text/javascript">
+	var currentpage = "<?php echo Mage::app()->getRequest()->getRouteName().'/'.Mage::app()->getRequest()->getControllerName();  ?>";
+	var baseUrl = "<?php echo $this->getUrl(''); ?>";
+	var cartcount = "<?php echo $cartcount = Mage::helper('checkout/cart')->getCart()->getItemsCount(); ?>";
+	try{ 
+		<?php if (in_array("popup", Mage::helper('sociallogin')->getShownPositions())):?>
+			var links = document.links;
+			for (i = 0; i < links.length; i++) {
+                        if (links[i].href.search('/customer/account/login/') != -1 && links[i].href.search('/customer/account/login/#') == -1) {
+                            links[i].href = 'javascript:socialLogin.open();$("magestore-create-back").click();';
+                            Event.observe(links[i], 'click', function () {
+                                $('magestore-login-social').style.display = "block";
+                                if ($('sociallogin-other-a-popup')) $('sociallogin-other-a-popup').style.display = "block";
+                                $('magestore-popup').style.width="706px";
+                            });
+                        }
+                        if (links[i].href.search('/customer/account/create/') != -1 && links[i].href.search('/customer/account/create/#') == -1) {
+                            links[i].href = 'javascript:socialLogin.open();$("magestore-sociallogin-create-new-customer").click();';
+                            Event.observe(links[i], 'click', function () {
+                               $('magestore-login-social').style.display = "block";
+                                if ($('sociallogin-other-a-popup')) $('sociallogin-other-a-popup').style.display = "block";
+                                $('magestore-popup').style.width="706px";
+                            });
+                        }
+                        if (links[i].href.search('/wishlist/') != -1) {
+                            links[i].href = 'javascript:socialLogin.open();';
+                            Event.observe(links[i], 'click', function () {
+                                $('magestore-login-social').style.display = "block";
+                                if ($('sociallogin-other-a-popup')) $('sociallogin-other-a-popup').style.display = "block";
+                                $('magestore-popup').style.width="706px";
+                            });
+                        }
+                        if (links[i].href.search('/customer/account/') != -1 && !links[i].down('span') && links[i].href.search('/customer/account/login/#') == -1) {
+                            links[i].href = 'javascript:socialLogin.open();';
+                            Event.observe(links[i], 'click', function () {
+                               $('magestore-login-social').style.display = "block";
+                                if ($('sociallogin-other-a-popup')) $('sociallogin-other-a-popup').style.display = "block";
+                                $('magestore-popup').style.width="706px";
+                                });
+                        }
+                    }
+		
+		if(document.getElementById('product_comparison')){
+			var links = document.links;
+			for (i = 0; i < links.length; i++) {
+				if (links[i].href.search('/wishlist/') != -1) {		
+					links[i].href = 'javascript:socialLogin.open();';
+				}
+			}
+		}
+		<?php endif; ?>
+		if(document.getElementById("checkout-step-login"))
+		{
+			$$('.col-2 .buttons-set').each(function(e) {
+			e.insert({bottom: '<div id="multilogin"> <button type="button" class="button" style="" onclick="javascript:socialLogin.open();" title="Social Login" name="headerboxLink1" id="headerboxLink1"><span><span>Social Login</span></span></button></div>'});
+			});
+		}
+	}catch(exception)
+	{ alert(exception);}		
+	</script>
+	
+	<script type="text/javascript">
+		socialLogin = new Lightboxsocial('magestore-popup');
+		Event.observe(window, 'load', function () {
+			Event.observe('bg_fade', 'click', function () {
+				socialLogin.close();
+			}); 
+		});
+		Event.observe('sociallogin-close-popup', 'click', function () {
+			socialLogin.close();
+			jQuery('form#magestore-sociallogin-form-create input[type="text"],input[type="password"],texatrea, select').val(''); 
+			jQuery('form#magestore-sociallogin-form-forgot input[type="text"],texatrea, select').val(''); 
+			jQuery('form#magestore-sociallogin-form input[type="text"],input[type="password"],texatrea, select').val('');
+			jQuery('.removecheckox').removeAttr('checked');
+			jQuery('span[id="primary_select"]').remove();
+			jQuery('.hida').show();
+		}); 
+		document.observe("dom:loaded", function() {
+		var magestorePopupSocial = $('magestore-popup_social');
+		
+		Event.observe(window, 'resize', function () { 		
+			socialLogin._centerWindow('magestore-popup');
+			socialLogin._centerWindow('magestore-popup_social');
+		});	
+		});
+	</script>
+	 <script type="text/javascript">
+    //<![CDATA[
+         var dataForm = new VarienForm('magestore-sociallogin-form-create', true);
+        var dataForm1 = new VarienForm('magestore-sociallogin-form', true);
+         var forgotvali = new VarienForm('magestore-sociallogin-form-forgot', true);
+    //]]>
+    </script>
+	<script type="text/javascript">
+	function checkHttps(requestUrl){
+		if(window.location.href.match('https://') && !requestUrl.match('https://'))
+			requestUrl = requestUrl.replace('http://','https://');
+		if(!window.location.href.match('https://') && requestUrl.match('https://'))
+			requestUrl = requestUrl.replace('https://','http://');
+		return requestUrl;
+	}
+	Event.observe(window, 'load', function() {
+		var options = {					
+			email: document.getElementById('magestore-sociallogin-popup-email').value,
+			pass : document.getElementById('magestore-sociallogin-popup-pass').value,
+			login_url  : checkHttps("<?php echo $this->getUrl().'sociallogin/popup/login';?>"),
+			send_pass_url : checkHttps("<?php echo $this->getUrl().'sociallogin/popup/sendPass';?>"),
+			create_url : checkHttps("<?php echo $this->getUrl().'sociallogin/popup/createAcc';?>"),
+		};
+		Login = new LoginPopup(options);	
+	 }); 		
+	</script>
+	 
+	<script>
+// 		jQuery(function(){
+//     jQuery(".showpassword").each(function(index,input) {
+//         var $input = jQuery(input);
+//         jQuery('<label class="showpasswordlabel"/>').append(
+//             jQuery("<input type='checkbox' class='showpasswordcheckbox' />").click(function() {
+//                 var change = jQuery(this).is(":checked") ? "text" : "password";
+//                 var rep = jQuery("<input type='" + change + "' />")
+//                     .attr("id", $input.attr("id"))
+//                     .attr("name", $input.attr("name"))
+//                     .attr('class', $input.attr('class'))
+//                     .val($input.val())
+//                     .insertBefore($input);
+//                 $input.remove();
+//                 $input = rep;
+//              })
+//         ).append(jQuery("<span/>").text("Show password")).insertAfter($input);
+//     });
+// });
+		jQuery("#magestore-button-sociallogin").click(function(){
+			jQuery("#magestore-sociallogin-popup-email").focus();
+		})
+		// jQuery(".magestore-create-back").click(function(){
+		// 	 jQuery(".magestore-login-form-popup input").focus();
+		// $("#magestore-sociallogin-popup-email").find('input[type="text"]').focus();
+		// });
+
+
+
+		 jQuery("#reload").click(function() {
+	
+       jQuery("#imgdiv").html('');
+		var id = Date.now();
+		var urlreload = "<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).'captcha.php?id='?>"+id;
+       jQuery("#imgdiv").html("<img id='img' src=\""+urlreload+"\"/>");
+		 id ='';
+    });				
+ if(jQuery('#Customer').is(":checked")){
+	  
+	  var html = '<span title="Customer">Customer,</span>';
+	  jQuery('.multiSel').append(html);
+	  jQuery(".hida").hide();
+	  jQuery('#secondary_select').val(jQuery('#Customer').val());
+  } 
+
+//Primary Select Start
+jQuery('#primary_select').on('change', function() {
+var selectedPrimary = jQuery('#primary_select option:selected').text();
+if(selectedPrimary == 'Builder')
+{
+jQuery('#builderSelect').css('display','block');
+jQuery('#builder_company').addClass('required-entry');                      
+}
+else
+{
+jQuery('#builderSelect').css('display','none'); 
+jQuery('#builder_company').removeClass('required-entry');
+}
+
+if(selectedPrimary == 'Others')
+{
+jQuery('.secondary_select_hole').css('display','none');	
+jQuery('#otherSelect').css('display','block');
+jQuery('#others_customer').addClass('required-entry');
+jQuery('#Builder').prop('checked', false);
+jQuery('#builderSelect').css('display','none'); 
+jQuery('#builder_company').removeClass('required-entry');
+jQuery('#builder_company').val('');
+jQuery('#secondary_select').val('');
+}
+else
+{
+jQuery('.secondary_select_hole').css('display','block');	
+jQuery('#otherSelect').css('display','none'); 
+jQuery('#others_customer').removeClass('required-entry');
+jQuery('#others_customer').val(''); 				
+}
+
+
+
+//Call Secondary
+if(jQuery('#Builder').is(":checked"))
+{
+jQuery('#builderSelect').css('display','block'); 
+}
+
+})
+//Primary Select End
+
+//Secondary Select Start
+jQuery(".mutliSelect ul").click(function(){
+var output = jQuery.map(jQuery(':checkbox[name=secondary\\[\\]]:checked'), function (n, i) {
+return n.value;
+}).join(',');
+jQuery('#secondary_select').val(output);
+
+if(jQuery('#Builder').is(":checked"))
+{
+jQuery('#builderSelect').css('display','block'); 
+jQuery('#builder_company').addClass('required-entry');
+}
+else
+{
+jQuery('#builderSelect').css('display','none'); 
+jQuery('#builder_company').removeClass('required-entry');
+}
+
+if(jQuery('#Others').is(":checked"))
+{
+jQuery('#otherSelect').css('display','block'); 
+jQuery('#others_customer').addClass('required-entry');
+}
+else
+{
+jQuery('#otherSelect').css('display','none'); 
+jQuery('#others_customer').removeClass('required-entry');
+}
+
+
+//Call Primary
+var selectedPrimary = jQuery('#primary_select option:selected').text();
+if(selectedPrimary == 'Builder')
+{
+jQuery('#builderSelect').css('display','block');    
+}
+
+
+
+
+
+
+});
+//Secondary Select End
+ /** forgot Form **/
+   
+   /*jQuery('#magestore-button-sociallogin-forgot').click(function() { 
+    forgotvali.validator.validate();
+    jQuery(".errormobi1").hide();
+    var hasErrors = 0;
+    
+    var mobiRegm11 = /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/;
+    var mobilenVal1 = jQuery(".mobile3").val();
+     
+    if(mobilenVal1 == '') {
+        jQuery("#advice-required-entry-mobile").css({
+                    "opacity": "999",
+                    "display": "block"
+                    });
+    }else if(!mobiRegm11.test(mobilenVal1)) {
+        jQuery(".mobile3").after('<span class="errormobi1">Please enter a valid mobile number.</span>');
+        jQuery("#advice-required-entry-mobile").css({
+                        "opacity": "0",
+                        "display": "none"
+                        });
+       hasErrors = 1;
+        
+    }else
+    {
+        jQuery("#advice-required-entry-mobile").css({
+                    "opacity": "0",
+                    "display": "none"
+                    });
+    }
+
+      
+     
+		if(hasErrors == 1)
+         {
+			 alert('false');
+			 jQuery( document ).ajaxStop(function() {
+  //$( "#loading" ).hide();
+});
+            return false;
+         }else{
+			  alert('true');
+             return true;
+         }  
+      
+  
+   
+    });*/
+
+    jQuery('.register').click(function() {
+        dataForm.validator.validate();
+        /** ===== First Name ===== **/
+        jQuery(".error1").hide();
+        var hasError = 0;
+        var nameregex =/^[a-zA-Z. ]+$/;
+        var nameaddressVal = jQuery(".firstname").val();
+        if(nameaddressVal != "")    {
+            jQuery("#advice-required-entry-firstname").css({
+                        "opacity": "0",
+                        "display": "none"
+                        });         
+        }
+        if(nameaddressVal == "")    {
+            jQuery("#advice-required-entry-firstname").css({
+                        "opacity": "999",
+                        "display": "block"
+                        });         
+        }
+        else if(!nameregex.test(nameaddressVal)) {
+            jQuery(".firstname").after('<span class="error1">Please enter a valid first name.</span>');
+            jQuery("#advice-required-entry-firstname").css({
+                        "opacity": "0",
+                        "display": "none"
+                        });
+            hasError = 1;
+        }
+        /** ===== First Name ====== **/
+        
+        /** ===== Last Name ======= **/
+        jQuery(".error2").hide();
+        
+        var lnameregex =/^[a-zA-Z. ]+$/;
+        var lnameaddressVal = jQuery(".lastname").val();
+        if(lnameaddressVal != "")   {
+            jQuery("#advice-required-entry-lastname").css({
+                        "opacity": "0",
+                        "display": "none"
+                        });         
+        }
+        if(lnameaddressVal == "")   {
+            jQuery("#advice-required-entry-lastname").css({
+                        "opacity": "999",
+                        "display": "block"
+                        });
+                
+        }
+        else if(!lnameregex.test(lnameaddressVal)) {
+            jQuery(".lastname").after('<span class="error2">Please enter a valid last name.</span>');
+            jQuery("#advice-required-entry-lastname").css({
+                        "opacity": "0",
+                        "display": "none"
+                        });
+            hasError = 1;
+        }
+        /** ===== Last Name ===== **/
+        
+        /** ===== Email Address ===== **/
+        jQuery(".error3").hide();
+    
+        var emailblockReg = /^([0-9a-zA-Z\-_.]+@[a-zA-z]{2,7}([\w-]+\.)+[\w-]{2,4})?$/;
+        var emailaddressVal = jQuery("#email_address").val();
+    
+        if(!emailblockReg.test(emailaddressVal)) {
+            jQuery("#email_address").after('<span class="error3">Please enter a valid email address.</span>');
+            
+            hasError = 1;
+        }
+        /** ===== Email Address ===== **/
+        
+        /** ===== Mobile Number ===== 
+       <!-- jQuery(".error4").hide();
+        
+        var mobiReg = /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/;
+        var mobileVal = jQuery("#mobile").val();
+        if(mobileVal == '') {
+                jQuery("#advice-required-entry-mobile").css({
+                        "opacity": "999",
+                        "display": "block"
+                        });
+        }
+        else if(!mobiReg.test(mobileVal)) {
+            jQuery("#mobile").after('<span class="error4">Please enter a valid mobile number.</span>');
+            jQuery("#advice-required-entry-mobile").css({
+                        "opacity": "0",
+                        "display": "none"
+                        });
+            hasError = 1;
+        }       
+        else
+        {
+            jQuery("#advice-required-entry-mobile").css({
+                        "opacity": "0",
+                        "display": "none"
+                        });
+        }
+        **/
+        /** ===== Mobile Number ===== **/
+        
+        /** ===== Password ===== **/
+            
+        var password = jQuery("#password").val();
+        var lent = jQuery("#password").val().length;
+        
+        if(lent < 6 && password != ''){
+        jQuery("#advice-required-entry-password").css({
+                            "opacity": "0",
+                            "display": "none"
+                            });
+        hasError = 1;
+        }else{
+        jQuery("#password").after('<span class="error1"></span>');
+        jQuery("#advice-required-entry-password").css({
+                            "opacity": "999",
+                            "display": "block"
+                            });
+        jQuery("#advice-required-entry-password").css({
+                    "opacity": "0",
+                    "display": "none"
+                    });
+                    
+        }
+        
+       if(password != '') {
+        jQuery("#advice-required-entry-password").css({
+                    "opacity": "0",
+                    "display": "none"
+                    });
+                    
+        }else{
+            
+            jQuery("#advice-required-entry-password").css({
+                            "opacity": "999",
+                            "display": "block"
+                            });
+                            
+        }
+        /** ===== Password ===== **/
+        
+        /** ===== Confirm Password ===== **/
+            
+        var cpassword = jQuery("#confirmation").val();
+        var clent = jQuery("#confirmation").val().length;
+
+        if(clent < 6 && cpassword != ''){
+        jQuery("#advice-validate-password-pass").css({
+                            "opacity": "0",
+                            "display": "none"
+                            });
+        hasError = 1;
+        
+        }else{
+        jQuery("#confirmation").after('<span class="error1"></span>');
+        jQuery("#advice-validate-password-pass").css({
+                            "opacity": "999",
+                            "display": "block"
+                            });
+        }
+        
+       if(cpassword != '') {
+        jQuery("#advice-validate-cpassword-confirmation").css({
+                    "opacity": "0",
+                    "display": "none"
+                    });
+        jQuery("#advice-required-entry-confirmation").css({
+        "opacity": "0",
+        "display": "none"
+        });
+        
+                    
+        }else{
+        
+        jQuery("#advice-validate-cpassword-confirmation").css({
+                        "opacity": "999",
+                        "display": "block"
+                        });
+        jQuery("#advice-required-entry-confirmation").css({
+                        "opacity": "999",
+                        "display": "block"
+                        });             
+                        
+                        
+        }       
+        /** ===== Confirm Password ===== **/
+        
+        if(hasError == 1)
+         {
+            return false;
+         }else{
+             return true;
+         }      
+         
+         
+        
+   });
+ </script>
+
+<style>
+.error1{ clear:both; float:left;}
+.multiSel span{background: #ccc none repeat scroll 0 0;border-radius: 5px;float: left;margin: 2px;padding: 5px;}
+.hida {background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;}	
+</style>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Msupply_Trusted>
+			<version>0.1.0</version>
+		</Msupply_Trusted>
+	</modules>
+	<global>
+		<resources>
+		<msupply_trusted_setup>
+			<setup>
+				<module>Msupply_Trusted</module>
+				<class>Mage_Customer_Model_Entity_Setup</class>
+			</setup>
+			<connection>
+				<use>core_setup</use>
+			</connection>
+		</msupply_trusted_setup>
+		<msupply_trusted_write>
+			<connection>
+				<use>core_write</use>
+			</connection>
+		</msupply_trusted_write>
+		<msupply_trusted_read>
+			<connection>
+				<use>core_read</use>
+			</connection>
+		</msupply_trusted_read>
+		</resources>
+	</global>
+</config> 

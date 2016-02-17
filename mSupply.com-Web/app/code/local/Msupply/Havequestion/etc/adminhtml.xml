@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Msupply_Havequestion extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Msupply
+ * @package        Msupply_Havequestion
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <msupply_havequestion translate="title" module="msupply_havequestion">
+                                        <title>Havequestion</title>
+                                    </msupply_havequestion>
+                                </children>
+                            </config>
+                        </children>
+                    </system> 
+                    <msupply_havequestion translate="title" module="msupply_havequestion">
+                        <title>Havequestion</title>
+                        <children>
+                            <havequestion translate="title" module="msupply_havequestion">
+                                <title>Havequestion Details</title>
+                                <sort_order>10</sort_order>
+                            </havequestion>
+                        </children>
+                    </msupply_havequestion>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <msupply_havequestion translate="title" module="msupply_havequestion">
+            <title>Havequestion</title>
+            <sort_order>85</sort_order>
+            <children>
+                <havequestion translate="title" module="msupply_havequestion">
+                    <title>Havequestion Details</title>
+                    <action>adminhtml/havequestion_havequestion</action>
+                    <sort_order>0</sort_order>
+                </havequestion>
+            </children>
+        </msupply_havequestion>
+    </menu>
+</config>

@@ -1,0 +1,55 @@
+<div class="homepagepopup" onkeypress="ESCclose(event)">
+
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			var check_cookie = "<?php echo Mage::getModel('core/cookie')->get('popup-shown'); ?>";
+
+        if(!check_cookie) {
+			jQuery("#myModal").modal('show');
+			<?php Mage::getModel('core/cookie')->set('popup-shown', 'true', 60*60*24);?>
+        }
+
+            jQuery('.x').click(function(){
+                    jQuery('#myModal').modal('hide');
+            });    			
+		});
+		window.onkeyup = function (event) {
+			if (event.keyCode == 27) {
+				jQuery('#myModal').modal('hide');
+			}
+		}
+	</script>
+	
+	<style>		
+	
+		.homepagepopup .modal-dialog .x{float: right;height: 20px;left: -20px;position: relative;top: 28px;width: 20px;z-index: 100;}
+		.homepagepopup .modal-dialog .x:hover{cursor: pointer;}
+		.homepagepopup .modal-header { float: left; width: 100%; padding: 15px 15px 0px; }			
+		.homepagepopup .modal-footer{background: none; border-top:0; }
+		.homepagepopup .modal-dialog { margin: 65px auto 0; }
+		.homepagepopup h2.serviceheading {clear: both;color: #000;font-size: 100%;text-align: left;font-family: MontserratLight !important; line-height: 1.8;
+		                margin: 0; position: absolute; bottom: 310px; float: right; margin: 0 0 0 345px; padding: 0 !important;}	
+		.homepagepopup .modal-header h2.serviceheading strong { color:#222325; font-size:32px; font-weight: bold; text-align:left; line-height: 1.5em; position:realtive;
+		                             top: -445px; width: 50%; }
+		.homepagepopup .modal-content {border-radius: 0; box-shadow: none; float:left;background-color:transparent; border:0;}
+		.homepagepopup .modal-body { background: none; float: right; position: relative; text-align: left; top: -460px; width: 50%; }
+		.homepagepopup .modal-body .img:hover { cursor: pointer; }
+		.homepagepopup .modal-header{border-bottom: 0; background: none; float: left; width: 100%; min-height: auto !important;padding: 0 !important;}
+	
+		
+	</style>
+								
+<div id="myModal" class="modal fade">
+		<div class="modal-dialog">
+		    <img src=<?php echo $this->getSkinUrl('images/home_popup_close.png'); ?> alt='quit' class='x' id='x' />
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 15px 15px 8px;">
+				     <img src="http://52.18.252.197/msupply.in/media/wysiwyg/steel_corporate_mailer/Steel_the_Deal_popup_responsive.png" alt='banner' class="img-responsive" style="width: 100%;" />
+					 
+				</div>
+				
+			</div>
+		</div>
+</div>
+<div class="keyboard" style="height: 0">&nbsp;</div>
+</div>

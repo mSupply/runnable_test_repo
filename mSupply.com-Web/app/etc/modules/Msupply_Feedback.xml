@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Msupply_Feedback>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Msupply_Feedback>
+    </modules>
+</config>

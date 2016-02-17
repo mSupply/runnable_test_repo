@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+
+<config>
+	<modules>
+		<Msupply_Cashin>
+			<version>1.0.0</version>
+		</Msupply_Cashin>
+	</modules>
+	<global>
+		<helpers>
+			<cashin>
+				<class>Msupply_Cashin_Helper</class>
+			</cashin>
+		</helpers>
+		<blocks>
+			<cashin>
+				<class>Msupply_Cashin_Block</class>
+			</cashin>
+		</blocks>
+		<models>
+			<cashin>
+				<class>Msupply_Cashin_Model</class>
+				<resourceModel>cashin_mysql4</resourceModel>
+			</cashin>
+		</models>
+		
+		<events>
+            <sales_order_place_after>
+                    <observers>
+                        <Msupply_Cashin>
+                            <type>singleton</type>
+                            <class>cashin/observer</class>
+                            <method>update_pannumber</method>
+                        </Msupply_Cashin>
+                    </observers>
+            </sales_order_place_after>
+        </events>
+		
+		
+		<resources>
+			<cashin_setup>
+				<setup>
+					<module>Msupply_Cashin</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</cashin_setup>
+			<cashin_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</cashin_read>
+			<cashin_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</cashin_write>
+		</resources>
+		<fieldsets>
+             <sales_convert_quote_payment>
+                <panno>
+                    <to_order_payment>*</to_order_payment>
+                </panno>
+             </sales_convert_quote_payment>
+        </fieldsets>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<cashin>
+					<file>cashin.xml</file>
+				</cashin>
+			</updates>
+		</layout>
+		<routers>
+			<cashin>
+				<use>standard</use>
+				<args>
+					<module>Msupply_Cashin</module>
+					<frontName>customcard</frontName>
+				</args>
+			</cashin>
+		</routers>
+	</frontend>
+	<default>
+		<payment>
+		    <cashin>
+                <active>1</active>
+                <model>cashin/cashin</model>
+                <order_status>processing</order_status>
+                <title>CBD Payment</title>
+            </cashin>
+			<cashin_checkout>
+                <active>1</active>
+                <model>cashin/standard</model>
+                <order_status>processing</order_status>
+                <title>Custom Gateway</title>
+				<payment_action>sale</payment_action>
+				<submit_url>https://www.google.com</submit_url>
+				<merchant_id>Insert merchant id</merchant_id>
+				<allowspecific>0</allowspecific>
+				<sort_order>1</sort_order>
+            </cashin_checkout>
+         </payment>
+	</default>
+</config>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Msupply_Knowmore extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Msupply
+ * @package        Msupply_Knowmore
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<layout>
+    <msupply_knowmore_index_index>
+		<reference name="content">
+            <block type="msupply_knowmore/knowmore_view" name="knowmore" template="msupply_knowmore/knowmore/form.phtml"/>
+        </reference>
+	</msupply_knowmore_index_index>
+    <msupply_knowmore_knowmore_view translate="label" module="msupply_knowmore">
+        <label>Knowmore view page</label>
+        <update handle="page_two_columns_left" />
+        <reference name="content">
+            <block type="msupply_knowmore/knowmore_view" name="knowmore_view" template="msupply_knowmore/knowmore/view.phtml" />
+        </reference>
+    </msupply_knowmore_knowmore_view>
+</layout>

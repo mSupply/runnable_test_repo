@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Msupply_Serviceproviders>
+            <version>0.1.0</version>
+        </Msupply_Serviceproviders>
+    </modules>
+    <frontend>
+        <routers>
+            <serviceproviders>
+                <use>standard</use>
+                <args>
+                    <module>Msupply_Serviceproviders</module>
+                    <frontName>serviceproviders</frontName>
+                </args>
+            </serviceproviders>
+        </routers>
+        <layout>
+            <updates>
+                <serviceproviders>
+                    <file>serviceproviders.xml</file>
+                </serviceproviders>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <serviceproviders>
+                <use>admin</use>
+                <args>
+                    <module>Msupply_Serviceproviders</module>
+                    <frontName>serviceproviders</frontName>
+                </args>
+            </serviceproviders>
+        </routers>
+    </admin>
+    <adminhtml>
+	
+	    <!--<menu>
+        <msupply_knowmore>
+            <children>
+                <serviceproviders translate="title" module="serviceproviders">
+                    <title>Service Providers Details</title>
+                        <sort_order>0</sort_order>
+                        <action>serviceproviders/adminhtml_serviceproviders</action>
+                </serviceproviders>  
+			</children>
+        </msupply_knowmore>
+        </menu>-->
+	
+        <menu>
+            <serviceproviders module="serviceproviders">
+                <title>Service Providers</title>
+                <sort_order>71</sort_order>
+                <children>
+                    <items module="serviceproviders">
+                        <title>Service Providers Details</title>
+                        <sort_order>0</sort_order>
+                        <action>serviceproviders/adminhtml_serviceproviders</action>
+                    </items>
+                </children>
+            </serviceproviders>
+        </menu>
+       <!-- <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <Msupply_Serviceproviders>
+                            <title>Serviceproviders Module</title>
+                            <sort_order>10</sort_order>
+                        </Msupply_Serviceproviders>
+                    </children>
+                </admin>
+            </resources>
+        </acl> -->
+		
+	    <acl>
+		<resources>
+			<admin>
+				<children>
+					<serviceproviders translate="title" module="serviceproviders">
+						<title>Service Providers</title>
+						<sort_order>10</sort_order>
+
+						<children>
+							<items translate="title" module="serviceproviders">
+								<title>Service Providers Details</title>
+							</items>                        
+						</children>
+					</serviceproviders>
+				</children>
+			</admin>
+		</resources>
+	    </acl>
+		
+        <layout>
+            <updates>
+                <serviceproviders>
+                    <file>serviceproviders.xml</file>
+                </serviceproviders>
+            </updates>
+        </layout>
+    </adminhtml>
+    <global>
+        <models>
+            <serviceproviders>
+                <class>Msupply_Serviceproviders_Model</class>
+                <resourceModel>serviceproviders_mysql4</resourceModel>
+            </serviceproviders>
+            <serviceproviders_mysql4>
+                <class>Msupply_Serviceproviders_Model_Mysql4</class>
+                <entities>
+                    <serviceproviders>
+                        <table>serviceproviders</table>
+                    </serviceproviders>
+                </entities>
+            </serviceproviders_mysql4>
+        </models>
+        <resources>
+            <serviceproviders_setup>
+                <setup>
+                    <module>Msupply_Serviceproviders</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </serviceproviders_setup>
+            <serviceproviders_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </serviceproviders_write>
+            <serviceproviders_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </serviceproviders_read>
+        </resources>
+		
+		<!--<events>
+		<salesrule_rule_save_before>
+					<observers>
+						<serviceproviders>
+							<type>singleton</type>
+							<class>msupply_serviceproviders_model_observer</class>
+							<method>salesrule_rule_save_before</method>
+						</serviceproviders>
+					</observers>
+		</salesrule_rule_save_before>
+		</events>-->
+		
+		
+        <blocks>
+            <serviceproviders>
+                <class>Msupply_Serviceproviders_Block</class>
+            </serviceproviders>
+        </blocks>
+        <helpers>
+            <serviceproviders>
+                <class>Msupply_Serviceproviders_Helper</class>
+            </serviceproviders>
+        </helpers>
+    </global>
+</config>

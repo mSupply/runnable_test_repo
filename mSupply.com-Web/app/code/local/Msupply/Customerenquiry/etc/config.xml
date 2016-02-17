@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Msupply_Customerenquiry>
+            <version>0.1.0</version>
+        </Msupply_Customerenquiry>
+    </modules>
+    <frontend>
+        <routers>
+            <customerenquiry>
+                <use>standard</use>
+                <args>
+                    <module>Msupply_Customerenquiry</module>
+                    <frontName>customerenquiry</frontName>
+                </args>
+            </customerenquiry>
+        </routers>
+        <layout>
+            <updates>
+                <customerenquiry>
+                    <file>customerenquiry.xml</file>
+                </customerenquiry>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <customerenquiry>
+                <use>admin</use>
+                <args>
+                    <module>Msupply_Customerenquiry</module>
+                    <frontName>customerenquiry</frontName>
+                </args>
+            </customerenquiry>
+        </routers>
+    </admin>
+    <adminhtml>
+	        <!--<menu>
+			<msupply_knowmore>
+				<children>
+					<customerenquiry translate="title" module="customerenquiry">
+						<title>Customer Enquiry Details</title>
+							<sort_order>0</sort_order>
+							<action>customerenquiry/adminhtml_customerenquiry</action>
+					</customerenquiry>  
+				</children>
+			</msupply_knowmore>
+			</menu>-->
+			
+        <menu>
+            <customerenquiry module="customerenquiry">
+                <title>Customer Enquiry</title>
+                <sort_order>71</sort_order>
+                <children>
+                    <items module="customerenquiry">
+                        <title>Customerenquiry Details</title>
+                        <sort_order>0</sort_order>
+                        <action>customerenquiry/adminhtml_customerenquiry</action>
+                    </items>
+                </children>
+            </customerenquiry>
+        </menu>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<customerenquiry translate="title" module="customerenquiry">
+						<title>Customer Enquiry</title>
+						<sort_order>10</sort_order>
+
+						<children>
+							<items translate="title" module="customerenquiry">
+								<title>Customerenquiry Details</title>
+							</items>                        
+						</children>
+					</customerenquiry>
+				</children>
+			</admin>
+		</resources>
+	    </acl>
+		
+        <layout>
+            <updates>
+                <customerenquiry>
+                    <file>customerenquiry.xml</file>
+                </customerenquiry>
+            </updates>
+        </layout>
+    </adminhtml>
+    <global>
+        <models>
+            <customerenquiry>
+                <class>Msupply_Customerenquiry_Model</class>
+                <resourceModel>customerenquiry_mysql4</resourceModel>
+            </customerenquiry>
+            <customerenquiry_mysql4>
+                <class>Msupply_Customerenquiry_Model_Mysql4</class>
+                <entities>
+                    <customerenquiry>
+                        <table>customerenquiry</table>
+                    </customerenquiry>
+                </entities>
+            </customerenquiry_mysql4>
+        </models>
+        <resources>
+            <customerenquiry_setup>
+                <setup>
+                    <module>Msupply_Customerenquiry</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </customerenquiry_setup>
+            <customerenquiry_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </customerenquiry_write>
+            <customerenquiry_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </customerenquiry_read>
+        </resources>
+        <blocks>
+            <customerenquiry>
+                <class>Msupply_Customerenquiry_Block</class>
+            </customerenquiry>
+        </blocks>
+        <helpers>
+            <customerenquiry>
+                <class>Msupply_Customerenquiry_Helper</class>
+            </customerenquiry>
+        </helpers>
+    </global>
+</config>

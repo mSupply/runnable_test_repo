@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Msupply_Havequestion extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Msupply
+ * @package        Msupply_Havequestion
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+--> 
+<layout>
+    <adminhtml_havequestion_havequestion_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>msupply_havequestion/havequestion</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="msupply_havequestion/adminhtml_havequestion" name="havequestion" />
+        </reference>
+    </adminhtml_havequestion_havequestion_index>
+    <adminhtml_havequestion_havequestion_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="msupply_havequestion/adminhtml_havequestion_grid" name="havequestion_grid"/>
+        </block>
+    </adminhtml_havequestion_havequestion_grid>
+    <!-- Havequestion add/edit action -->
+    <adminhtml_havequestion_havequestion_edit>
+        <update handle="editor"/>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>msupply_havequestion/havequestion</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="msupply_havequestion/adminhtml_havequestion_edit" name="havequestion_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="msupply_havequestion/adminhtml_havequestion_edit_tabs" name="havequestion_tabs"></block>
+        </reference>
+    </adminhtml_havequestion_havequestion_edit>
+
+</layout>

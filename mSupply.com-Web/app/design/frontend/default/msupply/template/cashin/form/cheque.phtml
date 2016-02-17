@@ -1,0 +1,24 @@
+<?php $_code=$this->getMethodCode() ?>
+  <ul class="form-list col-lg-12 col-md-12 col-sm-12 col-xs-12 mt20 pad10" id="payment_form_<?php echo $_code ?>" style="display:none; width:100% !important;">
+ <div class="cq_dd_payment">
+                <p class="p_text">1. Write a cheque/DD with below given details.</p>
+                <div class="pay_box"><span class="name">Pay to/ In Favour of :</span> <span class="details">mSupply</span>
+                    <span class="name">Date:</span> <span class="details">Today’s Date</span>
+                    <span class="name">Amount.:</span> <span class="details">662.00</span>
+                </div>
+                <p class="p_text"><span>Note:</span><b> Post dated cheques are not accepted.</b></p>
+                <p class="p_text">2. Enter the details below</p>
+                <div>
+				<input type="text" placeholder="Cheque/ DD No." title="Cheque/ DD No." class="input-text required-entry validate-number Cheque_no" id="<?php echo $_code ?>_check_no" name="payment[check_no]" value="<?php echo $this->htmlEscape($this->getInfoData('check_no')) ?>" />
+				<input type="text" placeholder="Bank Name" title="Bank Name" class="input-text required-entry bank_name" id="<?php echo $_code ?>_draweebank" name="payment[draweebank]" value="<?php echo $this->htmlEscape($this->getInfoData('draweebank')) ?>" />
+                
+                    <div class="btn_wrapper">
+                        <div class="trms-cndts"> By placing the order, I have read and agreed to mSupply.com <br> <span class="terms-conditions"> Terms of Use | Terms of Sale </span></div>
+                    </div>
+                </div>   
+</div>
+
+   </ul>
+   <div>
+      <?php echo $this->getMethod()->getConfigData('message');?>
+   </div>

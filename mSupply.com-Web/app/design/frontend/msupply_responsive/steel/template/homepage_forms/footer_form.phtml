@@ -1,0 +1,55 @@
+<h3 id="h_question">Have a Question?</h3>
+<form action="<?php echo $this->getUrl('havequestion/index/sendmail') ?>" id="havequestion" method="post" class="col-xs-9">
+        <ul class="list-address get_touch">
+          <li>
+            <input type="text" placeholder="Email" name="email_question" id="email_question" class="required-entry validate-email" /> </li>
+          <li>
+            <textarea rows="4" cols="50" class="required-entry" placeholder="Your Question" name="question" id="question"></textarea>
+          </li>
+          <li>
+            <button type="submit" class="btn-style">ASK NOW</button> 
+          </li>
+         </ul>
+</form>
+<div id="formSuccess" style="display:none;color:#000; clear:both;"></div>
+<script type="text/javascript">
+//<![CDATA[
+    var havequestion = new VarienForm('havequestion', false);
+//]]>
+
+//<![CDATA[
+    var formId = 'havequestion';
+    var myForm = new VarienForm(formId, false);
+    var postUrl = '<?php echo $this->getUrl('havequestion/index/sendmail') ?>';
+    function doAjax() {
+         jQuery('#formSuccess').html('');
+        if (myForm.validator.validate()) {
+            new Ajax.Updater(
+                { success:'formSuccess' }, postUrl, {
+                    method:'post',
+                    asynchronous:true,
+                    evalScripts:false,
+                    onComplete:function(request, json) {
+                        //Element.hide(formId);
+                        document.getElementById(formId).reset();
+                        jQuery('#formSuccess').html('');
+                        Element.show('formSuccess');
+                        var div = document.getElementById('formSuccess');
+                        div.innerHTML = div.innerHTML + 'Thank You. Our expert will contact you.';
+                        
+                    },
+                    onLoading:function(request, json){
+                        Element.show('formLoader');
+                    },
+                    parameters: $(formId).serialize(true),
+                }
+            );
+        }
+    }
+    
+    new Event.observe(formId, 'submit', function(e){
+        e.stop();
+        doAjax();
+    });
+//]]>
+</script>        

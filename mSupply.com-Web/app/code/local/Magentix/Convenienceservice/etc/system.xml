@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <convenience translate="label">
+            <label>Convenience Setting</label>
+            <tab>sales</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>700</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <convenience_group translate="label">
+                    <label>Convenience Charges</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <convenienceservicechargepercentage translate="label">
+                            <label>Service Tax(Convenience Fee)(%)</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Enter the Convenience service Charge that will be calculted for Convenience.</comment>
+							<validate>validate-number</validate>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </convenienceservicechargepercentage>
+                    </fields>
+					
+                </convenience_group>
+            </groups>            
+        </convenience>
+		
+		<sales>
+			<groups>
+				<totals_sort translate="label" module="sales">
+					<tab>sales</tab>
+					<fields>
+                    	<convenienceservice translate="label">
+                            <label>Service Tax (14% of Conv. Fee)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </convenienceservice>
+                    </fields>
+				</totals_sort>
+			</groups>
+		</sales>
+    </sections>
+</config>

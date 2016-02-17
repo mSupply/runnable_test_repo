@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Msupply_Havequestion extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Msupply
+ * @package        Msupply_Havequestion
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <Msupply_Havequestion>
+            <version>1.0.0</version>
+        </Msupply_Havequestion>
+    </modules>
+    <global>
+        <resources>
+            <msupply_havequestion_setup>
+                <setup>
+                    <module>Msupply_Havequestion</module>
+                    <class>Msupply_Havequestion_Model_Resource_Setup</class>
+                </setup>
+            </msupply_havequestion_setup>
+        </resources>
+        <blocks>
+            <msupply_havequestion>
+                <class>Msupply_Havequestion_Block</class>
+            </msupply_havequestion>
+        </blocks>
+        <helpers>
+            <msupply_havequestion>
+                <class>Msupply_Havequestion_Helper</class>
+            </msupply_havequestion>
+        </helpers>
+        <models>
+            <msupply_havequestion>
+                <class>Msupply_Havequestion_Model</class>
+                <resourceModel>msupply_havequestion_resource</resourceModel>
+            </msupply_havequestion>
+            <msupply_havequestion_resource>
+                <class>Msupply_Havequestion_Model_Resource</class>
+                <entities>
+                    <havequestion>
+                        <table>msupply_havequestion_havequestion</table>
+                    </havequestion>
+                </entities>
+            </msupply_havequestion_resource>
+        </models>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <msupply_havequestion>
+                    <file>msupply_havequestion.xml</file>
+                </msupply_havequestion>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Msupply_Havequestion>
+                    <files>
+                        <default>Msupply_Havequestion.csv</default>
+                    </files>
+                </Msupply_Havequestion>
+            </modules>
+        </translate>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Msupply_Havequestion before="Mage_Adminhtml">Msupply_Havequestion_Adminhtml</Msupply_Havequestion>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <frontend>
+        <routers>
+            <msupply_havequestion>
+                <use>standard</use>
+                <args>
+                    <module>Msupply_Havequestion</module>
+                    <frontName>havequestion</frontName>
+                </args>
+            </msupply_havequestion>
+        </routers>
+        <layout>
+            <updates>
+                <msupply_havequestion>
+                    <file>msupply_havequestion.xml</file>
+                </msupply_havequestion>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Msupply_Havequestion>
+                    <files>
+                        <default>Msupply_Havequestion.csv</default>
+                    </files>
+                </Msupply_Havequestion>
+            </modules>
+        </translate>
+    </frontend>
+    <default>
+        <msupply_havequestion>
+            <havequestion>
+                <breadcrumbs>1</breadcrumbs>
+            </havequestion>
+        </msupply_havequestion>
+    </default>
+</config>

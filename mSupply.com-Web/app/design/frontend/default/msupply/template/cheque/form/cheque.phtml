@@ -1,0 +1,32 @@
+<?php $_code=$this->getMethodCode() ?>
+  <ul class="form-list col-lg-12 col-md-12 col-sm-12 col-xs-12 mt20 pad10" id="payment_form_<?php echo $_code ?>" style="display:none;">
+ <div class="cq_dd_payment">
+                <p class="p_text">1. Write a cheque/DD with below given details.</p>
+				 <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('cheque-payment-content')->toHtml(); ?>               
+                    <span class="name col-lg-5 col-sm-6  col-xs-6">Date:</span> <span class="details col-lg-7 col-sm-6 col-xs-6"><?php echo date("d/m/Y");  ?></span>
+                    <span class="name col-lg-5 col-sm-6 col-xs-6">Amount:</span> <span class="details col-lg-7 col-sm-6 col-xs-6" id="cheque_total_amount"></span>
+</div>	
+                <p class="p_text" style="margin:0 !important;"><span>Note:</span><b> Post dated cheques are not accepted.</b></p>
+                <p class="p_text">2. Enter the details below</p>
+               
+			<div class="col-lg-6 col-sm-6 col-xs-12 mb10">	<input type="text" placeholder="*Cheque/ DD No." title="Cheque/ DD No." class="input-text required-entry validate-number Cheque_no" id="<?php echo $_code ?>_check_no" name="payment[check_no]" value="<?php echo $this->htmlEscape($this->getInfoData('check_no')) ?>" /></div>
+			<div class="col-lg-6 col-sm-6 col-xs-12 mb10">	<input type="text" placeholder="*Bank Name" title="Bank Name" class="input-text required-entry bank_name" id="<?php echo $_code ?>_draweebank" name="payment[draweebank]" value="<?php echo $this->htmlEscape($this->getInfoData('draweebank')) ?>" /></div>
+                 
+                <div class="btn_wrapper_new11">
+		<div class="buttons-set allinonebtn11"  id="payment_form_<?php echo $_code ?>">
+			<div  class="buttons-set" id="payment-buttons-container">
+				<button type="button" class="button" onclick="loader('<?php echo $_code ?>');payment.save();"><span><?php echo $this->__('Continue') ?></span></button>
+
+				<span class="please-wait loader-pay<?php echo $_code ?>" id="payment-please-wait" style="display:none;">
+				<img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Please Wait...') ?>" title="<?php echo $this->__('Please Wait...') ?>" class="v-middle" /> <?php echo $this->__('Please Wait...') ?>
+				</span>
+			</div>
+			<div class="trms-cndts"> By placing the order, I have read and agreed to mSupply.com <br/> <span class="terms-conditions"><a href="<?php echo $this->getUrl('terms_and_conditions'); ?>" target="__blank"> Terms of Use | Terms of Sale</a> </span></div>
+		</div>
+		</div>
+
+
+   </ul>
+   <div>
+      <?php echo $this->getMethod()->getConfigData('message');?>
+   </div>

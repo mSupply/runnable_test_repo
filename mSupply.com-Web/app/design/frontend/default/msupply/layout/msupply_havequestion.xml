@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Msupply_Havequestion extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Msupply
+ * @package        Msupply_Havequestion
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<layout>
+    
+    <msupply_havequestion_index_index translate="label" module="msupply_havequestion">
+        <reference name="content">
+            <block type="msupply_havequestion/havequestion_list" name="havequestion" template="msupply_havequestion/havequestion/form.phtml" />
+        </reference>
+    </msupply_havequestion_index_index>
+    <msupply_havequestion_havequestion_view translate="label" module="msupply_havequestion">
+        <label>Havequestion view page</label>
+        <update handle="page_two_columns_left" />
+        <reference name="content">
+            <block type="msupply_havequestion/havequestion_view" name="havequestion_view" template="msupply_havequestion/havequestion/view.phtml" />
+        </reference>
+    </msupply_havequestion_havequestion_view>
+</layout>

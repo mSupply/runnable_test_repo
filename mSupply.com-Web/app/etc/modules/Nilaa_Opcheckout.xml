@@ -1,0 +1,8 @@
+<config>
+	<modules>
+		<Nilaa_Opcheckout>
+			<codePool>local</codePool>
+			<active>true</active>
+		</Nilaa_Opcheckout>
+	</modules>
+</config>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+<default translate="label" module="page">
+	<reference name="before_body_end">
+		<block type="core/template" name="footer_js" template="footer/js.phtml"/>
+   </reference>
+</default>
+</layout>

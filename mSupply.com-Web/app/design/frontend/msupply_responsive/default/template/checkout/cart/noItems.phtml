@@ -1,0 +1,53 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<div class="clearfix"></div>
+<div class="wrapper-container-cart" style="margin-top:1em;">
+<div class="well-block">
+<div class="page-title">
+    <h2 class="text-center text-danger shopping_list_header_h"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'wysiwyg/EmptyCart_icon_03.jpg' ?>" /><?php echo $this->__('Your Shopping List is empty !') ?></h2>
+</div>
+<div class="text-center">
+	<h2 class="browse-cate">Browse Categories</h2>
+</div>
+<div class="cart-empty">
+    <?php echo $this->getMessagesBlock()->toHtml() ?>
+    <?php echo $this->getChildHtml('checkout_cart_empty_widget'); ?>
+
+
+
+    <!-- <ul class="empty_icons">
+    	<li><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'wysiwyg/recommended_icon_07.jpg' ?>" /><span>Recommended</span></li>
+    	<li><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'wysiwyg/top_seller_icon_07.jpg' ?>" /><span>Top Sellers</span></li>
+    	<li><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'wysiwyg/wht_news_icon_07.jpg' ?>" /><span>What’s new’s</span></li>
+    </ul> -->
+   <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('shoppingcart-quicklinks')->toHtml(); ?>
+
+	<div class="text-center"><a href="<?php echo Mage::getBaseUrl()?>" class="start_shopping">Start shopping now</a></div>
+    <?php echo $this->getChildHtml('shopping.cart.table.after'); ?>
+</div>
+</div>
+</div>    

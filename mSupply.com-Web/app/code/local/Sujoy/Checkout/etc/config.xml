@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sujoy_Checkout>
+            <version>0.0.1</version>
+        </Sujoy_Checkout>
+    </modules>
+    <global>
+        <blocks>
+            <checkout>
+                <rewrite>
+                    <onepage>Sujoy_Checkout_Block_Onepage</onepage><!-- rewrite the onepage chackout block -->
+                </rewrite>
+            </checkout>
+        </blocks>
+        <helpers>
+            <sujoy_checkout>
+                <class>Sujoy_Checkout_Helper</class>
+            </sujoy_checkout>
+        </helpers>
+        <models>
+            <sujoy_checkout>
+                <class>Sujoy_Checkout_Model</class>
+            </sujoy_checkout>
+        </models>
+    </global>
+    <default>
+        <checkout>
+            <options>
+                <hide_shipping>1</hide_shipping>
+                <default_shipping>tablerate_bestway</default_shipping><!-- set the default shipping method code -->
+            </options>
+        </checkout>
+    </default>
+    <frontend>
+        <routers>
+            <checkout>
+                <args>
+                    <modules>
+                        <Sujoy_Checkout before="Mage_Checkout">Sujoy_Checkout</Sujoy_Checkout>
+                    </modules>
+                </args>
+            </checkout>
+        </routers>
+        <translate>
+            <modules>
+                <Sujoy_Checkout>
+                    <files>
+                        <default>Sujoy_Checkout.csv</default>
+                    </files>
+                </Sujoy_Checkout>
+            </modules>
+        </translate>
+    </frontend>
+</config>

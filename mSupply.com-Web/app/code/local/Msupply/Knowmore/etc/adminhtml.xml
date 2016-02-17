@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Msupply_Knowmore extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Msupply
+ * @package        Msupply_Knowmore
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <msupply_knowmore translate="title" module="msupply_knowmore">
+                                        <title>Ask Now Details</title>
+                                    </msupply_knowmore>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <msupply_knowmore translate="title" module="msupply_knowmore">
+                        <title>Ask Now</title>
+                        <children>
+                            <knowmore translate="title" module="msupply_knowmore">
+                                <title>Ask Now Details</title>
+                                <sort_order>0</sort_order>
+                            </knowmore>
+                        </children>
+                    </msupply_knowmore>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <msupply_knowmore translate="title" module="msupply_knowmore">
+            <title>Ask Now</title>
+            <sort_order>75</sort_order>
+            <children>
+                <knowmore translate="title" module="msupply_knowmore">
+                    <title>Ask Now Details</title>
+                    <action>adminhtml/knowmore_knowmore</action>
+                    <sort_order>0</sort_order>
+                </knowmore>
+            </children>
+        </msupply_knowmore>
+    </menu>
+</config>

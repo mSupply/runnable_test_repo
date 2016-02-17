@@ -1,0 +1,15 @@
+
+
+<div class="main container container-sub-content">
+<div class="col-xs-12">
+<div class="well breadcrumb-block" style="min-height:300px;">
+<ul class="mob_logout">
+          <li><p><i class="fa fa-user fa-fw"></i>Hello, <span id="firstName"><?php echo $this->__(Mage::getSingleton('customer/session')->getCustomer()->getFirstname()); ?></span> </p></li>
+          <li><a href="<?php echo $this->getUrl('customer/account/create') ?>">My Account   <i class="fa fa-angle-right desktop-dropdown"></i> </a> </li>
+          <li><a href="<?php echo $this->getUrl('sales/order/history') ?>">My Orders <i class="fa fa-angle-right desktop-dropdown"></i></a></li>
+          <li><a href="<?php echo $this->getUrl('wishlist') ?>">My Wishlist <i class="fa fa-angle-right desktop-dropdown"></i></a> </li>
+          <li><button type="button" id="btnLogout" onclick="window.location='<?php echo $this->getUrl('customer/account/logout') ?>';">Logout</button></li>
+</ul>  
+</div>    
+</div>
+</div>   

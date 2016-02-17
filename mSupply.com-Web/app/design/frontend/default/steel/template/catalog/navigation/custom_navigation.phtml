@@ -1,0 +1,233 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-slider-block">
+<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+<ul class="category-list orange">
+<li class="default desktop-display"><i class='fa fa-bars'></i></i>Menu</li>
+ <?php 
+$children = Mage::getModel('catalog/category')->load(2); 
+$_category1 =  $children->getChildrenCategories();
+?>
+<?php foreach ($_category1 as $category1) { ?>
+<li><a class="main-nav" href="JavaScript:void(0)">
+	<?php
+	$cid =  $category1->getId();
+	if($cid == 271){
+	?>
+		<div class="menu-image">
+          <img src="<?php echo $this->getSkinUrl('images/building.png'); ?>" 
+          onmouseover="this.src='<?php echo $this->getSkinUrl('images/building_w.png'); ?>'"  
+          onmouseout="this.src='<?php echo $this->getSkinUrl('images/building.png'); ?>'" alt="building"/></div>
+	<?php 
+	}
+	 if($cid == 272){
+	 	?>
+		<div class="menu-image">
+          <img src="<?php echo $this->getSkinUrl('images/cables.png'); ?>" 
+          onmouseover="this.src='<?php echo $this->getSkinUrl('images/cables_w.png'); ?>'"  
+          onmouseout="this.src='<?php echo $this->getSkinUrl('images/cables.png'); ?>'" alt="cables"/></div>
+		<?php 
+	}
+	?>
+	<?php
+	$cid =  $category1->getId();
+	if($cid == 276){
+	?>
+		<div class="menu-image"> 
+         <img src="<?php echo $this->getSkinUrl('images/bricks.png'); ?>" 
+          onmouseover="this.src='<?php echo $this->getSkinUrl('images/bricks_w.png'); ?>'"  
+          onmouseout="this.src='<?php echo $this->getSkinUrl('images/bricks.png'); ?>'" alt="bricks"/></div>
+	<?php 
+	}
+	if($cid == 274){
+	 	?>
+	<div class="menu-image">
+          <img src="<?php echo $this->getSkinUrl('images/paint.png'); ?>" 
+          onmouseover="this.src='<?php echo $this->getSkinUrl('images/paint_w.png'); ?>'"  
+          onmouseout="this.src='<?php echo $this->getSkinUrl('images/paint.png'); ?>'" alt="paint"/></div>
+		<?php  
+	}	
+	?>
+	<?php
+	$cid =  $category1->getId();
+	if($cid == 275){
+	?>
+		 <div class="menu-image">
+          <img src="<?php echo $this->getSkinUrl('images/interiors.png'); ?>" 
+          onmouseover="this.src='<?php echo $this->getSkinUrl('images/interiors_w.png'); ?>'"  
+          onmouseout="this.src='<?php echo $this->getSkinUrl('images/interiors.png'); ?>'" alt="interiors"/></div>
+	<?php 
+	}
+	if($cid == 273){
+	 	?>
+		<div class="menu-image">
+
+          <img src="<?php echo $this->getSkinUrl('images/plumbing.png'); ?>" 
+          onmouseover="this.src='<?php echo $this->getSkinUrl('images/plumbing_w.png'); ?>'"  
+          onmouseout="this.src='<?php echo $this->getSkinUrl('images/plumbing.png'); ?>'" alt="plumbing"/></div>
+		<?php 
+	}
+	?><?php echo $category1->getName();?><span class="fa fa-angle-right"></span></a>
+<ul>
+        <?php 
+        $catId1 = $category1->getId();
+        $children1 = Mage::getModel('catalog/category')->load($catId1); 
+        $_category2 =  $children1->getChildrenCategories();
+        ?>
+		<?php foreach ($_category2 as $category2) { ?>
+            <li><a href="<?php echo $category2->getUrl();?>"><?php echo $category2->getName();?></a>
+                <ul class="brand-list">
+				
+				<!-- Type Start -->
+				   <?php
+					$products1 = Mage::getModel('catalog/category')->load($category2->getId())
+							    ->getProductCollection()
+								->addAttributeToSelect('*')
+								->addAttributeToFilter('status', 1)
+							    ->addAttributeToFilter('visibility', 4)
+								->setOrder('price', 'ASC');
+												
+					$menuType = 'product_type';
+					$usedtypeAttributeValues = array();
+												
+					foreach($products1 as $product)
+					{
+					$usedtypeAttributeValues[$product->getData($menuType)] = $product->getAttributeText($menuType);
+					}
+                    $usedtypeAttributeValues1 = array_unique($usedtypeAttributeValues);
+												
+					?>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 type-nav-block">
+                    <li><span>Type</span> </li>
+					<?php 
+					$typeUrl = $category2->getUrl(); 
+					$typefinalUrl = str_replace(".html","",$typeUrl);
+					?>
+					<?php  foreach($usedtypeAttributeValues1 as $key => $value) { ?>
+					<?php
+                    $typeKey = strtolower($value);
+				    $typeKeynew = str_replace(" &","",$typeKey);
+					$typeKeynew1 = str_replace(" ","-",$typeKeynew);
+					$typeKeynew2 = str_replace("(","-",$typeKeynew1);
+					$typeKeynew3 = str_replace(")","",$typeKeynew2);
+					$finaltypeKey = str_replace(".","-",$typeKeynew3);
+					?>
+				    <?php if($category2->getId() == 249){ ?>
+				    <?php if($value) { ?>
+                    <li><a href="<?php echo $category2->getUrl();?>"><?php echo $value; ?></a></li>
+                    <?php } ?>
+					<?php } else { ?>
+					<?php if($value) { ?>
+					<li><a href="<?php echo $typefinalUrl ;?>/filter/product_type/<?php echo $finaltypeKey ;?>.html"><?php echo $value; ?></a></li>
+					<?php } ?>
+					<?php } ?>
+					<?php } ?>
+                  </div>
+				  
+				<!-- Type end -->
+				
+				<!-- Brand end -->
+				
+				    <?php
+				    $products = Mage::getModel('catalog/category')->load($category2->getId())
+						  ->getProductCollection()
+						  ->addAttributeToSelect('*')
+						  ->addAttributeToFilter('status', 1)
+						  ->addAttributeToFilter('visibility', 4)
+						  ->setOrder('price', 'ASC');
+												
+				    $manufacturer = 'manufacturer';
+				    $usedAttributeValues = array();
+												
+				    foreach($products as $product)
+				    {
+				    $usedAttributeValues[$product->getData($manufacturer)] = $product->getAttributeText($manufacturer);
+				    }
+                    $usedAttributeValues1 = array_unique($usedAttributeValues);
+												
+				    ?>
+				
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 brand-menu-list">
+                    <li><span>Brand</span> </li>
+                    <?php 
+					$url = $category2->getUrl(); 
+					$finalUrl = str_replace(".html","",$url);
+					?>
+						<?php  
+					$brand_1 = 1;
+					foreach($usedAttributeValues1 as $key => $value) { ?>
+					<?php
+                    $brandKey = strtolower($value);
+					$brandKeynew = str_replace(" &","",$brandKey);
+					$brandKeynew1 = str_replace(" ","-",$brandKeynew);
+					$brandKeynew2 = str_replace("(","-",$brandKeynew1);
+					$brandKeynew3 = str_replace(")","",$brandKeynew2);
+					$finalBrandKey = str_replace(".","-",$brandKeynew3);
+					?>
+					   <?php if($category2->getId() == 282){ ?>
+              <?php if($value) {   
+			  if($brand_1 >=9){
+					  	  
+			  ?> 
+<li><a href="<?php echo $category2->getUrl()?>" class="brandmore"><?php echo 'More..'; ?></a></li>			  
+              <?php
+			   break;
+				  }else{
+              ?> 
+              <li><a href="<?php echo $category2->getUrl()?>?catid=<?php echo $key ?>"><?php echo $value; ?></a></li>
+              <?php 
+				  }
+				  } ?>
+              <?php } else {
+				  if($brand_1 >=9){
+					   	  
+			  ?> 
+<li><a href="<?php echo $category2->getUrl()?>" class="brandmore"><?php echo 'More..'; ?></a></li>			  
+              <?php
+			   break;
+				  }else{
+              ?>
+<?php if($value && $value != '') {  ?>				  
+<li><a href="<?php echo $finalUrl ;?>/filter/manufacturer/<?php echo $finalBrandKey ;?>.html"><?php echo $value; ?></a></li>
+<?php } ?>
+<?php					  
+				  }
+				  } ?>
+					<?php 
+					$brand_1++;
+					} 
+					?>
+                  </div>
+
+                <!-- Brand end --> 				  
+				
+
+				
+				<!-- How to buy start --> 
+				  
+				  <?php $cid = $category2->getId(); ?>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 drag-down-menu">
+						<li><span>Help</span> </li>
+						<li><a href="javascript:void(0)" class="showfaqpopup" id="faq<?php echo $cid; ?>">FAQs</a> </li>
+                  </div>				  
+				  <div class="faq<?php echo $cid; ?>" style="display:none;">
+					   <?php echo Mage::getModel('catalog/category')->load($cid)->getFaq(); ?>
+                  </div>
+                  
+				<!-- How to buy end -->  
+				
+                </ul>
+		    </li>
+		<?php } ?>    	
+</ul>
+<?php } ?>
+</li>
+</ul>
+<ul class="coming-soon">
+	<li><div style="width:25px;float:left;"><img src="<?php echo $this->getSkinUrl('images/decor.png'); ?>" alt="logo"/></div>Decor</li>
+	<li><div style="width:25px;float:left;"><img src="<?php echo $this->getSkinUrl('images/green_building.png'); ?>" alt="logo"/></div>Green Solutions</li>
+	<li><div style="width:25px;float:left;"><img src="<?php echo $this->getSkinUrl('images/tools.png'); ?>" alt="logo"/></div>Spares and Tools</li>
+<ul>
+</div>
+<!-- Carousel-->
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('new-home-slideshow')->toHtml();?>
+<!-- /.carousel -->
+</div>

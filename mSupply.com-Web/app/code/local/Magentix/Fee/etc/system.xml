@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+
+<config>
+
+    <sections>
+
+        <fee translate="label">
+
+            <label>Shipping Cost Setting</label>
+
+            <tab>general</tab>
+
+            <frontend_type>text</frontend_type>
+
+            <sort_order>200</sort_order>
+
+            <show_in_default>1</show_in_default>
+
+            <show_in_website>1</show_in_website>
+
+            <show_in_store>1</show_in_store>
+
+            <groups>
+
+                <fee_group translate="label">
+
+                    <label>Shipping Cost Setting</label>
+
+                    <frontend_type>text</frontend_type>
+
+                    <sort_order>5</sort_order>
+
+                    <show_in_default>1</show_in_default>
+
+                    <show_in_website>1</show_in_website>
+
+                    <show_in_store>1</show_in_store>
+
+                    <fields>
+
+                        <freeshippingtotal translate="label">
+
+                            <label>Free shipping Total</label>
+
+                            <frontend_type>text</frontend_type>
+
+                            <comment>Enter the total order amount for free shipping apply.</comment>
+
+                            <sort_order>10</sort_order>
+
+                            <show_in_default>1</show_in_default>
+
+                            <show_in_website>1</show_in_website>
+
+                            <show_in_store>1</show_in_store>
+
+                        </freeshippingtotal>
+
+                    </fields>
+					
+					<fields>
+
+                        <minimumshippingamount translate="label">
+
+                            <label>Minimum Shipping Amount</label>
+
+                            <frontend_type>text</frontend_type>
+
+                            <comment>Enter the minimum shipping amount.</comment>
+
+                            <sort_order>11</sort_order>
+
+                            <show_in_default>1</show_in_default>
+
+                            <show_in_website>1</show_in_website>
+
+                            <show_in_store>1</show_in_store>
+
+                        </minimumshippingamount>
+
+                    </fields>
+					
+					<fields>
+
+                        <shipamounteach translate="label">
+
+                            <label>Shipping amount for each 100 rupees in order total.</label>
+
+                            <frontend_type>text</frontend_type>
+
+                            <comment>Enter the shipping amount for each 100 rupees in order total.</comment>
+
+                            <sort_order>12</sort_order>
+
+                            <show_in_default>1</show_in_default>
+
+                            <show_in_website>1</show_in_website>
+
+                            <show_in_store>1</show_in_store>
+
+                        </shipamounteach>
+
+                    </fields>
+
+                </fee_group>
+
+            </groups>            
+
+        </fee>
+        
+		<sales>
+			<groups>
+				<totals_sort translate="label" module="sales">
+					<tab>sales</tab>
+					<fields>
+                    	<fee translate="label">
+                            <label>Shipping &amp; Handling Charge</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </fee>
+                    </fields>
+				</totals_sort>
+			</groups>
+		</sales>
+		
+
+    </sections>
+
+</config>
+

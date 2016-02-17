@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Mage
+ * @package     Msupply_Layout
+ 
+ */
+-->
+<config>
+    <global>
+        <page>
+            <layouts>
+				<msupply_layout>
+                    <label>CMS Page</label>
+                    <template>page/cms-layout.phtml</template>
+                    <layout_handle>custom_layout</layout_handle>
+                </msupply_layout>
+            </layouts>
+        </page>
+    </global>
+</config>

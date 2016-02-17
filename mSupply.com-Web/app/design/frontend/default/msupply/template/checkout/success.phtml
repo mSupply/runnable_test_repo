@@ -1,0 +1,405 @@
+<?php
+
+$last_order_id = Mage::getSingleton('checkout/session')->getLastOrderId();
+
+$pre_order_id = $last_order_id - 1;
+ 
+$pre_order = Mage::getModel('sales/order')->load($pre_order_id);
+
+$pre_deposit_val =  $pre_order->getDepositId();
+
+$current_deposit_value = $pre_deposit_val + 1;
+
+
+$connection = Mage::getSingleton('core/resource')->getConnection('core_write');
+$connection->beginTransaction();
+$__fields = array();
+$__fields['deposit_id'] = $current_deposit_value;
+$__where = $connection->quoteInto('entity_id =?', $last_order_id);
+$connection->update('zaybx_sales_flat_order', $__fields, $__where);
+$connection->commit();
+
+
+$curr_order = Mage::getModel('sales/order')->load($last_order_id);
+$display_deposit = $curr_order->getDepositId();
+$strlen = strlen($display_deposit);
+
+if($strlen == 1)
+{
+  $original_deposit_id = "00000" . $display_deposit;
+}
+else if($strlen == 2)
+{
+  $original_deposit_id = "0000" . $display_deposit;
+}
+else if($strlen == 3)
+{
+  $original_deposit_id = "000" . $display_deposit;
+}
+else if($strlen == 4)
+{
+  $original_deposit_id = "00" . $display_deposit;
+}
+else if($strlen == 5)
+{
+  $original_deposit_id = "0" . $display_deposit;
+}
+else
+{
+  $original_deposit_id = $display_deposit;
+} 
+
+?>
+
+<?php
+$order = Mage::getModel('sales/order')->loadByIncrementId($this->getOrderId());   
+    
+$reffer_by = $_SESSION["reffer_by"];
+unset($_SESSION["reffer_by"]);
+
+$resource = Mage::getSingleton('core/resource');
+$write = $resource->getConnection('core_write');
+$tableName = $resource->getTableName('sales_flat_order_grid');
+
+$sql = 'UPDATE ' . $tableName. ' SET reffer_by = "'.$reffer_by.'" WHERE entity_id = '.$order->getId();
+$write->query($sql);
+$billing_address = $order->getBillingAddress(); 
+$ShippingAddress = $order->getShippingAddress(); 
+$biltel = $billing_address->getTelephone(); 
+$billposcode = $billing_address->getPostcode();
+$regionbil = $billing_address->getRegion(); 
+$lastnamebill = $billing_address->getLastname();
+$firstnamebill = $billing_address->getFirstname();
+$bilstreet1 = $billing_address->getStreet(1);
+$bilstreet2 = $billing_address->getStreet(2); 
+$billcity = $billing_address->getCity();
+$billcon = $billing_address->getCountryId();
+
+$countryModel = Mage::getModel('directory/country')->loadByCode($billcon);
+$countryName = $countryModel->getName();
+
+$shitel = $ShippingAddress->getTelephone(); 
+$shiposcode = $ShippingAddress->getPostcode();
+$shipbil = $ShippingAddress->getRegion(); 
+$lastnameship = $ShippingAddress->getLastname();
+$firstnameship = $ShippingAddress->getFirstname();
+$shipstreet1 = $ShippingAddress->getStreet(1);
+$shipstreet2 = $ShippingAddress->getStreet(2);
+$shipcity = $ShippingAddress->getCity();
+$shipcon = $ShippingAddress->getCountryId();
+
+$shippcountryModel = Mage::getModel('directory/country')->loadByCode($shipcon);
+$shiipcountryName = $shippcountryModel->getName();
+
+//$order = Mage::getModel('sales/order')->load($orderid);
+//$orderData = $order->getData();
+//print_r($order->getBillingAddress()).'</br>';
+//print_r($order->getShippingAddress()).'</br>';
+$items = $order->getAllVisibleItems();
+
+   foreach($items as $i):
+   $image = (string)Mage::helper('catalog/image')->init($i, 'image')->resize(150);
+   $productname = $i->getName();
+   $productqty = $i->getQtyOrdered();
+   $ordprice = $i->getPrice();
+   endforeach;
+   $payment_method_code = $order->getPayment()->getMethodInstance()->getCode();
+   $customername = $order->getCustomerFirstname().' '.$order->getCustomerLastname();
+  //$currentdate = Mage::getModel('core/date')->date('Y-m-d H:i:s');
+  $currentdate = Mage::getModel('core/date')->date('d-m-Y');
+  $depositno = mt_rand(000001, 100000);
+  //$depositno = '000001';
+  $grandtotal = floatval($order->getGrandTotal());
+  $total = floatval($order->getGrandTotal());
+  $companyname ='CLEARTHINK SOFTWARE PRIVATE LIMITED.';
+  $clientcode ='CLRTNKSFTW';
+  $localchq = $order->getPayment()->getCheqloc();
+if($localchq == 1){
+        $local = 'Yes';
+        $out = 'No';
+      }else{
+        $local = 'No';
+        $out = 'Yes';
+      }
+      
+  $checkno = $order->getPayment()->getCheckNo();
+  $chqdate = $order->getPayment()->getCheckDate();
+  $draweename = $order->getPayment()->getDraweename();
+  $draweebank = $order->getPayment()->getDraweebank();
+  $panno = $order->getPayment()->getPanno();
+  $dd_no = $order->getPayment()->getDdNo();
+  $dd_date = $order->getPayment()->getDdDate();
+  $draweenamedd = $order->getPayment()->getDraweenamedd();
+  $draweebankdd = $order->getPayment()->getDraweebankdd();
+?>
+<!--<div class="page-title">
+    <h1><?php echo $this->__('Your order has been received.') ?></h1>
+</div>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<h2 class="sub-title"><?php echo $this->__('Thank you for your purchase!') ?></h2>
+
+<?php if ($this->getOrderId()):?>
+<?php if ($this->getCanViewOrder()) :?>
+    <p><?php echo $this->__('Your order # is: %s.', sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getViewOrderUrl()), $this->escapeHtml($this->getOrderId()))) ?></p>
+<?php  else :?>
+    <p><?php echo $this->__('Your order # is: %s.', $this->escapeHtml($this->getOrderId())) ?></p>
+<?php endif;?>
+    <p><?php echo $this->__('You will receive an order confirmation email with details of your order and a link to track its progress.') ?></p>
+<?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
+    <p>
+        <?php echo $this->__('Click <a href="%s" onclick="this.target=\'_blank\'">here to print</a> a copy of your order confirmation.', $this->getPrintUrl()) ?>
+        <?php echo $this->getChildHtml() ?>
+    </p>
+<?php endif;?>
+<?php endif;?>
+
+<?php if ($this->getAgreementRefId()): ?>
+    <p><?php echo $this->__('Your billing agreement # is: %s.', sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getAgreementUrl()), $this->escapeHtml($this->getAgreementRefId())))?></p>
+<?php endif;?>
+
+<?php if ($profiles = $this->getRecurringProfiles()):?>
+<p><?php echo $this->__('Your recurring payment profiles:'); ?></p>
+<ul class="disc">
+<?php foreach($profiles as $profile):?>
+<?php $profileIdHtml = ($this->getCanViewProfiles() ? sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getProfileUrl($profile)), $this->escapeHtml($this->getObjectData($profile, 'reference_id'))) : $this->escapeHtml($this->getObjectData($profile, 'reference_id')));?>
+    <li><?php echo $this->__('Payment profile # %s: "%s".', $profileIdHtml, $this->escapeHtml($this->getObjectData($profile, 'schedule_description')))?></li>
+<?php endforeach;?>
+</ul>
+<?php endif;?>
+<a href=<?php echo Mage::getBaseUrl().'checkout/index/pdf?orderid='.$this->getOrderId(); ?>> Print Challan</a>
+<div class="buttons-set">
+    <button type="button" class="button" title="<?php echo $this->__('Continue Shopping') ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+</div>
+complete  -->
+
+
+
+    <script type="text/javascript">
+    function showDialog(){
+      
+      jQuery("#dialog").dialog({
+        
+               resizable: false,
+               modal: true,
+               title: "Cancel Order",
+               dialogClass: "dialog dialogCheckout",
+               height: 150,
+               width: 465,
+               draggable: false,
+
+               buttons: {
+                // "Yes": function () {
+                  // jQuery('#product_addtocart_form').submit();
+                // },
+                "OK": function () {
+                  jQuery(this).dialog('close');
+                }
+               }
+              });
+
+
+      }
+      </script>
+
+      <div class="well-block" style="margin-top:20px; min-height:100px;margin-bottom:20px;">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt20">
+            <div class="pull-right"></div>
+              <div class="order-chk bg-white">
+                 <div class="first-block" style="padding: 20px 0px;">
+                      <div class="oid col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;"><div class="products_change success-font">Order Successful (ID: <?php echo $this->__($this->escapeHtml($this->getOrderId())) ?>)</div>
+  					 <?php if($payment_method_code != 'callmsupply'){?>
+  						<p>Your order has been processed successfully.</p>
+					 <?php }
+					 else{ // call msupply message?>
+						<p>You order status is pending. Call mSupply support on +91-7899901156 to confirm the order.</p>
+					 <?php }?>
+					 <?php $order_status_check = $order->getStatus(); ?>
+            <div class="orderstatus"><span>Order Status:</span><span class="orderstats"> <?php if($order_status_check == 'holded'){ echo 'On Hold'; }else{ echo $this->__($this->escapeHtml($order->getStatus())); } ?></span></div>
+          </div>
+                    <div class="col-lg-8 col-md-11 col-sm-10 col-xs-5"></div>
+                    <div class="cancel-order col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+                      <a id="OpenDialog" href="#" onclick="showDialog();" style="font-size: 12px; display: inherit;">Cancel Order</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <?php if($payment_method_code == 'cheque_checkout' || $payment_method_code == 'cashin_checkout'){ 
+                    if($payment_method_code == 'cheque_checkout'){
+                        $imagepdf = $this->getSkinUrl('images/pdf/cheque.jpg');
+                        ?>
+
+                   <!-- <div class="chqchalan12 paymentmodulepack pdf-align"  style="background:url(<?php echo $imagepdf; ?>) no-repeat left center; position:relative; min-height: 50em;margin-bottom:17px;">-->
+                    <div class="chqchalan12 paymentmodulepack pdf-align " style="position:relative; min-height: 50em;margin-bottom:17px">
+                        <img class = "img-responsive paymentmodulepack" src= "<?php echo $imagepdf; ?>" no-repeat left center;/>
+
+                        <div class="compname"><?php echo $companyname; ?></div>
+                        <!--<div class="localchq"><?php echo $local; ?></div>
+                        <div class="outchq"><?php echo $out; ?></div>-->
+                        <div class="dsnum"><?php echo $original_deposit_id; ?></div>
+                        <div class="clientcode"><?php echo $clientcode; ?></div>
+                        <div class="chqdate"><?php echo $currentdate; ?></div>
+                        <div class="deploc"><?php echo ''; ?></div>
+                        <div class="custname"><?php echo  $customername; ?></div>
+                        <div class="chqno"><?php echo $checkno; ?></div>
+                        <div class="chqdate1"><?php echo $chqdate; ?></div>
+                        <div class="drawname"><?php echo $draweename; ?></div>
+                        <div class="drwbank"><?php echo $draweebank; ?></div>
+                        <div class="orderid"><?php echo $this->getOrderId(); ?></div>
+                        <div class="chq-amt"><?php echo Mage::helper('checkout')->formatPrice($grandtotal); ?></div>
+                        <div class="total-amnt"><?php echo Mage::helper('checkout')->formatPrice($grandtotal); ?></div>
+                    </div>
+          
+            <?php
+          }else if($payment_method_code == 'paymentmodulepackbankin'){
+            $imagepdf = $this->getSkinUrl('images/pdf/dd.jpg');
+ ?>
+          
+
+                    <div class="chqchalan12 pdf-align  paymentmodulepackbankin " style="position:relative; min-height: 50em;margin-bottom:17px">
+                        <img class = "img-responsive paymentmodulepackbankin" src= "<?php echo $imagepdf; ?>" no-repeat left center;/>
+
+                        <div class="compname"><?php echo $companyname; ?></div>
+                        <div class="dsnumdd"><?php echo $original_deposit_id; ?></div>
+                        <div class="clientcode"><?php echo $clientcode; ?></div>
+                        <div class="chqdatedd"><?php echo $currentdate; ?></div>
+                        <div class="deploc"><?php echo ''; ?></div>
+                        <div class="custname"><?php echo  $customername; ?></div>
+                        <div class="chqno"><?php echo $dd_no; ?></div>
+                        <div class="chqdate1"><?php echo $dd_date; ?></div>
+                        <div class="drawname"><?php echo $draweenamedd; ?></div>
+                        <div class="drwbank"><?php echo $draweebankdd; ?></div>
+                        <div class="orderid"><?php echo $this->getOrderId(); ?></div>
+                        <div class="chq-amt"><?php echo Mage::helper('checkout')->formatPrice($grandtotal); ?></div>
+                        <div class="total-amnt"><?php echo Mage::helper('checkout')->formatPrice($grandtotal); ?></div>
+                    </div>
+ <?php
+          }else{
+          $imagepdf = $this->getSkinUrl('images/pdf/cashin.jpg'); 
+          ?>
+
+                    <div class="chqchalan12 pdf-align paymentmodulepackdd_checkout" style="position:relative; min-height: 50em;margin-bottom:17px">
+                        <img class = "img-responsive paymentmodulepackdd_checkout" src= "<?php echo $imagepdf; ?>" no-repeat left center;/>
+            
+                        <div class="compname"><?php echo $companyname; ?></div>
+                       <!-- <div class="localchq"><?php echo $localchq; ?></div>
+                        <div class="outchq"><?php echo $localchq; ?></div>-->
+                        <div class="dsnum"><?php echo $original_deposit_id; ?></div>
+                        <div class="clientcode"><?php echo $clientcode; ?></div>
+                        <div class="chqdate"><?php echo $currentdate; ?></div>
+                        <div class="deploc"><?php echo ''; ?></div>
+                        <div class="custname"><?php echo  $customername; ?></div>
+                        <div class="orderidcash"><?php echo $this->getOrderId(); ?></div>
+                        <div class="total-amntcash"><?php echo Mage::helper('checkout')->formatPrice($grandtotal); ?></div>
+                    </div>
+          <?php
+          }
+          ?>
+                      
+                      <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 txt-center" id="print_download">  
+                        <a  class="border-btn" href=<?php echo Mage::getBaseUrl().'checkout/index/pdf?orderid='.$this->getOrderId(); ?>><span class="mr10 icon-print"></span><span class="printChallan">Print Challan</span></a>
+                        <a class="border-btn" href=<?php echo Mage::getBaseUrl().'checkout/index/pdf?orderid='.$this->getOrderId(); ?>><span class="mr10 icon-cloud-download"></span><span class="downloadChallan">Download</span></a>
+                      </div>
+                      <div class="clearfix" style="margin-top:100px"></div>
+            <?php } ?>
+		  
+		  <?php  if($payment_method_code != 'callmsupply'){ ?>
+					<div class="success-bottom">
+						<div class="success-fonth">What next?</div>
+			  
+						<p class="color-gry">1. We have sent a confirmation email to you with the details of your order. Incase you dont find it in your inbox , please check for the same in your spam folder.</p>
+						<p class="color-gry">2. Once the ordered product(s) reach our local warehouse, our delivery team will call you to schedule a convenient time for delivery. </p>
+					</div>
+				<?php }
+					else
+					{ 
+					?>
+					<div class="success-bottom">
+						<div class="success-fonth">What next?</div>
+			  			<p class="color-gry">1. Call +91-7899901156 to confirm the order.</p>
+						<p class="color-gry">2. Post confirmation, we will email you the order details. (Incase you don’t find it in your inbox , please check for the same in your spam folder.) </p>
+						<p class="color-gry">3. Our delivery team will call you to schedule a convenient time for delivery.</p>
+					</div>
+				<?php 
+					}
+				?>
+                  </div>		  
+                </div>
+              </div>
+
+ <!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt20">
+                    
+                <div class="success_form">
+                        <table class="table table-responsive carttable">
+                            <tr><th>Item</th><th>Product Name</th><th>Qty</th><th>Unit Price</th></tr>
+                            
+              <?php 
+              foreach($items as $item):
+   $image = (string)Mage::helper('catalog/image')->init($item, 'image')->resize(105);
+   $productname = $item->getName();
+   $productqty = $item->getQtyOrdered();
+   $ordprice = $item->getPrice();
+    $sku = $item->getSku();
+$parentProductIdArr = explode("-",$sku);
+$product = Mage::getModel("catalog/product")->loadByAttribute("sku",$parentProductIdArr[0]);
+
+   ?>                    <tr>
+                            <td><img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image')->resize(100, 100); ?>" /></td>
+                            <td> <span class="mt30"><?php echo $productname; ?></span></td>                            
+                            <td><span><?php echo $productqty; ?> </span></td>
+                            <td><span><?php echo Mage::helper('checkout')->formatPrice($ordprice); ?> </span></td>
+                         </tr>
+              <?php endforeach; ?>
+                    </table>
+                </div>
+            </div>-->
+        
+<!--<div class="buttons-set" style="border-top: 1px solid #ddd;clear: both;float: left;margin-top: 30px;padding-top: 15px;width: 100% !important;">
+    <button type="button" class="button" title="<?php echo $this->__('Continue Shopping') ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+</div>   -->     
+
+    </div><!-- complete end -->
+
+    <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 last-section text-center thankyou-block">
+      <h4 class="products_change marg-btm ">Thank You!</h4>
+      <div class="color-gry">We hope you liked your shopping experience.</div>
+      <div class="color-gry">We are reachable at +91 78999 01156 (Monday to Saturday* 10am to 6pm)</div>
+      <div class="color-gry">*(1st & 3rd Saturday only)</div>
+      <div class="color-gry"> OR email at: <span><a style="color: #bd4931" href="mailto:support@msupply.com">support@msupply.com</a></span></div>
+      <!--  <div class="regtxt">Happy shopping and here’s to more,</br>The mSupply team </div> -->
+      <button type="button" class="button1" title="<?php echo $this->__('Continue Shopping') ?>" onclick="window.location='<?php echo $this->getUrl() ?>'">
+        <span><?php echo $this->__('Continue Shopping') ?></span>
+      </button>
+    </div>
+
+    <div id="dialog" style="display:none;">
+      <p>To Cancel the Order, please contact +91-7899901156 or email at support@msupply.com</p>
+    </div>
+</div>
+</div>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '994150780628906');
+fbq('track', "PageView");
+fbq('track', 'Purchase', {value: '<?php echo $grandtotal; ?>', currency: 'INR'});</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=994150780628906&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<!-- Begin: Groovinads mSupply_Conversion -->
+<img src="https://ssl01.groovinads.com/grv/track/px.os?fgimg=1&idpixel=210&goalvalue=<?php echo $grandtotal; ?>&idtransaction=<?php echo $this->getOrderId(); ?>" height="1" width=1>
+<!--End: Groovinads mSupply_Conversion --> 
+
+<?php $status = Mage::getStoreConfig('configuration/configuration_seller_order_email/sellerordersendemailstatus');
+if($status == '1'){
+	$order_status = $order->getStatus();
+ if(($payment_method_code == 'cheque_checkout') && ($order_status == 'holded')){
+}else{
+echo $this->getLayout()->createBlock('cms/block')->setBlockId('order-confirmation-mail-seller-wise')->toHtml();
+}
+}
+?>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Magentix_Convenienceservice>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Magentix_Convenience />
+            </depends>
+        </Magentix_Convenienceservice>
+    </modules>
+</config> 

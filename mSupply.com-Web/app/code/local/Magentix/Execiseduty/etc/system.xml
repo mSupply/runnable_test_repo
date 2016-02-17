@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+		<sales>
+			<groups>
+				<totals_sort translate="label" module="sales">
+					<tab>sales</tab>
+					<fields>
+                    	<execiseduty translate="label">
+                            <label>Excise Duty</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </execiseduty>
+                    </fields>
+				</totals_sort>
+			</groups>
+		</sales>
+    </sections>
+</config>

@@ -1,0 +1,22 @@
+<?php
+/* 
+ * @category    Clarion
+ * @package     Clarion_PaymentModulePack
+ * @created     12th Dec,2014
+ * @author      Clarion magento team<magento.team@clariontechnologies.co.in>   
+ * @purpose     Cheque payment template with cheque number and date parameters
+ * @copyright   Copyright (c) 2014 Clarion Technologies Pvt.Ltd
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License
+ */
+?>
+<?php $_code=$this->getMethodCode() ?>
+<div class="paymt-desc"><?php echo $this->__('Lorem Ipsum dolor sit.....') ?></div>
+<style>.form-list{ width:100% !important;}</style>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt20 pad10">
+<ul class="form-list" id="payment_form_<?php echo $_code ?>" style="display:none; ">
+	
+</ul>
+<div>
+    <?php echo $this->getMethod()->getConfigData('message');?>
+</div>
+</div>

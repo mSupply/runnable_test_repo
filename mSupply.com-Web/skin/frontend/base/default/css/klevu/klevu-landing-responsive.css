@@ -1,0 +1,147 @@
+.kuContainer{
+	width:100% !important;
+}
+
+@media only screen and (max-width: 1024px) {
+	.kuSortby{
+		width:39%;
+	}
+
+	.kuView{
+		width:50%;
+		text-align:right;
+	}
+	
+	.kuPerPage{
+		width:32%;
+	}
+	
+	.kuPagination{
+		width:30%;
+		display:none;
+	}
+	
+	.kuGridView ul li{
+		width:30%;	
+	}
+	
+	.kuListView ul li .kuNameDesc{
+		width:80%;	
+	}
+	
+	.kuListView ul li .kuPrice{
+		float:none !important;
+		width:100%;
+	}
+	
+	.kuListView ul li .kuPrice .kuSalePrice{
+		display:inline !important;	
+	}
+
+	.kuListView ul li .kuPrice .kuOrigPrice{
+		display:inline !important;	
+	}
+	
+	.kuGridView ul li:nth-child(4){
+		border-top:1px solid #ddd;	
+	}
+	
+}
+
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+	.kuGridView ul li{
+		width:30%;	
+	}
+	.search-index-index .main{
+		width: 96%;
+	}
+	.kuFilterHead,.kuFilterNames ul li a span.kuFilterLabel{
+		font-size:12px;
+	}
+	.kuGridView ul li:nth-child(4){
+		border-top:1px solid #ddd;	
+	}	
+	.kuGridView ul li .kuName a,.kuGridView ul li .kuSalePrice{
+		font-size:10px;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.kuFilters{
+		display:none !important;	
+	}
+	
+	.kuResultList{
+		float:none;
+		width:100%;	
+		margin-left:0px;
+	}
+	
+	.kuSortby{
+		width:58%;
+		height:50px;
+	}
+	
+	.kuSortHeader{
+		margin:0px;	
+	}
+
+	.kuView{
+		width:50%;
+		text-align:right;
+		height:50px;
+	}
+	
+	.kuPerPage{
+		width:30%;
+		text-align:left;
+		margin:0 auto;
+		margin-top:0px;
+	}
+	
+	.kuPagination{
+		width:65%;
+		margin:0 auto;
+		margin-top:0px;
+	}
+	
+	.kuGridView ul li{
+		width:31%;	
+	}
+	
+	.kuGridView ul li:nth-child(3){
+		border-top:none;	
+	}
+	
+	.kuGridView ul li:nth-child(4){
+		border-top:1px solid #ddd;	
+	}	
+	.kuBottomPagi .kuPagination{
+		width: 100%;
+		float: none;
+	}
+	.search-index-index .main{
+		width:96%;
+	}
+	.kuGridView ul li{
+		margin-left:3%;
+	}
+
+}
+
+@media only screen and (max-width: 480px) {
+	.kuGridView ul li{
+		width:46%;	
+	}
+	
+	.kuGridView ul li:nth-child(3),.kuGridView ul li:nth-child(4){
+		border-top:1px solid #ddd;	
+	}
+	.kuPerPage label{
+		display:none;
+	}
+	.kuGridView ul li .kuName a,.kuGridView ul li .kuSalePrice{
+		font-size:10px;
+	}
+}
+ 

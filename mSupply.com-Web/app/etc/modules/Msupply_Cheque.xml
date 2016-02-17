@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Msupply_Cheque>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Msupply_Cheque>
+    </modules>
+</config>

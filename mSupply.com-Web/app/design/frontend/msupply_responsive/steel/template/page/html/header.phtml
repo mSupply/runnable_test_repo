@@ -1,0 +1,81 @@
+<div class="fixed-navbar-block">
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-8">
+      <!-- inner page menu start -->
+      <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('inner-page-menu')->toHtml();?>
+	  <div class="width85" id="mainLogo"> 
+		<a href="<?php echo $this->getUrl(); ?>" class="pull-left tag-block"> 
+			<img title="Building, Construction & Interior Materials Online" alt="Building, Construction & Interior Materials Online" src="<?php echo $this->getSkinUrl('images/mSupply-logo-revised.png'); ?>" class="logo-svg img-responsive" />
+		</a>
+      </div>
+    </div>
+	 <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 search-block" id="serch"><?php echo $this->getChildHtml('topSearch') ?> </div>
+    <div class="col-lg-4 col-md-5 col-sm-4 col-xs-0 account-info-header">
+      <ul class="nav navbar-nav navbar-brand">
+        <li id="lnkConnect" class="border-bottom desktop-display"> <a href="#"><i class="fa fa-phone fa-fw"></i> <span class="helptext"><?php echo Mage::getStoreConfig('configuration/configuration_header_telephone/headerphonenumber'); ?></span></a>
+		  <div class="popup-block" id="divConnect">
+            <ul>
+              <li>
+                <label>Phone: <span><?php echo Mage::getStoreConfig('configuration/configuration_header_telephone/headerphonenumber'); ?></span> </label>
+              </li>
+            </ul>
+          </div>
+		
+		</li>
+        <li class="border-bottom desktop-display place"> <a href="#"><i class="fa fa-map-marker fa-fw"></i><span class="helptext">Bangalore</span> </a>
+          <div class="popup-block" id="divLocation">
+            <ul>
+              <li>Bangalore </li>
+            </ul>
+          </div>
+        </li>      
+        <li id="lnkAccount" class="border-bottom"> <a href="#"><i class="fa fa-user fa-fw"></i><span class="helptext acct">Account</span></a>
+          <?php if(!Mage::getSingleton( 'customer/session')->isLoggedIn()) { ?>
+          <div class="popup-block" id="divAccount">
+            <ul>
+              <li><i class="fa fa-user"></i>
+               <a href="<?php echo $this->getUrl('customer/account/login'); ?>" class="lnkLookBtn">Login</a>
+              </li>
+              <li>
+                <label>New User? <a href="<?php echo $this->getUrl('customer/account/create'); ?>">Sign Up</a> </label>
+              </li>
+            </ul>
+          </div>
+          <?php } else { ?>
+          <div class="popup-block text-center" id="divLoggedUser">
+            <ul>
+              <li><i class="fa fa-user fa-fw"></i>Hello, <span id="firstName"><?php echo $this->__(Mage::getSingleton('customer/session')->getCustomer()->getFirstname()); ?></span> </li>
+              <li><a href="<?php echo $this->getUrl('customer/account/create'); ?>">My Account</a> </li>
+              <li><a href="<?php echo $this->getUrl('sales/order/history'); ?>">My Orders</a> </li>
+              <li><a href="<?php echo $this->getUrl('wishlist'); ?>">My Wishlist</a> </li>
+              <li>
+                <button type="button" id="btnLogout">Logout</button>
+              </li>
+            </ul>
+          </div>
+          <?php } ?> </li>
+        <li class="border-bottom cart-block"> <a href="<?php echo $this->getUrl('checkout/cart'); ?>"><i class="fa fa-shopping-cart fa-fw"></i>
+              <span class="helptext">Shopping List</span>
+        <?php $cartcount = Mage::helper('checkout/cart')->getCart()->getItemsCount(); if($cartcount >0){ ?>
+        <span class="carcount"><?php echo $cartcount;?></span>
+        <?php }?>
+          </a> </li>
+        </ul>        
+      </div>
+    </div>
+</div>
+<script type="text/javascript">
+  jQuery("#btnLogin").click(function() {
+    window.location.href = "<?php echo $this->getUrl('customer/account/create'); ?>";
+  });
+  jQuery("#btnLogout").click(function() {
+    window.location.href = "<?php echo $this->getUrl('customer/account/logout'); ?>";
+  });
+</script>
+<?php if(Mage::getBlockSingleton( 'page/html_header')->getIsHomePage()) { ?>
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('new-home-popup')->toHtml();?>
+<?php } ?>
+
+
+    

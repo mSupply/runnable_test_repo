@@ -1,0 +1,247 @@
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl('css/sku.css'); ?>" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+
+<div class="header">
+	<div class="contenar">
+		<div class="logo"><img src="<?php echo $this->getSkinUrl('images/logo.png') ?>"></div>
+	</div>
+</div>
+<div class="contenar">
+	<div class="banner">
+		<h2>Welcome To <br>SKU Generation</h2>
+	</div>
+	<div class="ban_shadow"><img src="<?php echo $this->getSkinUrl('images/banner_shadow.png') ?>"></div>
+	<div class="clearfix"></div>
+	
+	
+	
+	<div class="content">
+		<ul>
+			<li><label>Please select product Segment</label>
+				<select id="segment_item" title="Select one" name="segment_item">
+				<option value="">Select</option>
+				<?php 
+				$connection = Mage::getSingleton('core/resource')->getConnection('core_read');
+				$select = $connection->select()
+					->from('zaybx_generatesku', array('*')) 
+					->group('segment');              
+				$rowsArray = $connection->fetchAll($select); 
+				?>
+				<?php foreach($rowsArray as $row): ?>
+                <option value="<?php echo $row['segment'] ?>"><?php echo $row['segment'] ?></option>				
+				<?php endforeach; ?>	
+				</select> 
+				<div id="interaction_div1"></div>
+			</li>
+			
+		<script>
+			jQuery(document).ready(function () {
+				jQuery('#segment_item').val('');
+				jQuery("#segment_item").change(function(){
+					var segmentval = jQuery('#segment_item').val();
+					var data = 'segmentval='+ segmentval;
+					jQuery.ajax({
+				
+						  type: 'POST',
+						  data: data,
+						
+						  url:'<?php echo Mage::getUrl(); ?>generatesku/index/autoselect',
+							beforeSend:function(){
+								jQuery("#interaction_div1").html("<img src='<?php echo $this->getSkinUrl('images/loading.gif') ?>' /> ");
+							},
+						
+						  success: function(response){
+						 										
+						  jQuery("#interaction_div1").html("");
+						  jQuery(".product_family").html(response);
+						  jQuery('#class_item').val('');
+						  jQuery('#brick_item').val('');
+						  jQuery('#count_sku').val('');
+						  jQuery('.skus span').text("SKU CODE");
+						  
+						 
+						}
+			
+					});
+				});
+			});
+		
+		</script>
+			
+
+			<li><label>Please select product Family</label>
+			    <div class="product_family">
+				<select id="family_item" title="Select one" name="family_item">
+				<option value="">Select</option>
+				
+				</select>
+                </div>		
+				<div id="interaction_div2"></div>				
+			</li>
+			
+		<script>
+			jQuery(document).ready(function () {
+			    
+				jQuery(".product_family").on("change","#family_item", function(){
+					var familyval = jQuery('#family_item').val();
+					
+					var datal = 'familyval='+ familyval;
+					jQuery.ajax({
+				
+						  type: 'POST',
+						  data: datal,
+						
+						  url:'<?php echo Mage::getUrl(); ?>generatesku/index/autoselectfamily',
+							beforeSend:function(){
+								jQuery("#interaction_div2").html("<img src='<?php echo $this->getSkinUrl('images/loading.gif') ?>' /> ");
+							},
+						
+						  success: function(response){
+						 										
+						  jQuery("#interaction_div2").html("");
+						  jQuery(".product_class").html(response);
+						  jQuery('#brick_item').val('');
+						  jQuery('#count_sku').val('');
+						  jQuery('.skus span').text("SKU CODE");
+						 
+						}
+			
+					});
+				});
+			});
+		
+		</script>
+				
+			<li><label>Please select product Class</label>
+				<div class="product_class">
+				<select id="class_item"title="Select one">
+				<option value="">Select</option>
+					
+				</select>
+				</div>	
+				<div id="interaction_div3"></div>
+			</li>
+			
+		<script>
+			jQuery(document).ready(function () {
+			    
+				jQuery(".product_class").on("change","#class_item", function(){
+					var classval = jQuery('#class_item').val();
+					
+					var data2 = 'classval='+ classval;
+					jQuery.ajax({
+				
+						  type: 'POST',
+						  data: data2,
+						
+						  url:'<?php echo Mage::getUrl(); ?>generatesku/index/autoselectbrick',
+							beforeSend:function(){
+								jQuery("#interaction_div3").html("<img src='<?php echo $this->getSkinUrl('images/loading.gif') ?>' /> ");
+							},
+						
+						  success: function(response){
+						 										
+						  jQuery("#interaction_div3").html("");
+						  jQuery(".product_brick").html(response);
+						  jQuery('#count_sku').val('');
+						  jQuery('.skus span').text("SKU CODE");
+						 
+						}
+			
+					});
+				});
+			});
+		
+		</script>			
+			
+			<li><label>Please select product Brick</label>
+				<div class="product_brick">
+				<select id="brick_item"title="Select one">
+				<option value="">Select</option>
+					
+				</select>
+				</div>	
+				<div id="interaction_div4"></div>
+			</li>
+			<script>
+			jQuery(document).ready(function () {
+			    
+				jQuery(".product_brick").on("change","#brick_item", function(){
+					
+					jQuery('#count_sku').val('');
+					jQuery('.skus span').text("SKU CODE");
+		
+				});
+			});
+		
+		</script>	
+				
+			<li><label>Enter number of SKUs IDs to be generated</label>
+				<input id="count_sku" type="text" name="number" value="">
+			</li>
+			<li>
+			<div class="generate_class">
+			<label>&nbsp;</label><input type="button" class="btn" id="generatesku" value="Generate SKU" title="Generate SKU">
+			</div>
+			<script>
+			jQuery(document).ready(function () {
+			    
+				jQuery(".generate_class").on("click","#generatesku", function(){
+					
+					var a = jQuery('#segment_item').val();
+					var b = jQuery('#family_item').val();
+					var c = jQuery('#class_item').val();
+					var d = jQuery('#count_sku').val();
+					
+					if(a == '' || b == '' || c == ''|| d == '')
+					{
+						alert("Please select the correct data.");
+						
+					}else if(d > 30){
+						
+						alert("Maximum allowed sku is 30");
+					}
+                    else
+					{						
+					var classval = jQuery('#class_item').val();
+					var countskuval = jQuery('#count_sku').val();
+					
+					var data2 = 'classval='+ classval + '&countskuval=' + countskuval;
+					jQuery.ajax({
+				
+						  type: 'POST',
+						  data: data2,
+						
+						  url:'<?php echo Mage::getUrl(); ?>generatesku/index/autoselectclass',
+							beforeSend:function(){
+								jQuery("#interaction_div4").html("<img src='<?php echo $this->getSkinUrl('images/loading.gif') ?>' /> ");
+							},
+						
+						  success: function(response){
+						 										
+						  jQuery("#interaction_div4").html("");
+						  
+						  jQuery(".skus span").html(response);
+						 
+						 
+						}
+			
+					});
+					}
+				});
+			});
+		
+		</script>
+			
+			</li>
+		</ul>
+		<div class="clearfix"></div>
+		<div class="skus">
+			<div class="skus_arrow"><img src="<?php echo $this->getSkinUrl('images/arrow_03.png') ?>"></div>
+			<div class="clearfix"></div>
+			<span>SKU CODE</span>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	
+</div>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <customerenquiry_adminhtml_customerenquiry_index>
+        <reference name="content">
+            <block type="customerenquiry/adminhtml_customerenquiry" name="customerenquiry" />
+        </reference>
+    </customerenquiry_adminhtml_customerenquiry_index>
+</layout>

@@ -1,0 +1,424 @@
+<?php
+/**
+ * One page checkout payment methods
+ *
+ * @var $this Mage_Checkout_Block_Onepage_Payment_Methods
+ */
+?>
+<h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 payement_method">Select a Payment Method</h3>
+<?php
+    $methods = $this->getMethods();
+	//print_r($methods->getData());
+    $oneMethod = count($methods) <= 1;
+?>
+<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 pad0">
+<div class="checkout-border">
+<div id="vtab">
+			<ul class="nav nav-pills nav-stacked col-md-3 col-sm-4">
+			<?php if (empty($methods)): ?>
+				<li>
+					<?php echo $this->__('No Payment Methods') ?>
+				</li>
+			<?php else:
+				$postPayment = array('paymentmodulepackdd_checkout','paymentmodulepack','paymentmodulepackbankin','cashondelivery');
+				$isTrusted = Mage::getStoreConfig('paymentstatus/paymentstatus_group/paymenttrustedoption');
+				foreach ($methods as $_method):
+					$customer = Mage::getSingleton('customer/session')->getCustomer();
+					$_code = $_method->getCode();
+			?>
+			<?php
+				$cart = Mage::getSingleton('checkout/session')->getQuote();
+				$amount = Mage::helper('paymentcharge')->getPaymentCharge($_code, $cart);
+				$totals = Mage::getSingleton('checkout/session')->getQuote()->getTotals(); //Total object
+				$subtotal = $totals["subtotal"]->getValue();
+				$conveniencechargepercentage = Mage::getStoreConfig('convenience/convenience_group/conveniencechargepercentage');
+				$minimumconveniencecharge = Mage::getStoreConfig('convenience/convenience_group/minimumconveniencecharge');
+				$conveniencePercent = $subtotal * ($conveniencechargepercentage/100);
+				$balance =($conveniencePercent < $minimumconveniencecharge) ? $conveniencePercent: $minimumconveniencecharge;
+				
+				$convenienceservicechargepercentage = Mage::getStoreConfig('convenience/convenience_group/convenienceservicechargepercentage');
+				$convenienceservice = $balance * ($convenienceservicechargepercentage/100);
+				
+				$subtotal = number_format(($balance+$convenienceservice),2);
+				$subtotal = str_replace( ',', '', $subtotal );
+				
+				$gtotat = number_format(Mage::helper('checkout')->getQuote()->getGrandTotal(),2);
+				$gtotal = str_replace( ',', '', $gtotat );
+				$checkopay = $cart->getMethod();
+				$selected_method = $this->getSelectedMethodCode();
+				$selected = Mage::helper('paymentcharge')->getPaymentCharge($selected_method, $cart);
+				
+				$cashminimumTotal = Mage::getStoreConfig('payment/cashin/minimumgrandtotal');
+				
+          	?>
+			 <?php if($_code == "hdfc_standard"){ ?>
+			 
+				 <li selectedmet = "<?php echo $selected; ?>" cashmintotal="<?php echo $cashminimumTotal; ?>" gtotal="<?php echo $gtotal; ?>" charge="<?php echo $amount; ?>" subtotal = "<?php echo $subtotal; ?>" class="<?php if($this->getSelectedMethodCode() == $_code){ ?> active<?php } ?> <?php if($this->getSelectedMethodCode() == ''){ ?> active<?php } ?>"> <a href="#tab_<?php echo $_code ?>" selectedmet = "<?php echo $selected; ?>" gtotal="<?php echo $gtotal; ?>" cashmintotal="<?php echo $cashminimumTotal; ?>" subtotal = "<?php echo $subtotal; ?>" id="tab_payment<?php echo $_code ?>" charge="<?php echo $amount; ?>" data-toggle="pill" onclick="checkTheSelectedPaymentOption('<?php echo $_code ?>');payment.switchMethod('<?php echo $_code ?>');"><i class="fa fa-angle-right"></i>
+				<?php if(!$oneMethod): ?>
+					<input id="p_method_<?php echo $_code ?>" style="display:none;" value="<?php echo $_code ?>" type="radio"  name="payment[method]" title="<?php echo $this->escapeHtml($_method->getTitle()) ?>" onclick="payment.switchMethod('<?php echo $_code ?>')"<?php if($this->getSelectedMethodCode()==$_code): ?> checked="checked"<?php endif; ?> class="radio" />
+				<?php else: ?>
+					<span class="no-display"><input id="p_method_<?php echo $_code ?>" value="<?php echo $_code ?>" type="radio" name="payment[method]" checked="checked" class="radio" /></span>
+					<?php $oneMethod = $_code; ?>
+				<?php endif; ?>
+				   <label for="p_method_<?php echo $_code ?>"><?php echo $this->escapeHtml($this->getMethodTitle($_method)) ?> <?php echo $this->getMethodLabelAfterHtml($_method) ?></a></label>
+				</li>
+							   <?php }else{ ?>
+				    <li selectedmet = "<?php echo $selected; ?>" cashmintotal="<?php echo $cashminimumTotal; ?>" gtotal="<?php echo $gtotal; ?>" charge="<?php echo $amount; ?>" subtotal = "<?php echo $subtotal; ?>" class="<?php if($this->getSelectedMethodCode()==$_code): ?> active<?php endif; ?>"> <a href="#tab_<?php echo $_code ?>"  selectedmet = "<?php echo $selected; ?>" subtotal = "<?php echo $subtotal; ?>" id="tab_payment<?php echo $_code ?>" gtotal="<?php echo $gtotal; ?>" cashmintotal="<?php echo $cashminimumTotal; ?>" charge="<?php echo $amount; ?>" data-toggle="pill" onclick="checkTheSelectedPaymentOption('<?php echo $_code ?>');payment.switchMethod('<?php echo $_code ?>');"><i class="fa fa-angle-right"></i>
+				<?php if(!$oneMethod): ?>
+					<input id="p_method_<?php echo $_code ?>" value="<?php echo $_code ?>" type="radio"  name="payment[method]" style="display:none;" title="<?php echo $this->escapeHtml($_method->getTitle()) ?>" onclick="payment.switchMethod('<?php echo $_code ?>')"<?php if($this->getSelectedMethodCode()==$_code): ?> checked="checked"<?php endif; ?> class="radio" />
+				<?php else: ?>
+					<span class="no-display"><input id="p_method_<?php echo $_code ?>" value="<?php echo $_code ?>" type="radio" name="payment[method]" checked="checked" class="radio" /></span>
+					<?php $oneMethod = $_code; ?>
+				<?php endif; ?>
+				   <label for="p_method_<?php echo $_code ?>"><?php echo $this->escapeHtml($this->getMethodTitle($_method)) ?> <?php echo $this->getMethodLabelAfterHtml($_method) ?></a></label></li>
+				    <?php } ?>
+			<?php endforeach;
+				endif;
+			?>
+			</ul>
+<div class="tab-content">
+<?php if (empty($methods)): ?>
+   
+        <?php //echo $this->__('No Payment Methods') ?>
+<?php else:
+	$postPayment = array('paymentmodulepackdd_checkout','paymentmodulepack','paymentmodulepackbankin','cashondelivery');
+	$isTrusted = Mage::getStoreConfig('paymentstatus/paymentstatus_group/paymenttrustedoption');
+	foreach ($methods as $_method):
+		$customer = Mage::getSingleton('customer/session')->getCustomer();
+		$_code = $_method->getCode();
+?>
+		
+		<?php if($_code == "neft"): ?>
+		<div class="tab-pane " id="tab_<?php echo $_code ?>">
+		<?php if ($html = $this->getPaymentMethodFormHtml($_method)): ?>
+        <?php echo $html; ?>
+    <?php endif; ?>
+		</div>
+		<?php endif; ?>
+		<?php if($_code == "hdfc_standard"): ?>
+		
+		<div class="tab-pane <?php if($this->getSelectedMethodCode()==$_code){ ?> active <?php } ?> <?php if($this->getSelectedMethodCode() == ''){ ?> active<?php } ?>" id="tab_<?php echo $_code ?>">
+		<?php
+		$cart = Mage::getSingleton('checkout/session')->getQuote();
+		$amount = Mage::helper('paymentcharge')->getPaymentCharge($_code, $cart);
+          	?>
+			<div class="cc_payment">
+					<div class="cc-redirect">You will be redirected to the Payment gateway</div>
+					<div class="cc-dc-img"></div>
+					<div class="btn_wrapper_new">
+			<div class="buttons-set allinonebtn" id="payment_form_<?php echo $_code ?>">
+			<div  class="buttons-set" id="payment-buttons-container">
+			<button type="button" class="button" onclick="loader('<?php echo $_code ?>');payment.save()"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+
+			<span class="please-wait loader-pay<?php echo $_code ?>" id="payment-please-wait" style="display:none;">
+			<img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Please Wait...') ?>" title="<?php echo $this->__('Please Wait...') ?>" class="v-middle" /> <?php echo $this->__('Please Wait...') ?>
+			</span>
+			</div>
+			<div class="trms-cndts"> By placing the order, I have read and agreed to mSupply.com <br/> <span class="terms-conditions"><a href="<?php echo $this->getUrl('terms_and_conditions'); ?>" target="__blank"> Terms of Use | Terms of Sale</a> </span></div>
+			</div>
+			</div>
+			</div>
+		</div>
+		
+
+			
+		
+		<?php endif; ?>
+		<?php if($_code == "hdfcdc_standard"): 
+		
+		?>
+		<div class="tab-pane <?php if($this->getSelectedMethodCode()==$_code): ?> active<?php endif; ?>" id="tab_<?php echo $_code ?>">
+		<?php
+		$cart = Mage::getSingleton('checkout/session')->getQuote();
+		$amount = Mage::helper('paymentcharge')->getPaymentCharge($_code, $cart);
+          	?>
+			<div class="cc_payment">
+					<div class="cc-redirect">You will be redirected to the Payment gateway</div>
+					<div class="cc-dc-img"></div>
+					<div class="btn_wrapper_new">
+			<div class="buttons-set allinonebtn" id="payment_form_<?php echo $_code ?>">
+			<div  class="buttons-set" id="payment-buttons-container">
+			<button type="button" class="button" onclick="loader('<?php echo $_code ?>');payment.save()"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+
+			<span class="please-wait loader-pay<?php echo $_code ?>" id="payment-please-wait" style="display:none;">
+			<img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Please Wait...') ?>" title="<?php echo $this->__('Please Wait...') ?>" class="v-middle" /> <?php echo $this->__('Please Wait...') ?>
+			</span>
+			</div>
+			<div class="trms-cndts"> By placing the order, I have read and agreed to mSupply.com <br/> <span class="terms-conditions"><a href="<?php echo $this->getUrl('terms_and_conditions'); ?>" target="__blank"> Terms of Use | Terms of Sale</a> </span></div>
+			</div>
+			</div>
+			</div>
+		</div>
+		
+
+			
+		
+		<?php endif; ?>
+		<?php if($_code == "hdfcnb_standard"):
+		?>
+		<div class="tab-pane <?php if($this->getSelectedMethodCode()==$_code): ?> active<?php endif; ?>" id="tab_<?php echo $_code ?>">
+		<?php
+		$cart = Mage::getSingleton('checkout/session')->getQuote();
+		$amount = Mage::helper('paymentcharge')->getPaymentCharge($_code, $cart);
+          	?>
+			<div class="cc_payment">
+					<div class="cc-redirect">You will be redirected to the Payment gateway</div>
+					<div class="cc-nb-img"></div>
+					<div class="btn_wrapper_new">
+			<div class="buttons-set allinonebtn" id="payment_form_<?php echo $_code ?>">
+			<div  class="buttons-set" id="payment-buttons-container">
+			<button type="button" class="button" onclick="loader('<?php echo $_code ?>');payment.save()"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+
+			<span class="please-wait loader-pay<?php echo $_code ?>" id="payment-please-wait" style="display:none;">
+			<img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Please Wait...') ?>" title="<?php echo $this->__('Please Wait...') ?>" class="v-middle" /> <?php echo $this->__('Please Wait...') ?>
+			</span>
+			</div>
+			<div class="trms-cndts"> By placing the order, I have read and agreed to mSupply.com <br/> <span class="terms-conditions"><a href="<?php echo $this->getUrl('terms_and_conditions'); ?>" target="__blank"> Terms of Use | Terms of Sale</a> </span></div>
+			</div>
+			</div>
+			</div>
+		</div>
+	
+		<?php endif; ?>
+		
+		<?php if($_code == "cashin_checkout"): ?>
+		<div class="tab-pane <?php if($this->getSelectedMethodCode()==$_code): ?> active<?php endif; ?>" id="tab_<?php echo $_code ?>">
+			<div class="cash_payment">
+                <p class="p_text"><b>COD (Cash on Delivery)</b><br/>
+                Cash on Delivery is applicable only for orders above &#8377;1000 </p>
+				<div class="btn_wrapper_new">
+				<div class="buttons-set allinonebtn"  id="payment_form_<?php echo $_code ?>">
+				<div  class="buttons-set" id="payment-buttons-container">
+				<button type="button" class="button" onclick="loader('<?php echo $_code ?>');payment.save();"><span><?php echo $this->__('Continue') ?></span></button>
+
+				<span class="please-wait loader-pay<?php echo $_code ?>" id="payment-please-wait" style="display:none;">
+				<img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Please Wait...') ?>" title="<?php echo $this->__('Please Wait...') ?>" class="v-middle" /> <?php echo $this->__('Please Wait...') ?>
+				</span>
+				</div>
+				<div class="trms-cndts"> By placing the order, I have read and agreed to mSupply.com <br/> <span class="terms-conditions"><a href="<?php echo $this->getUrl('terms_and_conditions'); ?>" target="__blank"> Terms of Use | Terms of Sale</a> </span></div>
+				</div>
+				</div>
+            </div>
+		</div>
+		<?php endif; ?>
+		
+		<?php if($_code == "cashin"): ?>
+		<div class="tab-pane <?php if($this->getSelectedMethodCode()==$_code): ?> active<?php endif; ?>" id="tab_<?php echo $_code ?>">
+		<?php if ($html = $this->getPaymentMethodFormHtml($_method)): ?>
+        <?php echo $html; ?>
+       <?php endif; ?>
+		</div>
+		<?php endif; ?>
+		
+		
+		<?php if($_code == "cashondelivery"): ?>
+		<div class="tab-pane <?php if($this->getSelectedMethodCode()==$_code): ?> active<?php endif; ?>" id="tab_<?php echo $_code ?>"><?php echo $this->__('Cash Before Dispatch') ?></div>
+		<?php endif; ?>
+		
+		<?php if($_code == "cheque"): ?>
+		<div class="tab-pane <?php if($this->getSelectedMethodCode()==$_code): ?> active<?php endif; ?>" id="tab_<?php echo $_code ?>">
+		<?php if ($html = $this->getPaymentMethodFormHtml($_method)): ?>
+        <?php echo $html; ?>
+        <?php endif; ?>
+		</div>
+		<?php endif; ?>
+		
+		
+		<?php if($_code == "cheque_checkout"): ?>
+		<div class="tab-pane <?php if($this->getSelectedMethodCode()==$_code): ?> active<?php endif; ?>" id="tab_<?php echo $_code ?>">
+		
+		 <div class="cq_dd_payment">
+                <p class="p_text">1. Write a cheque/DD with below given details.</p>
+				 <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('cheque-payment-content')->toHtml(); ?>               
+                    <span class="name col-lg-5 col-sm-6  col-xs-6">Date:</span> <span class="details col-lg-7 col-sm-6 col-xs-6"><?php echo date("d/m/Y");  ?></span>
+                    <span class="name col-lg-5 col-sm-6 col-xs-6">Amount:</span> <span class="details col-lg-7 col-sm-6 col-xs-6" id="cheque_total_amount"></span>
+</div>	
+                <p class="p_text"><span>Note:</span><b> Post dated cheques are not accepted.</b></p>       
+                <div class="btn_wrapper_new11">
+		<div class="buttons-set allinonebtn11"  id="payment_form_<?php echo $_code ?>">
+			<div  class="buttons-set" id="payment-buttons-container">
+				<button type="button" class="button" onclick="loader('<?php echo $_code ?>');payment.save();"><span><?php echo $this->__('Continue') ?></span></button>
+
+				<span class="please-wait loader-pay<?php echo $_code ?>" id="payment-please-wait" style="display:none;">
+				<img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Please Wait...') ?>" title="<?php echo $this->__('Please Wait...') ?>" class="v-middle" /> <?php echo $this->__('Please Wait...') ?>
+				</span>
+			</div>
+			<div class="trms-cndts"> By placing the order, I have read and agreed to mSupply.com <br/> <span class="terms-conditions"><a href="<?php echo $this->getUrl('terms_and_conditions'); ?>" target="__blank"> Terms of Use | Terms of Sale</a> </span></div>
+		</div>
+		</div>
+         </div>
+
+		
+		
+		
+		</div>
+		<?php endif; ?>
+		<?php if($_code == "payucheckout_shared"): 
+		?>
+		<div class="tab-pane <?php if($this->getSelectedMethodCode()==$_code): ?> active <?php endif; ?>" id="tab_<?php echo $_code ?>">
+		<?php
+		$cart = Mage::getSingleton('checkout/session')->getQuote();
+		$amount = Mage::helper('paymentcharge')->getPaymentCharge($_code, $cart);
+          	?>
+			<div class="nb_payment">
+                <div class="cc-redirect">You will be redirected to the Payment gateway</div>
+                <div class="cc-ng-img"><img class="img-responsive" src="<?php echo $this->getSkinUrl('images/payumoney.jpg'); ?>">
+                        
+                   
+                </div>
+               <div class="btn_wrapper_new">
+		<div class="buttons-set allinonebtn"  id="payment_form_<?php echo $_code ?>">
+			<div  class="buttons-set" id="payment-buttons-container">
+				<button type="button" class="button" onclick="loader('<?php echo $_code ?>');payment.save();"><span><?php echo $this->__('Continue') ?></span></button>
+
+				<span class="please-wait loader-pay<?php echo $_code ?>" id="payment-please-wait" style="display:none;">
+				<img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Please Wait...') ?>" title="<?php echo $this->__('Please Wait...') ?>" class="v-middle" /> <?php echo $this->__('Please Wait...') ?>
+				</span>
+			</div>
+			<div class="trms-cndts"> By placing the order, I have read and agreed to mSupply.com <br/> <span class="terms-conditions"><a href="<?php echo $this->getUrl('terms_and_conditions'); ?>" target="__blank"> Terms of Use | Terms of Sale</a> </span></div>
+		</div>
+		</div>
+            </div>
+		</div>
+		<?php endif; ?>
+
+<?php endforeach;
+    endif;
+?>
+
+</div><!-- tab content end-->
+
+
+</div></div></div>
+<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 padr0">
+    <div class="checkout-border">
+        <h4 class="amount_payable">amount payable</h4>
+        <ul class="amount_contain">
+            <li>
+                <span class="amount_name">SUBTOTAL</span>
+                
+				<span class="amount_price" id="sub_charge"><?php 
+                $session  = Mage::helper('checkout/cart')->getQuote();
+				$quote_id = $session->getId();
+				$quote = Mage::getModel('sales/quote')->load($quote_id );
+				//$paymentcode = $quote->getPayment()->getMethodInstance()->getCode();
+				$currency_symbol = Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();
+				
+				$totals = Mage::getSingleton('checkout/session')->getQuote()->getTotals(); //Total object
+				echo $currency_symbol.$subtotal = number_format($totals["subtotal"]->getValue(),2);?></span>
+            </li>
+            <li>
+                <span class="amount_name">SHIPPING &amp; HANDLING CHARGES</span>
+                <span class="amount_price"><?php $totals = Mage::getSingleton('checkout/session')->getQuote()->getTotals(); //Total object
+				echo  $currency_symbol.$subtotal = number_format($totals["fee"]->getValue(),2); ?></span>
+            </li>
+            <li>
+                <span class="amount_name">VAT</span>
+                <span class="amount_price"><?php $totals = Mage::getSingleton('checkout/session')->getQuote()->getTotals(); //Total object
+				echo  $currency_symbol.$subtotal = number_format($totals["tax"]->getValue(),2); ?></span>
+            </li>
+            <?php $couponCode1 = Mage::getSingleton('checkout/session')->getQuote()->getCouponCode();
+                if($couponCode1 != ''){
+            ?>
+            <li>
+                <span class="amount_name">Discount(<?php echo $couponCode = Mage::getSingleton('checkout/session')->getQuote()->getCouponCode(); ?>)</span>
+                <span class="amount_price"><?php 
+                $totals = Mage::getSingleton('checkout/session')->getQuote()->getTotals();
+                $totalDiscount = $totals["discount"]->getValue();
+                echo Mage::helper('core')->currency($totalDiscount, true, false);
+                ?></span>
+            </li>
+            <?php } ?>
+			<li>
+                <span class="amount_name">EXCISE DUTY</span>
+                <span class="amount_price"><?php $totals = Mage::getSingleton('checkout/session')->getQuote()->getTotals(); //Total object
+				echo  $currency_symbol.$subtotal = number_format($totals["execiseduty"]->getValue(),2); ?></span>
+            </li>
+            <li>
+                <span class="amount_name">SERVICE CHARGES <br/> <i>(Including Service Tax & Other Charges)</i></span>
+                
+                <span class="amount_price" id="pay_charge">
+				<?php $totals = Mage::getSingleton('checkout/session')->getQuote()->getTotals(); //Total object
+				$cart = Mage::getSingleton('checkout/session')->getQuote();
+		        $checkopay = $cart->getMethod();
+				if( $cart->getPayment()->hasMethodInstance()){
+				$paymentcode = $cart->getPayment()->getMethodInstance()->getCode();
+				$amount = Mage::helper('paymentcharge')->getPaymentCharge($paymentcode, $cart);
+				}else{
+					$amount ='0.00';
+				}
+				echo $currency_symbol.$convenience = number_format($totals["convenience"]->getValue(),2);  ?></span>
+            </li>
+            <li class="total_border">
+                <span class="amount_name" style="color: #444">TOTAL</span>
+                <span class="amount_price" id="gtotal"><?php $session= Mage::getSingleton('checkout/session');
+                //echo Mage::helper('checkout')->getQuote()->getGrandTotal();
+				echo $currency_symbol.number_format(Mage::helper('checkout')->getQuote()->getGrandTotal(),2);?></span>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<?php echo $this->getChildChildHtml('additional'); ?>
+<script type="text/javascript">
+    //<![CDATA[
+    <?php echo $this->getChildChildHtml('scripts'); ?>
+    payment.init();
+    <?php if (is_string($oneMethod)): ?>
+    payment.switchMethod('<?php echo $oneMethod ?>');
+        <?php endif; ?>
+		
+    //]]>
+</script>
+<?php if($this->getSelectedMethodCode() == ''){ ?>
+<script type="text/javascript">
+	
+jQuery("#p_method_hdfc_standard").prop("checked", true);
+//jQuery("#p_method_hdfc_standard").prop("checked", true);
+jQuery('#payment_form_hdfc_standard button').prop("disabled", false); 
+</script>
+<?php } ?>
+<script type="text/javascript">
+    jQuery(function() {
+        var $items = jQuery('#vtab>ul>li.active');
+		var currency_symbol = '<?php echo Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();?>';
+        $items.click(function() {
+           var charge1 = jQuery(this).attr('charge');
+	var subtot1 = jQuery(this).attr('subtotal');
+	var gtot1 = jQuery(this).attr('gtotal');
+	var selected_charge = jQuery(this).attr('selectedmet');
+	//var total_charge1 = (parseFloat(charge1)+parseFloat(subtot1)).toFixed(2);
+	var total_charge1 = (Math.floor((parseFloat(charge1) + parseFloat(subtot1)) * 100)/100).toFixed(2);
+	var gtotal_charge1 = (parseFloat(charge1)+parseFloat(gtot1)).toFixed(2);
+	var gtotal_charge1 = (parseFloat(gtotal_charge1)-parseFloat(selected_charge)).toFixed(2);
+	jQuery('#pay_charge').text(currency_symbol+total_charge1);
+	jQuery('#gtotal').text(currency_symbol+gtotal_charge1);
+	jQuery('#cheque_total_amount').text(currency_symbol + gtotal_charge1);
+	
+	
+	
+	
+	var cashmintotal1 = jQuery(this).attr('cashmintotal');
+	if(parseInt(gtotal_charge1) >= parseInt(cashmintotal1))
+	{
+		jQuery("#pan_block").show();
+		jQuery("#payment_submit").attr("disable", false);
+		jQuery("#payment_submit").bind('click');
+		jQuery("#payment_submit").css({"opacity":"1"});
+	}
+	else
+	{
+		jQuery("#pan_block").hide();
+		jQuery("#payment_submit").attr("disable", true);
+		jQuery("#payment_submit").unbind('click');
+		jQuery("#payment_submit").css({"opacity":"0.3"});
+	}	
+
+	
+	
+         }).eq(0).click();
+     });
+ </script>
+
+

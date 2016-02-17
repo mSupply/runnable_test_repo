@@ -1,0 +1,195 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2008-2015 Diglin GmbH - Switzerland (http://www.diglin.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Customer onepage checkout login form template
+ *
+ * @see app/design/frontend/base/default/template/checkout/onepage/login.phtml
+ */
+/** @var $this Mage_Checkout_Block_Onepage_Login */
+?>
+
+
+<div class="col2-set">
+    <?php echo $this->getChildHtml('login_before')?>
+	<?php //echo $this->getMessagesBlock()->getGroupedHtml() ?>
+
+<div class="col-lg-6 col-md-6 col-sm-6 	col-xs-12">
+    <div class="creat_account">
+    <?php echo $this->getChildHtml('form_fields_before')?>
+   
+    <form action="<?php echo $this->getUrl('customer/account/createpost/') ?>" method="post" id="form-validate">
+        <div class="register">
+            <input type="hidden" name="success_url" value="<?php echo $this->getSuccessUrl() ?>" />
+            <input type="hidden" name="error_url" value="<?php echo $this->getErrorUrl() ?>" />
+
+            <h2><?php echo $this->__('New Customer') ?></h2>
+            <p><?php echo $this->__('By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.') ?></p>
+
+           <?php echo $this->getLayout()->createBlock('customer/form_register')->setTemplate('customer/form/register.phtml')->toHtml(); ?>
+        </div>
+    </form>
+    </div>
+    </div>    
+
+
+
+<div class="col-lg-6 col-md-6 col-sm-6	col-xs-12">
+    <div class="login_panel" style="margin-bottom:0px;">
+    <div class="col-2">
+        <?php //echo $this->getMessagesBlock()->getGroupedHtml() ?>
+        <form id="login-form" action="<?php echo $this->getPostAction() ?>" method="post">
+            <?php echo $this->getBlockHtml('formkey'); ?>
+            <h2><?php echo $this->__('Existing Customer') ?></h2> 
+            <p><?php echo $this->__('If you have account with us please log in') ?></p> 
+            <ul id="checkout_login">
+                <li>
+                    <input type="text" placeholder="* Mobile No." class="input-text required-entry mobile2" id="login-email" name="login[username]" value="<?php echo $this->escapeHtml($this->getUsername()) ?>" />
+                </li>
+                <li>
+                    <input type="password" placeholder="* Password" class="custominput required-entry validate-password" id="login-password" name="login[password]" />
+                    <button type="submit" class="submit loginsubmit login-form" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><span> <!-- <img src="<?php echo $this->getSkinUrl('images/submit_arrow.jpg'); ?>" /> --> LOGIN</span></button>
+					
+                </li>
+                <?php echo $this->getChildHtml('form.additional.info'); ?>
+                <?php echo $this->getChildHtml('persistent.remember.me'); ?>
+            </ul>
+            <input name="context" type="hidden" value="checkout" />
+            <span class="text-center col-lg-12"><a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" class="f-left"><?php echo $this->__('Forgot Your Password?') ?></a></span>
+        </form>
+    </div>
+
+</div>
+<!-- <div class="col2-set">
+    <div class="col-1">
+        <div class="buttons-set">
+            <p class="required">&nbsp;</p>
+            <?php if ($this->getQuote()->isAllowedGuestCheckout()): ?>
+                <button id="onepage-guest-register-button" type="button" class="button" onclick="checkout.setMethod();"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+            <?php elseif ($this->helper('checkout')->isCustomerMustBeLogged()): ?>
+                <button id="onepage-guest-register-button" type="button" class="button" onclick="checkout.setMethod();"><span><span><?php echo $this->__('Register') ?></span></span></button>
+            <?php else: ?>
+                 <form action="<?php echo $this->getUrl('persistent/index/saveMethod'); ?>">
+                    <button id="onepage-guest-register-button" type="submit" class="button"><span><span><?php //echo $this->__('Register') ?></span></span></button>
+                </form>
+            <?php endif; ?>
+        </div>
+    </div>
+   
+</div> -->
+</div>
+<script type="text/javascript">
+//<![CDATA[
+    var loginForm = new VarienForm('login-form', true);
+    $('login-email').observe('keypress', bindLoginPost);
+    $('login-password').observe('keypress', bindLoginPost);
+    function bindLoginPost(evt){
+        if (evt.keyCode == Event.KEY_RETURN) {
+            loginForm.submit();
+        }
+    }
+    function onepageLogin(button)
+    {
+        if(loginForm.validator && loginForm.validator.validate()){
+            button.disabled = true;
+            loginForm.submit();
+        }
+    }
+
+    // Diglin - Special Username
+    document.observe("login:setMethod", function (event){
+        if(event.memo.method == 'guest') {
+            Element.hide('register-username');
+        } else {
+            Element.show('register-username');
+        }
+    });
+//]]>
+</script>
+
+ 
+ <style>.error1{ clear:both; float:left;width:100%;}.error{color:#ec5523;float:left; clear:both;}</style>
+	 <script type="text/javascript">
+	jQuery(document).ready(function() {
+
+	jQuery('#login-form').click(function() { 
+
+	jQuery(".error1").hide();
+	var hasError = 0;
+	var mobiReg = /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/;
+	
+	var passwords = jQuery("#login-password").val();
+	var lent = jQuery("#login-password").val().length;
+	var mobileVal = jQuery(".mobile2").val();
+	  
+	if(lent < 6 && passwords != ''){
+		 jQuery("#login-password").after('<span class="error1">Please enter 6 or more characters. Leading or trailing spaces will be ignored.</span>');
+		jQuery("#advice-required-entry-login-password").css({
+						"opacity": "0",
+                        "display": "none"
+						});
+	hasError = 1;
+	
+    }else{
+	jQuery("#login-password").after('<span class="error1"></span>');
+	jQuery("#advice-required-entry-login-password").css({
+						"opacity": "999",
+                        "display": "block"
+						});
+	}
+	
+   if(password != '') {
+	jQuery("#advice-required-entry-login-password").css({
+				"opacity": "0",
+				"display": "none"
+				});
+    }else{
+		
+		jQuery("#advice-required-entry-login-password").css({
+						"opacity": "999",
+                        "display": "block"
+						});
+	}
+	
+    if(mobileVal == '') {
+        var mobileVal = jQuery(".mobile1").val();
+    }
+
+    else if(!mobiReg.test(mobileVal)) {
+        jQuery(".mobile2").after('<span class="error1">Enter a valid mobile number.</span>');
+		jQuery("#advice-required-entry-login-email").css({
+						"opacity": "0",
+                        "display": "none"
+						});
+       hasError = 1;
+    }
+	
+	
+    if(hasError == 1)
+	 {
+		return false;
+	 }else{
+		 return true;
+	 }
+	
+
+   });
+   
+   
+});
+ </script>
