@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="102931" started-at="2016-03-16T10:41:00Z" finished-at="2016-03-16T10:42:43Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="102931" started-at="2016-03-16T10:41:00Z" finished-at="2016-03-16T10:42:43Z">
+      <class name="Scenarios.AddProductLoginCheckoutTest_CashOnDelivery">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:Scenarios.AddProductLoginCheckoutTest_CashOnDelivery@1d251891]" name="beforeTestCofig" is-config="true" duration-ms="17174" started-at="2016-03-16T16:11:00Z" finished-at="2016-03-16T16:11:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestCofig -->
+        <test-method status="PASS" signature="AddProductLoginCheckout()[pri:0, instance:Scenarios.AddProductLoginCheckoutTest_CashOnDelivery@1d251891]" name="AddProductLoginCheckout" duration-ms="85747" started-at="2016-03-16T16:11:17Z" finished-at="2016-03-16T16:12:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddProductLoginCheckout -->
+      </class> <!-- Scenarios.AddProductLoginCheckoutTest_CashOnDelivery -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

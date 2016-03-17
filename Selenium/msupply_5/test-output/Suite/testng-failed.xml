@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="Scenarios.NewUserRegistration">
+        <methods>
+          <include name="beforeTestCofig"/>
+        </methods>
+      </class> <!-- Scenarios.NewUserRegistration -->
+      <class name="Scenarios.AddProductLoginCheckoutTest">
+        <methods>
+          <include name="AddProductLoginCheckout"/>
+        </methods>
+      </class> <!-- Scenarios.AddProductLoginCheckoutTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

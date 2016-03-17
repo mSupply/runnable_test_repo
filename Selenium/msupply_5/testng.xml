@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>                
+    </listeners>
+        
+  <test name="msupply Reports">
+    <classes>
+     <class name="Scenarios.AddProductLoginCheckoutTest_FirstFourOptions">
+      <methods><include name="AddProductLoginCheckout" /></methods>
+      </class>
+      <class name="Scenarios.NewUserRegistration">
+      <methods><exclude name="UserRegistration" /></methods>
+      </class>
+      <class name="Scenarios.PaymentGatewayChequeDD">
+      <methods><exclude name="PaymentChequeorDD" /></methods>
+      </class>
+      <class name="Scenarios.PaymentGatewayPayuMoney">
+      <methods><exclude name="PaymentPayuMoney" /></methods>
+      </class>
+      <class name="Scenarios.PaymentGatewayDebitCard">
+      <methods><exclude name="PaymentDebitCard" /></methods>
+      </class>
+      <class name="Scenarios.PaymentGatewayCashonDeilvery">
+      <methods><exclude name="CashonDelivery" /></methods>
+      </class>
+      <class name="Scenarios.PaymentGatewayCreditCard">
+       <methods><exclude name="PaymentCreditCard" /></methods>
+      </class>
+      <class name="Scenarios.LoginForRegisteredUsers">
+       <methods><exclude name="UserLogin" /></methods>
+      </class>
+      <class name="Scenarios.LoginAndAddtoCart">
+       <methods><exclude name="UserLoginAndAddToCart" /></methods>
+      </class>
+      <class name="Scenarios.PaymentGatewayNetBanking">
+      <methods><exclude name="PaymentNetBanking" /></methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
