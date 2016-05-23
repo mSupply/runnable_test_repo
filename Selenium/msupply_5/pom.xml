@@ -50,12 +50,12 @@
                                 <mailport>465</mailport>
                                 <mailssl>true</mailssl>
                                 <mailAltConfig>true</mailAltConfig>                                
-                                <mailuser>ksandeep5407@gmail.com</mailuser>
-                                <mailpassword>ppppppppp</mailpassword>
+                                <mailuser>ksandeepmsupply@gmail.com</mailuser>
+                                <mailpassword>ksandeep2016</mailpassword>
                                                                 
-                                <from>ksandeep5407@gmail.com</from>
+                                <from>ksandeepmsupply@gmail.com</from>
                                 <receivers>
-                                        <receiver>ksandeep5407@gmail.com</receiver>
+                                        <receiver>ksandeepmsupply@gmail.com</receiver>
                                 </receivers>
                                 
                                 <subject>Test Automation Report</subject>
@@ -64,7 +64,7 @@
                                                             
                                 <fileSets>
                                         <fileSet>
-                                                <directory>D:/Msupply Project/msupply/target/surefire-reports/html</directory>
+                                                <directory>D:/Selenium Workspace/msupply_5/target/surefire-reports/html</directory>
                                                 <includes>
                                                         <include>**/index.html</include>
                                                         <include>**/overview.html</include>
@@ -99,18 +99,23 @@
 	<artifactId>guice</artifactId>
 	<version>3.0</version>
 </dependency>
+<dependency>
+	<groupId>org.seleniumhq.selenium</groupId>
+	<artifactId>selenium-java</artifactId>
+	<version>2.53.0</version>
+</dependency>
 
    <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-server</artifactId>
         <version>2.52.0</version>
    </dependency>
-   <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <version>6.8</version>
-      <scope>test</scope>
-  </dependency>
+<dependency>
+	<groupId>org.testng</groupId>
+	<artifactId>testng</artifactId>
+	<version>6.9.10</version>
+</dependency>
+
   <dependency>
 	<groupId>log4j</groupId>
 	<artifactId>log4j</artifactId>
@@ -124,19 +129,27 @@
 <dependency>
 	<groupId>org.apache.poi</groupId>
 	<artifactId>poi-ooxml</artifactId>
-	<version>3.14-beta1</version>
+	<version>3.14</version>
 </dependency>
+
+
 <dependency>
 	<groupId>org.apache.poi</groupId>
 	<artifactId>poi-ooxml-schemas</artifactId>
-	<version>3.14-beta1</version>
+	<version>3.14</version>
 </dependency>
 
-<dependency> 
-    <groupId>xml-apis</groupId>
-    <artifactId>xml-apis</artifactId>
-    <version>1.4.01</version>
+<dependency>
+	<groupId>xml-apis</groupId>
+	<artifactId>xml-apis</artifactId>
+	<version>2.0.2</version>
 </dependency>
+<dependency>
+	<groupId>com.relevantcodes</groupId>
+	<artifactId>extentreports</artifactId>
+	<version>2.40</version>
+</dependency>
+
    
 </dependencies>    
     

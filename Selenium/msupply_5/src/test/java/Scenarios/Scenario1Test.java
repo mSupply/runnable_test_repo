@@ -19,7 +19,7 @@ public class Scenario1Test
     public static RetrieveXlsxData rXlsx;
     public static WebDriver driver;
     public static org.apache.log4j.Logger log;
-    static POM.HomePage homePageObj;
+    public static POM.HomePage homePageObj;
     
     @BeforeTest
     public void beforeTestCofig()
@@ -28,9 +28,18 @@ public class Scenario1Test
 		wdcf = new WebDriverCommonFunctions();
 		rXlsx = new RetrieveXlsxData();
 		log = LogReports.writeLog(Scenario1Test.class);
-		driver=BrowserSelection.selectBrowserDriver("firefox");
-		driver.get(Credentials.url);
+		driver=BrowserSelection.selectBrowserDriver("firefox");	
+		//driver.manage().deleteAllCookies();
 		WebDriverCommonFunctions wb=new WebDriverCommonFunctions();
 		wb.maximizingWindow();
-    }       
+		
+		driver.get(Credentials.url);
+		
+		Scenario1Test.wdcf.waitForPageToLoad();
+    }   
+    @AfterTest
+    public void AfterTest()
+    {
+    	//driver.quit();
+    }
 }

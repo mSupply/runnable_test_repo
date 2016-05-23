@@ -1,23 +1,23 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 21.461 sec <<< FAILURE! - in TestSuite
-UserRegistration(Scenarios.NewUserRegistration)  Time elapsed: 6.214 sec  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 233.813 sec <<< FAILURE! - in TestSuite
+OrderID_Verification_CashOnDelivery(SanityTest.OrderID_Verification_CashOnDelivery_Test)  Time elapsed: 215.22 sec  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: {"method":"xpath","selector":"//*[@id='firstname']"}
-Command duration or timeout: 41 milliseconds
+Unable to locate element: {"method":"xpath","selector":"//*[@id='my-orders-table']/tbody/tr[1]/td[1]"}
+Command duration or timeout: 30.13 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.1.44', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 57e465c1-e7d5-442d-86ad-bd54e311000b
-*** Element info: {Using=xpath, value=//*[@id='firstname']}
-	at Scenarios.NewUserRegistration.UserRegistration(NewUserRegistration.java:30)
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=40.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: edccf51e-760b-4a29-851d-29d4ad8ff33e
+*** Element info: {Using=xpath, value=//*[@id='my-orders-table']/tbody/tr[1]/td[1]}
+	at SanityTest.OrderID_Verification_CashOnDelivery_Test.OrderID_Verification_CashOnDelivery(OrderID_Verification_CashOnDelivery_Test.java:21)
 Caused by: org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: {"method":"xpath","selector":"//*[@id='firstname']"}
+Unable to locate element: {"method":"xpath","selector":"//*[@id='my-orders-table']/tbody/tr[1]/td[1]"}
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.1.44', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: driver.version: unknown
 

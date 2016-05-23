@@ -1,42 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="EndToEnd">
     <listeners>
-        <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>                
+        <listener class-name="org.uncommons.reportng.HTMLReporter"></listener> 
+        <listener class-name="GenericLibrary.ExtentReporterNG"></listener>                 
     </listeners>
         
-  <test name="msupply Reports">
+ <!-- <test name="SanityTest_cartPage">
     <classes>
-     <class name="Scenarios.AddProductLoginCheckoutTest_FirstFourOptions">
-      <methods><include name="AddProductLoginCheckout" /></methods>
-      </class>
-      <class name="Scenarios.NewUserRegistration">
-      <methods><exclude name="UserRegistration" /></methods>
-      </class>
-      <class name="Scenarios.PaymentGatewayChequeDD">
-      <methods><exclude name="PaymentChequeorDD" /></methods>
-      </class>
-      <class name="Scenarios.PaymentGatewayPayuMoney">
-      <methods><exclude name="PaymentPayuMoney" /></methods>
-      </class>
-      <class name="Scenarios.PaymentGatewayDebitCard">
-      <methods><exclude name="PaymentDebitCard" /></methods>
-      </class>
-      <class name="Scenarios.PaymentGatewayCashonDeilvery">
-      <methods><exclude name="CashonDelivery" /></methods>
-      </class>
-      <class name="Scenarios.PaymentGatewayCreditCard">
-       <methods><exclude name="PaymentCreditCard" /></methods>
-      </class>
-      <class name="Scenarios.LoginForRegisteredUsers">
-       <methods><exclude name="UserLogin" /></methods>
-      </class>
-      <class name="Scenarios.LoginAndAddtoCart">
-       <methods><exclude name="UserLoginAndAddToCart" /></methods>
-      </class>
-      <class name="Scenarios.PaymentGatewayNetBanking">
-      <methods><exclude name="PaymentNetBanking" /></methods>
-      </class>
+       <class name="SanityTest.ServiceChargeCalculation_KartPage_Test" />
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test>  
+
+  <test name="SanityTest_PaymentMethods">
+    <classes>
+       <class name="SanityTest.PaymentMethods_Verification_Test" />
+    </classes>
+  </test>
+  
+  <test name="SanityTest_MOQ_Verification">
+    <classes>
+       <class name="SanityTest.Product_MOQ_Verification_Test" />
+    </classes>
+  </test>  
+-->  
+  <test name="SanityTest_OrderIDVerification">
+    <classes>
+       <class name="SanityTest.OrderID_Verification_CashOnDelivery_Test" />
+    </classes>
+  </test>  
+
+    
+</suite> 
+
+ 	

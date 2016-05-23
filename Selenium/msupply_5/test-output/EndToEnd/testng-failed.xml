@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [EndToEnd]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="GenericLibrary.ExtentReporterNG"/>
+  </listeners>
+  <test name="SanityTest_cartPage">
+    <classes>
+      <class name="SanityTest.ServiceChargeCalculation"/>
+    </classes>
+  </test> <!-- SanityTest_cartPage -->
+  <test name="SanityTest_PaymentMethods">
+    <classes>
+      <class name="SanityTest.ServiceChargeCalculation_PaymentMethods_Test"/>
+    </classes>
+  </test> <!-- SanityTest_PaymentMethods -->
+  <test name="SanityTest_MOQ_Verification">
+    <classes>
+      <class name="SanityTest.ProductDetails_Verification_Test"/>
+    </classes>
+  </test> <!-- SanityTest_MOQ_Verification -->
+  <test name="SanityTest_OrderIDVerification">
+    <classes>
+      <class name="SanityTest.AddProductLoginCheckoutTest_CashOnDelivery_Test"/>
+    </classes>
+  </test> <!-- SanityTest_OrderIDVerification -->
+  <test name="SanityTest_cartPage(failed)">
+    <classes>
+      <class name="SanityTest.ServiceChargeCalculation">
+        <methods>
+          <include name="beforeTestCofig"/>
+          <include name="ServiceChargeCalculation_PaymentMethods"/>
+          <include name="AfterTest"/>
+        </methods>
+      </class> <!-- SanityTest.ServiceChargeCalculation -->
+      <class name="SanityTest.ServiceChargeCalculation_PaymentMethods_Test">
+        <methods>
+          <include name="beforeTestCofig"/>
+        </methods>
+      </class> <!-- SanityTest.ServiceChargeCalculation_PaymentMethods_Test -->
+      <class name="SanityTest.ProductDetails_Verification_Test">
+        <methods>
+          <include name="beforeTestCofig"/>
+        </methods>
+      </class> <!-- SanityTest.ProductDetails_Verification_Test -->
+      <class name="SanityTest.AddProductLoginCheckoutTest_CashOnDelivery_Test">
+        <methods>
+          <include name="beforeTestCofig"/>
+        </methods>
+      </class> <!-- SanityTest.AddProductLoginCheckoutTest_CashOnDelivery_Test -->
+    </classes>
+  </test> <!-- SanityTest_cartPage(failed) -->
+  <test name="SanityTest_PaymentMethods(failed)">
+    <classes>
+      <class name="SanityTest.ServiceChargeCalculation">
+        <methods>
+          <include name="beforeTestCofig"/>
+          <include name="AfterTest"/>
+        </methods>
+      </class> <!-- SanityTest.ServiceChargeCalculation -->
+      <class name="SanityTest.ServiceChargeCalculation_PaymentMethods_Test">
+        <methods>
+          <include name="ServiceChargeCalculation_PaymentMethods"/>
+          <include name="beforeTestCofig"/>
+        </methods>
+      </class> <!-- SanityTest.ServiceChargeCalculation_PaymentMethods_Test -->
+      <class name="SanityTest.ProductDetails_Verification_Test">
+        <methods>
+          <include name="beforeTestCofig"/>
+        </methods>
+      </class> <!-- SanityTest.ProductDetails_Verification_Test -->
+      <class name="SanityTest.AddProductLoginCheckoutTest_CashOnDelivery_Test">
+        <methods>
+          <include name="beforeTestCofig"/>
+        </methods>
+      </class> <!-- SanityTest.AddProductLoginCheckoutTest_CashOnDelivery_Test -->
+    </classes>
+  </test> <!-- SanityTest_PaymentMethods(failed) -->
+  <test name="SanityTest_MOQ_Verification(failed)">
+    <classes>
+      <class name="SanityTest.ServiceChargeCalculation">
+        <methods>
+          <include name="beforeTestCofig"/>
+          <include name="AfterTest"/>
+        </methods>
+      </class> <!-- SanityTest.ServiceChargeCalculation -->
+      <class name="SanityTest.ServiceChargeCalculation_PaymentMethods_Test">
+        <methods>
+          <include name="beforeTestCofig"/>
+        </methods>
+      </class> <!-- SanityTest.ServiceChargeCalculation_PaymentMethods_Test -->
+      <class name="SanityTest.ProductDetails_Verification_Test">
+        <methods>
+          <include name="beforeTestCofig"/>
+          <include name="ProductDetails_Verification"/>
+        </methods>
+      </class> <!-- SanityTest.ProductDetails_Verification_Test -->
+      <class name="SanityTest.AddProductLoginCheckoutTest_CashOnDelivery_Test">
+        <methods>
+          <include name="beforeTestCofig"/>
+        </methods>
+      </class> <!-- SanityTest.AddProductLoginCheckoutTest_CashOnDelivery_Test -->
+    </classes>
+  </test> <!-- SanityTest_MOQ_Verification(failed) -->
+  <test name="SanityTest_OrderIDVerification(failed)">
+    <classes>
+      <class name="SanityTest.ServiceChargeCalculation">
+        <methods>
+          <include name="beforeTestCofig"/>
+          <include name="AfterTest"/>
+        </methods>
+      </class> <!-- SanityTest.ServiceChargeCalculation -->
+      <class name="SanityTest.ServiceChargeCalculation_PaymentMethods_Test">
+        <methods>
+          <include name="beforeTestCofig"/>
+        </methods>
+      </class> <!-- SanityTest.ServiceChargeCalculation_PaymentMethods_Test -->
+      <class name="SanityTest.AddProductLoginCheckoutTest_CashOnDelivery_Test">
+        <methods>
+          <include name="AddProductLoginCheckout"/>
+          <include name="beforeTestCofig"/>
+        </methods>
+      </class> <!-- SanityTest.AddProductLoginCheckoutTest_CashOnDelivery_Test -->
+      <class name="SanityTest.ProductDetails_Verification_Test">
+        <methods>
+          <include name="beforeTestCofig"/>
+        </methods>
+      </class> <!-- SanityTest.ProductDetails_Verification_Test -->
+    </classes>
+  </test> <!-- SanityTest_OrderIDVerification(failed) -->
+</suite> <!-- Failed suite [EndToEnd] -->

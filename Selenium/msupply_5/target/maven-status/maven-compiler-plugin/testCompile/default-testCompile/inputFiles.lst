@@ -5,8 +5,10 @@ D:\Selenium Workspace\msupply_5\src\test\java\GenericLibrary\LogReports.java
 D:\Selenium Workspace\msupply_5\src\test\java\Scenarios\PaymentGatewayNetBanking.java
 D:\Selenium Workspace\msupply_5\src\test\java\POM\PaymentPayuMoney.java
 D:\Selenium Workspace\msupply_5\src\test\java\POM\LoginPage.java
+D:\Selenium Workspace\msupply_5\src\test\java\POM\ProductDetailsPage.java
 D:\Selenium Workspace\msupply_5\src\test\java\GenericLibrary\Credentials.java
 D:\Selenium Workspace\msupply_5\src\test\java\POM\PaymentNetBanking.java
+D:\Selenium Workspace\msupply_5\src\test\java\Scenarios\AddProductLoginCheckoutTest_Cheque_Test.java
 D:\Selenium Workspace\msupply_5\src\test\java\Scenarios\PaymentGatewayCashonDeilvery.java
 D:\Selenium Workspace\msupply_5\src\test\java\Scenarios\LoginAndAddtoCart.java
 D:\Selenium Workspace\msupply_5\src\test\java\Scenarios\PaymentGatewayChequeDD.java
@@ -15,8 +17,10 @@ D:\Selenium Workspace\msupply_5\src\test\java\POM\AddItemToCart.java
 D:\Selenium Workspace\msupply_5\src\test\java\POM\HomePage.java
 D:\Selenium Workspace\msupply_5\src\test\java\GenericLibrary\BrowserSelection.java
 D:\Selenium Workspace\msupply_5\src\test\java\Scenarios\PaymentGatewayDebitCard.java
+D:\Selenium Workspace\msupply_5\src\test\java\Scenarios\AddProductLoginCheckoutTest_FirstFourOptions_Test.java
 D:\Selenium Workspace\msupply_5\src\test\java\Scenarios\PaymentGatewayPayuMoney.java
 D:\Selenium Workspace\msupply_5\src\test\java\GenericLibrary\Listener.java
+D:\Selenium Workspace\msupply_5\src\test\java\Scenarios\AddProductLoginCheckoutTest_CashOnDelivery_Test.java
 D:\Selenium Workspace\msupply_5\src\test\java\GenericLibrary\RetrieveXlsxData.java
 D:\Selenium Workspace\msupply_5\src\test\java\Scenarios\Scenario1Test.java
 D:\Selenium Workspace\msupply_5\src\test\java\POM\PaymentCreditCard.java
