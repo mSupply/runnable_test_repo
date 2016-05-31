@@ -11,6 +11,9 @@ import POM.HomePage;
 import POM.ShoppingCartPage;
 import Scenarios.Scenario1Test;
 
+/*
+ * Home page
+ */
 public class Homepage_Test extends Scenario1Test
 {
 	@Test
