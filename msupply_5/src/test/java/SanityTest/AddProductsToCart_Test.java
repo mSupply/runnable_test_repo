@@ -11,7 +11,11 @@ import POM.LoginPage;
 import POM.ShoppingCartPage;
 import Scenarios.Scenario1Test;
 
-
+/**
+ * Checking cart.
+ * @author Sandeep K
+ *
+ */
 public class AddProductsToCart_Test  extends Scenario1Test
 {
 	@Test
