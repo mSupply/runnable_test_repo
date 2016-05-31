@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<layout version="0.1.0">
-    <productupload_adminhtml_productupload_index>
-        <reference name="content">
-            <block type="productupload/adminhtml_productupload" name="productupload" />
-        </reference>
-    </productupload_adminhtml_productupload_index>
-</layout>

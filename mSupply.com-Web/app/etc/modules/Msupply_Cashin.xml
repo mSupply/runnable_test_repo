@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <modules>
-        <Msupply_Cashin>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Msupply_Cashin>
-    </modules>
-</config>
