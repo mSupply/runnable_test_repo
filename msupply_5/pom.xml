@@ -1,0 +1,157 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Project</groupId>
+  <artifactId>msupply_5</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <build>
+		
+		<plugins>
+			<!-- Compiler plug-in -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${jdk.level}</source>
+					<target>${jdk.level}</target>
+				</configuration>
+			</plugin>
+		
+			<!-- Below plug-in is used to execute tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<suiteXmlFiles>
+						<!-- TestNG suite XML files -->
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					<testFailureIgnore>true</testFailureIgnore>
+				</configuration>
+			</plugin>
+		
+		
+<plugin>
+   <groupId>ch.fortysix</groupId>
+	<artifactId>maven-postman-plugin</artifactId>
+	<version>0.1.6</version>
+        <executions>
+                <execution>
+                        <id>send_an_email</id> 
+                        <phase>test</phase>
+                        <goals>
+                                <goal>send-mail</goal>
+                        </goals>
+                        <inherited>true</inherited>
+                        <configuration>
+                                                                
+                                <mailhost>smtp.gmail.com</mailhost>
+                                <mailport>465</mailport>
+                                <mailssl>true</mailssl>
+                                <mailAltConfig>true</mailAltConfig>                                
+                                <mailuser>ksandeepmsupply@gmail.com</mailuser>
+                                <mailpassword>ksandeep2016</mailpassword>
+                                                                
+                                <from>ksandeepmsupply@gmail.com</from>
+                                <receivers>
+                                        <receiver>ksandeepmsupply@gmail.com</receiver>
+                                </receivers>
+                                
+                                <subject>Test Automation Report</subject>
+                                <failonerror>false</failonerror>    
+                                <htmlMessage>This is the Report</htmlMessage>
+                                                            
+                                <fileSets>
+                                        <fileSet>
+                                                <directory>D:/Selenium Workspace/msupply_5/target/surefire-reports/html</directory>
+                                                <includes>
+                                                        <include>**/index.html</include>
+                                                        <include>**/overview.html</include>
+                                                        <include>**/reportng.css</include>
+                                                        <include>**/reportng.js</include>
+                                                        <include>**/sorttable.js</include>
+                                                        <include>**/suite1_test1_results.html</include>
+                                                         <include>**/suites.html</include>
+                                                </includes>
+                                        </fileSet>
+                                </fileSets>
+                        </configuration>
+                        
+                </execution>
+        </executions>
+</plugin>
+
+		</plugins>
+
+</build>
+
+
+
+<dependencies>  
+<dependency>
+	<groupId>org.uncommons</groupId>
+	<artifactId>reportng</artifactId>
+	<version>1.1.4</version>
+</dependency>
+<dependency>
+	<groupId>com.google.inject</groupId>
+	<artifactId>guice</artifactId>
+	<version>3.0</version>
+</dependency>
+<dependency>
+	<groupId>org.seleniumhq.selenium</groupId>
+	<artifactId>selenium-java</artifactId>
+	<version>2.53.0</version>
+</dependency>
+
+   <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-server</artifactId>
+        <version>2.52.0</version>
+   </dependency>
+<dependency>
+	<groupId>org.testng</groupId>
+	<artifactId>testng</artifactId>
+	<version>6.9.10</version>
+</dependency>
+
+  <dependency>
+	<groupId>log4j</groupId>
+	<artifactId>log4j</artifactId>
+	<version>1.2.17</version>
+  </dependency> 
+   <dependency>
+	<groupId>org.apache.poi</groupId>
+	<artifactId>poi</artifactId>
+	<version>3.14-beta1</version>
+  </dependency>  
+<dependency>
+	<groupId>org.apache.poi</groupId>
+	<artifactId>poi-ooxml</artifactId>
+	<version>3.14</version>
+</dependency>
+
+
+<dependency>
+	<groupId>org.apache.poi</groupId>
+	<artifactId>poi-ooxml-schemas</artifactId>
+	<version>3.14</version>
+</dependency>
+
+<dependency>
+	<groupId>xml-apis</groupId>
+	<artifactId>xml-apis</artifactId>
+	<version>2.0.2</version>
+</dependency>
+<dependency>
+	<groupId>com.relevantcodes</groupId>
+	<artifactId>extentreports</artifactId>
+	<version>2.40</version>
+</dependency>
+
+   
+</dependencies>    
+    
+    
+</project>

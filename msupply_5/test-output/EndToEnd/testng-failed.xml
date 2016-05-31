@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [EndToEnd]">
+  <parameter name="Production_URL" value="http://www.msupply.com"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="GenericLibrary.Listener"/>
+  </listeners>
+  <test name="SanityTest_cartPage">
+    <parameter name="Production_URL" value="http://www.msupply.com"/>
+    <classes>
+      <class name="SanityTest.ServiceChargeCalculation_KartPage_Test"/>
+    </classes>
+  </test> <!-- SanityTest_cartPage -->
+</suite> <!-- Failed suite [EndToEnd] -->

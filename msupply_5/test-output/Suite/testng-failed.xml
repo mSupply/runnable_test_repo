@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+  </listeners>
+  <test name="exampletest1">
+    <classes>
+      <class name="Scenarios.AddProductLoginCheckoutTest_CashOnDelivery_Test"/>
+    </classes>
+  </test> <!-- exampletest1 -->
+  <test name="exampletest2">
+    <classes>
+      <class name="Scenarios.AddProductLoginCheckoutTest_Cheque_Test"/>
+    </classes>
+  </test> <!-- exampletest2 -->
+</suite> <!-- Failed suite [Suite] -->

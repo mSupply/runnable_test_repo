@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [EndToEnd]">
+  <parameter name="STAGING_URL" value="http://staging.msupply.com"/>
+  <parameter name="Production_URL" value="http://www.msupply.com"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="GenericLibrary.Listener"/>
+  </listeners>
+  <test name="SanityTest_HomePage">
+    <parameter name="Production_URL" value="http://www.msupply.com"/>
+    <classes>
+      <class name="SanityTest.Homepage_Test"/>
+    </classes>
+  </test> <!-- SanityTest_HomePage -->
+  <test name="SanityTest_AddProducts_To_cart">
+    <parameter name="Production_URL" value="http://www.msupply.com"/>
+    <classes>
+      <class name="SanityTest.AddProductsToCart_Test"/>
+    </classes>
+  </test> <!-- SanityTest_AddProducts_To_cart -->
+  <test name="SanityTest">
+    <parameter name="STAGING_URL" value="http://staging.msupply.com"/>
+    <classes>
+      <class name="SanityTest.PlaceOrder_CashOnDelivery_Test"/>
+    </classes>
+  </test> <!-- SanityTest -->
+  <test name="SanityTest_MOQ_Verification">
+    <parameter name="Production_URL" value="http://www.msupply.com"/>
+    <classes>
+      <class name="SanityTest.Product_MOQ_Verification_Test"/>
+    </classes>
+  </test> <!-- SanityTest_MOQ_Verification -->
+  <test name="SanityTest_cartPage">
+    <parameter name="Production_URL" value="http://www.msupply.com"/>
+    <classes>
+      <class name="SanityTest.ServiceChargeCalculation_KartPage_Test"/>
+    </classes>
+  </test> <!-- SanityTest_cartPage -->
+  <test name="SanityTest_PaymentMethods">
+    <parameter name="Production_URL" value="http://www.msupply.com"/>
+    <classes>
+      <class name="SanityTest.PaymentMethods_Verification_Test"/>
+    </classes>
+  </test> <!-- SanityTest_PaymentMethods -->
+</suite> <!-- Failed suite [EndToEnd] -->

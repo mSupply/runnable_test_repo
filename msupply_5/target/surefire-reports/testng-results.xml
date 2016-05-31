@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+    <line>
+      <![CDATA[Clicked on Close Button - POPUP]]>
+    </line>
+    <line>
+      <![CDATA[Moved to Account in Home page]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Login Button]]>
+    </line>
+    <line>
+      <![CDATA[Mobile Number is9555554444]]>
+    </line>
+    <line>
+      <![CDATA[Entered Mobile Number]]>
+    </line>
+    <line>
+      <![CDATA[Password isksandeep]]>
+    </line>
+    <line>
+      <![CDATA[Entered Password]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Login Button]]>
+    </line>
+    <line>
+      <![CDATA[TestCase - for AddProduct to cart]]>
+    </line>
+    <line>
+      <![CDATA[............Clicked on Close Button on HomePage Popup.........]]>
+    </line>
+    <line>
+      <![CDATA[............Selecting Product from Navigation.........]]>
+    </line>
+    <line>
+      <![CDATA[............Selecting Electrical Product from Search Box.........]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : SearchBox and entering value Electrical]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : Clicked on a Electrical Product]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : zipcode_popup]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on zipcode_popup_Go Button]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_AddtoList]]>
+    </line>
+    <line>
+      <![CDATA[............Selecting Electrical Product from Search Box.........]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : SearchBox and entering value Electrical]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : Clicked on a Electrical Product]]>
+    </line>
+    <line>
+      <![CDATA[............Selecting Product from Home page.........]]>
+    </line>
+    <line>
+      <![CDATA[............Click on Home Page Icon.........]]>
+    </line>
+    <line>
+      <![CDATA[............Click on Home Page_Cement product.........]]>
+    </line>
+    <line>
+      <![CDATA[Moved to Account in Home page]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Login Button]]>
+    </line>
+    <line>
+      <![CDATA[Mobile Number is9555554444]]>
+    </line>
+    <line>
+      <![CDATA[Entered Mobile Number]]>
+    </line>
+    <line>
+      <![CDATA[Password isksandeep]]>
+    </line>
+    <line>
+      <![CDATA[Entered Password]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Login Button]]>
+    </line>
+    <line>
+      <![CDATA[Testcase - Place Order through Cash on Delivery]]>
+    </line>
+    <line>
+      <![CDATA[............Clicked on Close Button on HomePage Popup.........]]>
+    </line>
+    <line>
+      <![CDATA[............Selecting Product from Navigation.........]]>
+    </line>
+    <line>
+      <![CDATA[............Selecting Electrical Product from Search Box.........]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : SearchBox and entering value Electrical]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : Clicked on a Electrical Product]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : zipcode_popup]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on zipcode_popup_Go Button]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_AddtoList]]>
+    </line>
+    <line>
+      <![CDATA[............Selecting Electrical Product from Search Box.........]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : SearchBox and entering value Electrical]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : Clicked on a Electrical Product]]>
+    </line>
+    <line>
+      <![CDATA[............Selecting Product from Home page.........]]>
+    </line>
+    <line>
+      <![CDATA[............Click on Home Page Icon.........]]>
+    </line>
+    <line>
+      <![CDATA[............Click on Home Page_Cement product.........]]>
+    </line>
+    <line>
+      <![CDATA[.........Inside Cart Page...........]]>
+    </line>
+    <line>
+      <![CDATA[Mobile Number is9555554444]]>
+    </line>
+    <line>
+      <![CDATA[Entered Mobile Number]]>
+    </line>
+    <line>
+      <![CDATA[Password isksandeep]]>
+    </line>
+    <line>
+      <![CDATA[Entered Password]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Login Button]]>
+    </line>
+    <line>
+      <![CDATA[.........Inside Cart Page...........]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Place order]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on a Address]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on SaveAndContinue Billing]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Address_Shipping]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on SaveAndContinue_Shipping]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Cheque option]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on ContinueButtonPayment]]>
+    </line>
+    <line>
+      <![CDATA[Moved to Account in Home page]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Login Button]]>
+    </line>
+    <line>
+      <![CDATA[Mobile Number is9555554444]]>
+    </line>
+    <line>
+      <![CDATA[Entered Mobile Number]]>
+    </line>
+    <line>
+      <![CDATA[Password isksandeep]]>
+    </line>
+    <line>
+      <![CDATA[Entered Password]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Login Button]]>
+    </line>
+    <line>
+      <![CDATA[............Selecting Electrical Product from Search Box.........]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : SearchBox and entering value Electrical]]>
+    </line>
+    <line>
+      <![CDATA[Moved to : Clicked on a Electrical Product]]>
+    </line>
+    <line>
+      <![CDATA[.........Inside Cart Page...........]]>
+    </line>
+    <line>
+      <![CDATA[Mobile Number is9555554444]]>
+    </line>
+    <line>
+      <![CDATA[Entered Mobile Number]]>
+    </line>
+    <line>
+      <![CDATA[Password isksandeep]]>
+    </line>
+    <line>
+      <![CDATA[Entered Password]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Login Button]]>
+    </line>
+  </reporter-output>
+  <suite name="EndToEnd" duration-ms="2997445" started-at="2016-05-31T04:26:52Z" finished-at="2016-05-31T05:16:49Z">
+    <groups>
+    </groups>
+    <test name="SanityTest_HomePage" duration-ms="923095" started-at="2016-05-31T04:26:52Z" finished-at="2016-05-31T04:42:15Z">
+      <class name="SanityTest.Homepage_Test">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.Homepage_Test@77caeb3e]" name="beforeTestCofig" is-config="true" duration-ms="4941" started-at="2016-05-31T09:56:52Z" finished-at="2016-05-31T09:56:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestCofig -->
+        <test-method status="PASS" signature="HomePage_verification(java.lang.String)[pri:0, instance:SanityTest.Homepage_Test@77caeb3e]" name="HomePage_verification" duration-ms="860170" started-at="2016-05-31T09:56:57Z" finished-at="2016-05-31T10:11:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.msupply.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Clicked on Close Button - POPUP]]>
+            </line>
+            <line>
+              <![CDATA[Moved to Account in Home page]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Login Button]]>
+            </line>
+            <line>
+              <![CDATA[Mobile Number is9555554444]]>
+            </line>
+            <line>
+              <![CDATA[Entered Mobile Number]]>
+            </line>
+            <line>
+              <![CDATA[Password isksandeep]]>
+            </line>
+            <line>
+              <![CDATA[Entered Password]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Login Button]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- HomePage_verification -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.Homepage_Test@77caeb3e]" name="tearDown" is-config="true" duration-ms="57750" started-at="2016-05-31T10:11:17Z" finished-at="2016-05-31T10:12:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- SanityTest.Homepage_Test -->
+    </test> <!-- SanityTest_HomePage -->
+    <test name="SanityTest_AddProducts_To_cart" duration-ms="288214" started-at="2016-05-31T04:42:15Z" finished-at="2016-05-31T04:47:03Z">
+      <class name="SanityTest.AddProductsToCart_Test">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.AddProductsToCart_Test@1a968a59]" name="beforeTestCofig" is-config="true" duration-ms="4907" started-at="2016-05-31T10:12:15Z" finished-at="2016-05-31T10:12:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestCofig -->
+        <test-method status="PASS" signature="AddProduct(java.lang.String)[pri:0, instance:SanityTest.AddProductsToCart_Test@1a968a59]" name="AddProduct" duration-ms="220722" started-at="2016-05-31T10:12:20Z" finished-at="2016-05-31T10:16:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.msupply.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[TestCase - for AddProduct to cart]]>
+            </line>
+            <line>
+              <![CDATA[............Clicked on Close Button on HomePage Popup.........]]>
+            </line>
+            <line>
+              <![CDATA[............Selecting Product from Navigation.........]]>
+            </line>
+            <line>
+              <![CDATA[............Selecting Electrical Product from Search Box.........]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : SearchBox and entering value Electrical]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : Clicked on a Electrical Product]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : zipcode_popup]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on zipcode_popup_Go Button]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_AddtoList]]>
+            </line>
+            <line>
+              <![CDATA[............Selecting Electrical Product from Search Box.........]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : SearchBox and entering value Electrical]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : Clicked on a Electrical Product]]>
+            </line>
+            <line>
+              <![CDATA[............Selecting Product from Home page.........]]>
+            </line>
+            <line>
+              <![CDATA[............Click on Home Page Icon.........]]>
+            </line>
+            <line>
+              <![CDATA[............Click on Home Page_Cement product.........]]>
+            </line>
+            <line>
+              <![CDATA[Moved to Account in Home page]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Login Button]]>
+            </line>
+            <line>
+              <![CDATA[Mobile Number is9555554444]]>
+            </line>
+            <line>
+              <![CDATA[Entered Mobile Number]]>
+            </line>
+            <line>
+              <![CDATA[Password isksandeep]]>
+            </line>
+            <line>
+              <![CDATA[Entered Password]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Login Button]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddProduct -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.AddProductsToCart_Test@1a968a59]" name="tearDown" is-config="true" duration-ms="62358" started-at="2016-05-31T10:16:01Z" finished-at="2016-05-31T10:17:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- SanityTest.AddProductsToCart_Test -->
+    </test> <!-- SanityTest_AddProducts_To_cart -->
+    <test name="SanityTest" duration-ms="244280" started-at="2016-05-31T04:47:03Z" finished-at="2016-05-31T04:51:08Z">
+      <class name="SanityTest.PlaceOrder_CashOnDelivery_Test">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.PlaceOrder_CashOnDelivery_Test@4dfa3a9d]" name="beforeTestCofig" is-config="true" duration-ms="4346" started-at="2016-05-31T10:17:03Z" finished-at="2016-05-31T10:17:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestCofig -->
+        <test-method status="PASS" signature="PlaceOrder_CashOnDelivery(java.lang.String)[pri:0, instance:SanityTest.PlaceOrder_CashOnDelivery_Test@4dfa3a9d]" name="PlaceOrder_CashOnDelivery" duration-ms="155011" started-at="2016-05-31T10:17:08Z" finished-at="2016-05-31T10:19:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://staging.msupply.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Testcase - Place Order through Cash on Delivery]]>
+            </line>
+            <line>
+              <![CDATA[............Clicked on Close Button on HomePage Popup.........]]>
+            </line>
+            <line>
+              <![CDATA[............Selecting Product from Navigation.........]]>
+            </line>
+            <line>
+              <![CDATA[............Selecting Electrical Product from Search Box.........]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : SearchBox and entering value Electrical]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : Clicked on a Electrical Product]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : zipcode_popup]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on zipcode_popup_Go Button]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_AddtoList]]>
+            </line>
+            <line>
+              <![CDATA[............Selecting Electrical Product from Search Box.........]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : SearchBox and entering value Electrical]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : Clicked on a Electrical Product]]>
+            </line>
+            <line>
+              <![CDATA[............Selecting Product from Home page.........]]>
+            </line>
+            <line>
+              <![CDATA[............Click on Home Page Icon.........]]>
+            </line>
+            <line>
+              <![CDATA[............Click on Home Page_Cement product.........]]>
+            </line>
+            <line>
+              <![CDATA[.........Inside Cart Page...........]]>
+            </line>
+            <line>
+              <![CDATA[Mobile Number is9555554444]]>
+            </line>
+            <line>
+              <![CDATA[Entered Mobile Number]]>
+            </line>
+            <line>
+              <![CDATA[Password isksandeep]]>
+            </line>
+            <line>
+              <![CDATA[Entered Password]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Login Button]]>
+            </line>
+            <line>
+              <![CDATA[.........Inside Cart Page...........]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Place order]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on a Address]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on SaveAndContinue Billing]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Address_Shipping]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on SaveAndContinue_Shipping]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Cheque option]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on ContinueButtonPayment]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- PlaceOrder_CashOnDelivery -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.PlaceOrder_CashOnDelivery_Test@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="84731" started-at="2016-05-31T10:19:43Z" finished-at="2016-05-31T10:21:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- SanityTest.PlaceOrder_CashOnDelivery_Test -->
+    </test> <!-- SanityTest -->
+    <test name="SanityTest_MOQ_Verification" duration-ms="250097" started-at="2016-05-31T04:51:08Z" finished-at="2016-05-31T04:55:18Z">
+      <class name="SanityTest.Product_MOQ_Verification_Test">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.Product_MOQ_Verification_Test@57fffcd7]" name="beforeTestCofig" is-config="true" duration-ms="4687" started-at="2016-05-31T10:21:08Z" finished-at="2016-05-31T10:21:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestCofig -->
+        <test-method status="PASS" signature="Product_MOQ_Verification(java.lang.String)[pri:0, instance:SanityTest.Product_MOQ_Verification_Test@57fffcd7]" name="Product_MOQ_Verification" duration-ms="181595" started-at="2016-05-31T10:21:12Z" finished-at="2016-05-31T10:24:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.msupply.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Product_MOQ_Verification -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.Product_MOQ_Verification_Test@57fffcd7]" name="tearDown" is-config="true" duration-ms="63509" started-at="2016-05-31T10:24:14Z" finished-at="2016-05-31T10:25:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- SanityTest.Product_MOQ_Verification_Test -->
+    </test> <!-- SanityTest_MOQ_Verification -->
+    <test name="SanityTest_cartPage" duration-ms="644930" started-at="2016-05-31T04:55:18Z" finished-at="2016-05-31T05:06:03Z">
+      <class name="SanityTest.ServiceChargeCalculation_KartPage_Test">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.ServiceChargeCalculation_KartPage_Test@4f7d0008]" name="beforeTestCofig" is-config="true" duration-ms="4700" started-at="2016-05-31T10:25:18Z" finished-at="2016-05-31T10:25:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestCofig -->
+        <test-method status="PASS" signature="ServiceChargeCalculation_KartPage(java.lang.String)[pri:0, instance:SanityTest.ServiceChargeCalculation_KartPage_Test@4f7d0008]" name="ServiceChargeCalculation_KartPage" duration-ms="582494" started-at="2016-05-31T10:25:22Z" finished-at="2016-05-31T10:35:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.msupply.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Moved to Account in Home page]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Login Button]]>
+            </line>
+            <line>
+              <![CDATA[Mobile Number is9555554444]]>
+            </line>
+            <line>
+              <![CDATA[Entered Mobile Number]]>
+            </line>
+            <line>
+              <![CDATA[Password isksandeep]]>
+            </line>
+            <line>
+              <![CDATA[Entered Password]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Login Button]]>
+            </line>
+            <line>
+              <![CDATA[............Selecting Electrical Product from Search Box.........]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : SearchBox and entering value Electrical]]>
+            </line>
+            <line>
+              <![CDATA[Moved to : Clicked on a Electrical Product]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ServiceChargeCalculation_KartPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.ServiceChargeCalculation_KartPage_Test@4f7d0008]" name="tearDown" is-config="true" duration-ms="57523" started-at="2016-05-31T10:35:05Z" finished-at="2016-05-31T10:36:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- SanityTest.ServiceChargeCalculation_KartPage_Test -->
+    </test> <!-- SanityTest_cartPage -->
+    <test name="SanityTest_PaymentMethods" duration-ms="646736" started-at="2016-05-31T05:06:03Z" finished-at="2016-05-31T05:16:49Z">
+      <class name="SanityTest.PaymentMethods_Verification_Test">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.PaymentMethods_Verification_Test@4cf777e8]" name="beforeTestCofig" is-config="true" duration-ms="4335" started-at="2016-05-31T10:36:03Z" finished-at="2016-05-31T10:36:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestCofig -->
+        <test-method status="PASS" signature="PaymentMethods_Verification(java.lang.String)[pri:0, instance:SanityTest.PaymentMethods_Verification_Test@4cf777e8]" name="PaymentMethods_Verification" duration-ms="585101" started-at="2016-05-31T10:36:07Z" finished-at="2016-05-31T10:45:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.msupply.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[.........Inside Cart Page...........]]>
+            </line>
+            <line>
+              <![CDATA[Mobile Number is9555554444]]>
+            </line>
+            <line>
+              <![CDATA[Entered Mobile Number]]>
+            </line>
+            <line>
+              <![CDATA[Password isksandeep]]>
+            </line>
+            <line>
+              <![CDATA[Entered Password]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Login Button]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- PaymentMethods_Verification -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.PaymentMethods_Verification_Test@4cf777e8]" name="tearDown" is-config="true" duration-ms="57091" started-at="2016-05-31T10:45:52Z" finished-at="2016-05-31T10:46:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- SanityTest.PaymentMethods_Verification_Test -->
+    </test> <!-- SanityTest_PaymentMethods -->
+  </suite> <!-- EndToEnd -->
+</testng-results>
