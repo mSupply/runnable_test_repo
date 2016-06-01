@@ -2,6 +2,7 @@ SanityTest\ServiceChargeCalculation_KartPage_Test.class
 GenericLibrary\RetrieveXlsxData.class
 POM\AddItemToCart.class
 POM\ShoppingCartPage.class
+SanityTest\PlaceOrder_Cheque_Test.class
 Scenarios\AddProductLoginCheckoutTest_FirstFourOptions_Test.class
 Functional_TestCases\ReviewsAndRatings\mSupply_Review_Rating_001_Test.class
 POM\CheckoutPage.class
@@ -20,9 +21,9 @@ GenericLibrary\ExtentReporterNG.class
 GenericLibrary\Listener.class
 POM\RegistrationPage.class
 SanityTest\Homepage_Test.class
-SanityTest\PlaceOrder_CashOnDelivery_Test.class
 Scenarios\Scenario1Test.class
 Scenarios\LoginForRegisteredUsers.class
+Functional_TestCases\ReviewsAndRatings\Demo.class
 GenericLibrary\WebDriverCommonFunctions.class
 GenericLibrary\LogReports.class
 POM\LoginPage.class

@@ -41,8 +41,8 @@ public class Scenario1Test
     @AfterTest
 	public void tearDown() throws Throwable
 	{
-    	ShoppingCartPage.removeCartProducts();
-    	driver.quit();
+//    	ShoppingCartPage.removeCartProducts();
+//    	driver.quit();
 	}
     
 

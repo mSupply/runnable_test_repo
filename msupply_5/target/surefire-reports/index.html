@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-EndToEnd">
-              <span class="suite-name border-passed">EndToEnd</span>
+              <span class="suite-name border-failed">EndToEnd</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-EndToEnd">
-                    <span>D:\Selenium Workspace\msupply_5\testng.xml</span>
+                    <span>D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">6 methods, 4 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-EndToEnd" class="hide-methods failed suite-EndToEnd"> (hide)</a> <!-- hide-methods failed suite-EndToEnd -->
+                      <a href="#" panel-name="suite-EndToEnd" class="show-methods failed suite-EndToEnd"> (show)</a> <!-- show-methods failed suite-EndToEnd -->
+                    </span>
+                    <div class="method-list-content failed suite-EndToEnd">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-EndToEnd" title="SanityTest.Homepage_Test" hash-for-method="HomePage_verification(http://www.msupply.com)">HomePage_verification(http://www.msupply.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-EndToEnd" title="SanityTest.PaymentMethods_Verification_Test" hash-for-method="PaymentMethods_Verification(http://www.msupply.com)">PaymentMethods_Verification(http://www.msupply.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-EndToEnd" title="SanityTest.PlaceOrder_Cheque_Test" hash-for-method="PlaceOrder_CashOnDelivery(http://staging.msupply.com)">PlaceOrder_CashOnDelivery(http://staging.msupply.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-EndToEnd" title="SanityTest.ServiceChargeCalculation_KartPage_Test" hash-for-method="ServiceChargeCalculation_KartPage(http://www.msupply.com)">ServiceChargeCalculation_KartPage(http://www.msupply.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-EndToEnd -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -107,27 +136,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-EndToEnd" title="SanityTest.Homepage_Test" hash-for-method="HomePage_verification(http://www.msupply.com)">HomePage_verification(http://www.msupply.com)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-EndToEnd" title="SanityTest.PaymentMethods_Verification_Test" hash-for-method="PaymentMethods_Verification(http://www.msupply.com)">PaymentMethods_Verification(http://www.msupply.com)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-EndToEnd" title="SanityTest.PlaceOrder_CashOnDelivery_Test" hash-for-method="PlaceOrder_CashOnDelivery(http://staging.msupply.com)">PlaceOrder_CashOnDelivery(http://staging.msupply.com)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-EndToEnd" title="SanityTest.Product_MOQ_Verification_Test" hash-for-method="Product_MOQ_Verification(http://www.msupply.com)">Product_MOQ_Verification(http://www.msupply.com)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-EndToEnd" title="SanityTest.ServiceChargeCalculation_KartPage_Test" hash-for-method="ServiceChargeCalculation_KartPage(http://www.msupply.com)">ServiceChargeCalculation_KartPage(http://www.msupply.com)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-EndToEnd -->
@@ -142,9 +151,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-EndToEnd" class="panel EndToEnd">
-          <div class="suite-EndToEnd-class-passed">
+          <div class="suite-EndToEnd-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">SanityTest.Homepage_Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -154,14 +163,44 @@
                   </a> <!-- HomePage_verification(http://www.msupply.com) -->
                   <span class="method-name">HomePage_verification</span>
                   <span class="parameters">(http://www.msupply.com)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;popzip&apos;]&quot;}
+Command duration or timeout: 39.26 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;MS-DT-056&apos;, ip: &apos;10.1.2.253&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f0ebc906-a961-4711-b51b-fcb9faf6eda8
+*** Element info: {Using=xpath, value=//*[@id=&apos;popzip&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.sendKeys(Unknown Source)
+	at POM.HomePage.addCementProductToCart(HomePage.java:933)
+	at SanityTest.Homepage_Test.HomePage_verification(Homepage_Test.java:44)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;popzip&apos;]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;MS-DT-056&apos;, ip: &apos;10.1.2.253&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SANDEE~1/AppData/Local/Temp/anonymous2094387044516580991webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/SANDEE~1/AppData/Local/Temp/anonymous2094387044516580991webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-EndToEnd-class-passed -->
-          <div class="suite-EndToEnd-class-passed">
+          </div> <!-- suite-EndToEnd-class-failed -->
+          <div class="suite-EndToEnd-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">SanityTest.PlaceOrder_CashOnDelivery_Test</span>
+              <img src="failed.png"/>
+              <span class="class-name">SanityTest.PlaceOrder_Cheque_Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -170,10 +209,84 @@
                   </a> <!-- PlaceOrder_CashOnDelivery(http://staging.msupply.com) -->
                   <span class="method-name">PlaceOrder_CashOnDelivery</span>
                   <span class="parameters">(http://staging.msupply.com)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;seller_choosen&apos;]/div/div[3]/button[2]&quot;}
+Command duration or timeout: 30.15 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;MS-DT-056&apos;, ip: &apos;10.1.2.253&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 51c77d71-5ab1-4649-9177-15f3d7c7b4dd
+*** Element info: {Using=xpath, value=//div[@id=&apos;seller_choosen&apos;]/div/div[3]/button[2]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at POM.HomePage.SelectProducts(HomePage.java:266)
+	at SanityTest.PlaceOrder_Cheque_Test.PlaceOrder_CashOnDelivery(PlaceOrder_Cheque_Test.java:27)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;seller_choosen&apos;]/div/div[3]/button[2]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;MS-DT-056&apos;, ip: &apos;10.1.2.253&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SANDEE~1/AppData/Local/Temp/anonymous2913977607791058654webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/SANDEE~1/AppData/Local/Temp/anonymous2913977607791058654webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-EndToEnd-class-passed -->
+          </div> <!-- suite-EndToEnd-class-failed -->
+          <div class="suite-EndToEnd-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">SanityTest.PaymentMethods_Verification_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="PaymentMethods_Verification(http://www.msupply.com)">
+                  </a> <!-- PaymentMethods_Verification(http://www.msupply.com) -->
+                  <span class="method-name">PaymentMethods_Verification</span>
+                  <span class="parameters">(http://www.msupply.com)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [17123] but found [17122]
+	at POM.ShoppingCartPage.cart(ShoppingCartPage.java:140)
+	at POM.HomePage.SelectProductsforKartVerification(HomePage.java:360)
+	at SanityTest.PaymentMethods_Verification_Test.PaymentMethods_Verification(PaymentMethods_Verification_Test.java:25)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EndToEnd-class-failed -->
+          <div class="suite-EndToEnd-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">SanityTest.ServiceChargeCalculation_KartPage_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ServiceChargeCalculation_KartPage(http://www.msupply.com)">
+                  </a> <!-- ServiceChargeCalculation_KartPage(http://www.msupply.com) -->
+                  <span class="method-name">ServiceChargeCalculation_KartPage</span>
+                  <span class="parameters">(http://www.msupply.com)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [17123] but found [17122]
+	at POM.ShoppingCartPage.cart(ShoppingCartPage.java:140)
+	at POM.HomePage.SelectProductsforKartVerification(HomePage.java:360)
+	at SanityTest.ServiceChargeCalculation_KartPage_Test.ServiceChargeCalculation_KartPage(ServiceChargeCalculation_KartPage_Test.java:36)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EndToEnd-class-failed -->
           <div class="suite-EndToEnd-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -185,22 +298,6 @@
                   <a name="AddProduct(http://www.msupply.com)">
                   </a> <!-- AddProduct(http://www.msupply.com) -->
                   <span class="method-name">AddProduct</span>
-                  <span class="parameters">(http://www.msupply.com)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-EndToEnd-class-passed -->
-          <div class="suite-EndToEnd-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">SanityTest.PaymentMethods_Verification_Test</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="PaymentMethods_Verification(http://www.msupply.com)">
-                  </a> <!-- PaymentMethods_Verification(http://www.msupply.com) -->
-                  <span class="method-name">PaymentMethods_Verification</span>
                   <span class="parameters">(http://www.msupply.com)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -222,26 +319,10 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-EndToEnd-class-passed -->
-          <div class="suite-EndToEnd-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">SanityTest.ServiceChargeCalculation_KartPage_Test</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="ServiceChargeCalculation_KartPage(http://www.msupply.com)">
-                  </a> <!-- ServiceChargeCalculation_KartPage(http://www.msupply.com) -->
-                  <span class="method-name">ServiceChargeCalculation_KartPage</span>
-                  <span class="parameters">(http://www.msupply.com)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-EndToEnd-class-passed -->
         </div> <!-- panel EndToEnd -->
         <div panel-name="test-xml-EndToEnd" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Selenium Workspace\msupply_5\testng.xml</span>
+            <span class="header-content">D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -267,7 +348,7 @@
   &lt;test name=&quot;SanityTest&quot;&gt;
     &lt;parameter name=&quot;STAGING_URL&quot; value=&quot;http://staging.msupply.com&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;SanityTest.PlaceOrder_CashOnDelivery_Test&quot;/&gt;
+      &lt;class name=&quot;SanityTest.PlaceOrder_Cheque_Test&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- SanityTest --&gt;
   &lt;test name=&quot;SanityTest_MOQ_Verification&quot;&gt;
@@ -344,32 +425,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'HomePage_verification')
 data.setCell(0, 2, 'SanityTest.Homepage_Test')
-data.setCell(0, 3, 860170);
+data.setCell(0, 3, 762213);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'PaymentMethods_Verification')
-data.setCell(1, 2, 'SanityTest.PaymentMethods_Verification_Test')
-data.setCell(1, 3, 585101);
+data.setCell(1, 1, 'AddProduct')
+data.setCell(1, 2, 'SanityTest.AddProductsToCart_Test')
+data.setCell(1, 3, 194526);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'ServiceChargeCalculation_KartPage')
-data.setCell(2, 2, 'SanityTest.ServiceChargeCalculation_KartPage_Test')
-data.setCell(2, 3, 582494);
+data.setCell(2, 1, 'Product_MOQ_Verification')
+data.setCell(2, 2, 'SanityTest.Product_MOQ_Verification_Test')
+data.setCell(2, 3, 179213);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'AddProduct')
-data.setCell(3, 2, 'SanityTest.AddProductsToCart_Test')
-data.setCell(3, 3, 220722);
+data.setCell(3, 1, 'ServiceChargeCalculation_KartPage')
+data.setCell(3, 2, 'SanityTest.ServiceChargeCalculation_KartPage_Test')
+data.setCell(3, 3, 153064);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'Product_MOQ_Verification')
-data.setCell(4, 2, 'SanityTest.Product_MOQ_Verification_Test')
-data.setCell(4, 3, 181595);
+data.setCell(4, 1, 'PaymentMethods_Verification')
+data.setCell(4, 2, 'SanityTest.PaymentMethods_Verification_Test')
+data.setCell(4, 3, 151551);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'PlaceOrder_CashOnDelivery')
-data.setCell(5, 2, 'SanityTest.PlaceOrder_CashOnDelivery_Test')
-data.setCell(5, 3, 155011);
+data.setCell(5, 2, 'SanityTest.PlaceOrder_Cheque_Test')
+data.setCell(5, 3, 69683);
 window.suiteTableData['EndToEnd']= { tableData: data, tableDiv: 'times-div-EndToEnd'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 43 minutes</span>
+              <span class="suite-total-time">Total running time: 25 minutes</span>
               <div id="times-div-EndToEnd">
               </div> <!-- times-div-EndToEnd -->
             </div> <!-- times-div -->
@@ -384,13 +465,6 @@ return data;
               <span class="reporter-method-name">HomePage_verification(http://www.msupply.com)</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Clicked on Close Button - POPUP</span>
-                <span class="reporter-method-output">Moved to Account in Home page</span>
-                <span class="reporter-method-output">Clicked on Login Button</span>
-                <span class="reporter-method-output">Mobile Number is9555554444</span>
-                <span class="reporter-method-output">Entered Mobile Number</span>
-                <span class="reporter-method-output">Password isksandeep</span>
-                <span class="reporter-method-output">Entered Password</span>
-                <span class="reporter-method-output">Clicked on Login Button</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -431,53 +505,6 @@ return data;
                 <span class="reporter-method-output">Moved to : Clicked on a Electrical Product</span>
                 <span class="reporter-method-output">Moved to : zipcode_popup</span>
                 <span class="reporter-method-output">Clicked on zipcode_popup_Go Button</span>
-                <span class="reporter-method-output">Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_AddtoList</span>
-                <span class="reporter-method-output">............Selecting Electrical Product from Search Box.........</span>
-                <span class="reporter-method-output">Moved to : SearchBox and entering value Electrical</span>
-                <span class="reporter-method-output">Moved to : Clicked on a Electrical Product</span>
-                <span class="reporter-method-output">............Selecting Product from Home page.........</span>
-                <span class="reporter-method-output">............Click on Home Page Icon.........</span>
-                <span class="reporter-method-output">............Click on Home Page_Cement product.........</span>
-                <span class="reporter-method-output">.........Inside Cart Page...........</span>
-                <span class="reporter-method-output">Mobile Number is9555554444</span>
-                <span class="reporter-method-output">Entered Mobile Number</span>
-                <span class="reporter-method-output">Password isksandeep</span>
-                <span class="reporter-method-output">Entered Password</span>
-                <span class="reporter-method-output">Clicked on Login Button</span>
-                <span class="reporter-method-output">.........Inside Cart Page...........</span>
-                <span class="reporter-method-output">Clicked on Place order</span>
-                <span class="reporter-method-output">Clicked on a Address</span>
-                <span class="reporter-method-output">Clicked on SaveAndContinue Billing</span>
-                <span class="reporter-method-output">Clicked on Address_Shipping</span>
-                <span class="reporter-method-output">Clicked on SaveAndContinue_Shipping</span>
-                <span class="reporter-method-output">Clicked on Cheque option</span>
-                <span class="reporter-method-output">Clicked on ContinueButtonPayment</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">ServiceChargeCalculation_KartPage(http://www.msupply.com)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Moved to Account in Home page</span>
-                <span class="reporter-method-output">Clicked on Login Button</span>
-                <span class="reporter-method-output">Mobile Number is9555554444</span>
-                <span class="reporter-method-output">Entered Mobile Number</span>
-                <span class="reporter-method-output">Password isksandeep</span>
-                <span class="reporter-method-output">Entered Password</span>
-                <span class="reporter-method-output">Clicked on Login Button</span>
-                <span class="reporter-method-output">............Selecting Electrical Product from Search Box.........</span>
-                <span class="reporter-method-output">Moved to : SearchBox and entering value Electrical</span>
-                <span class="reporter-method-output">Moved to : Clicked on a Electrical Product</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">PaymentMethods_Verification(http://www.msupply.com)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">.........Inside Cart Page...........</span>
-                <span class="reporter-method-output">Mobile Number is9555554444</span>
-                <span class="reporter-method-output">Entered Mobile Number</span>
-                <span class="reporter-method-output">Password isksandeep</span>
-                <span class="reporter-method-output">Entered Password</span>
-                <span class="reporter-method-output">Clicked on Login Button</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -501,87 +528,95 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">HomePage_verification(http://www.msupply.com)</span>
-                <span class="method-start">4947 ms</span>
+                <span class="method-start">5621 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">865344 ms</span>
+                <span class="method-start">768314 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">SanityTest.AddProductsToCart_Test</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTestCofig</span>
-                <span class="method-start">923150 ms</span>
+                <span class="method-start">768399 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">AddProduct(http://www.msupply.com)</span>
-                <span class="method-start">928057 ms</span>
+                <span class="method-start">774129 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1149006 ms</span>
+                <span class="method-start">968871 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">SanityTest.PlaceOrder_CashOnDelivery_Test</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">SanityTest.PlaceOrder_Cheque_Test</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTestCofig</span>
-                <span class="method-start">1211373 ms</span>
+                <span class="method-start">968882 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">PlaceOrder_CashOnDelivery(http://staging.msupply.com)</span>
-                <span class="method-start">1215719 ms</span>
+                <span class="method-start">974212 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1370922 ms</span>
+                <span class="method-start">1044067 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">SanityTest.Product_MOQ_Verification_Test</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTestCofig</span>
-                <span class="method-start">1455663 ms</span>
+                <span class="method-start">1044085 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">Product_MOQ_Verification(http://www.msupply.com)</span>
-                <span class="method-start">1460350 ms</span>
+                <span class="method-start">1048365 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1642251 ms</span>
+                <span class="method-start">1227883 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">SanityTest.ServiceChargeCalculation_KartPage_Test</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTestCofig</span>
-                <span class="method-start">1705769 ms</span>
+                <span class="method-start">1227904 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">ServiceChargeCalculation_KartPage(http://www.msupply.com)</span>
-                <span class="method-start">1710469 ms</span>
+                <span class="method-start">1232941 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">2293176 ms</span>
+                <span class="method-start">1386184 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">SanityTest.PaymentMethods_Verification_Test</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTestCofig</span>
-                <span class="method-start">2350708 ms</span>
+                <span class="method-start">1386197 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">PaymentMethods_Verification(http://www.msupply.com)</span>
-                <span class="method-start">2355043 ms</span>
+                <span class="method-start">1390422 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">2940353 ms</span>
+                <span class="method-start">1542152 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -32,7 +32,7 @@ public class ProductDetailsPage extends LoadLocators
 	static Logger log = LogReports.writeLog(ProductDetailsPage.class);
 	
 	
-	public void WriteReview() throws Throwable
+	public void WriteReview(String Status) throws Throwable
 	{
 		//Verify for the "Write Review Text" is present
 		WebElement Write_Review_Link=loadElementByLinkText("Write_Review_Link_Xpath");
@@ -56,25 +56,33 @@ public class ProductDetailsPage extends LoadLocators
 			log.info("Not Present on the Product Details Page");
 			Reporter.log("Not Present on the Product Details Page",false);
 			throw new Exception();
+		}		
+		
+		if(Status.equals("BeforeLogin"))
+		{
+		   //Login and Navigate to Review and Rating
+		   WebElement Login_For_Review_And_Rating=loadElementByLinkText("Login_For_Review_And_Rating_LinkText");
+		   Login_For_Review_And_Rating.click();
+		
+		   String ExcelData[]=RetrieveXlsxData.getExcelData("LoginID_4");
+		
+		   WebElement MobileNumberField=loadElementByXpath("MobileNumberField_Xpath");
+		   MobileNumberField.sendKeys(ExcelData[1]);
+	       log.info("Mobile Number is"+ExcelData[1]);
+	       Reporter.log("Mobile Number is"+ExcelData[1],false);
+	       
+	       WebElement PasswordField=loadElementByXpath("PasswordField_Xpath");
+	       PasswordField.sendKeys(ExcelData[2]);
+	       log.info("Mobile Number is"+ExcelData[2]);
+	       Reporter.log("Mobile Number is"+ExcelData[2],false);
+	       
+	       WebElement LoginButton=loadElementByXpath("LoginButton_Xpath");
+	       LoginButton.click();
+		
+	       CommonFunctions.LoadPageExpicitWait();
 		}
-		
-		//Login and Naviage to Review and Rating
-		WebElement Login_For_Review_And_Rating=loadElementByLinkText("Login_For_Review_And_Rating_Xpath");
-		Login_For_Review_And_Rating.click();
-		String ExcelData[]=RetrieveXlsxData.getExcelData("LoginID_4");
-		
-		WebElement MobileNumberField=loadElementByLinkText("MobileNumberField_Xpath");
-		MobileNumberField.sendKeys(ExcelData[1]);
-	    log.info("Mobile Number is"+ExcelData[1]);
-	
-	    WebElement PasswordField=loadElementByLinkText("PasswordField_Xpath");
-	    PasswordField.sendKeys(ExcelData[2]);
-	    log.info("Mobile Number is"+ExcelData[2]);
 	    
-	    WebElement LoginButton=loadElementByLinkText("LoginButton_Xpath");
-	    LoginButton.click();
 		
-	    CommonFunctions.LoadPageExpicitWait();
 	    
 	    
 	}

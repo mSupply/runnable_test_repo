@@ -6,10 +6,22 @@
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="GenericLibrary.Listener"/>
   </listeners>
-  <test name="SanityTest_cartPage">
+  <test name="SanityTest_PaymentMethods">
     <parameter name="Production_URL" value="http://www.msupply.com"/>
     <classes>
-      <class name="SanityTest.ServiceChargeCalculation_KartPage_Test"/>
+      <class name="SanityTest.PaymentMethods_Verification_Test"/>
     </classes>
-  </test> <!-- SanityTest_cartPage -->
+  </test> <!-- SanityTest_PaymentMethods -->
+  <test name="SanityTest_PaymentMethods(failed)">
+    <parameter name="Production_URL" value="http://www.msupply.com"/>
+    <classes>
+      <class name="SanityTest.PaymentMethods_Verification_Test">
+        <methods>
+          <include name="beforeTestCofig"/>
+          <include name="PaymentMethods_Verification" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- SanityTest.PaymentMethods_Verification_Test -->
+    </classes>
+  </test> <!-- SanityTest_PaymentMethods(failed) -->
 </suite> <!-- Failed suite [EndToEnd] -->

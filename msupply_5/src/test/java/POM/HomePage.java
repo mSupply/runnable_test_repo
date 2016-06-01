@@ -931,7 +931,7 @@ public class HomePage extends LoadLocators
 		
 		
 		zipcode_popup.sendKeys("560064");
-	log.info("Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_zipcode_popup");
+	    log.info("Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_zipcode_popup");
 		
 		zipcode_popup_Go.click();
 		log.info("Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_zipcode_popup_Go");
@@ -999,7 +999,7 @@ public class HomePage extends LoadLocators
         logoutButton.click();
 	}
 
-	public ProductDetailsPage SelectProductsForReviewsandRatings() throws Throwable 
+	public ProductDetailsPage SelectProductsForReviewsandRatings(boolean zipCodePopUpEnabled) throws Throwable 
 	{
 		//Get Locators from Excel and create the WebElement object		
 		
@@ -1032,16 +1032,20 @@ public class HomePage extends LoadLocators
 		
 		CommonFunctions.LoadPageExpicitWait();
 		CommonFunctions.SwitchtoWebPage();
-		WebElement ZipCode_POPUP=loadElementByXpath("ZipCode_POPUP_xpath");
-		ZipCode_POPUP.sendKeys("560064");
-		log.info("Entered Pincode 560064");
-		Reporter.log("Entered Pincode 560064",false);			
 		
-		WebElement ZipCode_POPUP_Go=loadElementByXpath("ZipCode_POPUP_Go_Xpath");
-		ZipCode_POPUP_Go.click();
-		log.info("Clicked on Go Button - Pincode");
-		Reporter.log("Clicked on Go Button - Pincode",false);
-		CommonFunctions.LoadPageExpicitWait();
+		if(zipCodePopUpEnabled==true)
+		{
+		   WebElement ZipCode_POPUP=loadElementByXpath("ZipCode_POPUP_xpath");
+		   ZipCode_POPUP.sendKeys("560064");
+		   log.info("Entered Pincode 560064");
+		   Reporter.log("Entered Pincode 560064",false);			
+		
+		   WebElement ZipCode_POPUP_Go=loadElementByXpath("ZipCode_POPUP_Go_Xpath");
+		   ZipCode_POPUP_Go.click();
+		   log.info("Clicked on Go Button - Pincode");
+		   Reporter.log("Clicked on Go Button - Pincode",false);
+		   CommonFunctions.LoadPageExpicitWait();
+		}   
 		 
 		return PageFactory.initElements(Scenario1Test.driver, ProductDetailsPage.class);
 		

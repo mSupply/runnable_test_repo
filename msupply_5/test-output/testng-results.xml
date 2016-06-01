@@ -1,79 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[TestCase - Product Review]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on Close Button - POPUP]]>
-    </line>
-    <line>
-      <![CDATA[Selecting Product from Navigation]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on Navigation -> Buildingmaterial ->Cement -> PPC]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on : First Cement Product]]>
-    </line>
-    <line>
-      <![CDATA[Entered Pincode 560064]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on Go Button - Pincode]]>
-    </line>
-    <line>
-      <![CDATA[Write Review is Present on the Product Details Page]]>
-    </line>
-    <line>
-      <![CDATA[Present on the Product Details Page]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="149350" started-at="2016-05-31T07:28:52Z" finished-at="2016-05-31T07:31:21Z">
+  <suite name="EndToEnd" duration-ms="150358" started-at="2016-06-01T14:33:24Z" finished-at="2016-06-01T14:35:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="149350" started-at="2016-05-31T07:28:52Z" finished-at="2016-05-31T07:31:21Z">
-      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_001_Test">
-        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_001_Test@7dc36524]" name="beforeTestCofig" is-config="true" duration-ms="5295" started-at="2016-05-31T12:58:52Z" finished-at="2016-05-31T12:58:57Z">
+    <test name="SanityTest_PaymentMethods" duration-ms="150358" started-at="2016-06-01T14:33:24Z" finished-at="2016-06-01T14:35:54Z">
+      <class name="SanityTest.PaymentMethods_Verification_Test">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.PaymentMethods_Verification_Test@56f4468b]" name="beforeTestCofig" is-config="true" duration-ms="5263" started-at="2016-06-01T20:03:24Z" finished-at="2016-06-01T20:03:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestCofig -->
-        <test-method status="PASS" signature="mSupply_Review_Rating_001()[pri:0, instance:Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_001_Test@7dc36524]" name="mSupply_Review_Rating_001" duration-ms="86434" started-at="2016-05-31T12:58:57Z" finished-at="2016-05-31T13:00:23Z">
+        <test-method status="FAIL" signature="PaymentMethods_Verification(java.lang.String)[pri:0, instance:SanityTest.PaymentMethods_Verification_Test@56f4468b]" name="PaymentMethods_Verification" duration-ms="144882" started-at="2016-06-01T20:03:29Z" finished-at="2016-06-01T20:05:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.msupply.com]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [17123] but found [17122]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [17123] but found [17122]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at POM.ShoppingCartPage.cart(ShoppingCartPage.java:140)
+	at POM.HomePage.SelectProductsforKartVerification(HomePage.java:360)
+	at SanityTest.PaymentMethods_Verification_Test.PaymentMethods_Verification(PaymentMethods_Verification_Test.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
-            <line>
-              <![CDATA[TestCase - Product Review]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on Close Button - POPUP]]>
-            </line>
-            <line>
-              <![CDATA[Selecting Product from Navigation]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on Navigation -> Buildingmaterial ->Cement -> PPC]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on : First Cement Product]]>
-            </line>
-            <line>
-              <![CDATA[Entered Pincode 560064]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on Go Button - Pincode]]>
-            </line>
-            <line>
-              <![CDATA[Write Review is Present on the Product Details Page]]>
-            </line>
-            <line>
-              <![CDATA[Present on the Product Details Page]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- mSupply_Review_Rating_001 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_001_Test@7dc36524]" name="tearDown" is-config="true" duration-ms="57608" started-at="2016-05-31T13:00:23Z" finished-at="2016-05-31T13:01:21Z">
+        </test-method> <!-- PaymentMethods_Verification -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.PaymentMethods_Verification_Test@56f4468b]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-01T20:05:54Z" finished-at="2016-06-01T20:05:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_001_Test -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- SanityTest.PaymentMethods_Verification_Test -->
+    </test> <!-- SanityTest_PaymentMethods -->
+  </suite> <!-- EndToEnd -->
 </testng-results>
