@@ -95,16 +95,16 @@
       <![CDATA[Clicked on zipcode_popup_Go Button]]>
     </line>
   </reporter-output>
-  <suite name="EndToEnd" duration-ms="1542153" started-at="2016-06-01T11:37:11Z" finished-at="2016-06-01T12:02:53Z">
+  <suite name="EndToEnd" duration-ms="1430324" started-at="2016-06-01T15:30:05Z" finished-at="2016-06-01T15:53:55Z">
     <groups>
     </groups>
-    <test name="SanityTest_HomePage" duration-ms="768316" started-at="2016-06-01T11:37:11Z" finished-at="2016-06-01T11:49:59Z">
+    <test name="SanityTest_HomePage" duration-ms="704836" started-at="2016-06-01T15:30:05Z" finished-at="2016-06-01T15:41:50Z">
       <class name="SanityTest.Homepage_Test">
-        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.Homepage_Test@77caeb3e]" name="beforeTestCofig" is-config="true" duration-ms="5612" started-at="2016-06-01T17:07:11Z" finished-at="2016-06-01T17:07:16Z">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.Homepage_Test@1bce4f0a]" name="beforeTestCofig" is-config="true" duration-ms="5102" started-at="2016-06-01T21:00:05Z" finished-at="2016-06-01T21:00:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestCofig -->
-        <test-method status="FAIL" signature="HomePage_verification(java.lang.String)[pri:0, instance:SanityTest.Homepage_Test@77caeb3e]" name="HomePage_verification" duration-ms="762213" started-at="2016-06-01T17:07:16Z" finished-at="2016-06-01T17:19:59Z">
+        <test-method status="FAIL" signature="HomePage_verification(java.lang.String)[pri:0, instance:SanityTest.Homepage_Test@1bce4f0a]" name="HomePage_verification" duration-ms="699338" started-at="2016-06-01T21:00:10Z" finished-at="2016-06-01T21:11:49Z">
           <params>
             <param index="0">
               <value>
@@ -115,24 +115,24 @@
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Unable to locate element: {"method":"xpath","selector":"//*[@id='popzip']"}
-Command duration or timeout: 39.26 seconds
+Command duration or timeout: 37.71 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: f0ebc906-a961-4711-b51b-fcb9faf6eda8
+Session ID: 6607a051-297e-4ecf-9505-2ce7ec20d7a6
 *** Element info: {Using=xpath, value=//*[@id='popzip']}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//*[@id='popzip']"}
-Command duration or timeout: 39.26 seconds
+Command duration or timeout: 37.71 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: f0ebc906-a961-4711-b51b-fcb9faf6eda8
+Session ID: 6607a051-297e-4ecf-9505-2ce7ec20d7a6
 *** Element info: {Using=xpath, value=//*[@id='popzip']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -182,8 +182,8 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SANDEE~1/AppData/Local/Temp/anonymous2094387044516580991webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SANDEE~1/AppData/Local/Temp/anonymous2094387044516580991webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SANDEE~1/AppData/Local/Temp/anonymous6263521375978411305webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SANDEE~1/AppData/Local/Temp/anonymous6263521375978411305webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
@@ -193,19 +193,19 @@ Driver info: driver.version: unknown
             </line>
           </reporter-output>
         </test-method> <!-- HomePage_verification -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.Homepage_Test@77caeb3e]" name="tearDown" is-config="true" duration-ms="1" started-at="2016-06-01T17:19:59Z" finished-at="2016-06-01T17:19:59Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.Homepage_Test@1bce4f0a]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-01T21:11:50Z" finished-at="2016-06-01T21:11:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- SanityTest.Homepage_Test -->
     </test> <!-- SanityTest_HomePage -->
-    <test name="SanityTest_AddProducts_To_cart" duration-ms="200472" started-at="2016-06-01T11:49:59Z" finished-at="2016-06-01T11:53:20Z">
+    <test name="SanityTest_AddProducts_To_cart" duration-ms="180163" started-at="2016-06-01T15:41:50Z" finished-at="2016-06-01T15:44:50Z">
       <class name="SanityTest.AddProductsToCart_Test">
-        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.AddProductsToCart_Test@1a968a59]" name="beforeTestCofig" is-config="true" duration-ms="5730" started-at="2016-06-01T17:19:59Z" finished-at="2016-06-01T17:20:05Z">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.AddProductsToCart_Test@e25b2fe]" name="beforeTestCofig" is-config="true" duration-ms="4126" started-at="2016-06-01T21:11:50Z" finished-at="2016-06-01T21:11:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestCofig -->
-        <test-method status="PASS" signature="AddProduct(java.lang.String)[pri:0, instance:SanityTest.AddProductsToCart_Test@1a968a59]" name="AddProduct" duration-ms="194526" started-at="2016-06-01T17:20:05Z" finished-at="2016-06-01T17:23:19Z">
+        <test-method status="PASS" signature="AddProduct(java.lang.String)[pri:0, instance:SanityTest.AddProductsToCart_Test@e25b2fe]" name="AddProduct" duration-ms="175802" started-at="2016-06-01T21:11:54Z" finished-at="2016-06-01T21:14:50Z">
           <params>
             <param index="0">
               <value>
@@ -282,19 +282,19 @@ Driver info: driver.version: unknown
             </line>
           </reporter-output>
         </test-method> <!-- AddProduct -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.AddProductsToCart_Test@1a968a59]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-01T17:23:20Z" finished-at="2016-06-01T17:23:20Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.AddProductsToCart_Test@e25b2fe]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-01T21:14:50Z" finished-at="2016-06-01T21:14:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- SanityTest.AddProductsToCart_Test -->
     </test> <!-- SanityTest_AddProducts_To_cart -->
-    <test name="SanityTest" duration-ms="75186" started-at="2016-06-01T11:53:20Z" finished-at="2016-06-01T11:54:35Z">
+    <test name="SanityTest" duration-ms="72201" started-at="2016-06-01T15:44:50Z" finished-at="2016-06-01T15:46:02Z">
       <class name="SanityTest.PlaceOrder_Cheque_Test">
-        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.PlaceOrder_Cheque_Test@4dfa3a9d]" name="beforeTestCofig" is-config="true" duration-ms="5330" started-at="2016-06-01T17:23:20Z" finished-at="2016-06-01T17:23:25Z">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.PlaceOrder_Cheque_Test@13deb50e]" name="beforeTestCofig" is-config="true" duration-ms="4196" started-at="2016-06-01T21:14:50Z" finished-at="2016-06-01T21:14:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestCofig -->
-        <test-method status="FAIL" signature="PlaceOrder_CashOnDelivery(java.lang.String)[pri:0, instance:SanityTest.PlaceOrder_Cheque_Test@4dfa3a9d]" name="PlaceOrder_CashOnDelivery" duration-ms="69683" started-at="2016-06-01T17:23:25Z" finished-at="2016-06-01T17:24:35Z">
+        <test-method status="FAIL" signature="PlaceOrder_CashOnDelivery(java.lang.String)[pri:0, instance:SanityTest.PlaceOrder_Cheque_Test@13deb50e]" name="PlaceOrder_CashOnDelivery" duration-ms="67833" started-at="2016-06-01T21:14:54Z" finished-at="2016-06-01T21:16:02Z">
           <params>
             <param index="0">
               <value>
@@ -305,24 +305,24 @@ Driver info: driver.version: unknown
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Unable to locate element: {"method":"xpath","selector":"//div[@id='seller_choosen']/div/div[3]/button[2]"}
-Command duration or timeout: 30.15 seconds
+Command duration or timeout: 30.02 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 51c77d71-5ab1-4649-9177-15f3d7c7b4dd
+Session ID: 8470c458-dae4-46f8-ab45-1cdde1b9e693
 *** Element info: {Using=xpath, value=//div[@id='seller_choosen']/div/div[3]/button[2]}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//div[@id='seller_choosen']/div/div[3]/button[2]"}
-Command duration or timeout: 30.15 seconds
+Command duration or timeout: 30.02 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 51c77d71-5ab1-4649-9177-15f3d7c7b4dd
+Session ID: 8470c458-dae4-46f8-ab45-1cdde1b9e693
 *** Element info: {Using=xpath, value=//div[@id='seller_choosen']/div/div[3]/button[2]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -372,8 +372,8 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SANDEE~1/AppData/Local/Temp/anonymous2913977607791058654webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SANDEE~1/AppData/Local/Temp/anonymous2913977607791058654webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SANDEE~1/AppData/Local/Temp/anonymous4178822050066659959webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SANDEE~1/AppData/Local/Temp/anonymous4178822050066659959webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
@@ -404,19 +404,19 @@ Driver info: driver.version: unknown
             </line>
           </reporter-output>
         </test-method> <!-- PlaceOrder_CashOnDelivery -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.PlaceOrder_Cheque_Test@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="1" started-at="2016-06-01T17:24:35Z" finished-at="2016-06-01T17:24:35Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.PlaceOrder_Cheque_Test@13deb50e]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-01T21:16:02Z" finished-at="2016-06-01T21:16:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- SanityTest.PlaceOrder_Cheque_Test -->
     </test> <!-- SanityTest -->
-    <test name="SanityTest_MOQ_Verification" duration-ms="183798" started-at="2016-06-01T11:54:35Z" finished-at="2016-06-01T11:57:39Z">
+    <test name="SanityTest_MOQ_Verification" duration-ms="178916" started-at="2016-06-01T15:46:02Z" finished-at="2016-06-01T15:49:01Z">
       <class name="SanityTest.Product_MOQ_Verification_Test">
-        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.Product_MOQ_Verification_Test@57fffcd7]" name="beforeTestCofig" is-config="true" duration-ms="4280" started-at="2016-06-01T17:24:35Z" finished-at="2016-06-01T17:24:39Z">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.Product_MOQ_Verification_Test@14bf9759]" name="beforeTestCofig" is-config="true" duration-ms="3774" started-at="2016-06-01T21:16:02Z" finished-at="2016-06-01T21:16:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestCofig -->
-        <test-method status="PASS" signature="Product_MOQ_Verification(java.lang.String)[pri:0, instance:SanityTest.Product_MOQ_Verification_Test@57fffcd7]" name="Product_MOQ_Verification" duration-ms="179213" started-at="2016-06-01T17:24:39Z" finished-at="2016-06-01T17:27:38Z">
+        <test-method status="PASS" signature="Product_MOQ_Verification(java.lang.String)[pri:0, instance:SanityTest.Product_MOQ_Verification_Test@14bf9759]" name="Product_MOQ_Verification" duration-ms="174846" started-at="2016-06-01T21:16:06Z" finished-at="2016-06-01T21:19:01Z">
           <params>
             <param index="0">
               <value>
@@ -427,19 +427,19 @@ Driver info: driver.version: unknown
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Product_MOQ_Verification -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.Product_MOQ_Verification_Test@57fffcd7]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-01T17:27:39Z" finished-at="2016-06-01T17:27:39Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.Product_MOQ_Verification_Test@14bf9759]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-01T21:19:01Z" finished-at="2016-06-01T21:19:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- SanityTest.Product_MOQ_Verification_Test -->
     </test> <!-- SanityTest_MOQ_Verification -->
-    <test name="SanityTest_cartPage" duration-ms="158280" started-at="2016-06-01T11:57:39Z" finished-at="2016-06-01T12:00:17Z">
+    <test name="SanityTest_cartPage" duration-ms="144256" started-at="2016-06-01T15:49:01Z" finished-at="2016-06-01T15:51:25Z">
       <class name="SanityTest.ServiceChargeCalculation_KartPage_Test">
-        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.ServiceChargeCalculation_KartPage_Test@4f7d0008]" name="beforeTestCofig" is-config="true" duration-ms="5037" started-at="2016-06-01T17:27:39Z" finished-at="2016-06-01T17:27:44Z">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.ServiceChargeCalculation_KartPage_Test@6500df86]" name="beforeTestCofig" is-config="true" duration-ms="4090" started-at="2016-06-01T21:19:01Z" finished-at="2016-06-01T21:19:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestCofig -->
-        <test-method status="FAIL" signature="ServiceChargeCalculation_KartPage(java.lang.String)[pri:0, instance:SanityTest.ServiceChargeCalculation_KartPage_Test@4f7d0008]" name="ServiceChargeCalculation_KartPage" duration-ms="153064" started-at="2016-06-01T17:27:44Z" finished-at="2016-06-01T17:30:17Z">
+        <test-method status="FAIL" signature="ServiceChargeCalculation_KartPage(java.lang.String)[pri:0, instance:SanityTest.ServiceChargeCalculation_KartPage_Test@6500df86]" name="ServiceChargeCalculation_KartPage" duration-ms="139986" started-at="2016-06-01T21:19:05Z" finished-at="2016-06-01T21:21:25Z">
           <params>
             <param index="0">
               <value>
@@ -495,19 +495,19 @@ Driver info: driver.version: unknown
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ServiceChargeCalculation_KartPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.ServiceChargeCalculation_KartPage_Test@4f7d0008]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-01T17:30:17Z" finished-at="2016-06-01T17:30:17Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.ServiceChargeCalculation_KartPage_Test@6500df86]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-01T21:21:25Z" finished-at="2016-06-01T21:21:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- SanityTest.ServiceChargeCalculation_KartPage_Test -->
     </test> <!-- SanityTest_cartPage -->
-    <test name="SanityTest_PaymentMethods" duration-ms="155955" started-at="2016-06-01T12:00:17Z" finished-at="2016-06-01T12:02:53Z">
+    <test name="SanityTest_PaymentMethods" duration-ms="149878" started-at="2016-06-01T15:51:25Z" finished-at="2016-06-01T15:53:55Z">
       <class name="SanityTest.PaymentMethods_Verification_Test">
-        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.PaymentMethods_Verification_Test@4cf777e8]" name="beforeTestCofig" is-config="true" duration-ms="4225" started-at="2016-06-01T17:30:17Z" finished-at="2016-06-01T17:30:21Z">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.PaymentMethods_Verification_Test@7085bdee]" name="beforeTestCofig" is-config="true" duration-ms="4297" started-at="2016-06-01T21:21:25Z" finished-at="2016-06-01T21:21:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestCofig -->
-        <test-method status="FAIL" signature="PaymentMethods_Verification(java.lang.String)[pri:0, instance:SanityTest.PaymentMethods_Verification_Test@4cf777e8]" name="PaymentMethods_Verification" duration-ms="151551" started-at="2016-06-01T17:30:21Z" finished-at="2016-06-01T17:32:53Z">
+        <test-method status="FAIL" signature="PaymentMethods_Verification(java.lang.String)[pri:0, instance:SanityTest.PaymentMethods_Verification_Test@7085bdee]" name="PaymentMethods_Verification" duration-ms="145399" started-at="2016-06-01T21:21:29Z" finished-at="2016-06-01T21:23:55Z">
           <params>
             <param index="0">
               <value>
@@ -563,7 +563,7 @@ Driver info: driver.version: unknown
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PaymentMethods_Verification -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.PaymentMethods_Verification_Test@4cf777e8]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-01T17:32:53Z" finished-at="2016-06-01T17:32:53Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.PaymentMethods_Verification_Test@7085bdee]" name="tearDown" is-config="true" duration-ms="1" started-at="2016-06-01T21:23:55Z" finished-at="2016-06-01T21:23:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

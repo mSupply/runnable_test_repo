@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [EndToEnd]">
-  <parameter name="Production_URL" value="http://www.msupply.com"/>
-  <listeners>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="GenericLibrary.Listener"/>
-  </listeners>
-  <test name="SanityTest_PaymentMethods">
-    <parameter name="Production_URL" value="http://www.msupply.com"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
-      <class name="SanityTest.PaymentMethods_Verification_Test"/>
+      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_001_Test"/>
     </classes>
-  </test> <!-- SanityTest_PaymentMethods -->
-  <test name="SanityTest_PaymentMethods(failed)">
-    <parameter name="Production_URL" value="http://www.msupply.com"/>
-    <classes>
-      <class name="SanityTest.PaymentMethods_Verification_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="PaymentMethods_Verification" invocation-numbers="0"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.PaymentMethods_Verification_Test -->
-    </classes>
-  </test> <!-- SanityTest_PaymentMethods(failed) -->
-</suite> <!-- Failed suite [EndToEnd] -->
+  </test> <!-- Default test -->
+</suite> <!-- Failed suite [Default suite] -->

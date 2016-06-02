@@ -22,7 +22,7 @@ public class mSupply_Review_Rating_001_Test extends Scenario1Test
 	@Test
 	public void mSupply_Review_Rating_001() throws Throwable
 	{
-		Credentials.url="https://www.msupply.com";
+		Credentials.url="http://staging.msupply.com";
 		Scenario1Test.driver.get(Credentials.url);
 		Scenario1Test.log.info("TestCase - Product Review");
 		Reporter.log("TestCase - Product Review",false);
