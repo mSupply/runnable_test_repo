@@ -60,7 +60,11 @@ public class mSupply_Review_Rating_002_Test extends Scenario1Test
 	    	  {
 	    		  //do nothing
 	    	  }
-	    	  if(value.equals("checked"))
+	    	  if(value==null)
+	    	  {
+	    		  //do nothing
+	    	  }
+	    	  else if(value.equals("checked"))
 	    	  {	
 	    	    	log.info("Error : Rating is filled ");
 	    		    Reporter.log("Error : Rating is filled ",false);

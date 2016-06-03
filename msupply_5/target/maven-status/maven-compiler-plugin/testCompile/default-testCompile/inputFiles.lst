@@ -5,6 +5,7 @@ D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\Scenarios\P
 D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\GenericLibrary\Credentials.java
 D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\Scenarios\AddProductLoginCheckoutTest_Cheque_Test.java
 D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\Scenarios\PaymentGatewayPayuMoney.java
+D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\Functional_TestCases\ReviewsAndRatings\mSupply_Review_Rating_007_Test.java
 D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\POM\LoginPage.java
 D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\SanityTest\PlaceOrder_Cheque_Test.java
 D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\GenericLibrary\LogReports.java
@@ -28,6 +29,7 @@ D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\Functional_
 D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\POM\CheckoutPage.java
 D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\Scenarios\PaymentGatewayCashonDeilvery.java
 D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\POM\RegistrationPage.java
+D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\POM\ReviewsPage.java
 D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\Scenarios\PaymentGatewayNetBanking.java
 D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\GenericLibrary\Listener.java
 D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5\src\test\java\POM\ProductDetailsPage.java

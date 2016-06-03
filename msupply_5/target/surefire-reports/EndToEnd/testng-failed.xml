@@ -43,48 +43,6 @@
       <class name="SanityTest.PaymentMethods_Verification_Test"/>
     </classes>
   </test> <!-- SanityTest_PaymentMethods -->
-  <test name="SanityTest_HomePage(failed)">
-    <parameter name="Production_URL" value="http://www.msupply.com"/>
-    <classes>
-      <class name="SanityTest.PlaceOrder_Cheque_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.PlaceOrder_Cheque_Test -->
-      <class name="SanityTest.AddProductsToCart_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.AddProductsToCart_Test -->
-      <class name="SanityTest.Homepage_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="HomePage_verification" invocation-numbers="0"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.Homepage_Test -->
-      <class name="SanityTest.Product_MOQ_Verification_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.Product_MOQ_Verification_Test -->
-      <class name="SanityTest.PaymentMethods_Verification_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.PaymentMethods_Verification_Test -->
-      <class name="SanityTest.ServiceChargeCalculation_KartPage_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.ServiceChargeCalculation_KartPage_Test -->
-    </classes>
-  </test> <!-- SanityTest_HomePage(failed) -->
   <test name="SanityTest(failed)">
     <parameter name="STAGING_URL" value="http://staging.msupply.com"/>
     <classes>
@@ -127,48 +85,6 @@
       </class> <!-- SanityTest.ServiceChargeCalculation_KartPage_Test -->
     </classes>
   </test> <!-- SanityTest(failed) -->
-  <test name="SanityTest_MOQ_Verification(failed)">
-    <parameter name="Production_URL" value="http://www.msupply.com"/>
-    <classes>
-      <class name="SanityTest.PlaceOrder_Cheque_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.PlaceOrder_Cheque_Test -->
-      <class name="SanityTest.AddProductsToCart_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.AddProductsToCart_Test -->
-      <class name="SanityTest.Product_MOQ_Verification_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="Product_MOQ_Verification" invocation-numbers="0"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.Product_MOQ_Verification_Test -->
-      <class name="SanityTest.Homepage_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.Homepage_Test -->
-      <class name="SanityTest.PaymentMethods_Verification_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.PaymentMethods_Verification_Test -->
-      <class name="SanityTest.ServiceChargeCalculation_KartPage_Test">
-        <methods>
-          <include name="beforeTestCofig"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- SanityTest.ServiceChargeCalculation_KartPage_Test -->
-    </classes>
-  </test> <!-- SanityTest_MOQ_Verification(failed) -->
   <test name="SanityTest_cartPage(failed)">
     <parameter name="Production_URL" value="http://www.msupply.com"/>
     <classes>
@@ -241,7 +157,7 @@
       <class name="SanityTest.PaymentMethods_Verification_Test">
         <methods>
           <include name="beforeTestCofig"/>
-          <include name="PaymentMethods_Verification" invocation-numbers="0"/>
+          <include name="PaymentMethods_Verification"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- SanityTest.PaymentMethods_Verification_Test -->

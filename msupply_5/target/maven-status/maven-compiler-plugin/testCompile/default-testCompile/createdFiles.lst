@@ -8,6 +8,7 @@ Functional_TestCases\ReviewsAndRatings\mSupply_Review_Rating_001_Test.class
 POM\CheckoutPage.class
 POM\PaymentChequeOrDD.class
 Scenarios\AddProductLoginCheckoutTest_CashOnDelivery_Test.class
+Functional_TestCases\ReviewsAndRatings\mSupply_Review_Rating_007_Test.class
 POM\ProductDetailsPage.class
 Scenarios\AddProductLoginCheckoutTest_Cheque_Test.class
 SanityTest\PaymentMethods_Verification_Test.class
@@ -27,6 +28,7 @@ Functional_TestCases\ReviewsAndRatings\Demo.class
 GenericLibrary\WebDriverCommonFunctions.class
 GenericLibrary\LogReports.class
 POM\LoginPage.class
+POM\ReviewsPage.class
 SanityTest\AddProductsToCart_Test.class
 GenericLibrary\Credentials.class
 SanityTest\Product_MOQ_Verification_Test.class

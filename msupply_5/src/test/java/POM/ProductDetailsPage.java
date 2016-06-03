@@ -35,15 +35,17 @@ public class ProductDetailsPage extends LoadLocators
 	public static void getCustomerReviews() throws Throwable
 	{
 		
-		WebElement No_Of_Customer_Reviews=loadElementByXpath("No_Of_Customer_Reviews_Xpath");
-		String ActualText=No_Of_Customer_Reviews.getText();
+		WebElement No_of_Customer_Reviews_DetailsPage=loadElementByXpath("No_of_Customer_Reviews_DetailsPage_Xpath");
+		String ActualText=No_of_Customer_Reviews_DetailsPage.getText();
+	
 		int Reviews=getNumber(ActualText);
 		log.info(Reviews+"Reviews Present on the Product Details Page");
 		Reporter.log(Reviews+"Reviews Present on the Product Details Page",false);		
 				
 		CommonFunctions.scrollPageUp(0,-550);
-		No_Of_Customer_Reviews.click();
+		No_of_Customer_Reviews_DetailsPage.click();
 		CommonFunctions.LoadPageExpicitWait();
+		
 		
 		int noOfReviews = 0;
 		if(Reviews>=1)
@@ -51,8 +53,9 @@ public class ProductDetailsPage extends LoadLocators
 		   noOfReviews = 1;
 		   while(checkifRowExistsinTable("(//div[@class='col-lg-9 customer_reviews pull-right']/div)["+noOfReviews+"]"))
 		   {
-			   
-			   
+			   WebElement Reviews_Date=loadElementByXpath("Review_Date_Xpath");
+			   String Date_Value=Reviews_Date.getText();
+			   ReviewsPage.ConstructDate(Date_Value,noOfReviews);
 			
 			   noOfReviews=noOfReviews+1;
 		   }
@@ -70,9 +73,6 @@ public class ProductDetailsPage extends LoadLocators
 		
 		
 		
-		
-		
-		
 	 }
 		
 		
@@ -84,7 +84,7 @@ public class ProductDetailsPage extends LoadLocators
 		//Verify for the "Write Review Text" is present
 		WebElement Write_Review_Link=loadElementByLinkText("Write_Review_Link_Xpath");
 		String ActualText=Write_Review_Link.getText();
-		Assert.assertEquals(ActualText,"Write a review");
+		Assert.assertEquals(ActualText,"Write Your Review");
 		
 		log.info("Write Review is Present on the Product Details Page");
 		Reporter.log("Write Review is Present on the Product Details Page",false);
