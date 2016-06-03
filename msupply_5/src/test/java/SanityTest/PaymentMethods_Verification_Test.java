@@ -15,10 +15,10 @@ import Scenarios.Scenario1Test;
 public class PaymentMethods_Verification_Test  extends Scenario1Test
 {
 	@Test
-	@Parameters({"Production_URL"})
-	public void PaymentMethods_Verification(String Production_URL) throws Throwable
+	//@Parameters({"Production_URL"})
+	public void PaymentMethods_Verification(/*String Production_URL*/) throws Throwable
 	{
-		Credentials.url=Production_URL;
+		Credentials.url="http://www.msupply.com";
 		Scenario1Test.driver.get(Credentials.url);
 		Scenario1Test.log.info("Sanity TestCase - PaymentMethods verification");
 		Scenario1Test.homePageObj = PageFactory.initElements(BrowserSelection.driver, HomePage.class);

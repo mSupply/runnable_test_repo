@@ -30,3 +30,4 @@ POM\LoginPage.class
 SanityTest\AddProductsToCart_Test.class
 GenericLibrary\Credentials.class
 SanityTest\Product_MOQ_Verification_Test.class
+Functional_TestCases\ReviewsAndRatings\mSupply_Review_Rating_002_Test.class

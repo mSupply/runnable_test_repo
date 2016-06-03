@@ -46,20 +46,26 @@ public class mSupply_Review_Rating_002_Test extends Scenario1Test
 	    Reporter.log("Case -1 : Options for Rating is upto 5",false);
 		
 	    //Check for ratings is unfilled
+	    //WebElement Empty_Rating_Stars=GenericLibrary.LoadLocators.loadElementByXpath("Empty_Rating_Stars_Xpath");
 	    int i;
+	    String value = null;
 	    for(i=1;i<=Rating_Stars.size();i++)
 	    {
-	    	try
-	    	{
 	    	  String Xpath_Value="((//form[@id='review-form']//div[2])[1]/div[1]/div[2]/input)["+i+"]";
-	    	  String value=Scenario1Test.driver.findElement(By.xpath(Xpath_Value)).getAttribute("checked");
-	    	  if(value==null)
-	    		  throw new Exception();
-	    	}
-	    	catch(Exception e)
-	    	{
-	    		//do nothing
-	    	}
+	    	  try
+	    	  {
+	    	     value=Scenario1Test.driver.findElement(By.xpath(Xpath_Value)).getAttribute("checked");
+	    	  }
+	    	  catch(Exception e)
+	    	  {
+	    		  //do nothing
+	    	  }
+	    	  if(value.equals("checked"))
+	    	  {	
+	    	    	log.info("Error : Rating is filled ");
+	    		    Reporter.log("Error : Rating is filled ",false);
+	    	    	throw new Exception();
+	    	  }
 	    }
 		
 	    Assert.assertEquals(i-1,5);
@@ -206,6 +212,12 @@ public class mSupply_Review_Rating_002_Test extends Scenario1Test
 	    	
 	    }
 	    
+	    
+	    WebElement SuccessMessage=GenericLibrary.LoadLocators.loadElementByXpath("SuccessMessage_Xpath");
+	    String Message=SuccessMessage.getText();
+	    Assert.assertEquals(Message,"Your review has been accepted for moderation.");
+	    log.info("Case - 3: Success Message Displayed");
+        Reporter.log("Case - 3: Success Message Displayed",false);
 	    
 	}
 

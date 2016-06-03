@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="1,430.867" tests="6" errors="0" skipped="0" failures="4">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="1,388.79" tests="6" errors="0" skipped="0" failures="5">
   <properties>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="JOB_NAME" value="Automation_version1_msupply_5"/>
@@ -27,7 +27,7 @@
     <property name="ProgramFiles" value="C:\Program Files"/>
     <property name="PROMPT" value="$P$G"/>
     <property name="user.language" value="en"/>
-    <property name="BUILD_DISPLAY_NAME" value="#51"/>
+    <property name="BUILD_DISPLAY_NAME" value="#53"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\bin"/>
     <property name="LOCALAPPDATA" value="C:\Users\Sandeep K\AppData\Local"/>
     <property name="java.version" value="1.8.0_73"/>
@@ -37,7 +37,7 @@
     <property name="sun.arch.data.model" value="64"/>
     <property name="NODE_NAME" value="master"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\endorsed"/>
-    <property name="BUILD_ID" value="51"/>
+    <property name="BUILD_ID" value="53"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -72,7 +72,7 @@
     <property name="POM_GROUPID" value="Project"/>
     <property name="PUBLIC" value="C:\Users\Public"/>
     <property name="user.home" value="C:\Users\Sandeep K"/>
-    <property name="BUILD_TAG" value="jenkins-Automation_version1_msupply_5-51"/>
+    <property name="BUILD_TAG" value="jenkins-Automation_version1_msupply_5-53"/>
     <property name="JENKINS_SERVER_COOKIE" value="544c3ce7ff0429b3"/>
     <property name="HUDSON_URL" value="http://localhost:8080/"/>
     <property name="ProgramData" value="C:\ProgramData"/>
@@ -86,7 +86,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="maven.home" value="D:\Installed Softwares\apache-maven-3.3.9"/>
     <property name="java.class.path" value="C:\Users\Sandeep K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-agent-1.5.jar;D:\Installed Softwares\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;D:\Installed Softwares\apache-maven-3.3.9/conf/logging"/>
-    <property name="sun.java.command" value="jenkins.maven3.agent.Maven31Main D:\Installed Softwares\apache-maven-3.3.9 C:\Users\Sandeep K\.jenkins\war\WEB-INF\lib\remoting-2.56.jar C:\Users\Sandeep K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-interceptor-1.5.jar C:\Users\Sandeep K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.5.jar 61047"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven31Main D:\Installed Softwares\apache-maven-3.3.9 C:\Users\Sandeep K\.jenkins\war\WEB-INF\lib\remoting-2.56.jar C:\Users\Sandeep K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-interceptor-1.5.jar C:\Users\Sandeep K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.5.jar 64082"/>
     <property name="Path" value="C:\Program Files\Java\jdk1.8.0_73/bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_73\bin;D:\Installed Softwares\apache-maven-3.3.9\bin;C:\Program Files (x86)\Google\Chrome\Application;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_73\bin;D:\Installed Softwares\apache-maven-3.3.9\bin"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="PROCESSOR_ARCHITECTURE" value="AMD64"/>
@@ -103,7 +103,7 @@
     <property name="HUDSON_HOME" value="C:\Users\Sandeep K\.jenkins"/>
     <property name="PATH+MAVEN" value="D:\Installed Softwares\apache-maven-3.3.9/bin"/>
     <property name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
-    <property name="BUILD_URL" value="http://localhost:8080/job/Automation_version1_msupply_5/51/"/>
+    <property name="BUILD_URL" value="http://localhost:8080/job/Automation_version1_msupply_5/53/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="os.arch" value="amd64"/>
@@ -116,7 +116,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="MAVEN_HOME" value="D:\Installed Softwares\apache-maven-3.3.9"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="BUILD_NUMBER" value="51"/>
+    <property name="BUILD_NUMBER" value="53"/>
     <property name="JENKINS_URL" value="http://localhost:8080/"/>
     <property name="PROCESSOR_REVISION" value="3c03"/>
     <property name="ProgramW6432" value="C:\Program Files"/>
@@ -129,16 +129,16 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="PSModulePath" value="C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules"/>
   </properties>
-  <testcase name="HomePage_verification" classname="SanityTest.Homepage_Test" time="699.353">
-    <failure message="Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;popzip&apos;]&quot;}&#10;Command duration or timeout: 37.71 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;&#10;System info: host: &apos;MS-DT-056&apos;, ip: &apos;10.1.2.253&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 6607a051-297e-4ecf-9505-2ce7ec20d7a6&#10;*** Element info: {Using=xpath, value=//*[@id=&apos;popzip&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+  <testcase name="HomePage_verification" classname="SanityTest.Homepage_Test" time="795.773">
+    <failure message="Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;popzip&apos;]&quot;}&#10;Command duration or timeout: 37.68 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;&#10;System info: host: &apos;MS-DT-056&apos;, ip: &apos;10.1.2.253&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: af4d48d9-f638-4a07-8f5b-ae84e16c7170&#10;*** Element info: {Using=xpath, value=//*[@id=&apos;popzip&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
 Unable to locate element: {"method":"xpath","selector":"//*[@id='popzip']"}
-Command duration or timeout: 37.71 seconds
+Command duration or timeout: 37.68 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6607a051-297e-4ecf-9505-2ce7ec20d7a6
+Session ID: af4d48d9-f638-4a07-8f5b-ae84e16c7170
 *** Element info: {Using=xpath, value=//*[@id='popzip']}
 	at SanityTest.Homepage_Test.HomePage_verification(Homepage_Test.java:44)
 Caused by: org.openqa.selenium.NoSuchElementException: 
@@ -148,34 +148,34 @@ Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca8
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: driver.version: unknown
 </failure>
-    <system-out><![CDATA[0    [2016-06-01 21:00:15,417] [INFO ] [Scenarios.Scenario1Test ] - Sanity TestCase - HomePage verification
-623  [2016-06-01 21:00:16,040] [INFO ] [POM.HomePage ] - Clicked on Close Button - POPUP
+    <system-out><![CDATA[0    [2016-06-03 08:00:16,957] [INFO ] [Scenarios.Scenario1Test ] - Sanity TestCase - HomePage verification
+5073 [2016-06-03 08:00:22,030] [INFO ] [POM.HomePage ] - Clicked on Close Button - POPUP
 ServiceProvidervalue=Some of our Service Providers
-355622 [2016-06-01 21:06:11,039] [INFO ] [POM.HomePage ] - ............Clicked on About Us link.........
-362281 [2016-06-01 21:06:17,698] [INFO ] [POM.HomePage ] - ............Clicked on Our Team link.........
-369265 [2016-06-01 21:06:24,682] [INFO ] [POM.HomePage ] - ............Clicked on Our Investors link.........
-376516 [2016-06-01 21:06:31,933] [INFO ] [POM.HomePage ] - ............Clicked on Careers link.........
-384038 [2016-06-01 21:06:39,455] [INFO ] [POM.HomePage ] - ............Clicked on Returns & Cancellations link.........
-390648 [2016-06-01 21:06:46,065] [INFO ] [POM.HomePage ] - ............Clicked on Terms & Conditions link.........
-397288 [2016-06-01 21:06:52,705] [INFO ] [POM.HomePage ] - ............Clicked on FAQs link.........
-404523 [2016-06-01 21:06:59,940] [INFO ] [POM.HomePage ] - ............Clicked on Sell on mSupply link.........
-411226 [2016-06-01 21:07:06,643] [INFO ] [POM.HomePage ] - ............Clicked on Contact Us link.........
-647673 [2016-06-01 21:11:03,090] [INFO ] [POM.HomePage ] - ............Selecting Product from Navigation.........
-649625 [2016-06-01 21:11:05,042] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC
-656527 [2016-06-01 21:11:11,944] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC_Nagarjuna
+417686 [2016-06-03 08:07:14,643] [INFO ] [POM.HomePage ] - ............Clicked on About Us link.........
+424949 [2016-06-03 08:07:21,906] [INFO ] [POM.HomePage ] - ............Clicked on Our Team link.........
+432402 [2016-06-03 08:07:29,359] [INFO ] [POM.HomePage ] - ............Clicked on Our Investors link.........
+442545 [2016-06-03 08:07:39,502] [INFO ] [POM.HomePage ] - ............Clicked on Careers link.........
+452172 [2016-06-03 08:07:49,129] [INFO ] [POM.HomePage ] - ............Clicked on Returns & Cancellations link.........
+459977 [2016-06-03 08:07:56,934] [INFO ] [POM.HomePage ] - ............Clicked on Terms & Conditions link.........
+467981 [2016-06-03 08:08:04,938] [INFO ] [POM.HomePage ] - ............Clicked on FAQs link.........
+476905 [2016-06-03 08:08:13,862] [INFO ] [POM.HomePage ] - ............Clicked on Sell on mSupply link.........
+484015 [2016-06-03 08:08:20,972] [INFO ] [POM.HomePage ] - ............Clicked on Contact Us link.........
+741124 [2016-06-03 08:12:38,081] [INFO ] [POM.HomePage ] - ............Selecting Product from Navigation.........
+743060 [2016-06-03 08:12:40,017] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC
+752242 [2016-06-03 08:12:49,199] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC_Nagarjuna
 ]]></system-out>
   </testcase>
-  <testcase name="AddProduct" classname="SanityTest.AddProductsToCart_Test" time="175.802"/>
-  <testcase name="PlaceOrder_CashOnDelivery" classname="SanityTest.PlaceOrder_Cheque_Test" time="67.833">
-    <failure message="Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;seller_choosen&apos;]/div/div[3]/button[2]&quot;}&#10;Command duration or timeout: 30.02 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;&#10;System info: host: &apos;MS-DT-056&apos;, ip: &apos;10.1.2.253&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 8470c458-dae4-46f8-ab45-1cdde1b9e693&#10;*** Element info: {Using=xpath, value=//div[@id=&apos;seller_choosen&apos;]/div/div[3]/button[2]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+  <testcase name="AddProduct" classname="SanityTest.AddProductsToCart_Test" time="181.426"/>
+  <testcase name="PlaceOrder_CashOnDelivery" classname="SanityTest.PlaceOrder_Cheque_Test" time="68.565">
+    <failure message="Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;seller_choosen&apos;]/div/div[3]/button[2]&quot;}&#10;Command duration or timeout: 30.10 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;&#10;System info: host: &apos;MS-DT-056&apos;, ip: &apos;10.1.2.253&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 098af232-2b84-4631-ba25-871eb49de909&#10;*** Element info: {Using=xpath, value=//div[@id=&apos;seller_choosen&apos;]/div/div[3]/button[2]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
 Unable to locate element: {"method":"xpath","selector":"//div[@id='seller_choosen']/div/div[3]/button[2]"}
-Command duration or timeout: 30.02 seconds
+Command duration or timeout: 30.10 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 8470c458-dae4-46f8-ab45-1cdde1b9e693
+Session ID: 098af232-2b84-4631-ba25-871eb49de909
 *** Element info: {Using=xpath, value=//div[@id='seller_choosen']/div/div[3]/button[2]}
 	at SanityTest.PlaceOrder_Cheque_Test.PlaceOrder_CashOnDelivery(PlaceOrder_Cheque_Test.java:27)
 Caused by: org.openqa.selenium.NoSuchElementException: 
@@ -185,126 +185,149 @@ Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca8
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: driver.version: unknown
 </failure>
-    <system-out><![CDATA[894662 [2016-06-01 21:15:10,079] [INFO ] [Scenarios.Scenario1Test ] - Testcase - Place Order through Cash on Delivery
-894850 [2016-06-01 21:15:10,267] [INFO ] [POM.HomePage ] - ............Clicked on Close Button on HomePage Popup.........
-894850 [2016-06-01 21:15:10,267] [INFO ] [POM.HomePage ] - ............Selecting Product from Navigation.........
-894850 [2016-06-01 21:15:10,267] [INFO ] [POM.HomePage ] - ............Selecting Electrical Product from Search Box.........
-894982 [2016-06-01 21:15:10,399] [INFO ] [POM.HomePage ] - Moved to : SearchBox and entering value Electrical
-916175 [2016-06-01 21:15:31,592] [INFO ] [POM.HomePage ] - Moved to : Clicked on a Electrical Product
-916316 [2016-06-01 21:15:31,733] [INFO ] [POM.HomePage ] - Moved to : zipcode_popup
-916832 [2016-06-01 21:15:32,249] [INFO ] [POM.HomePage ] - Clicked on zipcode_popup_Go Button
+    <system-out><![CDATA[990577 [2016-06-03 08:16:47,534] [INFO ] [Scenarios.Scenario1Test ] - Testcase - Place Order through Cash on Delivery
+990749 [2016-06-03 08:16:47,706] [INFO ] [POM.HomePage ] - ............Clicked on Close Button on HomePage Popup.........
+990749 [2016-06-03 08:16:47,706] [INFO ] [POM.HomePage ] - ............Selecting Product from Navigation.........
+990749 [2016-06-03 08:16:47,706] [INFO ] [POM.HomePage ] - ............Selecting Electrical Product from Search Box.........
+995123 [2016-06-03 08:16:52,080] [INFO ] [POM.HomePage ] - Moved to : SearchBox and entering value Electrical
+1018485 [2016-06-03 08:17:15,442] [INFO ] [POM.HomePage ] - Moved to : Clicked on a Electrical Product
+1018641 [2016-06-03 08:17:15,598] [INFO ] [POM.HomePage ] - Moved to : zipcode_popup
+1019329 [2016-06-03 08:17:16,286] [INFO ] [POM.HomePage ] - Clicked on zipcode_popup_Go Button
 ]]></system-out>
   </testcase>
-  <testcase name="Product_MOQ_Verification" classname="SanityTest.Product_MOQ_Verification_Test" time="174.845"/>
-  <testcase name="ServiceChargeCalculation_KartPage" classname="SanityTest.ServiceChargeCalculation_KartPage_Test" time="139.987">
+  <testcase name="Product_MOQ_Verification" classname="SanityTest.Product_MOQ_Verification_Test" time="30.298">
+    <failure message="Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;x&apos;]&quot;}&#10;Command duration or timeout: 30.02 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;&#10;System info: host: &apos;MS-DT-056&apos;, ip: &apos;10.1.2.253&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 018b2926-6cb1-4c83-94dc-f66db0092c97&#10;*** Element info: {Using=xpath, value=//*[@id=&apos;x&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"xpath","selector":"//*[@id='x']"}
+Command duration or timeout: 30.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 018b2926-6cb1-4c83-94dc-f66db0092c97
+*** Element info: {Using=xpath, value=//*[@id='x']}
+	at SanityTest.Product_MOQ_Verification_Test.Product_MOQ_Verification(Product_MOQ_Verification_Test.java:23)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"xpath","selector":"//*[@id='x']"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
+Driver info: driver.version: unknown
+</failure>
+    <system-out><![CDATA[D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5
+1054095 [2016-06-03 08:17:51,052] [INFO ] [Scenarios.Scenario1Test ] - Sanity TestCase - MOQ Verification
+]]></system-out>
+  </testcase>
+  <testcase name="ServiceChargeCalculation_KartPage" classname="SanityTest.ServiceChargeCalculation_KartPage_Test" time="140.395">
     <failure message="expected [17123] but found [17122]" type="java.lang.AssertionError">java.lang.AssertionError: expected [17123] but found [17122]
 	at SanityTest.ServiceChargeCalculation_KartPage_Test.ServiceChargeCalculation_KartPage(ServiceChargeCalculation_KartPage_Test.java:36)
 </failure>
-    <system-out><![CDATA[1135368 [2016-06-01 21:19:10,785] [INFO ] [Scenarios.Scenario1Test ] - Sanity TestCase - ServiceChargeCalculation_KartPage
-1135564 [2016-06-01 21:19:10,981] [INFO ] [POM.HomePage ] - Clicked on POPup Close Button
-1135564 [2016-06-01 21:19:10,981] [INFO ] [POM.HomePage ] - ------------------------------------------------
-1135564 [2016-06-01 21:19:10,981] [INFO ] [POM.HomePage ] - ............Selecting RMC Product from Navigation.........
-1141031 [2016-06-01 21:19:16,448] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial RMC Product
-1148279 [2016-06-01 21:19:23,696] [INFO ] [POM.HomePage ] - Moved to : BuildingMaterial_RMC_ConcreteBag
+    <system-out><![CDATA[D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5
+1094336 [2016-06-03 08:18:31,293] [INFO ] [Scenarios.Scenario1Test ] - Sanity TestCase - ServiceChargeCalculation_KartPage
+1094497 [2016-06-03 08:18:31,454] [INFO ] [POM.HomePage ] - Clicked on POPup Close Button
+1094498 [2016-06-03 08:18:31,455] [INFO ] [POM.HomePage ] - ------------------------------------------------
+1094498 [2016-06-03 08:18:31,455] [INFO ] [POM.HomePage ] - ............Selecting RMC Product from Navigation.........
+1100029 [2016-06-03 08:18:36,986] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial RMC Product
+1107788 [2016-06-03 08:18:44,745] [INFO ] [POM.HomePage ] - Moved to : BuildingMaterial_RMC_ConcreteBag
 Lafarge India Private Ltd
 560064
 143
 6
-1165349 [2016-06-01 21:19:40,766] [INFO ] [POM.HomePage ] - Product 1 added and Moved to : Kart Page 
-1177639 [2016-06-01 21:19:53,056] [INFO ] [POM.ShoppingCartPage ] - unitprice=143VAT=14.5Quantity=6SubTotal858
-1177639 [2016-06-01 21:19:53,056] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
-1207853 [2016-06-01 21:20:23,270] [INFO ] [POM.ShoppingCartPage ] - unitprice=143Quantity=6SubTotal858
-1207853 [2016-06-01 21:20:23,270] [INFO ] [POM.ShoppingCartPage ] - Verifing Product details and cart page
-1207913 [2016-06-01 21:20:23,330] [INFO ] [POM.ShoppingCartPage ] - Product Name from product details page and Shopping cart page is same
-1207966 [2016-06-01 21:20:23,383] [INFO ] [POM.ShoppingCartPage ] - Seller Name from product details page and Shopping cart page is same
-1208021 [2016-06-01 21:20:23,438] [INFO ] [POM.ShoppingCartPage ] - Pincode from product details page and Shopping cart page is same
-1208021 [2016-06-01 21:20:23,438] [INFO ] [POM.ShoppingCartPage ] - Unit Pricing from product details page and Shopping cart page is same
-1208021 [2016-06-01 21:20:23,438] [INFO ] [POM.ShoppingCartPage ] - Quantity from product details page and Shopping cart page is same
-1208021 [2016-06-01 21:20:23,438] [INFO ] [POM.ShoppingCartPage ] - SubTotal from product details page and Shopping cart page is same
-1208244 [2016-06-01 21:20:23,661] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for List Table : SubTotal from Kart Section and List Section is Same
+1125165 [2016-06-03 08:19:02,122] [INFO ] [POM.HomePage ] - Product 1 added and Moved to : Kart Page 
+1137444 [2016-06-03 08:19:14,401] [INFO ] [POM.ShoppingCartPage ] - unitprice=143VAT=14.5Quantity=6SubTotal858
+1137445 [2016-06-03 08:19:14,402] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
+1167643 [2016-06-03 08:19:44,600] [INFO ] [POM.ShoppingCartPage ] - unitprice=143Quantity=6SubTotal858
+1167643 [2016-06-03 08:19:44,600] [INFO ] [POM.ShoppingCartPage ] - Verifing Product details and cart page
+1167703 [2016-06-03 08:19:44,660] [INFO ] [POM.ShoppingCartPage ] - Product Name from product details page and Shopping cart page is same
+1167754 [2016-06-03 08:19:44,711] [INFO ] [POM.ShoppingCartPage ] - Seller Name from product details page and Shopping cart page is same
+1167808 [2016-06-03 08:19:44,765] [INFO ] [POM.ShoppingCartPage ] - Pincode from product details page and Shopping cart page is same
+1167808 [2016-06-03 08:19:44,765] [INFO ] [POM.ShoppingCartPage ] - Unit Pricing from product details page and Shopping cart page is same
+1167808 [2016-06-03 08:19:44,765] [INFO ] [POM.ShoppingCartPage ] - Quantity from product details page and Shopping cart page is same
+1167808 [2016-06-03 08:19:44,765] [INFO ] [POM.ShoppingCartPage ] - SubTotal from product details page and Shopping cart page is same
+1168029 [2016-06-03 08:19:44,986] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for List Table : SubTotal from Kart Section and List Section is Same
 98.67
-1208244 [2016-06-01 21:20:23,661] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Service charges List Table : Calculated Service is98
-1208244 [2016-06-01 21:20:23,661] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for GranTotal List Table : Calculated GrandTotal is956
-1208244 [2016-06-01 21:20:23,661] [INFO ] [POM.HomePage ] - .................................................
-1208244 [2016-06-01 21:20:23,661] [INFO ] [POM.HomePage ] - ............Selecting Product from Navigation.........
-1210193 [2016-06-01 21:20:25,610] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC
-1217601 [2016-06-01 21:20:33,018] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC_Nagarjuna
+1168029 [2016-06-03 08:19:44,986] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Service charges List Table : Calculated Service is98
+1168029 [2016-06-03 08:19:44,986] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for GranTotal List Table : Calculated GrandTotal is956
+1168029 [2016-06-03 08:19:44,986] [INFO ] [POM.HomePage ] - .................................................
+1168029 [2016-06-03 08:19:44,986] [INFO ] [POM.HomePage ] - ............Selecting Product from Navigation.........
+1169952 [2016-06-03 08:19:46,909] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC
+1176840 [2016-06-03 08:19:53,797] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC_Nagarjuna
 Deva Associates
 560064
 313
 50
-1226824 [2016-06-01 21:20:42,241] [INFO ] [POM.HomePage ] - Product 2 added and Moved to : Kart Page 
-1239106 [2016-06-01 21:20:54,523] [INFO ] [POM.ShoppingCartPage ] - unitprice=143VAT=14.5Quantity=6SubTotal858
-1239106 [2016-06-01 21:20:54,523] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
-1239434 [2016-06-01 21:20:54,851] [INFO ] [POM.ShoppingCartPage ] - unitprice=313VAT=14.5Quantity=50SubTotal15650
-1239434 [2016-06-01 21:20:54,851] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
-1269648 [2016-06-01 21:21:25,065] [INFO ] [POM.ShoppingCartPage ] - unitprice=313Quantity=50SubTotal15650
-1269648 [2016-06-01 21:21:25,065] [INFO ] [POM.ShoppingCartPage ] - Verifing Product details and cart page
-1269709 [2016-06-01 21:21:25,126] [INFO ] [POM.ShoppingCartPage ] - Product Name from product details page and Shopping cart page is same
-1269766 [2016-06-01 21:21:25,183] [INFO ] [POM.ShoppingCartPage ] - Seller Name from product details page and Shopping cart page is same
-1269823 [2016-06-01 21:21:25,240] [INFO ] [POM.ShoppingCartPage ] - Pincode from product details page and Shopping cart page is same
-1269823 [2016-06-01 21:21:25,240] [INFO ] [POM.ShoppingCartPage ] - Unit Pricing from product details page and Shopping cart page is same
-1269823 [2016-06-01 21:21:25,240] [INFO ] [POM.ShoppingCartPage ] - Quantity from product details page and Shopping cart page is same
-1269823 [2016-06-01 21:21:25,240] [INFO ] [POM.ShoppingCartPage ] - SubTotal from product details page and Shopping cart page is same
-1270048 [2016-06-01 21:21:25,465] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for List Table : SubTotal from Kart Section and List Section is Same
+1185744 [2016-06-03 08:20:02,701] [INFO ] [POM.HomePage ] - Product 2 added and Moved to : Kart Page 
+1198033 [2016-06-03 08:20:14,990] [INFO ] [POM.ShoppingCartPage ] - unitprice=143VAT=14.5Quantity=6SubTotal858
+1198033 [2016-06-03 08:20:14,990] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
+1198293 [2016-06-03 08:20:15,250] [INFO ] [POM.ShoppingCartPage ] - unitprice=313VAT=14.5Quantity=50SubTotal15650
+1198293 [2016-06-03 08:20:15,250] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
+1228505 [2016-06-03 08:20:45,462] [INFO ] [POM.ShoppingCartPage ] - unitprice=313Quantity=50SubTotal15650
+1228505 [2016-06-03 08:20:45,462] [INFO ] [POM.ShoppingCartPage ] - Verifing Product details and cart page
+1228567 [2016-06-03 08:20:45,524] [INFO ] [POM.ShoppingCartPage ] - Product Name from product details page and Shopping cart page is same
+1228620 [2016-06-03 08:20:45,577] [INFO ] [POM.ShoppingCartPage ] - Seller Name from product details page and Shopping cart page is same
+1228677 [2016-06-03 08:20:45,634] [INFO ] [POM.ShoppingCartPage ] - Pincode from product details page and Shopping cart page is same
+1228677 [2016-06-03 08:20:45,634] [INFO ] [POM.ShoppingCartPage ] - Unit Pricing from product details page and Shopping cart page is same
+1228677 [2016-06-03 08:20:45,634] [INFO ] [POM.ShoppingCartPage ] - Quantity from product details page and Shopping cart page is same
+1228677 [2016-06-03 08:20:45,634] [INFO ] [POM.ShoppingCartPage ] - SubTotal from product details page and Shopping cart page is same
+1228912 [2016-06-03 08:20:45,869] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for List Table : SubTotal from Kart Section and List Section is Same
 115.0
-1270049 [2016-06-01 21:21:25,466] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Service charges List Table : Calculated Service is115
+1228912 [2016-06-03 08:20:45,869] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Service charges List Table : Calculated Service is115
 ]]></system-out>
   </testcase>
-  <testcase name="PaymentMethods_Verification" classname="SanityTest.PaymentMethods_Verification_Test" time="145.4">
+  <testcase name="PaymentMethods_Verification" classname="SanityTest.PaymentMethods_Verification_Test" time="143.355">
     <failure message="expected [17123] but found [17122]" type="java.lang.AssertionError">java.lang.AssertionError: expected [17123] but found [17122]
 	at SanityTest.PaymentMethods_Verification_Test.PaymentMethods_Verification(PaymentMethods_Verification_Test.java:25)
 </failure>
     <system-out><![CDATA[D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5
-1279785 [2016-06-01 21:21:35,202] [INFO ] [Scenarios.Scenario1Test ] - Sanity TestCase - PaymentMethods verification
-1279962 [2016-06-01 21:21:35,379] [INFO ] [POM.HomePage ] - Clicked on POPup Close Button
-1279962 [2016-06-01 21:21:35,379] [INFO ] [POM.HomePage ] - ------------------------------------------------
-1279962 [2016-06-01 21:21:35,379] [INFO ] [POM.HomePage ] - ............Selecting RMC Product from Navigation.........
-1285519 [2016-06-01 21:21:40,936] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial RMC Product
-1293761 [2016-06-01 21:21:49,178] [INFO ] [POM.HomePage ] - Moved to : BuildingMaterial_RMC_ConcreteBag
+1240034 [2016-06-03 08:20:56,991] [INFO ] [Scenarios.Scenario1Test ] - Sanity TestCase - PaymentMethods verification
+1240207 [2016-06-03 08:20:57,164] [INFO ] [POM.HomePage ] - Clicked on POPup Close Button
+1240207 [2016-06-03 08:20:57,164] [INFO ] [POM.HomePage ] - ------------------------------------------------
+1240207 [2016-06-03 08:20:57,164] [INFO ] [POM.HomePage ] - ............Selecting RMC Product from Navigation.........
+1245699 [2016-06-03 08:21:02,656] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial RMC Product
+1254699 [2016-06-03 08:21:11,656] [INFO ] [POM.HomePage ] - Moved to : BuildingMaterial_RMC_ConcreteBag
 Lafarge India Private Ltd
 560064
 143
 6
-1315602 [2016-06-01 21:22:11,019] [INFO ] [POM.HomePage ] - Product 1 added and Moved to : Kart Page 
-1327894 [2016-06-01 21:22:23,311] [INFO ] [POM.ShoppingCartPage ] - unitprice=143VAT=14.5Quantity=6SubTotal858
-1327894 [2016-06-01 21:22:23,311] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
-1358079 [2016-06-01 21:22:53,496] [INFO ] [POM.ShoppingCartPage ] - unitprice=143Quantity=6SubTotal858
-1358079 [2016-06-01 21:22:53,496] [INFO ] [POM.ShoppingCartPage ] - Verifing Product details and cart page
-1358139 [2016-06-01 21:22:53,556] [INFO ] [POM.ShoppingCartPage ] - Product Name from product details page and Shopping cart page is same
-1358189 [2016-06-01 21:22:53,606] [INFO ] [POM.ShoppingCartPage ] - Seller Name from product details page and Shopping cart page is same
-1358248 [2016-06-01 21:22:53,665] [INFO ] [POM.ShoppingCartPage ] - Pincode from product details page and Shopping cart page is same
-1358248 [2016-06-01 21:22:53,665] [INFO ] [POM.ShoppingCartPage ] - Unit Pricing from product details page and Shopping cart page is same
-1358248 [2016-06-01 21:22:53,665] [INFO ] [POM.ShoppingCartPage ] - Quantity from product details page and Shopping cart page is same
-1358248 [2016-06-01 21:22:53,665] [INFO ] [POM.ShoppingCartPage ] - SubTotal from product details page and Shopping cart page is same
-1358465 [2016-06-01 21:22:53,882] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for List Table : SubTotal from Kart Section and List Section is Same
+1270901 [2016-06-03 08:21:27,858] [INFO ] [POM.HomePage ] - Product 1 added and Moved to : Kart Page 
+1283180 [2016-06-03 08:21:40,137] [INFO ] [POM.ShoppingCartPage ] - unitprice=143VAT=14.5Quantity=6SubTotal858
+1283181 [2016-06-03 08:21:40,138] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
+1313396 [2016-06-03 08:22:10,353] [INFO ] [POM.ShoppingCartPage ] - unitprice=143Quantity=6SubTotal858
+1313397 [2016-06-03 08:22:10,354] [INFO ] [POM.ShoppingCartPage ] - Verifing Product details and cart page
+1313458 [2016-06-03 08:22:10,415] [INFO ] [POM.ShoppingCartPage ] - Product Name from product details page and Shopping cart page is same
+1313509 [2016-06-03 08:22:10,466] [INFO ] [POM.ShoppingCartPage ] - Seller Name from product details page and Shopping cart page is same
+1313566 [2016-06-03 08:22:10,523] [INFO ] [POM.ShoppingCartPage ] - Pincode from product details page and Shopping cart page is same
+1313566 [2016-06-03 08:22:10,523] [INFO ] [POM.ShoppingCartPage ] - Unit Pricing from product details page and Shopping cart page is same
+1313566 [2016-06-03 08:22:10,523] [INFO ] [POM.ShoppingCartPage ] - Quantity from product details page and Shopping cart page is same
+1313566 [2016-06-03 08:22:10,523] [INFO ] [POM.ShoppingCartPage ] - SubTotal from product details page and Shopping cart page is same
+1313786 [2016-06-03 08:22:10,743] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for List Table : SubTotal from Kart Section and List Section is Same
 98.67
-1358465 [2016-06-01 21:22:53,882] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Service charges List Table : Calculated Service is98
-1358465 [2016-06-01 21:22:53,882] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for GranTotal List Table : Calculated GrandTotal is956
-1358465 [2016-06-01 21:22:53,882] [INFO ] [POM.HomePage ] - .................................................
-1358465 [2016-06-01 21:22:53,882] [INFO ] [POM.HomePage ] - ............Selecting Product from Navigation.........
-1360403 [2016-06-01 21:22:55,820] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC
-1367694 [2016-06-01 21:23:03,111] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC_Nagarjuna
+1313786 [2016-06-03 08:22:10,743] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Service charges List Table : Calculated Service is98
+1313786 [2016-06-03 08:22:10,743] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for GranTotal List Table : Calculated GrandTotal is956
+1313786 [2016-06-03 08:22:10,743] [INFO ] [POM.HomePage ] - .................................................
+1313786 [2016-06-03 08:22:10,743] [INFO ] [POM.HomePage ] - ............Selecting Product from Navigation.........
+1315715 [2016-06-03 08:22:12,672] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC
+1323934 [2016-06-03 08:22:20,891] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC_Nagarjuna
 Deva Associates
 560064
 313
 50
-1376776 [2016-06-01 21:23:12,193] [INFO ] [POM.HomePage ] - Product 2 added and Moved to : Kart Page 
-1389070 [2016-06-01 21:23:24,487] [INFO ] [POM.ShoppingCartPage ] - unitprice=143VAT=14.5Quantity=6SubTotal858
-1389070 [2016-06-01 21:23:24,487] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
-1389331 [2016-06-01 21:23:24,748] [INFO ] [POM.ShoppingCartPage ] - unitprice=313VAT=14.5Quantity=50SubTotal15650
-1389331 [2016-06-01 21:23:24,748] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
-1419532 [2016-06-01 21:23:54,949] [INFO ] [POM.ShoppingCartPage ] - unitprice=313Quantity=50SubTotal15650
-1419532 [2016-06-01 21:23:54,949] [INFO ] [POM.ShoppingCartPage ] - Verifing Product details and cart page
-1419593 [2016-06-01 21:23:55,010] [INFO ] [POM.ShoppingCartPage ] - Product Name from product details page and Shopping cart page is same
-1419648 [2016-06-01 21:23:55,065] [INFO ] [POM.ShoppingCartPage ] - Seller Name from product details page and Shopping cart page is same
-1419711 [2016-06-01 21:23:55,128] [INFO ] [POM.ShoppingCartPage ] - Pincode from product details page and Shopping cart page is same
-1419711 [2016-06-01 21:23:55,128] [INFO ] [POM.ShoppingCartPage ] - Unit Pricing from product details page and Shopping cart page is same
-1419711 [2016-06-01 21:23:55,128] [INFO ] [POM.ShoppingCartPage ] - Quantity from product details page and Shopping cart page is same
-1419711 [2016-06-01 21:23:55,128] [INFO ] [POM.ShoppingCartPage ] - SubTotal from product details page and Shopping cart page is same
-1419936 [2016-06-01 21:23:55,353] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for List Table : SubTotal from Kart Section and List Section is Same
+1334259 [2016-06-03 08:22:31,216] [INFO ] [POM.HomePage ] - Product 2 added and Moved to : Kart Page 
+1346551 [2016-06-03 08:22:43,508] [INFO ] [POM.ShoppingCartPage ] - unitprice=143VAT=14.5Quantity=6SubTotal858
+1346551 [2016-06-03 08:22:43,508] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
+1346808 [2016-06-03 08:22:43,765] [INFO ] [POM.ShoppingCartPage ] - unitprice=313VAT=14.5Quantity=50SubTotal15650
+1346808 [2016-06-03 08:22:43,765] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
+1377004 [2016-06-03 08:23:13,961] [INFO ] [POM.ShoppingCartPage ] - unitprice=313Quantity=50SubTotal15650
+1377004 [2016-06-03 08:23:13,961] [INFO ] [POM.ShoppingCartPage ] - Verifing Product details and cart page
+1377068 [2016-06-03 08:23:14,025] [INFO ] [POM.ShoppingCartPage ] - Product Name from product details page and Shopping cart page is same
+1377121 [2016-06-03 08:23:14,078] [INFO ] [POM.ShoppingCartPage ] - Seller Name from product details page and Shopping cart page is same
+1377176 [2016-06-03 08:23:14,133] [INFO ] [POM.ShoppingCartPage ] - Pincode from product details page and Shopping cart page is same
+1377176 [2016-06-03 08:23:14,133] [INFO ] [POM.ShoppingCartPage ] - Unit Pricing from product details page and Shopping cart page is same
+1377176 [2016-06-03 08:23:14,133] [INFO ] [POM.ShoppingCartPage ] - Quantity from product details page and Shopping cart page is same
+1377176 [2016-06-03 08:23:14,133] [INFO ] [POM.ShoppingCartPage ] - SubTotal from product details page and Shopping cart page is same
+1377398 [2016-06-03 08:23:14,355] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for List Table : SubTotal from Kart Section and List Section is Same
 115.0
-1419936 [2016-06-01 21:23:55,353] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Service charges List Table : Calculated Service is115
+1377398 [2016-06-03 08:23:14,355] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Service charges List Table : Calculated Service is115
 ]]></system-out>
   </testcase>
 </testsuite>

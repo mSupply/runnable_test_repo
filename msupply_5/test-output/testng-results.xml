@@ -8,27 +8,6 @@
       <![CDATA[Clicked on Close Button - POPUP]]>
     </line>
     <line>
-      <![CDATA[Selecting Product from Navigation]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on Navigation -> Buildingmaterial ->Cement -> PPC]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on : First Cement Product]]>
-    </line>
-    <line>
-      <![CDATA[Entered Pincode 560064]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on Go Button - Pincode]]>
-    </line>
-    <line>
-      <![CDATA[Write Review is Present on the Product Details Page]]>
-    </line>
-    <line>
-      <![CDATA[Present on the Product Details Page]]>
-    </line>
-    <line>
       <![CDATA[Mobile Number is9555554444]]>
     </line>
     <line>
@@ -44,73 +23,31 @@
       <![CDATA[Clicked on : First Cement Product]]>
     </line>
     <line>
-      <![CDATA[Write Review is Present on the Product Details Page]]>
+      <![CDATA[Entered Pincode 560064]]>
     </line>
     <line>
-      <![CDATA[Present on the Product Details Page]]>
+      <![CDATA[Clicked on Go Button - Pincode]]>
     </line>
     <line>
-      <![CDATA[Your Rating - Text is Displayed on the Page]]>
-    </line>
-    <line>
-      <![CDATA[Your Review - Text is Displayed on the Page]]>
-    </line>
-    <line>
-      <![CDATA[Options for Rating is upto 5]]>
-    </line>
-    <line>
-      <![CDATA[All 5 Rating options are unfilled]]>
-    </line>
-    <line>
-      <![CDATA[Review Title Present on the Page]]>
-    </line>
-    <line>
-      <![CDATA[Review Title TextBox accepts data]]>
-    </line>
-    <line>
-      <![CDATA[Review Present on the Page]]>
-    </line>
-    <line>
-      <![CDATA[Review TextBox accepts data]]>
+      <![CDATA[4Reviews Present on the Product Details Page]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="192402" started-at="2016-06-02T12:29:25Z" finished-at="2016-06-02T12:32:38Z">
+  <suite name="Default suite" duration-ms="144614" started-at="2016-06-03T10:35:24Z" finished-at="2016-06-03T10:37:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="192402" started-at="2016-06-02T12:29:25Z" finished-at="2016-06-02T12:32:38Z">
-      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_001_Test">
-        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_001_Test@7dc36524]" name="beforeTestCofig" is-config="true" duration-ms="4816" started-at="2016-06-02T17:59:25Z" finished-at="2016-06-02T17:59:30Z">
+    <test name="Default test" duration-ms="144614" started-at="2016-06-03T10:35:24Z" finished-at="2016-06-03T10:37:48Z">
+      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_007_Test">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_007_Test@7dc36524]" name="beforeTestCofig" is-config="true" duration-ms="5241" started-at="2016-06-03T16:05:24Z" finished-at="2016-06-03T16:05:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestCofig -->
-        <test-method status="PASS" signature="mSupply_Review_Rating_001()[pri:0, instance:Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_001_Test@7dc36524]" name="mSupply_Review_Rating_001" duration-ms="187577" started-at="2016-06-02T17:59:30Z" finished-at="2016-06-02T18:02:38Z">
+        <test-method status="PASS" signature="mSupply_Review_Rating_007()[pri:0, instance:Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_007_Test@7dc36524]" name="mSupply_Review_Rating_007" duration-ms="139359" started-at="2016-06-03T16:05:29Z" finished-at="2016-06-03T16:07:48Z">
           <reporter-output>
             <line>
               <![CDATA[TestCase - Product Review]]>
             </line>
             <line>
               <![CDATA[Clicked on Close Button - POPUP]]>
-            </line>
-            <line>
-              <![CDATA[Selecting Product from Navigation]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on Navigation -> Buildingmaterial ->Cement -> PPC]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on : First Cement Product]]>
-            </line>
-            <line>
-              <![CDATA[Entered Pincode 560064]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on Go Button - Pincode]]>
-            </line>
-            <line>
-              <![CDATA[Write Review is Present on the Product Details Page]]>
-            </line>
-            <line>
-              <![CDATA[Present on the Product Details Page]]>
             </line>
             <line>
               <![CDATA[Mobile Number is9555554444]]>
@@ -128,42 +65,21 @@
               <![CDATA[Clicked on : First Cement Product]]>
             </line>
             <line>
-              <![CDATA[Write Review is Present on the Product Details Page]]>
+              <![CDATA[Entered Pincode 560064]]>
             </line>
             <line>
-              <![CDATA[Present on the Product Details Page]]>
+              <![CDATA[Clicked on Go Button - Pincode]]>
             </line>
             <line>
-              <![CDATA[Your Rating - Text is Displayed on the Page]]>
-            </line>
-            <line>
-              <![CDATA[Your Review - Text is Displayed on the Page]]>
-            </line>
-            <line>
-              <![CDATA[Options for Rating is upto 5]]>
-            </line>
-            <line>
-              <![CDATA[All 5 Rating options are unfilled]]>
-            </line>
-            <line>
-              <![CDATA[Review Title Present on the Page]]>
-            </line>
-            <line>
-              <![CDATA[Review Title TextBox accepts data]]>
-            </line>
-            <line>
-              <![CDATA[Review Present on the Page]]>
-            </line>
-            <line>
-              <![CDATA[Review TextBox accepts data]]>
+              <![CDATA[4Reviews Present on the Product Details Page]]>
             </line>
           </reporter-output>
-        </test-method> <!-- mSupply_Review_Rating_001 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_001_Test@7dc36524]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-02T18:02:38Z" finished-at="2016-06-02T18:02:38Z">
+        </test-method> <!-- mSupply_Review_Rating_007 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_007_Test@7dc36524]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-03T16:07:48Z" finished-at="2016-06-03T16:07:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_001_Test -->
+      </class> <!-- Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_007_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -24,6 +24,7 @@ import GenericLibrary.BrowserSelection;
 import GenericLibrary.CommonFunctions;
 import GenericLibrary.LoadLocators;
 import GenericLibrary.LogReports;
+import GenericLibrary.RetrieveXlsxData;
 import GenericLibrary.WebDriverCommonFunctions;
 import Scenarios.Scenario1Test;
 
@@ -240,6 +241,33 @@ public class HomePage extends LoadLocators
 	public LoginPage navigatetoLoginPage() throws Exception
 	{
 		return PageFactory.initElements(Scenario1Test.driver, LoginPage.class);
+	}
+	
+	public void login() throws Throwable
+	{
+		   WebElement HomePage_Account=loadElementByXpath("HomePage_Account_Xpath");
+		   Scenario1Test.wdcf.mouseOverOperation(HomePage_Account);
+		 
+		   WebElement HomePage_Login=loadElementByXpath("HomePage_Login_Xpath");
+		   HomePage_Login.click();
+		
+		   String ExcelData[]=RetrieveXlsxData.getExcelData("LoginID_4");
+		
+		   WebElement MobileNumberField=loadElementByXpath("MobileNumberField_Xpath");
+		   MobileNumberField.sendKeys(ExcelData[1]);
+	       log.info("Mobile Number is"+ExcelData[1]);
+	       Reporter.log("Mobile Number is"+ExcelData[1],false);
+	       
+	       WebElement PasswordField=loadElementByXpath("PasswordField_Xpath");
+	       PasswordField.sendKeys(ExcelData[2]);
+	       log.info("Mobile Number is"+ExcelData[2]);
+	       Reporter.log("Mobile Number is"+ExcelData[2],false);
+	       
+	       WebElement LoginButton=loadElementByXpath("LoginButton_Xpath");
+	       LoginButton.click();
+		
+	       CommonFunctions.LoadPageExpicitWait();
+	    
 	}
 	
 	
@@ -930,11 +958,11 @@ public class HomePage extends LoadLocators
 		log.info("Moved to : Buildingmaterial_Cement_PPC_Nagarjuna");
 		
 		
-		zipcode_popup.sendKeys("560064");
-	    log.info("Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_zipcode_popup");
+		//zipcode_popup.sendKeys("560064");
+	    //log.info("Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_zipcode_popup");
 		
-		zipcode_popup_Go.click();
-		log.info("Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_zipcode_popup_Go");
+		//zipcode_popup_Go.click();
+		//log.info("Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_zipcode_popup_Go");
 		
 		Buildingmaterial_Blocks_ConcreteCover_15mm_AddtoList.click();
 		log.info("Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_AddtoList");

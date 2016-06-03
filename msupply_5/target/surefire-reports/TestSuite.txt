@@ -1,17 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1,430.867 sec <<< FAILURE! - in TestSuite
-HomePage_verification(SanityTest.Homepage_Test)  Time elapsed: 699.353 sec  <<< FAILURE!
+Tests run: 6, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 1,388.79 sec <<< FAILURE! - in TestSuite
+HomePage_verification(SanityTest.Homepage_Test)  Time elapsed: 795.773 sec  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: 
 Unable to locate element: {"method":"xpath","selector":"//*[@id='popzip']"}
-Command duration or timeout: 37.71 seconds
+Command duration or timeout: 37.68 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6607a051-297e-4ecf-9505-2ce7ec20d7a6
+Session ID: af4d48d9-f638-4a07-8f5b-ae84e16c7170
 *** Element info: {Using=xpath, value=//*[@id='popzip']}
 	at SanityTest.Homepage_Test.HomePage_verification(Homepage_Test.java:44)
 Caused by: org.openqa.selenium.NoSuchElementException: 
@@ -21,16 +21,16 @@ Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca8
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: driver.version: unknown
 
-PlaceOrder_CashOnDelivery(SanityTest.PlaceOrder_Cheque_Test)  Time elapsed: 67.833 sec  <<< FAILURE!
+PlaceOrder_CashOnDelivery(SanityTest.PlaceOrder_Cheque_Test)  Time elapsed: 68.565 sec  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: 
 Unable to locate element: {"method":"xpath","selector":"//div[@id='seller_choosen']/div/div[3]/button[2]"}
-Command duration or timeout: 30.02 seconds
+Command duration or timeout: 30.10 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 8470c458-dae4-46f8-ab45-1cdde1b9e693
+Session ID: 098af232-2b84-4631-ba25-871eb49de909
 *** Element info: {Using=xpath, value=//div[@id='seller_choosen']/div/div[3]/button[2]}
 	at SanityTest.PlaceOrder_Cheque_Test.PlaceOrder_CashOnDelivery(PlaceOrder_Cheque_Test.java:27)
 Caused by: org.openqa.selenium.NoSuchElementException: 
@@ -40,11 +40,30 @@ Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca8
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: driver.version: unknown
 
-ServiceChargeCalculation_KartPage(SanityTest.ServiceChargeCalculation_KartPage_Test)  Time elapsed: 139.987 sec  <<< FAILURE!
+Product_MOQ_Verification(SanityTest.Product_MOQ_Verification_Test)  Time elapsed: 30.298 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"xpath","selector":"//*[@id='x']"}
+Command duration or timeout: 30.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 018b2926-6cb1-4c83-94dc-f66db0092c97
+*** Element info: {Using=xpath, value=//*[@id='x']}
+	at SanityTest.Product_MOQ_Verification_Test.Product_MOQ_Verification(Product_MOQ_Verification_Test.java:23)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"xpath","selector":"//*[@id='x']"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
+Driver info: driver.version: unknown
+
+ServiceChargeCalculation_KartPage(SanityTest.ServiceChargeCalculation_KartPage_Test)  Time elapsed: 140.395 sec  <<< FAILURE!
 java.lang.AssertionError: expected [17123] but found [17122]
 	at SanityTest.ServiceChargeCalculation_KartPage_Test.ServiceChargeCalculation_KartPage(ServiceChargeCalculation_KartPage_Test.java:36)
 
-PaymentMethods_Verification(SanityTest.PaymentMethods_Verification_Test)  Time elapsed: 145.4 sec  <<< FAILURE!
+PaymentMethods_Verification(SanityTest.PaymentMethods_Verification_Test)  Time elapsed: 143.355 sec  <<< FAILURE!
 java.lang.AssertionError: expected [17123] but found [17122]
 	at SanityTest.PaymentMethods_Verification_Test.PaymentMethods_Verification(PaymentMethods_Verification_Test.java:25)
 
