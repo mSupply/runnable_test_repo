@@ -12,7 +12,7 @@
 <body>
 <h1>SanityTest_PaymentMethods</h1>
 <p>
-  Test duration: 153.336s
+  Test duration: 148.967s
 </p>
 
 
@@ -28,22 +28,23 @@
                   PaymentMethods_Verification
       </td>
   <td class="duration">
-    147.674s
+    144.751s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [17123] but found [17122]</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [NAGARJUNA OPC 53 GRADE CEMENT] but found [LAFARGE INSTAMIX CONCRETE BAG M20]</b></a><br />
     <div class="stackTrace" id="exception-0">
               org.testng.Assert.fail(Assert.java:94)<br />
               org.testng.Assert.failNotEquals(Assert.java:513)<br />
               org.testng.Assert.assertEqualsImpl(Assert.java:135)<br />
               org.testng.Assert.assertEquals(Assert.java:116)<br />
-              org.testng.Assert.assertEquals(Assert.java:389)<br />
-              org.testng.Assert.assertEquals(Assert.java:399)<br />
-              POM.ShoppingCartPage.cart(ShoppingCartPage.java:140)<br />
+              org.testng.Assert.assertEquals(Assert.java:190)<br />
+              org.testng.Assert.assertEquals(Assert.java:200)<br />
+              POM.ShoppingCartPage.GetProductDetailsFromKartTable(ShoppingCartPage.java:334)<br />
+              POM.ShoppingCartPage.cart(ShoppingCartPage.java:59)<br />
               POM.HomePage.SelectProductsforKartVerification(HomePage.java:388)<br />
               SanityTest.PaymentMethods_Verification_Test.PaymentMethods_Verification(PaymentMethods_Verification_Test.java:25)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />

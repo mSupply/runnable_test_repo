@@ -1,217 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[TestCase - Product Review]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on Close Button - POPUP]]>
-    </line>
-    <line>
-      <![CDATA[Selecting Product from Navigation]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on Navigation -> Buildingmaterial ->Cement -> PPC]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on : First Cement Product]]>
-    </line>
-    <line>
-      <![CDATA[Entered Pincode 560064]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on Go Button - Pincode]]>
-    </line>
-    <line>
-      <![CDATA[Write Review is Present on the Product Details Page]]>
-    </line>
-    <line>
-      <![CDATA[Present on the Product Details Page]]>
-    </line>
-    <line>
-      <![CDATA[Mobile Number is9555554444]]>
-    </line>
-    <line>
-      <![CDATA[Mobile Number isksandeep]]>
-    </line>
-    <line>
-      <![CDATA[Selecting Product from Navigation]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on Navigation -> Buildingmaterial ->Cement -> PPC]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on : First Cement Product]]>
-    </line>
-    <line>
-      <![CDATA[Write Review is Present on the Product Details Page]]>
-    </line>
-    <line>
-      <![CDATA[Present on the Product Details Page]]>
-    </line>
-    <line>
-      <![CDATA[TestCase - 2  : Case -1]]>
-    </line>
-    <line>
-      <![CDATA[Case -1 : Options for Rating is upto 5]]>
-    </line>
-    <line>
-      <![CDATA[Case -1 : All 5 Rating options are unfilled]]>
-    </line>
-    <line>
-      <![CDATA[Case -1 : Selected 3 - Ratings for the Product]]>
-    </line>
-    <line>
-      <![CDATA[Case -1 : Review Title - Error msg displayed on the Page]]>
-    </line>
-    <line>
-      <![CDATA[Case -1 : Review - Error msg displayed on the Page]]>
-    </line>
-    <line>
-      <![CDATA[TestCase - 2  : Case -2]]>
-    </line>
-    <line>
-      <![CDATA[Case -2 : Review Title TextBox accepts data]]>
-    </line>
-    <line>
-      <![CDATA[Case -2 : Review Title - Error msg is not displayed on the Page]]>
-    </line>
-    <line>
-      <![CDATA[Case -2 : Review - Error msg displayed on the Page]]>
-    </line>
-    <line>
-      <![CDATA[TestCase - 2  : Case -3]]>
-    </line>
-    <line>
-      <![CDATA[Case -3 : Review Title TextBox accepts data]]>
-    </line>
-    <line>
-      <![CDATA[Case -3 :Review TextBox accepts data]]>
-    </line>
-    <line>
-      <![CDATA[Case - 3: Element not present, Review Title - Error msg is not displayed on the Page]]>
-    </line>
-    <line>
-      <![CDATA[Case - 3: Element not present, Review  - Error msg is not displayed on the Page]]>
-    </line>
-    <line>
-      <![CDATA[Case - 3: Success Message Displayed]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="310701" started-at="2016-06-03T14:02:57Z" finished-at="2016-06-03T14:08:08Z">
+  <suite name="Default suite" duration-ms="5739" started-at="2016-06-27T13:07:41Z" finished-at="2016-06-27T13:07:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="310701" started-at="2016-06-03T14:02:57Z" finished-at="2016-06-03T14:08:08Z">
-      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_002_Test">
-        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_002_Test@2d209079]" name="beforeTestCofig" is-config="true" duration-ms="5281" started-at="2016-06-03T19:32:57Z" finished-at="2016-06-03T19:33:02Z">
+    <test name="Default test" duration-ms="5739" started-at="2016-06-27T13:07:41Z" finished-at="2016-06-27T13:07:47Z">
+      <class name="SanityTest.ServiceChargeCalculation_KartPage_Test">
+        <test-method status="PASS" signature="beforeTestCofig()[pri:0, instance:SanityTest.ServiceChargeCalculation_KartPage_Test@3cb5cdba]" name="beforeTestCofig" is-config="true" duration-ms="5726" started-at="2016-06-27T18:37:41Z" finished-at="2016-06-27T18:37:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestCofig -->
-        <test-method status="PASS" signature="mSupply_Review_Rating_001()[pri:0, instance:Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_002_Test@2d209079]" name="mSupply_Review_Rating_001" duration-ms="305408" started-at="2016-06-03T19:33:02Z" finished-at="2016-06-03T19:38:08Z">
+        <test-method status="SKIP" signature="ServiceChargeCalculation_KartPage(java.lang.String)[pri:0, instance:SanityTest.ServiceChargeCalculation_KartPage_Test@3cb5cdba]" name="ServiceChargeCalculation_KartPage" duration-ms="0" started-at="2016-06-27T18:37:47Z" finished-at="2016-06-27T18:37:47Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'Production_URL' is required by @Test on method ServiceChargeCalculation_KartPage but has not been marked @Optional or defined
+in C:\Users\Sandeep K\AppData\Local\Temp\testng-eclipse--1461942192\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'Production_URL' is required by @Test on method ServiceChargeCalculation_KartPage but has not been marked @Optional or defined
+in C:\Users\Sandeep K\AppData\Local\Temp\testng-eclipse--1461942192\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:154)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1274)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:989)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1079)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
-            <line>
-              <![CDATA[TestCase - Product Review]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on Close Button - POPUP]]>
-            </line>
-            <line>
-              <![CDATA[Selecting Product from Navigation]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on Navigation -> Buildingmaterial ->Cement -> PPC]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on : First Cement Product]]>
-            </line>
-            <line>
-              <![CDATA[Entered Pincode 560064]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on Go Button - Pincode]]>
-            </line>
-            <line>
-              <![CDATA[Write Review is Present on the Product Details Page]]>
-            </line>
-            <line>
-              <![CDATA[Present on the Product Details Page]]>
-            </line>
-            <line>
-              <![CDATA[Mobile Number is9555554444]]>
-            </line>
-            <line>
-              <![CDATA[Mobile Number isksandeep]]>
-            </line>
-            <line>
-              <![CDATA[Selecting Product from Navigation]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on Navigation -> Buildingmaterial ->Cement -> PPC]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on : First Cement Product]]>
-            </line>
-            <line>
-              <![CDATA[Write Review is Present on the Product Details Page]]>
-            </line>
-            <line>
-              <![CDATA[Present on the Product Details Page]]>
-            </line>
-            <line>
-              <![CDATA[TestCase - 2  : Case -1]]>
-            </line>
-            <line>
-              <![CDATA[Case -1 : Options for Rating is upto 5]]>
-            </line>
-            <line>
-              <![CDATA[Case -1 : All 5 Rating options are unfilled]]>
-            </line>
-            <line>
-              <![CDATA[Case -1 : Selected 3 - Ratings for the Product]]>
-            </line>
-            <line>
-              <![CDATA[Case -1 : Review Title - Error msg displayed on the Page]]>
-            </line>
-            <line>
-              <![CDATA[Case -1 : Review - Error msg displayed on the Page]]>
-            </line>
-            <line>
-              <![CDATA[TestCase - 2  : Case -2]]>
-            </line>
-            <line>
-              <![CDATA[Case -2 : Review Title TextBox accepts data]]>
-            </line>
-            <line>
-              <![CDATA[Case -2 : Review Title - Error msg is not displayed on the Page]]>
-            </line>
-            <line>
-              <![CDATA[Case -2 : Review - Error msg displayed on the Page]]>
-            </line>
-            <line>
-              <![CDATA[TestCase - 2  : Case -3]]>
-            </line>
-            <line>
-              <![CDATA[Case -3 : Review Title TextBox accepts data]]>
-            </line>
-            <line>
-              <![CDATA[Case -3 :Review TextBox accepts data]]>
-            </line>
-            <line>
-              <![CDATA[Case - 3: Element not present, Review Title - Error msg is not displayed on the Page]]>
-            </line>
-            <line>
-              <![CDATA[Case - 3: Element not present, Review  - Error msg is not displayed on the Page]]>
-            </line>
-            <line>
-              <![CDATA[Case - 3: Success Message Displayed]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- mSupply_Review_Rating_001 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_002_Test@2d209079]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-03T19:38:08Z" finished-at="2016-06-03T19:38:08Z">
+        </test-method> <!-- ServiceChargeCalculation_KartPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SanityTest.ServiceChargeCalculation_KartPage_Test@3cb5cdba]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-27T18:37:47Z" finished-at="2016-06-27T18:37:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Functional_TestCases.ReviewsAndRatings.mSupply_Review_Rating_002_Test -->
+      </class> <!-- SanityTest.ServiceChargeCalculation_KartPage_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

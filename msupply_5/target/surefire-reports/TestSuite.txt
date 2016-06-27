@@ -1,46 +1,27 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1,636.105 sec <<< FAILURE! - in TestSuite
-PlaceOrder_CashOnDelivery(SanityTest.PlaceOrder_Cheque_Test)  Time elapsed: 72.236 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: {"method":"xpath","selector":"//div[@id='seller_choosen']/div/div[3]/button[2]"}
-Command duration or timeout: 30.10 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1,454.302 sec <<< FAILURE! - in TestSuite
+HomePage_verification(SanityTest.Homepage_Test)  Time elapsed: 750.231 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Anchor Telephone Cable 0.4 mm-1 pair, 90 Mtr pack was added to your shopping list.] but found [Crabtree Athena RJ-11 One Gang with shutter was added to your shopping list.]
+	at SanityTest.Homepage_Test.HomePage_verification(Homepage_Test.java:56)
+
+PlaceOrder_CashOnDelivery(SanityTest.PlaceOrder_Cheque_Test)  Time elapsed: 13.89 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Element is not clickable at point (1313, 70). Other element would receive the click: <div class="block blockui"></div>
+Command duration or timeout: 71 milliseconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 4e48be3b-11b1-4f16-9950-9c61b18064d4
-*** Element info: {Using=xpath, value=//div[@id='seller_choosen']/div/div[3]/button[2]}
+Session ID: 7e5d0971-f9f7-4a8f-8633-2207016beb7e
 	at SanityTest.PlaceOrder_Cheque_Test.PlaceOrder_CashOnDelivery(PlaceOrder_Cheque_Test.java:27)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: {"method":"xpath","selector":"//div[@id='seller_choosen']/div/div[3]/button[2]"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
-Driver info: driver.version: unknown
 
-ServiceChargeCalculation_KartPage(SanityTest.ServiceChargeCalculation_KartPage_Test)  Time elapsed: 30.369 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: {"method":"xpath","selector":"//*[@id='x']"}
-Command duration or timeout: 30.09 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 7b80c477-6bb3-4d08-9f22-4515e141d1dd
-*** Element info: {Using=xpath, value=//*[@id='x']}
-	at SanityTest.ServiceChargeCalculation_KartPage_Test.ServiceChargeCalculation_KartPage(ServiceChargeCalculation_KartPage_Test.java:36)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: {"method":"xpath","selector":"//*[@id='x']"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
-Driver info: driver.version: unknown
-
-PaymentMethods_Verification(SanityTest.PaymentMethods_Verification_Test)  Time elapsed: 147.675 sec  <<< FAILURE!
+ServiceChargeCalculation_KartPage(SanityTest.ServiceChargeCalculation_KartPage_Test)  Time elapsed: 139.979 sec  <<< FAILURE!
 java.lang.AssertionError: expected [17123] but found [17122]
+	at SanityTest.ServiceChargeCalculation_KartPage_Test.ServiceChargeCalculation_KartPage(ServiceChargeCalculation_KartPage_Test.java:36)
+
+PaymentMethods_Verification(SanityTest.PaymentMethods_Verification_Test)  Time elapsed: 144.752 sec  <<< FAILURE!
+java.lang.AssertionError: expected [NAGARJUNA OPC 53 GRADE CEMENT] but found [LAFARGE INSTAMIX CONCRETE BAG M20]
 	at SanityTest.PaymentMethods_Verification_Test.PaymentMethods_Verification(PaymentMethods_Verification_Test.java:25)
 
