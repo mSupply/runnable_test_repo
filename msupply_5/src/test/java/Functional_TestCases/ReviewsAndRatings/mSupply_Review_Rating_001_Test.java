@@ -19,6 +19,7 @@ import Scenarios.Scenario1Test;
 
 public class mSupply_Review_Rating_001_Test extends Scenario1Test
 {
+	
 	@Test
 	public void mSupply_Review_Rating_001() throws Throwable
 	{
