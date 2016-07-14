@@ -12,7 +12,7 @@ import Scenarios.Scenario1Test;
 
 public class Demo extends Scenario1Test
 {
-	
+
 	@Test
 	public void main() throws Throwable
 	{
