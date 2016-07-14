@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import GenericLibrary.LogReports;
+import GenericLibrary.RetrieveXlsxData;
 import GenericLibrary.WebDriverCommonFunctions;
 import SanityTest.ServiceChargeCalculation_KartPage_Test;
 import Scenarios.Scenario1Test;
@@ -150,7 +151,7 @@ public class ShoppingCartPage
 	//Storing List Total Section
     //Store the KartDetails into List before Login, this will be used to compare with the Items after login
   
-	private static int getNoOfRowsInKartTable() 
+	public static int getNoOfRowsInKartTable() 
 	{
         int i=1;
 		while(checkifRowExistsinTable("//table[@class='cart-table bdtable table table-condensed']/tbody/tr["+i+"]/td[5]/span/span[1]"))
@@ -372,6 +373,18 @@ public class ShoppingCartPage
 	{
 	   WebDriverCommonFunctions.element_Click("KartPage_PlaceOrderButton_Xpath", "Clicked on Place Order in Homepage");		
 		
+	}
+	
+	public static void mSupplylogin() throws Throwable
+	{	   
+		   String ExcelData[]=RetrieveXlsxData.getExcelData("LoginID_4");
+		   String mobileNumber=ExcelData[1];
+		   String password=ExcelData[2];
+		   
+		   WebDriverCommonFunctions.element_EnterValuesToTextField("MobileNumberField_Xpath", mobileNumber, "Entered MobileNumber");
+		   WebDriverCommonFunctions.element_EnterValuesToTextField("PasswordField_Xpath", password, "Entered Password");
+	       WebDriverCommonFunctions.element_Click("LoginButton_Xpath", "Clicked on Login Button");
+	       
 	}
 	
 }

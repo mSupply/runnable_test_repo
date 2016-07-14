@@ -19,10 +19,12 @@ public class PaymentMethods_Verification_Test  extends Scenario1Test
 	@Test
 	public void PaymentMethods_Verification() throws Throwable
 	{
-		Credentials.url=CommonFunctions.readPropertiesFile("SanityPaymentMethods");
+		Credentials.url="http://staging.msupply.com";
 		Scenario1Test.driver.get(Credentials.url);
+		
 		WebDriverCommonFunctions.element_EnterValuesToTextField("ZipCodePOPUP_Xpath","560064","Pincode Entered");
 		WebDriverCommonFunctions.element_Click("ZipCodePOPUP_GoButton_Xpath", "Clicked on ZipCode Go Button");
+				
 		WebDriverCommonFunctions.element_Click("closeIcon_xpath","Clicked on Close Icon POPUP");
 		
 		Scenario1Test.log.info("Sanity TestCase - PaymentMethods verification");

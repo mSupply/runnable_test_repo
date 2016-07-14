@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
-    <classes>
-      <class name="SanityTest.ServiceChargeCalculation_KartPage_Test"/>
-    </classes>
-  </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="SanityTest.ServiceChargeCalculation_KartPage_Test">
+      <class name="Functional_TestCase_HomePage.msupply_HomePage_Main_HeaderVerification_Test">
         <methods>
           <include name="beforeTestCofig"/>
-          <include name="ServiceChargeCalculation_KartPage"/>
+          <include name="msupply_HomePage_Main_HeaderVerification"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- SanityTest.ServiceChargeCalculation_KartPage_Test -->
+      </class> <!-- Functional_TestCase_HomePage.msupply_HomePage_Main_HeaderVerification_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

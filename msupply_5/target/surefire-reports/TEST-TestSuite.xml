@@ -1,287 +1,891 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="1,454.302" tests="6" errors="0" skipped="0" failures="4">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="4,525.858" tests="6" errors="0" skipped="0" failures="5">
   <properties>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="JOB_NAME" value="Automation_version1_msupply_5"/>
+    <property name="JOB_NAME" value="msupply_1"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="NUMBER_OF_PROCESSORS" value="4"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="JENKINS_HOME" value="C:\Users\Sandeep K\.jenkins"/>
-    <property name="FPS_BROWSER_USER_PROFILE_STRING" value="Default"/>
-    <property name="HUDSON_SERVER_COOKIE" value="544c3ce7ff0429b3"/>
+    <property name="JENKINS_HOME" value="C:\Users\SANDEEP K\.jenkins"/>
+    <property name="HUDSON_SERVER_COOKIE" value="d48137443d916872"/>
     <property name="POM_ARTIFACTID" value="msupply_5"/>
-    <property name="os.name" value="Windows 10"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_73\jre\classes"/>
-    <property name="EXECUTOR_NUMBER" value="0"/>
+    <property name="os.name" value="Windows 8"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_17\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_17\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_17\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_17\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_17\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_17\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_17\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_17\jre\classes"/>
+    <property name="EXECUTOR_NUMBER" value="1"/>
     <property name="sun.desktop" value="windows"/>
     <property name="PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="POM_DISPLAYNAME" value="msupply_5"/>
     <property name="NODE_LABELS" value="master"/>
     <property name="TEMP" value="C:\Users\SANDEE~1\AppData\Local\Temp"/>
-    <property name="java.runtime.version" value="1.8.0_73-b02"/>
-    <property name="FPS_BROWSER_APP_PROFILE_STRING" value="Internet Explorer"/>
-    <property name="user.name" value="Sandeep K"/>
+    <property name="java.runtime.version" value="1.7.0_17-b02"/>
+    <property name="ANT_HOME" value="D:\Apache Ant\apache-ant-1.9.6"/>
+    <property name="user.name" value="SANDEEP K"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="CommonProgramW6432" value="C:\Program Files\Common Files"/>
     <property name="ProgramFiles" value="C:\Program Files"/>
     <property name="PROMPT" value="$P$G"/>
+    <property name="TESSDATA_PREFIX" value="D:\tessdata"/>
     <property name="user.language" value="en"/>
-    <property name="BUILD_DISPLAY_NAME" value="#63"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\bin"/>
-    <property name="LOCALAPPDATA" value="C:\Users\Sandeep K\AppData\Local"/>
-    <property name="java.version" value="1.8.0_73"/>
+    <property name="BUILD_DISPLAY_NAME" value="#5"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_17\jre\bin"/>
+    <property name="LOCALAPPDATA" value="C:\Users\SANDEEP K\AppData\Local"/>
+    <property name="java.version" value="1.7.0_17"/>
     <property name="PROCESSOR_LEVEL" value="6"/>
     <property name="user.timezone" value="Asia/Calcutta"/>
-    <property name="USERNAME" value="Sandeep K"/>
+    <property name="USERNAME" value="SANDEEP K"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="NODE_NAME" value="master"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\endorsed"/>
-    <property name="BUILD_ID" value="63"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_17\jre\lib\endorsed"/>
+    <property name="BUILD_ID" value="5"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="file.encoding.pkg" value="sun.io"/>
     <property name="file.separator" value="\"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="HOMEDRIVE" value="C:"/>
-    <property name="java.class.version" value="52.0"/>
-    <property name="=::" value="::\"/>
+    <property name="java.class.version" value="51.0"/>
     <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
-    <property name="user.country" value="IN"/>
+    <property name="user.country" value="US"/>
     <property name="ALLUSERSPROFILE" value="C:\ProgramData"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_73\jre"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_17\jre"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="os.version" value="10.0"/>
+    <property name="os.version" value="6.2"/>
     <property name="POM_VERSION" value="0.0.1-SNAPSHOT"/>
+    <property name="configsetroot" value="C:\Windows\ConfigSetRoot"/>
     <property name="TMP" value="C:\Users\SANDEE~1\AppData\Local\Temp"/>
     <property name="path.separator" value=";"/>
-    <property name="java.vm.version" value="25.73-b02"/>
+    <property name="java.vm.version" value="23.7-b01"/>
     <property name="user.variant" value=""/>
     <property name="CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
-    <property name="USERDOMAIN_ROAMINGPROFILE" value="MS-DT-056"/>
+    <property name="USERDOMAIN_ROAMINGPROFILE" value="SANDEEP"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
-    <property name="JAVA_HOME" value="C:\Program Files\Java\jdk1.8.0_73"/>
+    <property name="FP_NO_HOST_CHECK" value="NO"/>
+    <property name="JAVA_HOME" value="C:\Program Files\Java\jdk1.7.0_17"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="CommonProgramFiles" value="C:\Program Files\Common Files"/>
     <property name="ComSpec" value="C:\Windows\system32\cmd.exe"/>
-    <property name="HOMEPATH" value="\Users\Sandeep K"/>
+    <property name="HOMEPATH" value="\Users\SANDEEP K"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="POM_PACKAGING" value="jar"/>
-    <property name="COMPUTERNAME" value="MS-DT-056"/>
+    <property name="COMPUTERNAME" value="SANDEEP"/>
     <property name="user.script" value=""/>
+    <property name="asl.log" value="Destination=file"/>
     <property name="POM_GROUPID" value="Project"/>
+    <property name="user.home" value="C:\Users\SANDEEP K"/>
     <property name="PUBLIC" value="C:\Users\Public"/>
-    <property name="user.home" value="C:\Users\Sandeep K"/>
-    <property name="BUILD_TAG" value="jenkins-Automation_version1_msupply_5-63"/>
-    <property name="JENKINS_SERVER_COOKIE" value="544c3ce7ff0429b3"/>
+    <property name="BUILD_TAG" value="jenkins-msupply_1-5"/>
+    <property name="JENKINS_SERVER_COOKIE" value="d48137443d916872"/>
     <property name="HUDSON_URL" value="http://localhost:8080/"/>
     <property name="ProgramData" value="C:\ProgramData"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="USERPROFILE" value="C:\Users\Sandeep K"/>
+    <property name="USERPROFILE" value="C:\Users\SANDEEP K"/>
     <property name="CLASSPATH" value=""/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_73\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\Installed Softwares\apache-maven-3.3.9/bin;C:\Program Files\Java\jdk1.8.0_73/bin;C:\Program Files\Java\jdk1.8.0_73/bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_73\bin;D:\Installed Softwares\apache-maven-3.3.9\bin;C:\Program Files (x86)\Google\Chrome\Application;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_73\bin;D:\Installed Softwares\apache-maven-3.3.9\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\apache-maven-3.3.9/bin;C:\Program Files\Java\jdk1.7.0_17/bin;C:\Program Files\Java\jdk1.7.0_17/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\PC Connectivity Solution\;C:\Program Files\Java\jdk1.7.0_17\bin;D:\Programming\Selenium\New Jars\apache-ant-1.9.4\bin;D:\Apache Ant\apache-ant-1.9.6\bin;D:\Appium\android-sdk-windows\platform-tools;D:\Appium\android-sdk-windows\tools;C:\apache-maven-3.3.9\bin;%JAVA_HOME\bin;C:\Program Files\Java\jdk1.7.0_17\bin;C:\Program Files (x86)\Manymo/bin;C:\Program Files (x86)\Manymo;."/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="APPDATA" value="C:\Users\Sandeep K\AppData\Roaming"/>
+    <property name="APPDATA" value="C:\Users\SANDEEP K\AppData\Roaming"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="maven.home" value="D:\Installed Softwares\apache-maven-3.3.9"/>
-    <property name="java.class.path" value="C:\Users\Sandeep K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-agent-1.5.jar;D:\Installed Softwares\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;D:\Installed Softwares\apache-maven-3.3.9/conf/logging"/>
-    <property name="sun.java.command" value="jenkins.maven3.agent.Maven31Main D:\Installed Softwares\apache-maven-3.3.9 C:\Users\Sandeep K\.jenkins\war\WEB-INF\lib\remoting-2.56.jar C:\Users\Sandeep K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-interceptor-1.5.jar C:\Users\Sandeep K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.5.jar 53762"/>
-    <property name="Path" value="C:\Program Files\Java\jdk1.8.0_73/bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_73\bin;D:\Installed Softwares\apache-maven-3.3.9\bin;C:\Program Files (x86)\Google\Chrome\Application;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_73\bin;D:\Installed Softwares\apache-maven-3.3.9\bin"/>
+    <property name="maven.home" value="C:\apache-maven-3.3.9"/>
+    <property name="java.class.path" value="C:\Users\SANDEEP K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-agent-1.5.jar;C:\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;C:\apache-maven-3.3.9/conf/logging"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven31Main C:\apache-maven-3.3.9 C:\Users\SANDEEP K\.jenkins\war\WEB-INF\lib\remoting-2.53.2.jar C:\Users\SANDEEP K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-interceptor-1.5.jar C:\Users\SANDEEP K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.5.jar 57421"/>
+    <property name="Path" value="C:\Program Files\Java\jdk1.7.0_17/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\PC Connectivity Solution\;C:\Program Files\Java\jdk1.7.0_17\bin;D:\Programming\Selenium\New Jars\apache-ant-1.9.4\bin;D:\Apache Ant\apache-ant-1.9.6\bin;D:\Appium\android-sdk-windows\platform-tools;D:\Appium\android-sdk-windows\tools;C:\apache-maven-3.3.9\bin;%JAVA_HOME\bin;C:\Program Files\Java\jdk1.7.0_17\bin;C:\Program Files (x86)\Manymo/bin;C:\Program Files (x86)\Manymo"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="PROCESSOR_ARCHITECTURE" value="AMD64"/>
-    <property name="PATH+JDK" value="C:\Program Files\Java\jdk1.8.0_73/bin"/>
-    <property name="PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 60 Stepping 3, GenuineIntel"/>
+    <property name="PATH+JDK" value="C:\Program Files\Java\jdk1.7.0_17/bin"/>
+    <property name="PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel"/>
     <property name="SESSIONNAME" value="Console"/>
-    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="M2_HOME" value="D:\Installed Softwares\apache-maven-3.3.9"/>
-    <property name="=D:" value="D:\Installed Softwares\Jenkins"/>
+    <property name="M2_HOME" value="C:\apache-maven-3.3.9"/>
+    <property name="=D:" value="D:\Jenkins"/>
     <property name="java.io.tmpdir" value="C:\Users\SANDEE~1\AppData\Local\Temp\"/>
     <property name="OS" value="Windows_NT"/>
-    <property name="HUDSON_HOME" value="C:\Users\Sandeep K\.jenkins"/>
-    <property name="PATH+MAVEN" value="D:\Installed Softwares\apache-maven-3.3.9/bin"/>
+    <property name="HUDSON_HOME" value="C:\Users\SANDEEP K\.jenkins"/>
+    <property name="PATH+MAVEN" value="C:\apache-maven-3.3.9/bin"/>
     <property name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
-    <property name="BUILD_URL" value="http://localhost:8080/job/Automation_version1_msupply_5/63/"/>
+    <property name="BUILD_URL" value="http://localhost:8080/job/msupply_1/5/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="os.arch" value="amd64"/>
     <property name="SystemRoot" value="C:\Windows"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
-    <property name="user.dir" value="D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5"/>
-    <property name="JOB_URL" value="http://localhost:8080/job/Automation_version1_msupply_5/"/>
-    <property name="LOGONSERVER" value="\\MS-DT-056"/>
-    <property name="USERDOMAIN" value="MS-DT-056"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_17\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="user.dir" value="D:\Programming\DevelopmentWorkSpace\WebDriver\msupply_21"/>
+    <property name="JOB_URL" value="http://localhost:8080/job/msupply_1/"/>
+    <property name="LOGONSERVER" value="\\SANDEEP"/>
+    <property name="USERDOMAIN" value="SANDEEP"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="MAVEN_HOME" value="D:\Installed Softwares\apache-maven-3.3.9"/>
+    <property name="MAVEN_HOME" value="C:\apache-maven-3.3.9"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="BUILD_NUMBER" value="63"/>
+    <property name="BUILD_NUMBER" value="5"/>
+    <property name="ANDROID_HOME" value="D:\Appium\android-sdk-windows"/>
     <property name="JENKINS_URL" value="http://localhost:8080/"/>
-    <property name="PROCESSOR_REVISION" value="3c03"/>
+    <property name="PROCESSOR_REVISION" value="3a09"/>
     <property name="ProgramW6432" value="C:\Program Files"/>
     <property name="windir" value="C:\Windows"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="SystemDrive" value="C:"/>
-    <property name="maven3.interceptor" value="C:\Users\Sandeep K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-interceptor-1.5.jar"/>
-    <property name="WORKSPACE" value="C:\Users\Sandeep K\.jenkins\workspace\Automation_version1_msupply_5"/>
-    <property name="maven3.interceptor.common" value="C:\Users\Sandeep K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.5.jar"/>
-    <property name="java.specification.version" value="1.8"/>
-    <property name="PSModulePath" value="C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules"/>
+    <property name="maven3.interceptor" value="C:\Users\SANDEEP K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-interceptor-1.5.jar"/>
+    <property name="WORKSPACE" value="C:\Users\SANDEEP K\.jenkins\workspace\msupply_1"/>
+    <property name="maven3.interceptor.common" value="C:\Users\SANDEEP K\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.5.jar"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="PSModulePath" value="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\"/>
   </properties>
-  <testcase name="HomePage_verification" classname="SanityTest.Homepage_Test" time="750.231">
-    <failure message="expected [Anchor Telephone Cable 0.4 mm-1 pair, 90 Mtr pack was added to your shopping list.] but found [Crabtree Athena RJ-11 One Gang with shutter was added to your shopping list.]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Anchor Telephone Cable 0.4 mm-1 pair, 90 Mtr pack was added to your shopping list.] but found [Crabtree Athena RJ-11 One Gang with shutter was added to your shopping list.]
-	at SanityTest.Homepage_Test.HomePage_verification(Homepage_Test.java:56)
+  <testcase name="msupply_HomePage_FooterSections" classname="Functional_TestCase_HomePage.msupply_HomePage_FooterSections_Test" time="329.366">
+    <failure message="expected [mSupply] but found [mSupply | Facebook]" type="java.lang.AssertionError">java.lang.AssertionError: expected [mSupply] but found [mSupply | Facebook]
+	at Functional_TestCase_HomePage.msupply_HomePage_FooterSections_Test.msupply_HomePage_FooterSections(msupply_HomePage_FooterSections_Test.java:46)
 </failure>
-    <system-out><![CDATA[0    [2016-06-08 08:00:21,891] [INFO ] [Scenarios.Scenario1Test ] - Sanity TestCase - HomePage verification
-653  [2016-06-08 08:00:22,544] [INFO ] [POM.HomePage ] - Clicked on Close Button - POPUP
-ServiceProvidervalue=Some of our Service Providers
-370319 [2016-06-08 08:06:32,210] [INFO ] [POM.HomePage ] - ............Clicked on About Us link.........
-377667 [2016-06-08 08:06:39,558] [INFO ] [POM.HomePage ] - ............Clicked on Our Team link.........
-384309 [2016-06-08 08:06:46,200] [INFO ] [POM.HomePage ] - ............Clicked on Our Investors link.........
-391966 [2016-06-08 08:06:53,857] [INFO ] [POM.HomePage ] - ............Clicked on Careers link.........
-399310 [2016-06-08 08:07:01,201] [INFO ] [POM.HomePage ] - ............Clicked on Returns & Cancellations link.........
-406419 [2016-06-08 08:07:08,310] [INFO ] [POM.HomePage ] - ............Clicked on Terms & Conditions link.........
-413763 [2016-06-08 08:07:15,654] [INFO ] [POM.HomePage ] - ............Clicked on FAQs link.........
-420947 [2016-06-08 08:07:22,838] [INFO ] [POM.HomePage ] - ............Clicked on Sell on mSupply link.........
-427323 [2016-06-08 08:07:29,214] [INFO ] [POM.HomePage ] - ............Clicked on Contact Us link.........
-670321 [2016-06-08 08:11:32,212] [INFO ] [POM.HomePage ] - ............Selecting Product from Navigation.........
-672269 [2016-06-08 08:11:34,160] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC
-679627 [2016-06-08 08:11:41,518] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC_Nagarjuna
-687627 [2016-06-08 08:11:49,518] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_AddtoList
-Count== 1
-699853 [2016-06-08 08:12:01,744] [INFO ] [POM.LoginPage ] - Moved to Account in Home page
-700697 [2016-06-08 08:12:02,588] [INFO ] [POM.LoginPage ] - Clicked on Login Button
-700854 [2016-06-08 08:12:02,745] [INFO ] [POM.LoginPage ] - Mobile Number is9555554444
-701322 [2016-06-08 08:12:03,213] [INFO ] [POM.LoginPage ] - Entered Mobile Number
-701416 [2016-06-08 08:12:03,307] [INFO ] [POM.LoginPage ] - Password isksandeep
-701588 [2016-06-08 08:12:03,479] [INFO ] [POM.LoginPage ] - Entered Password
-701885 [2016-06-08 08:12:03,776] [INFO ] [POM.LoginPage ] - Clicked on Login Button
-Logged in
-702010 [2016-06-08 08:12:03,901] [INFO ] [POM.HomePage ] - ............Selecting Product from Navigation.........
-Entered into electricals
-Mouse hovered on Shop
-Mouse hovered on Electrical
-Clicked on Cables & Wires
-720349 [2016-06-08 08:12:22,240] [INFO ] [POM.HomePage ] - Moved to : Electrical_Cables_polycab
-Clicked on polycab product
-728370 [2016-06-08 08:12:30,261] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Blocks_ConcreteCover_15mm_AddtoList
+    <system-out><![CDATA[22:29:57.513 [main] INFO  POM.HomePage - Image is Displayed
+22:30:05.201 [main] INFO  POM.HomePage - Clicked on Close Icon POPUP
+22:30:11.771 [main] INFO  POM.HomePage - msuppy Footer-1 Present
+22:30:18.082 [main] INFO  POM.HomePage - Payment Methods Footer-2 Present
+22:30:24.307 [main] INFO  POM.HomePage - Quick Links Footer-3 Present
+22:30:30.809 [main] INFO  POM.HomePage - Payment Method text is Displayed
+22:30:37.263 [main] INFO  POM.HomePage - Payment Types Displayed
+22:30:43.545 [main] INFO  POM.HomePage - Delivery Partners text is Displayed
+22:30:49.872 [main] INFO  POM.HomePage - Delivery Partners Displayed
+22:31:02.801 [main] INFO  POM.HomePage - Search for Element
+22:31:02.960 [main] INFO  POM.HomePage - Search for Element
+22:31:03.100 [main] INFO  POM.HomePage - Search for Element
+22:31:03.481 [main] INFO  POM.HomePage - Search for Element
+22:31:03.732 [main] INFO  POM.HomePage - Search for Element
+22:31:03.894 [main] INFO  POM.HomePage - Search for Element
+22:31:04.068 [main] INFO  POM.HomePage - Search for Element
+22:31:13.180 [main] INFO  POM.HomePage - Clicked on About us
+22:31:19.475 [main] INFO  POM.HomePage - About Us Page Verified
+22:31:33.522 [main] INFO  POM.HomePage - Clicked on Out Team
+22:31:39.807 [main] INFO  POM.HomePage - Our Team Verified
+22:31:53.372 [main] INFO  POM.HomePage - Clicked on Our Investors
+22:31:59.630 [main] INFO  POM.HomePage - Our Investors Page Verified
+22:32:13.215 [main] INFO  POM.HomePage - Clicked on Our Carrers
+22:32:19.494 [main] INFO  POM.HomePage - Careers Page Verified
+22:32:27.331 [main] INFO  POM.HomePage - Clicked on msupply Blog
+22:32:27.488 [main] INFO  POM.HomePage - Switched to Blog
+22:32:32.562 [main] INFO  POM.HomePage - Switched to msupply Home Page
+22:32:45.264 [main] INFO  POM.HomePage - Search for Element
+22:32:45.409 [main] INFO  POM.HomePage - Search for Element
+22:32:45.543 [main] INFO  POM.HomePage - Search for Element
+22:32:45.690 [main] INFO  POM.HomePage - Search for Element
+22:32:45.826 [main] INFO  POM.HomePage - Search for Element
+22:32:45.936 [main] INFO  POM.HomePage - Search for Element
+22:32:46.061 [main] INFO  POM.HomePage - Search for Element
+22:32:53.108 [main] INFO  POM.HomePage - Clicked on Returns & Cancellations
+22:32:59.370 [main] INFO  POM.HomePage - Returns & Cancellations Page Verified
+22:33:12.225 [main] INFO  POM.HomePage - Clicked on Returns & Cancellations
+22:33:18.479 [main] INFO  POM.HomePage - Terms and Conditions of Use Page Verified
+22:33:31.696 [main] INFO  POM.HomePage - Clicked on FAQs
+22:33:38.025 [main] INFO  POM.HomePage - FAQs Page Verified
+22:33:51.790 [main] INFO  POM.HomePage - Clicked on FAQs
+22:33:58.084 [main] INFO  POM.HomePage - Sell On mSupply Verified
+22:34:11.187 [main] INFO  POM.HomePage - Clicked on Contact Us
+22:34:17.482 [main] INFO  POM.HomePage - Contact Us Page Verified
+22:34:31.348 [main] INFO  POM.HomePage - Clicked on Facebook
+22:34:31.396 [main] INFO  POM.HomePage - Switched to Facebook Tab
 ]]></system-out>
   </testcase>
-  <testcase name="AddProduct" classname="SanityTest.AddProductsToCart_Test" time="203.641"/>
-  <testcase name="PlaceOrder_CashOnDelivery" classname="SanityTest.PlaceOrder_Cheque_Test" time="13.89">
-    <failure message="Element is not clickable at point (1313, 70). Other element would receive the click: &lt;div class=&quot;block blockui&quot;&gt;&lt;/div&gt;&#10;Command duration or timeout: 71 milliseconds&#10;Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;&#10;System info: host: &apos;MS-DT-056&apos;, ip: &apos;10.1.2.253&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 7e5d0971-f9f7-4a8f-8633-2207016beb7e" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
-Element is not clickable at point (1313, 70). Other element would receive the click: <div class="block blockui"></div>
-Command duration or timeout: 71 milliseconds
+  <testcase name="msupply_HomePage_HeroImage_And_MarketingPromos" classname="Functional_TestCase_HomePage.msupply_HomePage_HeroImage_And_MarketingPromos_Test" time="144.309">
+    <failure type="java.util.NoSuchElementException">java.util.NoSuchElementException
+	at Functional_TestCase_HomePage.msupply_HomePage_HeroImage_And_MarketingPromos_Test.msupply_HomePage_HeroImage_And_MarketingPromos(msupply_HomePage_HeroImage_And_MarketingPromos_Test.java:42)
+</failure>
+    <system-out><![CDATA[D:\Programming\DevelopmentWorkSpace\WebDriver\msupply_21
+22:35:38.471 [main] INFO  POM.HomePage - Image is Displayed
+22:35:45.843 [main] INFO  POM.HomePage - Clicked on Close Icon POPUP
+22:35:52.109 [main] INFO  POM.HomePage - Sliders Displayed on HomePage
+22:35:58.300 [main] INFO  POM.HomePage - All Sliders Present on WebPage
+22:35:58.377 [main] INFO  POM.HomePage - Image not Broken
+22:35:58.417 [main] INFO  POM.HomePage - Image not Broken
+22:35:58.474 [main] INFO  POM.HomePage - Image not Broken
+22:35:58.549 [main] INFO  POM.HomePage - Image not Broken
+22:35:58.622 [main] INFO  POM.HomePage - Image not Broken
+22:36:04.905 [main] INFO  POM.HomePage - Element displayed.
+22:36:10.111 [main] INFO  POM.HomePage - Element displayed.
+22:36:15.326 [main] INFO  POM.HomePage - Element displayed.
+22:36:20.588 [main] INFO  POM.HomePage - Element displayed.
+22:36:25.918 [main] INFO  POM.HomePage - Element displayed.
+22:36:31.286 [main] INFO  POM.HomePage - Element displayed.
+22:36:36.510 [main] INFO  POM.HomePage - Element displayed.
+22:36:41.737 [main] INFO  POM.HomePage - Element displayed.
+22:37:01.552 [main] INFO  POM.HomePage - Service Provider text obtained
+22:37:07.856 [main] INFO  POM.HomePage - Element is Clickable
+22:37:15.182 [main] INFO  POM.HomePage - Clicked on Service Provider
+]]></system-out>
+  </testcase>
+  <testcase name="msupply_HomePage_Main_HeaderVerification" classname="Functional_TestCase_HomePage.msupply_HomePage_Main_HeaderVerification_Test" time="137.596">
+    <failure type="java.lang.Exception">java.lang.Exception
+	at Functional_TestCase_HomePage.msupply_HomePage_Main_HeaderVerification_Test.msupply_HomePage_Main_HeaderVerification(msupply_HomePage_Main_HeaderVerification_Test.java:48)
+</failure>
+    <system-out><![CDATA[D:\Programming\DevelopmentWorkSpace\WebDriver\msupply_21
+22:38:18.533 [main] INFO  POM.HomePage - Image is Displayed
+22:38:25.982 [main] INFO  POM.HomePage - Clicked on Close Icon POPUP
+22:38:33.191 [main] INFO  POM.HomePage - Home Page Header
+22:38:33.191 [main] INFO  POM.HomePage - Home Page Header Visible
+22:38:40.607 [main] INFO  POM.HomePage - Mouse over on Navigation
+22:38:46.761 [main] INFO  POM.HomePage - All categories Present
+22:39:09.134 [main] INFO  POM.HomePage - Navigating to the Product list page
+22:39:34.409 [main] INFO  POM.HomePage - Pincode Entered
+22:39:41.840 [main] INFO  POM.HomePage - Clicked on ZipCode Go Button
+22:39:48.173 [main] INFO  POM.HomePage - Not Navigated to the Product details page 
+]]></system-out>
+  </testcase>
+  <testcase name="msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification" classname="Functional_TestCase_HomePage.msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification_Test" time="190.154">
+    <failure message="Element is not clickable at point (1270.2166748046875, 23.48333740234375). Other element would receive the click: &lt;a href=&quot;https://www.msupply.com/checkout/cart/&quot;&gt;&lt;/a&gt;&#10;Command duration or timeout: 135 milliseconds&#10;Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;&#10;System info: host: &apos;SANDEEP&apos;, ip: &apos;192.168.2.3&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.7.0_17&apos;&#10;Session ID: 2818750d-b6be-4745-aae6-e590bb9a580d&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=37.0.2}]" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
+Element is not clickable at point (1270.2166748046875, 23.48333740234375). Other element would receive the click: <a href="https://www.msupply.com/checkout/cart/"></a>
+Command duration or timeout: 135 milliseconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
+System info: host: 'SANDEEP', ip: '192.168.2.3', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_17'
+Session ID: 2818750d-b6be-4745-aae6-e590bb9a580d
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 7e5d0971-f9f7-4a8f-8633-2207016beb7e
-	at SanityTest.PlaceOrder_Cheque_Test.PlaceOrder_CashOnDelivery(PlaceOrder_Cheque_Test.java:27)
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=37.0.2}]
+	at Functional_TestCase_HomePage.msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification_Test.msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification(msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification_Test.java:105)
 ]]></failure>
-    <system-out><![CDATA[966150 [2016-06-08 08:16:28,041] [INFO ] [Scenarios.Scenario1Test ] - Testcase - Place Order through Cash on Delivery
+    <system-out><![CDATA[D:\Programming\DevelopmentWorkSpace\WebDriver\msupply_21
+22:40:52.623 [main] INFO  POM.HomePage - Image is Displayed
+22:41:00.104 [main] INFO  POM.HomePage - Clicked on Close Icon POPUP
+22:41:06.712 [main] INFO  POM.HomePage - ServiceProvide Image Present
+22:41:13.199 [main] INFO  POM.HomePage - Customer Message is displayed
+22:41:19.635 [main] INFO  POM.HomePage - Name Field accepts value
+22:41:26.036 [main] INFO  POM.HomePage - Mobile Field accepts value
+22:41:32.390 [main] INFO  POM.HomePage - Email field accepts value
+22:41:39.176 [main] INFO  POM.HomePage - Message field accepts value
+22:41:46.426 [main] INFO  POM.HomePage - Ask-Now button Visible
+22:41:52.615 [main] INFO  POM.HomePage - Service Provider Message is displayed
+22:41:59.000 [main] INFO  POM.HomePage - Service Provider NameField accepts value
+22:42:05.368 [main] INFO  POM.HomePage - Service Provider Mobile accepts value
+22:42:11.722 [main] INFO  POM.HomePage - ServiceProvider DropDown default value is > Architect
+22:42:13.987 [main] INFO  POM.HomePage - Service Provider Other Field is Disabled
+22:42:21.258 [main] INFO  POM.HomePage - Register button Visible
+22:42:27.475 [main] INFO  POM.HomePage - Customer Testimonials Image Present
+22:42:33.786 [main] INFO  POM.HomePage - Customer Testimonial Header is displayed
+22:42:39.999 [main] INFO  POM.HomePage - BrandSlider Displayed on HomePage
+22:42:46.233 [main] INFO  POM.HomePage - Brands displayed on the Slider
+22:43:08.040 [main] INFO  POM.HomePage - 50th BrandImage not present
+22:43:09.473 [main] INFO  POM.HomePage - 50th BrandImage present
 ]]></system-out>
   </testcase>
-  <testcase name="Product_MOQ_Verification" classname="SanityTest.Product_MOQ_Verification_Test" time="172.782"/>
-  <testcase name="ServiceChargeCalculation_KartPage" classname="SanityTest.ServiceChargeCalculation_KartPage_Test" time="139.979">
-    <failure message="expected [17123] but found [17122]" type="java.lang.AssertionError">java.lang.AssertionError: expected [17123] but found [17122]
-	at SanityTest.ServiceChargeCalculation_KartPage_Test.ServiceChargeCalculation_KartPage(ServiceChargeCalculation_KartPage_Test.java:36)
-</failure>
-    <system-out><![CDATA[1153582 [2016-06-08 08:19:35,473] [INFO ] [Scenarios.Scenario1Test ] - Sanity TestCase - ServiceChargeCalculation_KartPage
-1153760 [2016-06-08 08:19:35,651] [INFO ] [POM.HomePage ] - Clicked on POPup Close Button
-1153760 [2016-06-08 08:19:35,651] [INFO ] [POM.HomePage ] - ------------------------------------------------
-1153760 [2016-06-08 08:19:35,651] [INFO ] [POM.HomePage ] - ............Selecting RMC Product from Navigation.........
-1159466 [2016-06-08 08:19:41,357] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial RMC Product
-1167194 [2016-06-08 08:19:49,085] [INFO ] [POM.HomePage ] - Moved to : BuildingMaterial_RMC_ConcreteBag
-Lafarge India Private Ltd
-560064
-143
-6
-1184270 [2016-06-08 08:20:06,161] [INFO ] [POM.HomePage ] - Product 1 added and Moved to : Kart Page 
-1196571 [2016-06-08 08:20:18,462] [INFO ] [POM.ShoppingCartPage ] - unitprice=143VAT=14.5Quantity=6SubTotal858
-1196571 [2016-06-08 08:20:18,462] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
-1226790 [2016-06-08 08:20:48,681] [INFO ] [POM.ShoppingCartPage ] - unitprice=143Quantity=6SubTotal858
-1226790 [2016-06-08 08:20:48,681] [INFO ] [POM.ShoppingCartPage ] - Verifing Product details and cart page
-1226850 [2016-06-08 08:20:48,741] [INFO ] [POM.ShoppingCartPage ] - Product Name from product details page and Shopping cart page is same
-1226903 [2016-06-08 08:20:48,794] [INFO ] [POM.ShoppingCartPage ] - Seller Name from product details page and Shopping cart page is same
-1226959 [2016-06-08 08:20:48,850] [INFO ] [POM.ShoppingCartPage ] - Pincode from product details page and Shopping cart page is same
-1226959 [2016-06-08 08:20:48,850] [INFO ] [POM.ShoppingCartPage ] - Unit Pricing from product details page and Shopping cart page is same
-1226959 [2016-06-08 08:20:48,850] [INFO ] [POM.ShoppingCartPage ] - Quantity from product details page and Shopping cart page is same
-1226959 [2016-06-08 08:20:48,850] [INFO ] [POM.ShoppingCartPage ] - SubTotal from product details page and Shopping cart page is same
-1227178 [2016-06-08 08:20:49,069] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for List Table : SubTotal from Kart Section and List Section is Same
-98.67
-1227179 [2016-06-08 08:20:49,070] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Service charges List Table : Calculated Service is98
-1227179 [2016-06-08 08:20:49,070] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for GranTotal List Table : Calculated GrandTotal is956
-1227179 [2016-06-08 08:20:49,070] [INFO ] [POM.HomePage ] - .................................................
-1227179 [2016-06-08 08:20:49,070] [INFO ] [POM.HomePage ] - ............Selecting Product from Navigation.........
-1229103 [2016-06-08 08:20:50,994] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC
-1236731 [2016-06-08 08:20:58,622] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC_Nagarjuna
-Deva Associates
-560064
-313
-50
-1245986 [2016-06-08 08:21:07,877] [INFO ] [POM.HomePage ] - Product 2 added and Moved to : Kart Page 
-1258278 [2016-06-08 08:21:20,169] [INFO ] [POM.ShoppingCartPage ] - unitprice=143VAT=14.5Quantity=6SubTotal858
-1258278 [2016-06-08 08:21:20,169] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
-1258536 [2016-06-08 08:21:20,427] [INFO ] [POM.ShoppingCartPage ] - unitprice=313VAT=14.5Quantity=50SubTotal15650
-1258536 [2016-06-08 08:21:20,427] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
-1288745 [2016-06-08 08:21:50,636] [INFO ] [POM.ShoppingCartPage ] - unitprice=313Quantity=50SubTotal15650
-1288745 [2016-06-08 08:21:50,636] [INFO ] [POM.ShoppingCartPage ] - Verifing Product details and cart page
-1288808 [2016-06-08 08:21:50,699] [INFO ] [POM.ShoppingCartPage ] - Product Name from product details page and Shopping cart page is same
-1288862 [2016-06-08 08:21:50,753] [INFO ] [POM.ShoppingCartPage ] - Seller Name from product details page and Shopping cart page is same
-1288919 [2016-06-08 08:21:50,810] [INFO ] [POM.ShoppingCartPage ] - Pincode from product details page and Shopping cart page is same
-1288919 [2016-06-08 08:21:50,810] [INFO ] [POM.ShoppingCartPage ] - Unit Pricing from product details page and Shopping cart page is same
-1288919 [2016-06-08 08:21:50,810] [INFO ] [POM.ShoppingCartPage ] - Quantity from product details page and Shopping cart page is same
-1288919 [2016-06-08 08:21:50,810] [INFO ] [POM.ShoppingCartPage ] - SubTotal from product details page and Shopping cart page is same
-1289145 [2016-06-08 08:21:51,036] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for List Table : SubTotal from Kart Section and List Section is Same
-115.0
-1289145 [2016-06-08 08:21:51,036] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Service charges List Table : Calculated Service is115
+  <testcase name="msupply_HomePage_SlidersVerification" classname="Functional_TestCase_HomePage.msupply_HomePage_SlidersVerification_Test" time="3,405.457">
+    <failure message="Element is not clickable at point (177.68333435058594, 8.583328247070312). Other element would receive the click: &lt;div class=&quot;navbar navbar-default navbar-fixed-top col-lg-12 col-md-12 col-sm-12 col-xs-12&quot;&gt;&lt;/div&gt;&#10;Command duration or timeout: 277 milliseconds&#10;Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;&#10;System info: host: &apos;SANDEEP&apos;, ip: &apos;192.168.2.3&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.7.0_17&apos;&#10;Session ID: 3a6c9f3e-d3d7-4e39-bfe2-1a9c292f2578&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=37.0.2}]" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
+Element is not clickable at point (177.68333435058594, 8.583328247070312). Other element would receive the click: <div class="navbar navbar-default navbar-fixed-top col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+Command duration or timeout: 277 milliseconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SANDEEP', ip: '192.168.2.3', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_17'
+Session ID: 3a6c9f3e-d3d7-4e39-bfe2-1a9c292f2578
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=37.0.2}]
+	at Functional_TestCase_HomePage.msupply_HomePage_SlidersVerification_Test.msupply_HomePage_SlidersVerification(msupply_HomePage_SlidersVerification_Test.java:58)
+]]></failure>
+    <system-out><![CDATA[D:\Programming\DevelopmentWorkSpace\WebDriver\msupply_21
+22:44:01.427 [main] INFO  POM.HomePage - Clicked on Close Icon POPUP
+22:44:07.636 [main] INFO  POM.HomePage - All Eight category Section Present on WebPage
+22:44:12.700 [main] INFO  POM.HomePage - Slider=1 is displayed
+22:44:17.758 [main] INFO  POM.HomePage - Slider=2 is displayed
+22:44:22.820 [main] INFO  POM.HomePage - Slider=3 is displayed
+22:44:27.879 [main] INFO  POM.HomePage - Slider=4 is displayed
+22:44:32.924 [main] INFO  POM.HomePage - Slider=5 is displayed
+22:44:37.980 [main] INFO  POM.HomePage - Slider=6 is displayed
+22:44:43.028 [main] INFO  POM.HomePage - Slider=7 is displayed
+22:44:48.097 [main] INFO  POM.HomePage - Slider=8 is displayed
+22:44:54.447 [main] INFO  POM.HomePage - Category Names
+22:45:34.938 [main] INFO  POM.HomePage - Header Name available for the Slider
+22:45:34.938 [main] INFO  POM.HomePage - Verifing 120 Product links from the Slider
+22:45:35.115 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=1==================================================
+22:45:53.405 [main] INFO  POM.HomePage - Pincode Entered
+22:46:00.791 [main] INFO  POM.HomePage - Clicked on ZipCode Go Button
+22:46:07.027 [main] INFO  POM.HomePage - HomePageProduct = priya gold ppc cement
+22:46:07.027 [main] INFO  POM.HomePage - ProductDetailsPageProductname = priya gold ppc cement
+22:46:07.027 [main] INFO  POM.HomePage - Product => 1:Slider=>1:Product=>1
+22:46:07.027 [main] INFO  POM.HomePage - : ActualValue=>priya gold ppc cement : Expectedvalue=>priya gold ppc cement
+22:46:14.977 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=2==================================================
+22:46:32.773 [main] INFO  POM.HomePage - HomePageProduct = penna opc 53 grade cement
+22:46:32.773 [main] INFO  POM.HomePage - ProductDetailsPageProductname = penna opc 53 grade cement
+22:46:32.773 [main] INFO  POM.HomePage - Product => 2:Slider=>1:Product=>2
+22:46:32.773 [main] INFO  POM.HomePage - : ActualValue=>penna opc 53 grade cement : Expectedvalue=>penna opc 53 grade cement
+22:46:40.807 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=3==================================================
+22:46:57.880 [main] INFO  POM.HomePage - HomePageProduct = acc opc 43 grade cement
+22:46:57.880 [main] INFO  POM.HomePage - ProductDetailsPageProductname = acc opc 43 grade cement
+22:46:57.880 [main] INFO  POM.HomePage - Product => 3:Slider=>1:Product=>3
+22:46:57.880 [main] INFO  POM.HomePage - : ActualValue=>acc opc 43 grade cement : Expectedvalue=>acc opc 43 grade cement
+22:47:06.065 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=4==================================================
+22:47:22.563 [main] INFO  POM.HomePage - HomePageProduct = ramco opc 53 grade cement
+22:47:22.563 [main] INFO  POM.HomePage - ProductDetailsPageProductname = ramco opc 53 grade cement
+22:47:22.564 [main] INFO  POM.HomePage - Product => 4:Slider=>1:Product=>4
+22:47:22.564 [main] INFO  POM.HomePage - : ActualValue=>ramco opc 53 grade cement : Expectedvalue=>ramco opc 53 grade cement
+22:47:30.771 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=5==================================================
+22:47:47.668 [main] INFO  POM.HomePage - HomePageProduct = coromandel king opc 43 grade cement
+22:47:47.668 [main] INFO  POM.HomePage - ProductDetailsPageProductname = coromandel king opc 43 grade cement
+22:47:47.668 [main] INFO  POM.HomePage - Product => 5:Slider=>1:Product=>5
+22:47:47.668 [main] INFO  POM.HomePage - : ActualValue=>coromandel king opc 43 grade cement : Expectedvalue=>coromandel king opc 43 grade cement
+22:47:58.735 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=6==================================================
+22:48:15.461 [main] INFO  POM.HomePage - HomePageProduct = maha gold opc 53 grade cement
+22:48:15.461 [main] INFO  POM.HomePage - ProductDetailsPageProductname = maha gold opc 53 grade cement
+22:48:15.461 [main] INFO  POM.HomePage - Product => 6:Slider=>1:Product=>6
+22:48:15.461 [main] INFO  POM.HomePage - : ActualValue=>maha gold opc 53 grade cement : Expectedvalue=>maha gold opc 53 grade cement
+22:48:25.679 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=7==================================================
+22:48:43.521 [main] INFO  POM.HomePage - HomePageProduct = maha gold ppc cement
+22:48:43.521 [main] INFO  POM.HomePage - ProductDetailsPageProductname = maha gold ppc cement
+22:48:43.521 [main] INFO  POM.HomePage - Product => 7:Slider=>1:Product=>7
+22:48:43.521 [main] INFO  POM.HomePage - : ActualValue=>maha gold ppc cement : Expectedvalue=>maha gold ppc cement
+22:48:53.107 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=8==================================================
+22:49:09.395 [main] INFO  POM.HomePage - HomePageProduct = bhavya opc 53 grade cement
+22:49:09.395 [main] INFO  POM.HomePage - ProductDetailsPageProductname = bhavya opc 53 grade cement
+22:49:09.395 [main] INFO  POM.HomePage - Product => 8:Slider=>1:Product=>8
+22:49:09.395 [main] INFO  POM.HomePage - : ActualValue=>bhavya opc 53 grade cement : Expectedvalue=>bhavya opc 53 grade cement
+22:49:18.915 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=9==================================================
+22:49:35.807 [main] INFO  POM.HomePage - HomePageProduct = kcp opc 53 grade cement
+22:49:35.807 [main] INFO  POM.HomePage - ProductDetailsPageProductname = kcp opc 53 grade cement
+22:49:35.807 [main] INFO  POM.HomePage - Product => 9:Slider=>1:Product=>9
+22:49:35.807 [main] INFO  POM.HomePage - : ActualValue=>kcp opc 53 grade cement : Expectedvalue=>kcp opc 53 grade cement
+22:49:45.171 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=10==================================================
+22:50:02.900 [main] INFO  POM.HomePage - HomePageProduct = kcp ppc cement
+22:50:02.900 [main] INFO  POM.HomePage - ProductDetailsPageProductname = kcp ppc cement
+22:50:02.900 [main] INFO  POM.HomePage - Product => 10:Slider=>1:Product=>10
+22:50:02.900 [main] INFO  POM.HomePage - : ActualValue=>kcp ppc cement : Expectedvalue=>kcp ppc cement
+22:50:13.837 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=11==================================================
+22:50:33.093 [main] INFO  POM.HomePage - HomePageProduct = bharathi opc 43 grade cement
+22:50:33.093 [main] INFO  POM.HomePage - ProductDetailsPageProductname = bharathi opc 43 grade cement
+22:50:33.093 [main] INFO  POM.HomePage - Product => 11:Slider=>1:Product=>11
+22:50:33.093 [main] INFO  POM.HomePage - : ActualValue=>bharathi opc 43 grade cement : Expectedvalue=>bharathi opc 43 grade cement
+22:50:44.200 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=12==================================================
+22:51:00.958 [main] INFO  POM.HomePage - HomePageProduct = dalmia opc 43 grade cement
+22:51:00.958 [main] INFO  POM.HomePage - ProductDetailsPageProductname = dalmia opc 43 grade cement
+22:51:00.958 [main] INFO  POM.HomePage - Product => 12:Slider=>1:Product=>12
+22:51:00.958 [main] INFO  POM.HomePage - : ActualValue=>dalmia opc 43 grade cement : Expectedvalue=>dalmia opc 43 grade cement
+22:51:12.942 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=13==================================================
+22:51:30.317 [main] INFO  POM.HomePage - HomePageProduct = zuari opc 43 grade cement
+22:51:30.317 [main] INFO  POM.HomePage - ProductDetailsPageProductname = zuari opc 43 grade cement
+22:51:30.317 [main] INFO  POM.HomePage - Product => 13:Slider=>1:Product=>13
+22:51:30.317 [main] INFO  POM.HomePage - : ActualValue=>zuari opc 43 grade cement : Expectedvalue=>zuari opc 43 grade cement
+22:51:41.321 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=14==================================================
+22:51:59.042 [main] INFO  POM.HomePage - HomePageProduct = zuari ppc cement
+22:51:59.042 [main] INFO  POM.HomePage - ProductDetailsPageProductname = zuari ppc cement
+22:51:59.042 [main] INFO  POM.HomePage - Product => 14:Slider=>1:Product=>14
+22:51:59.042 [main] INFO  POM.HomePage - : ActualValue=>zuari ppc cement : Expectedvalue=>zuari ppc cement
+22:52:09.746 [main] INFO  POM.HomePage - ============================= : Slider=1: Product=15==================================================
+22:52:26.869 [main] INFO  POM.HomePage - HomePageProduct = mycem psc cement
+22:52:26.870 [main] INFO  POM.HomePage - ProductDetailsPageProductname = mycem psc cement
+22:52:26.870 [main] INFO  POM.HomePage - Product => 15:Slider=>1:Product=>15
+22:52:26.870 [main] INFO  POM.HomePage - : ActualValue=>mycem psc cement : Expectedvalue=>mycem psc cement
+22:52:34.708 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=1==================================================
+22:52:52.851 [main] INFO  POM.HomePage - HomePageProduct = gilma nova 2b(m) manual
+22:52:52.852 [main] INFO  POM.HomePage - ProductDetailsPageProductname = gilma nova 2b(m) manual
+22:52:52.852 [main] INFO  POM.HomePage - Product => 16:Slider=>2:Product=>1
+22:52:52.852 [main] INFO  POM.HomePage - : ActualValue=>gilma nova 2b(m) manual : Expectedvalue=>gilma nova 2b(m) manual
+22:53:01.578 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=2==================================================
+22:53:19.972 [main] INFO  POM.HomePage - HomePageProduct = hafele nagold oro built-in 4 brass burner glass gas hob
+22:53:19.972 [main] INFO  POM.HomePage - ProductDetailsPageProductname = hafele nagold oro built-in 4 brass burner glass gas hob
+22:53:19.972 [main] INFO  POM.HomePage - Product => 17:Slider=>2:Product=>2
+22:53:19.972 [main] INFO  POM.HomePage - : ActualValue=>hafele nagold oro built-in 4 brass burner glass gas hob : Expectedvalue=>hafele nagold oro built-in 4 brass burner glass gas hob
+22:53:28.065 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=3==================================================
+22:53:46.119 [main] INFO  POM.HomePage - HomePageProduct = hafele nagold elite g01 built-in 4 burner glass gas hob
+22:53:46.119 [main] INFO  POM.HomePage - ProductDetailsPageProductname = hafele nagold elite g01 built-in 4 burner glass gas hob
+22:53:46.119 [main] INFO  POM.HomePage - Product => 18:Slider=>2:Product=>3
+22:53:46.119 [main] INFO  POM.HomePage - : ActualValue=>hafele nagold elite g01 built-in 4 burner glass gas hob : Expectedvalue=>hafele nagold elite g01 built-in 4 burner glass gas hob
+22:53:54.003 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=4==================================================
+22:54:10.510 [main] INFO  POM.HomePage - HomePageProduct = kaff base-60 chimney
+22:54:10.510 [main] INFO  POM.HomePage - ProductDetailsPageProductname = kaff base-60 chimney
+22:54:10.510 [main] INFO  POM.HomePage - Product => 19:Slider=>2:Product=>4
+22:54:10.510 [main] INFO  POM.HomePage - : ActualValue=>kaff base-60 chimney : Expectedvalue=>kaff base-60 chimney
+22:54:18.497 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=5==================================================
+22:54:36.087 [main] INFO  POM.HomePage - HomePageProduct = gilma stylo ss chimney
+22:54:36.087 [main] INFO  POM.HomePage - ProductDetailsPageProductname = gilma stylo ss chimney
+22:54:36.087 [main] INFO  POM.HomePage - Product => 20:Slider=>2:Product=>5
+22:54:36.087 [main] INFO  POM.HomePage - : ActualValue=>gilma stylo ss chimney : Expectedvalue=>gilma stylo ss chimney
+22:54:45.174 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=6==================================================
+22:55:01.895 [main] INFO  POM.HomePage - HomePageProduct = carysil vogue g2 non-auto cooktop
+22:55:01.895 [main] INFO  POM.HomePage - ProductDetailsPageProductname = carysil vogue g2 non-auto cooktop
+22:55:01.895 [main] INFO  POM.HomePage - Product => 21:Slider=>2:Product=>6
+22:55:01.895 [main] INFO  POM.HomePage - : ActualValue=>carysil vogue g2 non-auto cooktop : Expectedvalue=>carysil vogue g2 non-auto cooktop
+22:55:10.933 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=7==================================================
+22:55:35.676 [main] INFO  POM.HomePage - HomePageProduct = carysil vogue g2 non-auto cooktop
+22:55:35.676 [main] INFO  POM.HomePage - ProductDetailsPageProductname = carysil vogue g2 non-auto cooktop
+22:55:35.676 [main] INFO  POM.HomePage - Product => 22:Slider=>2:Product=>7
+22:55:35.676 [main] INFO  POM.HomePage - : ActualValue=>carysil vogue g2 non-auto cooktop : Expectedvalue=>carysil vogue g2 non-auto cooktop
+22:55:52.680 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=8==================================================
+22:56:11.389 [main] INFO  POM.HomePage - HomePageProduct = carysil 1/2 hp standard manual food waste disposer
+22:56:11.389 [main] INFO  POM.HomePage - ProductDetailsPageProductname = carysil 1/2 hp standard manual food waste disposer
+22:56:11.389 [main] INFO  POM.HomePage - Product => 23:Slider=>2:Product=>8
+22:56:11.389 [main] INFO  POM.HomePage - : ActualValue=>carysil 1/2 hp standard manual food waste disposer : Expectedvalue=>carysil 1/2 hp standard manual food waste disposer
+22:56:20.525 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=9==================================================
+22:56:39.517 [main] INFO  POM.HomePage - HomePageProduct = futura natural fs quartz series fs 2118nq
+22:56:39.517 [main] INFO  POM.HomePage - ProductDetailsPageProductname = futura natural fs quartz series fs 2118nq
+22:56:39.517 [main] INFO  POM.HomePage - Product => 24:Slider=>2:Product=>9
+22:56:39.517 [main] INFO  POM.HomePage - : ActualValue=>futura natural fs quartz series fs 2118nq : Expectedvalue=>futura natural fs quartz series fs 2118nq
+22:56:49.220 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=10==================================================
+22:57:08.109 [main] INFO  POM.HomePage - HomePageProduct = ebco profile drawer system 80
+22:57:08.109 [main] INFO  POM.HomePage - ProductDetailsPageProductname = ebco profile drawer system 80
+22:57:08.109 [main] INFO  POM.HomePage - Product => 25:Slider=>2:Product=>10
+22:57:08.109 [main] INFO  POM.HomePage - : ActualValue=>ebco profile drawer system 80 : Expectedvalue=>ebco profile drawer system 80
+22:57:18.950 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=11==================================================
+22:57:37.555 [main] INFO  POM.HomePage - HomePageProduct = ebco profile drawer system 160 (i)
+22:57:37.555 [main] INFO  POM.HomePage - ProductDetailsPageProductname = ebco profile drawer system 160 (i)
+22:57:37.555 [main] INFO  POM.HomePage - Product => 26:Slider=>2:Product=>11
+22:57:37.555 [main] INFO  POM.HomePage - : ActualValue=>ebco profile drawer system 160 (i) : Expectedvalue=>ebco profile drawer system 160 (i)
+22:57:48.157 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=12==================================================
+22:58:04.582 [main] INFO  POM.HomePage - HomePageProduct = ebco profile drawer side system 200 (i)
+22:58:04.582 [main] INFO  POM.HomePage - ProductDetailsPageProductname = ebco profile drawer side system 200 (i)
+22:58:04.582 [main] INFO  POM.HomePage - Product => 27:Slider=>2:Product=>12
+22:58:04.582 [main] INFO  POM.HomePage - : ActualValue=>ebco profile drawer side system 200 (i) : Expectedvalue=>ebco profile drawer side system 200 (i)
+22:58:14.885 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=13==================================================
+22:58:31.523 [main] INFO  POM.HomePage - HomePageProduct = ebco kitchen cutlery tray
+22:58:31.523 [main] INFO  POM.HomePage - ProductDetailsPageProductname = ebco kitchen cutlery tray
+22:58:31.523 [main] INFO  POM.HomePage - Product => 28:Slider=>2:Product=>13
+22:58:31.523 [main] INFO  POM.HomePage - : ActualValue=>ebco kitchen cutlery tray : Expectedvalue=>ebco kitchen cutlery tray
+22:58:41.613 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=14==================================================
+22:58:59.719 [main] INFO  POM.HomePage - HomePageProduct = carysil premium line cg db 3220 kitchen sink - granite
+22:58:59.719 [main] INFO  POM.HomePage - ProductDetailsPageProductname = carysil premium line cg db 3220 kitchen sink - granite
+22:58:59.719 [main] INFO  POM.HomePage - Product => 29:Slider=>2:Product=>14
+22:58:59.719 [main] INFO  POM.HomePage - : ActualValue=>carysil premium line cg db 3220 kitchen sink - granite : Expectedvalue=>carysil premium line cg db 3220 kitchen sink - granite
+22:59:10.189 [main] INFO  POM.HomePage - ============================= : Slider=2: Product=15==================================================
+22:59:27.262 [main] INFO  POM.HomePage - HomePageProduct = ambar 645a kitchen sink
+22:59:27.262 [main] INFO  POM.HomePage - ProductDetailsPageProductname = ambar 645a kitchen sink
+22:59:27.262 [main] INFO  POM.HomePage - Product => 30:Slider=>2:Product=>15
+22:59:27.262 [main] INFO  POM.HomePage - : ActualValue=>ambar 645a kitchen sink : Expectedvalue=>ambar 645a kitchen sink
+22:59:35.933 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=2==================================================
+22:59:51.690 [main] INFO  POM.HomePage - HomePageProduct = havells joy round 3 watt led 6000 kelvin
+22:59:51.690 [main] INFO  POM.HomePage - ProductDetailsPageProductname = havells joy round 3 watt led 6000 kelvin
+22:59:51.690 [main] INFO  POM.HomePage - Product => 32:Slider=>3:Product=>2
+22:59:51.690 [main] INFO  POM.HomePage - : ActualValue=>havells joy round 3 watt led 6000 kelvin : Expectedvalue=>havells joy round 3 watt led 6000 kelvin
+22:59:59.324 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=3==================================================
+23:00:20.820 [main] INFO  POM.HomePage - HomePageProduct = havells aristo 8 watt cfl
+23:00:20.821 [main] INFO  POM.HomePage - ProductDetailsPageProductname = havells aristo 8 watt cfl
+23:00:20.821 [main] INFO  POM.HomePage - Product => 33:Slider=>3:Product=>3
+23:00:20.821 [main] INFO  POM.HomePage - : ActualValue=>havells aristo 8 watt cfl : Expectedvalue=>havells aristo 8 watt cfl
+23:00:28.480 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=4==================================================
+23:00:46.344 [main] INFO  POM.HomePage - HomePageProduct = skava 10a 1 way lamp switch -1m
+23:00:46.344 [main] INFO  POM.HomePage - ProductDetailsPageProductname = skava 10a 1 way lamp switch -1m
+23:00:46.344 [main] INFO  POM.HomePage - Product => 34:Slider=>3:Product=>4
+23:00:46.344 [main] INFO  POM.HomePage - : ActualValue=>skava 10a 1 way lamp switch -1m : Expectedvalue=>skava 10a 1 way lamp switch -1m
+23:00:54.897 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=5==================================================
+23:01:11.769 [main] INFO  POM.HomePage - HomePageProduct = skava 10a 3 pin socket - 2m
+23:01:11.769 [main] INFO  POM.HomePage - ProductDetailsPageProductname = skava 10a 3 pin socket - 2m
+23:01:11.769 [main] INFO  POM.HomePage - Product => 35:Slider=>3:Product=>5
+23:01:11.769 [main] INFO  POM.HomePage - : ActualValue=>skava 10a 3 pin socket - 2m : Expectedvalue=>skava 10a 3 pin socket - 2m
+23:01:20.904 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=6==================================================
+23:01:37.328 [main] INFO  POM.HomePage - HomePageProduct = skava 5 step fan regulator - 2m
+23:01:37.328 [main] INFO  POM.HomePage - ProductDetailsPageProductname = skava 5 step fan regulator - 2m
+23:01:37.328 [main] INFO  POM.HomePage - Product => 36:Slider=>3:Product=>6
+23:01:37.328 [main] INFO  POM.HomePage - : ActualValue=>skava 5 step fan regulator - 2m : Expectedvalue=>skava 5 step fan regulator - 2m
+23:01:46.032 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=7==================================================
+23:02:02.623 [main] INFO  POM.HomePage - HomePageProduct = midtrip mcb - single pole (sp) skava 6a
+23:02:02.623 [main] INFO  POM.HomePage - ProductDetailsPageProductname = midtrip mcb - single pole (sp) skava 6a
+23:02:02.623 [main] INFO  POM.HomePage - Product => 37:Slider=>3:Product=>7
+23:02:02.623 [main] INFO  POM.HomePage - : ActualValue=>midtrip mcb - single pole (sp) skava 6a : Expectedvalue=>midtrip mcb - single pole (sp) skava 6a
+23:02:11.842 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=8==================================================
+23:02:29.710 [main] INFO  POM.HomePage - HomePageProduct = havells es-50 5 ceiling fan (brown- 1200 mm)
+23:02:29.710 [main] INFO  POM.HomePage - ProductDetailsPageProductname = havells es-50 5 ceiling fan (brown- 1200 mm)
+23:02:29.710 [main] INFO  POM.HomePage - Product => 38:Slider=>3:Product=>8
+23:02:29.710 [main] INFO  POM.HomePage - : ActualValue=>havells es-50 5 ceiling fan (brown- 1200 mm) : Expectedvalue=>havells es-50 5 ceiling fan (brown- 1200 mm)
+23:02:39.427 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=9==================================================
+23:02:57.256 [main] INFO  POM.HomePage - HomePageProduct = havells bueno water heater (25 litre)
+23:02:57.256 [main] INFO  POM.HomePage - ProductDetailsPageProductname = havells bueno water heater (25 litre)
+23:02:57.256 [main] INFO  POM.HomePage - Product => 39:Slider=>3:Product=>9
+23:02:57.256 [main] INFO  POM.HomePage - : ActualValue=>havells bueno water heater (25 litre) : Expectedvalue=>havells bueno water heater (25 litre)
+23:03:07.063 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=10==================================================
+23:03:24.119 [main] INFO  POM.HomePage - HomePageProduct = havells coral - 1 module cover plate
+23:03:24.119 [main] INFO  POM.HomePage - ProductDetailsPageProductname = havells coral - 1 module cover plate
+23:03:24.119 [main] INFO  POM.HomePage - Product => 40:Slider=>3:Product=>10
+23:03:24.119 [main] INFO  POM.HomePage - : ActualValue=>havells coral - 1 module cover plate : Expectedvalue=>havells coral - 1 module cover plate
+23:03:34.213 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=11==================================================
+23:03:51.396 [main] INFO  POM.HomePage - HomePageProduct = anchor roma telephone jack
+23:03:51.396 [main] INFO  POM.HomePage - ProductDetailsPageProductname = anchor roma telephone jack
+23:03:51.396 [main] INFO  POM.HomePage - Product => 41:Slider=>3:Product=>11
+23:03:51.396 [main] INFO  POM.HomePage - : ActualValue=>anchor roma telephone jack : Expectedvalue=>anchor roma telephone jack
+23:04:01.652 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=12==================================================
+23:04:19.520 [main] INFO  POM.HomePage - HomePageProduct = wipro garnet slim 12 watt round panel light 4000 kelvin
+23:04:19.520 [main] INFO  POM.HomePage - ProductDetailsPageProductname = wipro garnet slim 12 watt round panel light 4000 kelvin
+23:04:19.520 [main] INFO  POM.HomePage - Product => 42:Slider=>3:Product=>12
+23:04:19.520 [main] INFO  POM.HomePage - : ActualValue=>wipro garnet slim 12 watt round panel light 4000 kelvin : Expectedvalue=>wipro garnet slim 12 watt round panel light 4000 kelvin
+23:04:29.626 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=13==================================================
+23:04:46.102 [main] INFO  POM.HomePage - HomePageProduct = wipro garnet 5 watt led bulb 6500 kelvin
+23:04:46.102 [main] INFO  POM.HomePage - ProductDetailsPageProductname = wipro garnet 5 watt led bulb 6500 kelvin
+23:04:46.102 [main] INFO  POM.HomePage - Product => 43:Slider=>3:Product=>13
+23:04:46.102 [main] INFO  POM.HomePage - : ActualValue=>wipro garnet 5 watt led bulb 6500 kelvin : Expectedvalue=>wipro garnet 5 watt led bulb 6500 kelvin
+23:04:56.120 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=14==================================================
+23:05:14.430 [main] INFO  POM.HomePage - HomePageProduct = wipro garnet 3 watt led candle bulb 2700 kelvin
+23:05:14.430 [main] INFO  POM.HomePage - ProductDetailsPageProductname = wipro garnet 3 watt led candle bulb 2700 kelvin
+23:05:14.430 [main] INFO  POM.HomePage - Product => 44:Slider=>3:Product=>14
+23:05:14.430 [main] INFO  POM.HomePage - : ActualValue=>wipro garnet 3 watt led candle bulb 2700 kelvin : Expectedvalue=>wipro garnet 3 watt led candle bulb 2700 kelvin
+23:05:25.414 [main] INFO  POM.HomePage - ============================= : Slider=3: Product=15==================================================
+23:05:43.091 [main] INFO  POM.HomePage - HomePageProduct = sunlux 10w flood light
+23:05:43.091 [main] INFO  POM.HomePage - ProductDetailsPageProductname = sunlux 10w flood light
+23:05:43.091 [main] INFO  POM.HomePage - Product => 45:Slider=>3:Product=>15
+23:05:43.091 [main] INFO  POM.HomePage - : ActualValue=>sunlux 10w flood light : Expectedvalue=>sunlux 10w flood light
+23:05:51.494 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=1==================================================
+23:06:10.034 [main] INFO  POM.HomePage - HomePageProduct = sanman synthetic washable distemper - white - 1 kg
+23:06:10.034 [main] INFO  POM.HomePage - ProductDetailsPageProductname = sanman synthetic washable distemper - white - 1 kg
+23:06:10.034 [main] INFO  POM.HomePage - Product => 46:Slider=>4:Product=>1
+23:06:10.034 [main] INFO  POM.HomePage - : ActualValue=>sanman synthetic washable distemper - white - 1 kg : Expectedvalue=>sanman synthetic washable distemper - white - 1 kg
+23:06:18.132 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=2==================================================
+23:06:36.053 [main] INFO  POM.HomePage - HomePageProduct = sanman acrylic washable distemper - white - 1 kg
+23:06:36.053 [main] INFO  POM.HomePage - ProductDetailsPageProductname = sanman acrylic washable distemper - white - 1 kg
+23:06:36.054 [main] INFO  POM.HomePage - Product => 47:Slider=>4:Product=>2
+23:06:36.054 [main] INFO  POM.HomePage - : ActualValue=>sanman acrylic washable distemper - white - 1 kg : Expectedvalue=>sanman acrylic washable distemper - white - 1 kg
+23:06:44.413 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=3==================================================
+23:07:03.004 [main] INFO  POM.HomePage - HomePageProduct = gemprime synthetic cement primer (wt) - 500 ml
+23:07:03.004 [main] INFO  POM.HomePage - ProductDetailsPageProductname = gemprime synthetic cement primer (wt) - 500 ml
+23:07:03.004 [main] INFO  POM.HomePage - Product => 48:Slider=>4:Product=>3
+23:07:03.004 [main] INFO  POM.HomePage - : ActualValue=>gemprime synthetic cement primer (wt) - 500 ml : Expectedvalue=>gemprime synthetic cement primer (wt) - 500 ml
+23:07:11.269 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=4==================================================
+23:07:29.080 [main] INFO  POM.HomePage - HomePageProduct = gem synthetic knifing paste filler - grey - 1 kg
+23:07:29.080 [main] INFO  POM.HomePage - ProductDetailsPageProductname = gem synthetic knifing paste filler - grey - 1 kg
+23:07:29.080 [main] INFO  POM.HomePage - Product => 49:Slider=>4:Product=>4
+23:07:29.080 [main] INFO  POM.HomePage - : ActualValue=>gem synthetic knifing paste filler - grey - 1 kg : Expectedvalue=>gem synthetic knifing paste filler - grey - 1 kg
+23:07:36.899 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=5==================================================
+23:07:54.605 [main] INFO  POM.HomePage - HomePageProduct = gem synthetic knifing paste filler - grey - 0.5 kg
+23:07:54.605 [main] INFO  POM.HomePage - ProductDetailsPageProductname = gem synthetic knifing paste filler - grey - 0.5 kg
+23:07:54.605 [main] INFO  POM.HomePage - Product => 50:Slider=>4:Product=>5
+23:07:54.606 [main] INFO  POM.HomePage - : ActualValue=>gem synthetic knifing paste filler - grey - 0.5 kg : Expectedvalue=>gem synthetic knifing paste filler - grey - 0.5 kg
+23:08:03.891 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=6==================================================
+23:08:21.322 [main] INFO  POM.HomePage - HomePageProduct = gem synthetic metal primer red oxide - 500 ml
+23:08:21.322 [main] INFO  POM.HomePage - ProductDetailsPageProductname = gem synthetic metal primer red oxide - 500 ml
+23:08:21.322 [main] INFO  POM.HomePage - Product => 51:Slider=>4:Product=>6
+23:08:21.323 [main] INFO  POM.HomePage - : ActualValue=>gem synthetic metal primer red oxide - 500 ml : Expectedvalue=>gem synthetic metal primer red oxide - 500 ml
+23:08:30.987 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=7==================================================
+23:08:48.928 [main] INFO  POM.HomePage - HomePageProduct = gem synthetic metal primer red oxide - 200 ml
+23:08:48.928 [main] INFO  POM.HomePage - ProductDetailsPageProductname = gem synthetic metal primer red oxide - 200 ml
+23:08:48.928 [main] INFO  POM.HomePage - Product => 52:Slider=>4:Product=>7
+23:08:48.928 [main] INFO  POM.HomePage - : ActualValue=>gem synthetic metal primer red oxide - 200 ml : Expectedvalue=>gem synthetic metal primer red oxide - 200 ml
+23:08:57.927 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=8==================================================
+23:09:15.773 [main] INFO  POM.HomePage - HomePageProduct = gem synthetic primer surfacer - grey - 500 ml
+23:09:15.774 [main] INFO  POM.HomePage - ProductDetailsPageProductname = gem synthetic primer surfacer - grey - 500 ml
+23:09:15.774 [main] INFO  POM.HomePage - Product => 53:Slider=>4:Product=>8
+23:09:15.774 [main] INFO  POM.HomePage - : ActualValue=>gem synthetic primer surfacer - grey - 500 ml : Expectedvalue=>gem synthetic primer surfacer - grey - 500 ml
+23:09:24.592 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=9==================================================
+23:09:44.298 [main] INFO  POM.HomePage - HomePageProduct = gem synthetic primer surfacer - white - 500 ml
+23:09:44.298 [main] INFO  POM.HomePage - ProductDetailsPageProductname = gem synthetic primer surfacer - white - 500 ml
+23:09:44.298 [main] INFO  POM.HomePage - Product => 54:Slider=>4:Product=>9
+23:09:44.298 [main] INFO  POM.HomePage - : ActualValue=>gem synthetic primer surfacer - white - 500 ml : Expectedvalue=>gem synthetic primer surfacer - white - 500 ml
+23:09:53.134 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=10==================================================
+23:10:10.597 [main] INFO  POM.HomePage - HomePageProduct = nerolac little master acrylic emulsion light tulip-2008 -1 ltr
+23:10:10.598 [main] INFO  POM.HomePage - ProductDetailsPageProductname = nerolac little master acrylic emulsion light tulip-2008 -1 ltr
+23:10:10.598 [main] INFO  POM.HomePage - Product => 55:Slider=>4:Product=>10
+23:10:10.598 [main] INFO  POM.HomePage - : ActualValue=>nerolac little master acrylic emulsion light tulip-2008 -1 ltr : Expectedvalue=>nerolac little master acrylic emulsion light tulip-2008 -1 ltr
+23:10:20.593 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=11==================================================
+23:10:38.484 [main] INFO  POM.HomePage - HomePageProduct = nerolac little master acrylic emulsion honey cream-2036 -1 ltr
+23:10:38.484 [main] INFO  POM.HomePage - ProductDetailsPageProductname = nerolac little master acrylic emulsion honey cream-2036 -1 ltr
+23:10:38.484 [main] INFO  POM.HomePage - Product => 56:Slider=>4:Product=>11
+23:10:38.484 [main] INFO  POM.HomePage - : ActualValue=>nerolac little master acrylic emulsion honey cream-2036 -1 ltr : Expectedvalue=>nerolac little master acrylic emulsion honey cream-2036 -1 ltr
+23:10:49.070 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=12==================================================
+23:11:07.529 [main] INFO  POM.HomePage - HomePageProduct = nerolac little master acrylic emulsion mission beige-2078 -1 ltr
+23:11:07.529 [main] INFO  POM.HomePage - ProductDetailsPageProductname = nerolac little master acrylic emulsion mission beige-2078 -1 ltr
+23:11:07.529 [main] INFO  POM.HomePage - Product => 57:Slider=>4:Product=>12
+23:11:07.529 [main] INFO  POM.HomePage - : ActualValue=>nerolac little master acrylic emulsion mission beige-2078 -1 ltr : Expectedvalue=>nerolac little master acrylic emulsion mission beige-2078 -1 ltr
+23:11:17.915 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=13==================================================
+23:11:39.124 [main] INFO  POM.HomePage - HomePageProduct = nerolac little master acrylic emulsion cameo peach-2107 -1 ltr
+23:11:39.124 [main] INFO  POM.HomePage - ProductDetailsPageProductname = nerolac little master acrylic emulsion cameo peach-2107 -1 ltr
+23:11:39.124 [main] INFO  POM.HomePage - Product => 58:Slider=>4:Product=>13
+23:11:39.140 [main] INFO  POM.HomePage - : ActualValue=>nerolac little master acrylic emulsion cameo peach-2107 -1 ltr : Expectedvalue=>nerolac little master acrylic emulsion cameo peach-2107 -1 ltr
+23:11:49.523 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=14==================================================
+23:12:07.154 [main] INFO  POM.HomePage - HomePageProduct = nerolac little master acrylic emulsion coconut bisque-2793 -1 ltr
+23:12:07.154 [main] INFO  POM.HomePage - ProductDetailsPageProductname = nerolac little master acrylic emulsion coconut bisque-2793 -1 ltr
+23:12:07.154 [main] INFO  POM.HomePage - Product => 59:Slider=>4:Product=>14
+23:12:07.154 [main] INFO  POM.HomePage - : ActualValue=>nerolac little master acrylic emulsion coconut bisque-2793 -1 ltr : Expectedvalue=>nerolac little master acrylic emulsion coconut bisque-2793 -1 ltr
+23:12:17.635 [main] INFO  POM.HomePage - ============================= : Slider=4: Product=15==================================================
+23:12:36.427 [main] INFO  POM.HomePage - HomePageProduct = nerolac little master acrylic emulsion streamline-2440 -1 ltr
+23:12:36.427 [main] INFO  POM.HomePage - ProductDetailsPageProductname = nerolac little master acrylic emulsion streamline-2440 -1 ltr
+23:12:36.427 [main] INFO  POM.HomePage - Product => 60:Slider=>4:Product=>15
+23:12:36.427 [main] INFO  POM.HomePage - : ActualValue=>nerolac little master acrylic emulsion streamline-2440 -1 ltr : Expectedvalue=>nerolac little master acrylic emulsion streamline-2440 -1 ltr
+23:12:45.177 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=1==================================================
+23:13:03.747 [main] INFO  POM.HomePage - HomePageProduct = 20mm jelly
+23:13:03.747 [main] INFO  POM.HomePage - ProductDetailsPageProductname = 20mm jelly
+23:13:03.747 [main] INFO  POM.HomePage - Product => 61:Slider=>5:Product=>1
+23:13:03.747 [main] INFO  POM.HomePage - : ActualValue=>20mm jelly : Expectedvalue=>20mm jelly
+23:13:11.613 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=2==================================================
+23:13:29.157 [main] INFO  POM.HomePage - HomePageProduct = 12mm jelly
+23:13:29.157 [main] INFO  POM.HomePage - ProductDetailsPageProductname = 12mm jelly
+23:13:29.157 [main] INFO  POM.HomePage - Product => 62:Slider=>5:Product=>2
+23:13:29.157 [main] INFO  POM.HomePage - : ActualValue=>12mm jelly : Expectedvalue=>12mm jelly
+23:13:37.167 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=3==================================================
+23:13:57.787 [main] INFO  POM.HomePage - HomePageProduct = 40mm jelly
+23:13:57.787 [main] INFO  POM.HomePage - ProductDetailsPageProductname = 40mm jelly
+23:13:57.787 [main] INFO  POM.HomePage - Product => 63:Slider=>5:Product=>3
+23:13:57.787 [main] INFO  POM.HomePage - : ActualValue=>40mm jelly : Expectedvalue=>40mm jelly
+23:14:06.109 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=4==================================================
+23:14:21.923 [main] INFO  POM.HomePage - HomePageProduct = jsw concrete slag sand
+23:14:21.923 [main] INFO  POM.HomePage - ProductDetailsPageProductname = jsw concrete slag sand
+23:14:21.923 [main] INFO  POM.HomePage - Product => 64:Slider=>5:Product=>4
+23:14:21.924 [main] INFO  POM.HomePage - : ActualValue=>jsw concrete slag sand : Expectedvalue=>jsw concrete slag sand
+23:14:29.925 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=5==================================================
+23:14:48.272 [main] INFO  POM.HomePage - HomePageProduct = siporex light weight block - 8 inches
+23:14:48.272 [main] INFO  POM.HomePage - ProductDetailsPageProductname = siporex light weight block - 8 inches
+23:14:48.272 [main] INFO  POM.HomePage - Product => 65:Slider=>5:Product=>5
+23:14:48.272 [main] INFO  POM.HomePage - : ActualValue=>siporex light weight block - 8 inches : Expectedvalue=>siporex light weight block - 8 inches
+23:14:58.579 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=6==================================================
+23:15:16.397 [main] INFO  POM.HomePage - HomePageProduct = siporex light weight block - 6 inches
+23:15:16.397 [main] INFO  POM.HomePage - ProductDetailsPageProductname = siporex light weight block - 6 inches
+23:15:16.397 [main] INFO  POM.HomePage - Product => 66:Slider=>5:Product=>6
+23:15:16.397 [main] INFO  POM.HomePage - : ActualValue=>siporex light weight block - 6 inches : Expectedvalue=>siporex light weight block - 6 inches
+23:15:26.248 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=7==================================================
+23:15:44.275 [main] INFO  POM.HomePage - HomePageProduct = siporex light weight block - 4 inches
+23:15:44.275 [main] INFO  POM.HomePage - ProductDetailsPageProductname = siporex light weight block - 4 inches
+23:15:44.275 [main] INFO  POM.HomePage - Product => 67:Slider=>5:Product=>7
+23:15:44.275 [main] INFO  POM.HomePage - : ActualValue=>siporex light weight block - 4 inches : Expectedvalue=>siporex light weight block - 4 inches
+23:15:53.269 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=8==================================================
+23:16:11.311 [main] INFO  POM.HomePage - HomePageProduct = abc-red clay table moulded bricks
+23:16:11.311 [main] INFO  POM.HomePage - ProductDetailsPageProductname = abc-red clay table moulded bricks
+23:16:11.311 [main] INFO  POM.HomePage - Product => 68:Slider=>5:Product=>8
+23:16:11.311 [main] INFO  POM.HomePage - : ActualValue=>abc-red clay table moulded bricks : Expectedvalue=>abc-red clay table moulded bricks
+23:16:20.761 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=9==================================================
+23:16:39.044 [main] INFO  POM.HomePage - HomePageProduct = abc-red clay table moulded bricks
+23:16:39.044 [main] INFO  POM.HomePage - ProductDetailsPageProductname = abc-red clay table moulded bricks
+23:16:39.044 [main] INFO  POM.HomePage - Product => 69:Slider=>5:Product=>9
+23:16:39.044 [main] INFO  POM.HomePage - : ActualValue=>abc-red clay table moulded bricks : Expectedvalue=>abc-red clay table moulded bricks
+23:16:48.122 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=10==================================================
+23:17:05.729 [main] INFO  POM.HomePage - HomePageProduct = abc-wire cut bricks
+23:17:05.729 [main] INFO  POM.HomePage - ProductDetailsPageProductname = abc-wire cut bricks
+23:17:05.729 [main] INFO  POM.HomePage - Product => 70:Slider=>5:Product=>10
+23:17:05.729 [main] INFO  POM.HomePage - : ActualValue=>abc-wire cut bricks : Expectedvalue=>abc-wire cut bricks
+23:17:16.086 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=11==================================================
+23:17:33.307 [main] INFO  POM.HomePage - HomePageProduct = abc-wire cut bricks
+23:17:33.307 [main] INFO  POM.HomePage - ProductDetailsPageProductname = abc-wire cut bricks
+23:17:33.307 [main] INFO  POM.HomePage - Product => 71:Slider=>5:Product=>11
+23:17:33.307 [main] INFO  POM.HomePage - : ActualValue=>abc-wire cut bricks : Expectedvalue=>abc-wire cut bricks
+23:17:43.368 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=12==================================================
+23:18:01.602 [main] INFO  POM.HomePage - HomePageProduct = abc-wire cut bricks
+23:18:01.602 [main] INFO  POM.HomePage - ProductDetailsPageProductname = abc-wire cut bricks
+23:18:01.602 [main] INFO  POM.HomePage - Product => 72:Slider=>5:Product=>12
+23:18:01.602 [main] INFO  POM.HomePage - : ActualValue=>abc-wire cut bricks : Expectedvalue=>abc-wire cut bricks
+23:18:11.922 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=13==================================================
+23:18:29.780 [main] INFO  POM.HomePage - HomePageProduct = abc-wire cut bricks
+23:18:29.780 [main] INFO  POM.HomePage - ProductDetailsPageProductname = abc-wire cut bricks
+23:18:29.780 [main] INFO  POM.HomePage - Product => 73:Slider=>5:Product=>13
+23:18:29.780 [main] INFO  POM.HomePage - : ActualValue=>abc-wire cut bricks : Expectedvalue=>abc-wire cut bricks
+23:18:40.262 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=14==================================================
+23:18:57.374 [main] INFO  POM.HomePage - HomePageProduct = concrete cover blocks 30mm
+23:18:57.374 [main] INFO  POM.HomePage - ProductDetailsPageProductname = concrete cover blocks 30mm
+23:18:57.374 [main] INFO  POM.HomePage - Product => 74:Slider=>5:Product=>14
+23:18:57.374 [main] INFO  POM.HomePage - : ActualValue=>concrete cover blocks 30mm : Expectedvalue=>concrete cover blocks 30mm
+23:19:07.511 [main] INFO  POM.HomePage - ============================= : Slider=5: Product=15==================================================
+23:19:25.317 [main] INFO  POM.HomePage - HomePageProduct = concrete slag sand
+23:19:25.317 [main] INFO  POM.HomePage - ProductDetailsPageProductname = concrete slag sand
+23:19:25.317 [main] INFO  POM.HomePage - Product => 75:Slider=>5:Product=>15
+23:19:25.317 [main] INFO  POM.HomePage - : ActualValue=>concrete slag sand : Expectedvalue=>concrete slag sand
+23:19:33.492 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=1==================================================
+23:19:54.563 [main] INFO  POM.HomePage - HomePageProduct = kohler 8611in-1nd-cp dual handle faucet
+23:19:54.563 [main] INFO  POM.HomePage - ProductDetailsPageProductname = kohler 8611in-1nd-cp dual handle faucet
+23:19:54.563 [main] INFO  POM.HomePage - Product => 76:Slider=>6:Product=>1
+23:19:54.563 [main] INFO  POM.HomePage - : ActualValue=>kohler 8611in-1nd-cp dual handle faucet : Expectedvalue=>kohler 8611in-1nd-cp dual handle faucet
+23:20:02.398 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=2==================================================
+23:20:23.389 [main] INFO  POM.HomePage - HomePageProduct = kohler 16298in-9-cp sirocco 4way exposed bath faucet
+23:20:23.389 [main] INFO  POM.HomePage - ProductDetailsPageProductname = kohler 16298in-9-cp sirocco 4way exposed bath faucet
+23:20:23.389 [main] INFO  POM.HomePage - Product => 77:Slider=>6:Product=>2
+23:20:23.389 [main] INFO  POM.HomePage - : ActualValue=>kohler 16298in-9-cp sirocco 4way exposed bath faucet : Expectedvalue=>kohler 16298in-9-cp sirocco 4way exposed bath faucet
+23:20:30.837 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=3==================================================
+23:20:48.815 [main] INFO  POM.HomePage - HomePageProduct = kohler 11541in-4-cp eolia exposed wall-mount b/s fct trim
+23:20:48.815 [main] INFO  POM.HomePage - ProductDetailsPageProductname = kohler 11541in-4-cp eolia exposed wall-mount b/s fct trim
+23:20:48.815 [main] INFO  POM.HomePage - Product => 78:Slider=>6:Product=>3
+23:20:48.815 [main] INFO  POM.HomePage - : ActualValue=>kohler 11541in-4-cp eolia exposed wall-mount b/s fct trim : Expectedvalue=>kohler 11541in-4-cp eolia exposed wall-mount b/s fct trim
+23:20:57.024 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=4==================================================
+23:21:14.759 [main] INFO  POM.HomePage - HomePageProduct = kohler 16093in-4-cp july 1 way bib tap
+23:21:14.759 [main] INFO  POM.HomePage - ProductDetailsPageProductname = kohler 16093in-4-cp july 1 way bib tap
+23:21:14.759 [main] INFO  POM.HomePage - Product => 79:Slider=>6:Product=>4
+23:21:14.759 [main] INFO  POM.HomePage - : ActualValue=>kohler 16093in-4-cp july 1 way bib tap : Expectedvalue=>kohler 16093in-4-cp july 1 way bib tap
+23:21:22.581 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=5==================================================
+23:21:40.768 [main] INFO  POM.HomePage - HomePageProduct = kohler 37301in-4nd-cp cuff sc lavatory faucet without drain
+23:21:40.768 [main] INFO  POM.HomePage - ProductDetailsPageProductname = kohler 37301in-4nd-cp cuff sc lavatory faucet without drain
+23:21:40.768 [main] INFO  POM.HomePage - Product => 80:Slider=>6:Product=>5
+23:21:40.768 [main] INFO  POM.HomePage - : ActualValue=>kohler 37301in-4nd-cp cuff sc lavatory faucet without drain : Expectedvalue=>kohler 37301in-4nd-cp cuff sc lavatory faucet without drain
+23:21:49.621 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=6==================================================
+23:22:08.413 [main] INFO  POM.HomePage - HomePageProduct = kohler 37305in-4-cp cuff 2 hole widespread lavatory faucet with drain
+23:22:08.413 [main] INFO  POM.HomePage - ProductDetailsPageProductname = kohler 37305in-4-cp cuff 2 hole widespread lavatory faucet with drain
+23:22:08.413 [main] INFO  POM.HomePage - Product => 81:Slider=>6:Product=>6
+23:22:08.413 [main] INFO  POM.HomePage - : ActualValue=>kohler 37305in-4-cp cuff 2 hole widespread lavatory faucet with drain : Expectedvalue=>kohler 37305in-4-cp cuff 2 hole widespread lavatory faucet with drain
+23:22:17.883 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=7==================================================
+23:22:35.306 [main] INFO  POM.HomePage - HomePageProduct = johnson p3 shower panels-s0703w
+23:22:35.306 [main] INFO  POM.HomePage - ProductDetailsPageProductname = johnson p3 shower panels-s0703w
+23:22:35.306 [main] INFO  POM.HomePage - Product => 82:Slider=>6:Product=>7
+23:22:35.306 [main] INFO  POM.HomePage - : ActualValue=>johnson p3 shower panels-s0703w : Expectedvalue=>johnson p3 shower panels-s0703w
+23:22:44.225 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=8==================================================
+23:23:01.379 [main] INFO  POM.HomePage - HomePageProduct = johnson elite rain shower - square-s0032c
+23:23:01.379 [main] INFO  POM.HomePage - ProductDetailsPageProductname = johnson elite rain shower - square-s0032c
+23:23:01.380 [main] INFO  POM.HomePage - Product => 83:Slider=>6:Product=>8
+23:23:01.380 [main] INFO  POM.HomePage - : ActualValue=>johnson elite rain shower - square-s0032c : Expectedvalue=>johnson elite rain shower - square-s0032c
+23:23:10.834 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=9==================================================
+23:23:29.895 [main] INFO  POM.HomePage - HomePageProduct = johnson regal 3 flow overhead shower -s0407c
+23:23:29.895 [main] INFO  POM.HomePage - ProductDetailsPageProductname = johnson regal 3 flow overhead shower -s0407c
+23:23:29.895 [main] INFO  POM.HomePage - Product => 84:Slider=>6:Product=>9
+23:23:29.895 [main] INFO  POM.HomePage - : ActualValue=>johnson regal 3 flow overhead shower -s0407c : Expectedvalue=>johnson regal 3 flow overhead shower -s0407c
+23:23:39.277 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=10==================================================
+23:23:56.654 [main] INFO  POM.HomePage - HomePageProduct = johnson round shower overhead shower-s0005c
+23:23:56.654 [main] INFO  POM.HomePage - ProductDetailsPageProductname = johnson round shower overhead shower-s0005c
+23:23:56.654 [main] INFO  POM.HomePage - Product => 85:Slider=>6:Product=>10
+23:23:56.654 [main] INFO  POM.HomePage - : ActualValue=>johnson round shower overhead shower-s0005c : Expectedvalue=>johnson round shower overhead shower-s0005c
+23:24:06.709 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=11==================================================
+23:24:23.928 [main] INFO  POM.HomePage - HomePageProduct = johnson bell shaped overhead shower-s0012c
+23:24:23.928 [main] INFO  POM.HomePage - ProductDetailsPageProductname = johnson bell shaped overhead shower-s0012c
+23:24:23.929 [main] INFO  POM.HomePage - Product => 86:Slider=>6:Product=>11
+23:24:23.929 [main] INFO  POM.HomePage - : ActualValue=>johnson bell shaped overhead shower-s0012c : Expectedvalue=>johnson bell shaped overhead shower-s0012c
+23:24:34.267 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=12==================================================
+23:24:53.288 [main] INFO  POM.HomePage - HomePageProduct = johnson single flow hand shower with 1.5mt hose & hook-s0017c
+23:24:53.288 [main] INFO  POM.HomePage - ProductDetailsPageProductname = johnson single flow hand shower with 1.5mt hose & hook-s0017c
+23:24:53.288 [main] INFO  POM.HomePage - Product => 87:Slider=>6:Product=>12
+23:24:53.288 [main] INFO  POM.HomePage - : ActualValue=>johnson single flow hand shower with 1.5mt hose & hook-s0017c : Expectedvalue=>johnson single flow hand shower with 1.5mt hose & hook-s0017c
+23:25:04.295 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=13==================================================
+23:25:22.119 [main] INFO  POM.HomePage - HomePageProduct = johnson angel circular-s1022c
+23:25:22.119 [main] INFO  POM.HomePage - ProductDetailsPageProductname = johnson angel circular-s1022c
+23:25:22.119 [main] INFO  POM.HomePage - Product => 88:Slider=>6:Product=>13
+23:25:22.119 [main] INFO  POM.HomePage - : ActualValue=>johnson angel circular-s1022c : Expectedvalue=>johnson angel circular-s1022c
+23:25:32.706 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=14==================================================
+23:25:50.713 [main] INFO  POM.HomePage - HomePageProduct = watertec insta dry bathroom mat (580x350 mm)
+23:25:50.713 [main] INFO  POM.HomePage - ProductDetailsPageProductname = watertec insta dry bathroom mat (580x350 mm)
+23:25:50.713 [main] INFO  POM.HomePage - Product => 89:Slider=>6:Product=>14
+23:25:50.713 [main] INFO  POM.HomePage - : ActualValue=>watertec insta dry bathroom mat (580x350 mm) : Expectedvalue=>watertec insta dry bathroom mat (580x350 mm)
+23:26:00.819 [main] INFO  POM.HomePage - ============================= : Slider=6: Product=15==================================================
+23:26:20.542 [main] INFO  POM.HomePage - HomePageProduct = watertec insta dry bathroom mat (580x350 mm)
+23:26:20.542 [main] INFO  POM.HomePage - ProductDetailsPageProductname = watertec insta dry bathroom mat (580x350 mm)
+23:26:20.542 [main] INFO  POM.HomePage - Product => 90:Slider=>6:Product=>15
+23:26:20.542 [main] INFO  POM.HomePage - : ActualValue=>watertec insta dry bathroom mat (580x350 mm) : Expectedvalue=>watertec insta dry bathroom mat (580x350 mm)
+23:26:28.982 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=1==================================================
+23:26:49.656 [main] INFO  POM.HomePage - HomePageProduct = surya rmc ggbs mix m20 grade
+23:26:49.656 [main] INFO  POM.HomePage - ProductDetailsPageProductname = surya rmc ggbs mix m20 grade
+23:26:49.656 [main] INFO  POM.HomePage - Product => 91:Slider=>7:Product=>1
+23:26:49.657 [main] INFO  POM.HomePage - : ActualValue=>surya rmc ggbs mix m20 grade : Expectedvalue=>surya rmc ggbs mix m20 grade
+23:26:57.841 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=2==================================================
+23:27:16.213 [main] INFO  POM.HomePage - HomePageProduct = surya rmc ggbs mix m25 grade
+23:27:16.213 [main] INFO  POM.HomePage - ProductDetailsPageProductname = surya rmc ggbs mix m25 grade
+23:27:16.213 [main] INFO  POM.HomePage - Product => 92:Slider=>7:Product=>2
+23:27:16.213 [main] INFO  POM.HomePage - : ActualValue=>surya rmc ggbs mix m25 grade : Expectedvalue=>surya rmc ggbs mix m25 grade
+23:27:23.782 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=3==================================================
+23:27:41.191 [main] INFO  POM.HomePage - HomePageProduct = surya rmc opc mix m20 grade
+23:27:41.191 [main] INFO  POM.HomePage - ProductDetailsPageProductname = surya rmc opc mix m20 grade
+23:27:41.191 [main] INFO  POM.HomePage - Product => 93:Slider=>7:Product=>3
+23:27:41.191 [main] INFO  POM.HomePage - : ActualValue=>surya rmc opc mix m20 grade : Expectedvalue=>surya rmc opc mix m20 grade
+23:27:49.227 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=4==================================================
+23:28:05.431 [main] INFO  POM.HomePage - HomePageProduct = lafarge rmc ggbs - m 15
+23:28:05.431 [main] INFO  POM.HomePage - ProductDetailsPageProductname = lafarge rmc ggbs - m 15
+23:28:05.431 [main] INFO  POM.HomePage - Product => 94:Slider=>7:Product=>4
+23:28:05.431 [main] INFO  POM.HomePage - : ActualValue=>lafarge rmc ggbs - m 15 : Expectedvalue=>lafarge rmc ggbs - m 15
+23:28:12.955 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=5==================================================
+23:28:28.607 [main] INFO  POM.HomePage - HomePageProduct = rmc ggbs - m 20
+23:28:28.607 [main] INFO  POM.HomePage - ProductDetailsPageProductname = rmc ggbs - m 20
+23:28:28.607 [main] INFO  POM.HomePage - Product => 95:Slider=>7:Product=>5
+23:28:28.607 [main] INFO  POM.HomePage - : ActualValue=>rmc ggbs - m 20 : Expectedvalue=>rmc ggbs - m 20
+23:28:37.493 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=6==================================================
+23:28:56.935 [main] INFO  POM.HomePage - HomePageProduct = lafarge rmc ggbs - m 25
+23:28:56.935 [main] INFO  POM.HomePage - ProductDetailsPageProductname = lafarge rmc ggbs - m 25
+23:28:56.935 [main] INFO  POM.HomePage - Product => 96:Slider=>7:Product=>6
+23:28:56.935 [main] INFO  POM.HomePage - : ActualValue=>lafarge rmc ggbs - m 25 : Expectedvalue=>lafarge rmc ggbs - m 25
+23:29:05.652 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=7==================================================
+23:29:21.810 [main] INFO  POM.HomePage - HomePageProduct = lafarge rmc ggbs - m 30
+23:29:21.810 [main] INFO  POM.HomePage - ProductDetailsPageProductname = lafarge rmc ggbs - m 30
+23:29:21.810 [main] INFO  POM.HomePage - Product => 97:Slider=>7:Product=>7
+23:29:21.810 [main] INFO  POM.HomePage - : ActualValue=>lafarge rmc ggbs - m 30 : Expectedvalue=>lafarge rmc ggbs - m 30
+23:29:30.712 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=8==================================================
+23:29:47.472 [main] INFO  POM.HomePage - HomePageProduct = lafarge rmc opc mix - m 15
+23:29:47.472 [main] INFO  POM.HomePage - ProductDetailsPageProductname = lafarge rmc opc mix - m 15
+23:29:47.472 [main] INFO  POM.HomePage - Product => 98:Slider=>7:Product=>8
+23:29:47.472 [main] INFO  POM.HomePage - : ActualValue=>lafarge rmc opc mix - m 15 : Expectedvalue=>lafarge rmc opc mix - m 15
+23:29:57.372 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=9==================================================
+23:30:16.182 [main] INFO  POM.HomePage - HomePageProduct = lafarge rmc opc mix - m 25
+23:30:16.182 [main] INFO  POM.HomePage - ProductDetailsPageProductname = lafarge rmc opc mix - m 25
+23:30:16.182 [main] INFO  POM.HomePage - Product => 99:Slider=>7:Product=>9
+23:30:16.182 [main] INFO  POM.HomePage - : ActualValue=>lafarge rmc opc mix - m 25 : Expectedvalue=>lafarge rmc opc mix - m 25
+23:30:24.882 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=10==================================================
+23:30:43.741 [main] INFO  POM.HomePage - HomePageProduct = lafarge m20 pp fiber
+23:30:43.742 [main] INFO  POM.HomePage - ProductDetailsPageProductname = lafarge m20 pp fiber
+23:30:43.742 [main] INFO  POM.HomePage - Product => 100:Slider=>7:Product=>10
+23:30:43.742 [main] INFO  POM.HomePage - : ActualValue=>lafarge m20 pp fiber : Expectedvalue=>lafarge m20 pp fiber
+23:30:53.863 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=11==================================================
+23:31:12.037 [main] INFO  POM.HomePage - HomePageProduct = lafarge m30 agilia
+23:31:12.037 [main] INFO  POM.HomePage - ProductDetailsPageProductname = lafarge m30 agilia
+23:31:12.037 [main] INFO  POM.HomePage - Product => 101:Slider=>7:Product=>11
+23:31:12.037 [main] INFO  POM.HomePage - : ActualValue=>lafarge m30 agilia : Expectedvalue=>lafarge m30 agilia
+23:31:23.103 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=12==================================================
+23:31:41.266 [main] INFO  POM.HomePage - HomePageProduct = lafarge instamix concrete bag m20
+23:31:41.267 [main] INFO  POM.HomePage - ProductDetailsPageProductname = lafarge instamix concrete bag m20
+23:31:41.267 [main] INFO  POM.HomePage - Product => 102:Slider=>7:Product=>12
+23:31:41.267 [main] INFO  POM.HomePage - : ActualValue=>lafarge instamix concrete bag m20 : Expectedvalue=>lafarge instamix concrete bag m20
+23:31:51.616 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=13==================================================
+23:32:08.970 [main] INFO  POM.HomePage - HomePageProduct = lafarge instamix concrete bag m25
+23:32:08.971 [main] INFO  POM.HomePage - ProductDetailsPageProductname = lafarge instamix concrete bag m25
+23:32:08.971 [main] INFO  POM.HomePage - Product => 103:Slider=>7:Product=>13
+23:32:08.971 [main] INFO  POM.HomePage - : ActualValue=>lafarge instamix concrete bag m25 : Expectedvalue=>lafarge instamix concrete bag m25
+23:32:19.915 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=14==================================================
+23:32:38.233 [main] INFO  POM.HomePage - HomePageProduct = lafarge instamix concrete bag m30
+23:32:38.233 [main] INFO  POM.HomePage - ProductDetailsPageProductname = lafarge instamix concrete bag m30
+23:32:38.233 [main] INFO  POM.HomePage - Product => 104:Slider=>7:Product=>14
+23:32:38.233 [main] INFO  POM.HomePage - : ActualValue=>lafarge instamix concrete bag m30 : Expectedvalue=>lafarge instamix concrete bag m30
+23:32:48.189 [main] INFO  POM.HomePage - ============================= : Slider=7: Product=15==================================================
+23:33:05.214 [main] INFO  POM.HomePage - HomePageProduct = lafarge instamix screed concrete bag
+23:33:05.214 [main] INFO  POM.HomePage - ProductDetailsPageProductname = lafarge instamix screed concrete bag
+23:33:05.214 [main] INFO  POM.HomePage - Product => 105:Slider=>7:Product=>15
+23:33:05.214 [main] INFO  POM.HomePage - : ActualValue=>lafarge instamix screed concrete bag : Expectedvalue=>lafarge instamix screed concrete bag
+23:33:13.462 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=1==================================================
+23:33:31.226 [main] INFO  POM.HomePage - HomePageProduct = somani ply bwr grade hard wood blockboard 19 mm- 8x4 ft
+23:33:31.226 [main] INFO  POM.HomePage - ProductDetailsPageProductname = somani ply bwr grade hard wood blockboard 19 mm- 8x4 ft
+23:33:31.227 [main] INFO  POM.HomePage - Product => 106:Slider=>8:Product=>1
+23:33:31.227 [main] INFO  POM.HomePage - : ActualValue=>somani ply bwr grade hard wood blockboard 19 mm- 8x4 ft : Expectedvalue=>somani ply bwr grade hard wood blockboard 19 mm- 8x4 ft
+23:33:39.026 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=2==================================================
+23:33:55.863 [main] INFO  POM.HomePage - HomePageProduct = gurjan gold mr grade plywoods- 9mm (8x4)
+23:33:55.863 [main] INFO  POM.HomePage - ProductDetailsPageProductname = gurjan gold mr grade plywoods- 9mm (8x4)
+23:33:55.863 [main] INFO  POM.HomePage - Product => 107:Slider=>8:Product=>2
+23:33:55.863 [main] INFO  POM.HomePage - : ActualValue=>gurjan gold mr grade plywoods- 9mm (8x4) : Expectedvalue=>gurjan gold mr grade plywoods- 9mm (8x4)
+23:34:04.803 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=3==================================================
+23:34:23.469 [main] INFO  POM.HomePage - HomePageProduct = trojan mr grade plywood- 4mm (8x4)
+23:34:23.470 [main] INFO  POM.HomePage - ProductDetailsPageProductname = trojan mr grade plywood- 4mm (8x4)
+23:34:23.470 [main] INFO  POM.HomePage - Product => 108:Slider=>8:Product=>3
+23:34:23.470 [main] INFO  POM.HomePage - : ActualValue=>trojan mr grade plywood- 4mm (8x4) : Expectedvalue=>trojan mr grade plywood- 4mm (8x4)
+23:34:33.071 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=4==================================================
+23:34:52.195 [main] INFO  POM.HomePage - HomePageProduct = plyneer silver mr grade plywood- 6mm (7x4)
+23:34:52.195 [main] INFO  POM.HomePage - ProductDetailsPageProductname = plyneer silver mr grade plywood- 6mm (7x4)
+23:34:52.195 [main] INFO  POM.HomePage - Product => 109:Slider=>8:Product=>4
+23:34:52.196 [main] INFO  POM.HomePage - : ActualValue=>plyneer silver mr grade plywood- 6mm (7x4) : Expectedvalue=>plyneer silver mr grade plywood- 6mm (7x4)
+23:35:00.505 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=5==================================================
+23:35:18.967 [main] INFO  POM.HomePage - HomePageProduct = greenply ecotec mr grade plywood- 6 mm (7x4)
+23:35:18.967 [main] INFO  POM.HomePage - ProductDetailsPageProductname = greenply ecotec mr grade plywood- 6 mm (7x4)
+23:35:18.967 [main] INFO  POM.HomePage - Product => 110:Slider=>8:Product=>5
+23:35:18.967 [main] INFO  POM.HomePage - : ActualValue=>greenply ecotec mr grade plywood- 6 mm (7x4) : Expectedvalue=>greenply ecotec mr grade plywood- 6 mm (7x4)
+23:35:29.443 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=6==================================================
+23:35:47.691 [main] INFO  POM.HomePage - HomePageProduct = greenply ecotec mr grade plywood- 6 mm (7x4)
+23:35:47.691 [main] INFO  POM.HomePage - ProductDetailsPageProductname = greenply ecotec mr grade plywood- 6 mm (7x4)
+23:35:47.691 [main] INFO  POM.HomePage - Product => 111:Slider=>8:Product=>6
+23:35:47.691 [main] INFO  POM.HomePage - : ActualValue=>greenply ecotec mr grade plywood- 6 mm (7x4) : Expectedvalue=>greenply ecotec mr grade plywood- 6 mm (7x4)
+23:35:57.571 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=7==================================================
+23:36:16.924 [main] INFO  POM.HomePage - HomePageProduct = gurjan gold mr grade plywoods- 6mm- 7x4 ft
+23:36:16.924 [main] INFO  POM.HomePage - ProductDetailsPageProductname = gurjan gold mr grade plywoods- 6mm- 7x4 ft
+23:36:16.924 [main] INFO  POM.HomePage - Product => 112:Slider=>8:Product=>7
+23:36:16.924 [main] INFO  POM.HomePage - : ActualValue=>gurjan gold mr grade plywoods- 6mm- 7x4 ft : Expectedvalue=>gurjan gold mr grade plywoods- 6mm- 7x4 ft
+23:36:26.643 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=8==================================================
+23:36:44.580 [main] INFO  POM.HomePage - HomePageProduct = surajply imported scratch resistant prelaminated mdf (black)- 18mm- 9x4 ft
+23:36:44.581 [main] INFO  POM.HomePage - ProductDetailsPageProductname = surajply imported scratch resistant prelaminated mdf (black)- 18mm- 9x4 ft
+23:36:44.581 [main] INFO  POM.HomePage - Product => 113:Slider=>8:Product=>8
+23:36:44.581 [main] INFO  POM.HomePage - : ActualValue=>surajply imported scratch resistant prelaminated mdf (black)- 18mm- 9x4 ft : Expectedvalue=>surajply imported scratch resistant prelaminated mdf (black)- 18mm- 9x4 ft
+23:36:54.856 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=9==================================================
+23:37:14.937 [main] INFO  POM.HomePage - HomePageProduct = surajply imported scratch resistant prelaminated mdf (green)- 18mm (9x4)
+23:37:14.937 [main] INFO  POM.HomePage - ProductDetailsPageProductname = surajply imported scratch resistant prelaminated mdf (green)- 18mm (9x4)
+23:37:14.937 [main] INFO  POM.HomePage - Product => 114:Slider=>8:Product=>9
+23:37:14.937 [main] INFO  POM.HomePage - : ActualValue=>surajply imported scratch resistant prelaminated mdf (green)- 18mm (9x4) : Expectedvalue=>surajply imported scratch resistant prelaminated mdf (green)- 18mm (9x4)
+23:37:25.522 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=10==================================================
+23:37:43.189 [main] INFO  POM.HomePage - HomePageProduct = surajply bwp isi 710 grade plywood- 6mm- 8x4 ft
+23:37:43.189 [main] INFO  POM.HomePage - ProductDetailsPageProductname = surajply bwp isi 710 grade plywood- 6mm- 8x4 ft
+23:37:43.190 [main] INFO  POM.HomePage - Product => 115:Slider=>8:Product=>10
+23:37:43.190 [main] INFO  POM.HomePage - : ActualValue=>surajply bwp isi 710 grade plywood- 6mm- 8x4 ft : Expectedvalue=>surajply bwp isi 710 grade plywood- 6mm- 8x4 ft
+23:37:54.079 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=11==================================================
+23:38:15.259 [main] INFO  POM.HomePage - HomePageProduct = virgo sap veneer dark - 5401 wl
+23:38:15.259 [main] INFO  POM.HomePage - ProductDetailsPageProductname = virgo sap veneer dark - 5401 wl
+23:38:15.259 [main] INFO  POM.HomePage - Product => 116:Slider=>8:Product=>11
+23:38:15.259 [main] INFO  POM.HomePage - : ActualValue=>virgo sap veneer dark - 5401 wl : Expectedvalue=>virgo sap veneer dark - 5401 wl
+23:38:26.737 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=12==================================================
+23:38:44.510 [main] INFO  POM.HomePage - HomePageProduct = national laminates (rose) - 2105 sf
+23:38:44.525 [main] INFO  POM.HomePage - ProductDetailsPageProductname = national laminates (rose) - 2105 sf
+23:38:44.525 [main] INFO  POM.HomePage - Product => 117:Slider=>8:Product=>12
+23:38:44.525 [main] INFO  POM.HomePage - : ActualValue=>national laminates (rose) - 2105 sf : Expectedvalue=>national laminates (rose) - 2105 sf
+23:38:55.248 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=13==================================================
+23:39:15.379 [main] INFO  POM.HomePage - HomePageProduct = national laminates (black current) - 2202 sf
+23:39:15.379 [main] INFO  POM.HomePage - ProductDetailsPageProductname = national laminates (black current) - 2202 sf
+23:39:15.379 [main] INFO  POM.HomePage - Product => 118:Slider=>8:Product=>13
+23:39:15.379 [main] INFO  POM.HomePage - : ActualValue=>national laminates (black current) - 2202 sf : Expectedvalue=>national laminates (black current) - 2202 sf
+23:39:27.654 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=14==================================================
+23:39:45.711 [main] INFO  POM.HomePage - HomePageProduct = greenply ecotec mr grade block board- 19 mm (8x4)
+23:39:45.711 [main] INFO  POM.HomePage - ProductDetailsPageProductname = greenply ecotec mr grade block board- 19 mm (8x4)
+23:39:45.711 [main] INFO  POM.HomePage - Product => 119:Slider=>8:Product=>14
+23:39:45.711 [main] INFO  POM.HomePage - : ActualValue=>greenply ecotec mr grade block board- 19 mm (8x4) : Expectedvalue=>greenply ecotec mr grade block board- 19 mm (8x4)
+23:39:56.511 [main] INFO  POM.HomePage - ============================= : Slider=8: Product=15==================================================
+23:40:13.858 [main] INFO  POM.HomePage - HomePageProduct = greenply ecotec mr grade block board- 19 mm (8x4)
+23:40:13.858 [main] INFO  POM.HomePage - ProductDetailsPageProductname = greenply ecotec mr grade block board- 19 mm (8x4)
+23:40:13.858 [main] INFO  POM.HomePage - Product => 120:Slider=>8:Product=>15
+23:40:13.858 [main] INFO  POM.HomePage - : ActualValue=>greenply ecotec mr grade block board- 19 mm (8x4) : Expectedvalue=>greenply ecotec mr grade block board- 19 mm (8x4)
 ]]></system-out>
   </testcase>
-  <testcase name="PaymentMethods_Verification" classname="SanityTest.PaymentMethods_Verification_Test" time="144.752">
-    <failure message="expected [NAGARJUNA OPC 53 GRADE CEMENT] but found [LAFARGE INSTAMIX CONCRETE BAG M20]" type="java.lang.AssertionError">java.lang.AssertionError: expected [NAGARJUNA OPC 53 GRADE CEMENT] but found [LAFARGE INSTAMIX CONCRETE BAG M20]
-	at SanityTest.PaymentMethods_Verification_Test.PaymentMethods_Verification(PaymentMethods_Verification_Test.java:25)
-</failure>
-    <system-out><![CDATA[D:\Git_Selenium_WorkSpace\runnable_test_repo\msupply_5
-1297694 [2016-06-08 08:21:59,585] [INFO ] [Scenarios.Scenario1Test ] - Sanity TestCase - PaymentMethods verification
-1297871 [2016-06-08 08:21:59,762] [INFO ] [POM.HomePage ] - Clicked on POPup Close Button
-1297871 [2016-06-08 08:21:59,762] [INFO ] [POM.HomePage ] - ------------------------------------------------
-1297871 [2016-06-08 08:21:59,762] [INFO ] [POM.HomePage ] - ............Selecting RMC Product from Navigation.........
-1303533 [2016-06-08 08:22:05,424] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial RMC Product
-1311576 [2016-06-08 08:22:13,467] [INFO ] [POM.HomePage ] - Moved to : BuildingMaterial_RMC_ConcreteBag
-Lafarge India Private Ltd
-560064
-143
-6
-1332555 [2016-06-08 08:22:34,446] [INFO ] [POM.HomePage ] - Product 1 added and Moved to : Kart Page 
-1345953 [2016-06-08 08:22:47,844] [INFO ] [POM.ShoppingCartPage ] - unitprice=143VAT=14.5Quantity=6SubTotal858
-1345953 [2016-06-08 08:22:47,844] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
-1376207 [2016-06-08 08:23:18,098] [INFO ] [POM.ShoppingCartPage ] - unitprice=143Quantity=6SubTotal858
-1376207 [2016-06-08 08:23:18,098] [INFO ] [POM.ShoppingCartPage ] - Verifing Product details and cart page
-1376268 [2016-06-08 08:23:18,159] [INFO ] [POM.ShoppingCartPage ] - Product Name from product details page and Shopping cart page is same
-1376324 [2016-06-08 08:23:18,215] [INFO ] [POM.ShoppingCartPage ] - Seller Name from product details page and Shopping cart page is same
-1376383 [2016-06-08 08:23:18,274] [INFO ] [POM.ShoppingCartPage ] - Pincode from product details page and Shopping cart page is same
-1376383 [2016-06-08 08:23:18,274] [INFO ] [POM.ShoppingCartPage ] - Unit Pricing from product details page and Shopping cart page is same
-1376383 [2016-06-08 08:23:18,274] [INFO ] [POM.ShoppingCartPage ] - Quantity from product details page and Shopping cart page is same
-1376383 [2016-06-08 08:23:18,274] [INFO ] [POM.ShoppingCartPage ] - SubTotal from product details page and Shopping cart page is same
-1376608 [2016-06-08 08:23:18,499] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for List Table : SubTotal from Kart Section and List Section is Same
-98.67
-1376608 [2016-06-08 08:23:18,499] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Service charges List Table : Calculated Service is98
-1376608 [2016-06-08 08:23:18,499] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for GranTotal List Table : Calculated GrandTotal is956
-1376608 [2016-06-08 08:23:18,499] [INFO ] [POM.HomePage ] - .................................................
-1376608 [2016-06-08 08:23:18,499] [INFO ] [POM.HomePage ] - ............Selecting Product from Navigation.........
-1378534 [2016-06-08 08:23:20,425] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC
-1386330 [2016-06-08 08:23:28,221] [INFO ] [POM.HomePage ] - Moved to : Buildingmaterial_Cement_PPC_Nagarjuna
-Deva Associates
-560064
-313
-50
-1395744 [2016-06-08 08:23:37,635] [INFO ] [POM.HomePage ] - Product 2 added and Moved to : Kart Page 
-1408039 [2016-06-08 08:23:49,930] [INFO ] [POM.ShoppingCartPage ] - unitprice=143VAT=14.5Quantity=6SubTotal858
-1408039 [2016-06-08 08:23:49,930] [INFO ] [POM.ShoppingCartPage ] - Assert Passed for Kart Table : SubTotal and CalculatedSubToatal is Same
-1438244 [2016-06-08 08:24:20,135] [INFO ] [POM.ShoppingCartPage ] - unitprice=143Quantity=6SubTotal858
-1438244 [2016-06-08 08:24:20,135] [INFO ] [POM.ShoppingCartPage ] - Verifing Product details and cart page
-]]></system-out>
-  </testcase>
+  <testcase name="msupply_HomePage_SubHeaderVerification" classname="Functional_TestCase_HomePage.msupply_HomePage_SubHeaderVerification_Test" time="176.602"/>
 </testsuite>

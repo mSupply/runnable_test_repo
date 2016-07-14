@@ -64,7 +64,7 @@
                                                             
                                 <fileSets>
                                         <fileSet>
-                                                <directory>D:/Selenium Workspace/msupply_5/target/surefire-reports/html</directory>
+                                                <directory>D:/Git_Selenium_WorkSpace/msupply_6/target/surefire-reports/html</directory>
                                                 <includes>
                                                         <include>**/index.html</include>
                                                         <include>**/overview.html</include>
@@ -88,7 +88,26 @@
 
 
 
-<dependencies>  
+<dependencies> 
+<!-- http://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+<dependency>
+    <groupId>net.sourceforge.tess4j</groupId>
+    <artifactId>tess4j</artifactId>
+    <version>3.2.1</version>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.0</version>
+</dependency>
+
+ <dependency>
+        <groupId>org.mongodb</groupId>
+        <artifactId>mongodb-driver</artifactId>
+        <version>3.2.2</version>
+    </dependency>
+    
 <dependency>
 	<groupId>org.uncommons</groupId>
 	<artifactId>reportng</artifactId>

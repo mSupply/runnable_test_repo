@@ -30,7 +30,7 @@ public class Homepage_Test extends Scenario1Test
 		Scenario1Test.log.info("Sanity TestCase - HomePage verification");
 		Scenario1Test.homePageObj = PageFactory.initElements(BrowserSelection.driver, HomePage.class);
 		Scenario1Test.homePageObj.HeaderImageVerification();	
-		Scenario1Test.homePageObj.SlidersVerification2();
+		Scenario1Test.homePageObj.Pricing_In_SlidersVerification2();
 		Scenario1Test.homePageObj.VerifyMarketingPromos();
 		Scenario1Test.homePageObj.validateLeftStaticLinks(Scenario1Test.driver);
 		Scenario1Test.homePageObj.validateRightStaticLinks(Scenario1Test.driver);
@@ -77,6 +77,6 @@ public class Homepage_Test extends Scenario1Test
 	
        Scenario1Test.homePageObj.navigatetoLoginPage().navigateToInsideLoginPage();
        ShoppingCartPage.removeCartProducts();
+       
 	}
-
 }

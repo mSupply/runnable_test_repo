@@ -1,27 +1,38 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1,454.302 sec <<< FAILURE! - in TestSuite
-HomePage_verification(SanityTest.Homepage_Test)  Time elapsed: 750.231 sec  <<< FAILURE!
-java.lang.AssertionError: expected [Anchor Telephone Cable 0.4 mm-1 pair, 90 Mtr pack was added to your shopping list.] but found [Crabtree Athena RJ-11 One Gang with shutter was added to your shopping list.]
-	at SanityTest.Homepage_Test.HomePage_verification(Homepage_Test.java:56)
+Tests run: 6, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 4,525.858 sec <<< FAILURE! - in TestSuite
+msupply_HomePage_FooterSections(Functional_TestCase_HomePage.msupply_HomePage_FooterSections_Test)  Time elapsed: 329.366 sec  <<< FAILURE!
+java.lang.AssertionError: expected [mSupply] but found [mSupply | Facebook]
+	at Functional_TestCase_HomePage.msupply_HomePage_FooterSections_Test.msupply_HomePage_FooterSections(msupply_HomePage_FooterSections_Test.java:46)
 
-PlaceOrder_CashOnDelivery(SanityTest.PlaceOrder_Cheque_Test)  Time elapsed: 13.89 sec  <<< FAILURE!
+msupply_HomePage_HeroImage_And_MarketingPromos(Functional_TestCase_HomePage.msupply_HomePage_HeroImage_And_MarketingPromos_Test)  Time elapsed: 144.309 sec  <<< FAILURE!
+java.util.NoSuchElementException
+	at Functional_TestCase_HomePage.msupply_HomePage_HeroImage_And_MarketingPromos_Test.msupply_HomePage_HeroImage_And_MarketingPromos(msupply_HomePage_HeroImage_And_MarketingPromos_Test.java:42)
+
+msupply_HomePage_Main_HeaderVerification(Functional_TestCase_HomePage.msupply_HomePage_Main_HeaderVerification_Test)  Time elapsed: 137.596 sec  <<< FAILURE!
+java.lang.Exception
+	at Functional_TestCase_HomePage.msupply_HomePage_Main_HeaderVerification_Test.msupply_HomePage_Main_HeaderVerification(msupply_HomePage_Main_HeaderVerification_Test.java:48)
+
+msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification(Functional_TestCase_HomePage.msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification_Test)  Time elapsed: 190.154 sec  <<< FAILURE!
 org.openqa.selenium.WebDriverException: 
-Element is not clickable at point (1313, 70). Other element would receive the click: <div class="block blockui"></div>
-Command duration or timeout: 71 milliseconds
+Element is not clickable at point (1270.2166748046875, 23.48333740234375). Other element would receive the click: <a href="https://www.msupply.com/checkout/cart/"></a>
+Command duration or timeout: 135 milliseconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'MS-DT-056', ip: '10.1.2.253', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
+System info: host: 'SANDEEP', ip: '192.168.2.3', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_17'
+Session ID: 2818750d-b6be-4745-aae6-e590bb9a580d
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 7e5d0971-f9f7-4a8f-8633-2207016beb7e
-	at SanityTest.PlaceOrder_Cheque_Test.PlaceOrder_CashOnDelivery(PlaceOrder_Cheque_Test.java:27)
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=37.0.2}]
+	at Functional_TestCase_HomePage.msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification_Test.msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification(msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification_Test.java:105)
 
-ServiceChargeCalculation_KartPage(SanityTest.ServiceChargeCalculation_KartPage_Test)  Time elapsed: 139.979 sec  <<< FAILURE!
-java.lang.AssertionError: expected [17123] but found [17122]
-	at SanityTest.ServiceChargeCalculation_KartPage_Test.ServiceChargeCalculation_KartPage(ServiceChargeCalculation_KartPage_Test.java:36)
-
-PaymentMethods_Verification(SanityTest.PaymentMethods_Verification_Test)  Time elapsed: 144.752 sec  <<< FAILURE!
-java.lang.AssertionError: expected [NAGARJUNA OPC 53 GRADE CEMENT] but found [LAFARGE INSTAMIX CONCRETE BAG M20]
-	at SanityTest.PaymentMethods_Verification_Test.PaymentMethods_Verification(PaymentMethods_Verification_Test.java:25)
+msupply_HomePage_SlidersVerification(Functional_TestCase_HomePage.msupply_HomePage_SlidersVerification_Test)  Time elapsed: 3,405.457 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Element is not clickable at point (177.68333435058594, 8.583328247070312). Other element would receive the click: <div class="navbar navbar-default navbar-fixed-top col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+Command duration or timeout: 277 milliseconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'SANDEEP', ip: '192.168.2.3', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_17'
+Session ID: 3a6c9f3e-d3d7-4e39-bfe2-1a9c292f2578
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=37.0.2}]
+	at Functional_TestCase_HomePage.msupply_HomePage_SlidersVerification_Test.msupply_HomePage_SlidersVerification(msupply_HomePage_SlidersVerification_Test.java:58)
 

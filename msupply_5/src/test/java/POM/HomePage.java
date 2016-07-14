@@ -13,6 +13,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.server.handler.SendKeys;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -223,8 +224,11 @@ public class HomePage extends LoadLocators
 	public static int offerPrice_Poductdetails;
 	public static int Quantity_Poductdetails;
 	public static int Estimated_SubTotal_Poductdetails;
+	public static int totalprices;
+	public static ArrayList SliderNo;
+	public static ArrayList ProductNo;
 
-	private static int totalprices;
+	public static ArrayList list;
 	
 	public RegistrationPage navigatetoregisterpage() throws InterruptedException
 	{
@@ -351,6 +355,7 @@ public class HomePage extends LoadLocators
 		log.info("------------------------------------------------");
 		
 		addRMCProduct();
+		
 		ProductDetailsPage.getValuesFromProductDetailspage();		
 		Add_to_List.click();
 		log.info("Product 1 added and Moved to : Kart Page ");		
@@ -538,7 +543,7 @@ public class HomePage extends LoadLocators
 	}
 	
 	
-	public static void SlidersVerification2() throws Throwable
+	public static void Pricing_In_SlidersVerification2() throws Throwable
 	{
 		 Scenario1Test.driver.switchTo().defaultContent();
 		 int Total=1;
@@ -1064,7 +1069,10 @@ public class HomePage extends LoadLocators
         Thread.sleep(3000);
         logoutButton.click();
 	}
-	public  void mSupplylogin_HomePage() throws Throwable
+	
+//==================================================================================================================================================================	
+	
+	public  static void mSupplylogin_HomePage() throws Throwable
 	{	   
 		   String ExcelData[]=RetrieveXlsxData.getExcelData("LoginID_4");
 		   String mobileNumber=ExcelData[1];
@@ -1073,8 +1081,33 @@ public class HomePage extends LoadLocators
 		   WebDriverCommonFunctions.element_EnterValuesToTextField("MobileNumberField_Xpath", mobileNumber, "Entered MobileNumber");
 		   WebDriverCommonFunctions.element_EnterValuesToTextField("PasswordField_Xpath", password, "Entered Password");
 	       WebDriverCommonFunctions.element_Click("LoginButton_Xpath", "Clicked on Login Button");
+	       CommonFunctions.LoadPageExpicitWait();
 	       
 	}
+//==================================================================================================================================================================	
+	
+		public  static void mSupplylogout_HomePage() throws Throwable
+		{	   
+			ArrayList<String> Logoutelements=new ArrayList<String>();
+			Logoutelements.add("HomePageAccount_Xpath");
+			Logoutelements.add("LogoutButton_Xpath");		
+			WebDriverCommonFunctions.element_MouseOver_TillElementClick(Logoutelements, "Clicked on Logout Button");
+			CommonFunctions.LoadPageExpicitWait();
+		}
+
+//==================================================================================================================================================================	
+		
+		public  static void mSupplySignIn_HomePage() throws Throwable
+		{	   
+			ArrayList<String> NewAccountelements=new ArrayList<String>();
+			NewAccountelements.add("HomePageAccount_Xpath");
+			NewAccountelements.add("HomePageSignIn_Xpath");		
+			WebDriverCommonFunctions.element_MouseOver_TillElementClick(NewAccountelements, "Clicked on SigIn Button");
+					
+		       
+		}
+	
+//==================================================================================================================================================================	
 	public void SelectProductsForReviewsandRatings() throws Throwable 
 	{
 		ArrayList<String> elements=new ArrayList<String>();
@@ -1088,31 +1121,649 @@ public class HomePage extends LoadLocators
 		
 	}
 
+//==================================================================================================================================================================
+	
+		public static void Sliders_ProductLink_Verification() throws Throwable
+		{
+			WebDriverCommonFunctions.PrintinLogAndHTMLReports("Verifing 120 Product links from the Slider");
+			
+			 Scenario1Test.driver.switchTo().defaultContent();
+			 int Total=1;
+	         list=new ArrayList();
+	         
+			 for(int j=1;j<=8;j++)	
+			 {
+				 CommonFunctions.scrollDownPage(0,200);
+			     
+			     for(int i=1;i<=15;i++)
+				 {
+			    	 //for electrical product
+			    	 if(Total!=31)
+			    	 {
+			    		 
+					 //Slide to the next products
+			    	 if(i>=6)
+					 {  
+						  Scenario1Test.driver.findElement(By.xpath("(//div[@class='owl-next']/a)["+j+"]")).click();
+						  Thread.sleep(1000);
+					 }
+			    	 if(i>=11)
+			    	 {
+			    		  Scenario1Test.driver.findElement(By.xpath("(//div[@class='owl-next']/a)["+j+"]")).click();
+						  Thread.sleep(1000);
+					 	 
+			    	 }
+			    	 
+			    	 try
+			    	 {
+			    		WebDriverCommonFunctions.PrintinLogAndHTMLReports("============================="+" : Slider="+j+": Product="+i+"==================================================");	 
+			    	 
+			    	    String HomePageProduct=Scenario1Test.driver.findElement(By.xpath("(//div[@class='hmptitleblock']/a)["+Total+"]")).getText();
+			    	    if(HomePageProduct.equals(null)) // if the product details or product not present on the slider
+			    	       throw new Exception();
+			    	     
+			    	     try
+			    	     {
+			    		   Scenario1Test.driver.findElement(By.xpath("(//li[@class='divider item']/a)["+Total+"]")).click();
+			    	     }
+			    	     catch(Exception e)
+			    	     {
+			    	    	 CommonFunctions.scrollPageUp(0,-1000);
+			    	    	 CommonFunctions.scrollDownPage(0,200*j);
+			    	    	 Scenario1Test.driver.findElement(By.xpath("(//li[@class='divider item']/a)["+Total+"]")).click();
+			    	     }
+			    	     
+			    	     
+			    		 CommonFunctions.LoadPageExpicitWait();
+			    		 
+			    		 if(Total==1)
+			    		 {
+			    				try
+			    				{
+			    				  WebDriverCommonFunctions.element_EnterValuesToTextField("ZipCodePOPUP_Xpath","560064","Pincode Entered");
+			    				  WebDriverCommonFunctions.element_Click("ZipCodePOPUP_GoButton_Xpath", "Clicked on ZipCode Go Button");
+			    				}
+			    				catch(Exception e)
+			    				{
+			    					//do nothing
+			    				}
+			    		 }
+			    		 
+			    		 String DetailsPageProductname=WebDriverCommonFunctions.element_GetTextFromLabel("ProductName_Xpath");
+			    		 HomePageProduct=HomePageProduct.toLowerCase();
+			    		 DetailsPageProductname=DetailsPageProductname.toLowerCase();
+			    		 	    		 
+		    			 WebDriverCommonFunctions.PrintinLogAndHTMLReports("HomePageProduct = "+HomePageProduct);
+		    			 WebDriverCommonFunctions.PrintinLogAndHTMLReports("ProductDetailsPageProductname = "+DetailsPageProductname);
+			    		 
+			    		 WebDriverCommonFunctions.PrintinLogAndHTMLReports("Product => "+Total+":Slider=>"+j+":Product=>"+i);
+			    		 WebDriverCommonFunctions.Print_WithException_SoftAssert_inLogAndHTMLReports(HomePageProduct, DetailsPageProductname, true);
+			    		 
+			    		 
+//			    		 if(HomePageProduct.equalsIgnoreCase(DetailsPageProductname))
+//			    			 WebDriverCommonFunctions.PrintinLogAndHTMLReports("Product => "+Total+" : Navigated to Correct Page =>"+HomePageProduct+":Slider=>"+j+":Product=>"+i);
+//			    		 else
+//			    		 {
+//			    			 WebDriverCommonFunctions.PrintinLogAndHTMLReports("HomePageProduct = "+HomePageProduct);
+//			    			 WebDriverCommonFunctions.PrintinLogAndHTMLReports("ProductDetailsPageProductname = "+DetailsPageProductname);		    			 
+//			    			 WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Not Navigated to Correct Page => "+Total);
+//			    		 }
+			    		 
+			    		 Thread.sleep(500);				  
+						 Scenario1Test.driver.navigate().back();
+						 CommonFunctions.LoadPageExpicitWait();
+					   
+			    	     Total=Total+1;
+			    	 }		    	
+			    	 catch(Exception e)
+			    	 {
+			    		 Total=Total+1;
+			    		 WebDriverCommonFunctions.PrintinLogAndHTMLReports("================Error : Product => "+Total+":Slider=>"+j+":Product=>"+i);
+			    		 list.add(j);		    		 
+			    	 }
+			      }
+			      else
+			      {
+			    		 Total=Total+1;
+			      }
+				}
+			}		 
+			 		 
+	}
+	
+//==================================================================================================================================================================	
+public static void Functional_MarketingPromos() throws Throwable
+{
+	//Verify Marketing Promos
+	for(int i=1;i<=8;i++)
+	{		   
+	   if(i==1)
+	   {  
+		   String ImageText= WebDriverCommonFunctions.element_getTextFromImage("MarketingPromos_Xpath_1", "Service Provider text obtained");
+		   CommonFunctions.scrollDownPage(0,100);
+		   if(WebDriverCommonFunctions.element_ReturnWebElement("MarketingPromos_Xpath_1").isEnabled()==true)
+           {
+			   WebDriverCommonFunctions.PrintinLogAndHTMLReports("Element is Clickable");
+           }
+           else
+           {
+        	   WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Element is not clickable");
+           }
+		   
+		   WebDriverCommonFunctions.element_Click("MarketingPromos_Xpath_1", "Clicked on Service Provider");
+		   WebDriverCommonFunctions.element_Window_SwitchToChild("Switched to Child");
+		   String PageText=Scenario1Test.driver.getTitle();
+		   
+		   if(ImageText.contains("Provider")&&PageText.contains("Provider"))
+			   WebDriverCommonFunctions.PrintinLogAndHTMLReports("Navigated to Service Provider Page");
+		   else
+			   WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Not Navigated to PlayStore");
+		   		
+		   WebDriverCommonFunctions.element_Window_SwitchToParent("Switched to HomePage");			   
+	   }
+	   if(i==2)
+	   {
+		   String ImageText= WebDriverCommonFunctions.element_getTextFromImage("MarketingPromos_Xpath_2", "Service Provider text obtained");
+		  
+		   if(ImageText.contains("WhatsApp to Order"))
+			   WebDriverCommonFunctions.PrintinLogAndHTMLReports("Whatsapp Image Present");
+		   else
+			   WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Whatsapp Image not present");			   
+	   }
+	   if(i==3)
+	   {
+		  WebDriverCommonFunctions.element_Click("MarketingPromos_Xpath_3", "Clicked on Calculator");
+		  WebDriverCommonFunctions.element_Window_SwitchToChild("Switched to Calculator Page");
+		  WebDriverCommonFunctions.element_VerifyTextAndAssert("Calculator_Header_Xpath", "Calculators", "Navigated to Calculator page");
+		  WebDriverCommonFunctions.element_Window_SwitchToParent("Switched to HomePage");
+		   
+	   }
+	   if(i==4)
+	   {
+		   String ImageText= WebDriverCommonFunctions.element_getTextFromImage("MarketingPromos_Xpath_4", "Service Provider text obtained");
+		   //System.out.println(ImageText);
+		   
+		   if(ImageText.contains("Kitchen Products"))
+		       WebDriverCommonFunctions.PrintinLogAndHTMLReports("Kitchen Products Image Present");
+	       else
+		       WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Kitchen Products not present");
+		   
+		   WebDriverCommonFunctions.element_Click("MarketingPromos_Xpath_4", "Clicked on kitchen Promo - Discount 44%");
+		   
+		   List<WebElement> elements=WebDriverCommonFunctions.element_Collection("DiscountRange_CheckBox_Xpath", 0, false, "Discount Filters Count");
+		   int DiscountCheckBoxCount=elements.size();
+		   
+		   int Dicountnumber=CommonFunctions.getNumber(ImageText);
+		   int Discount=CommonFunctions.get_SelectedDiscount_CheckBoxNumber(Dicountnumber);
 
+		   ArrayList<String> AttributeValues=(ArrayList<String>) (WebDriverCommonFunctions.Table_SearchForElement_Action(CommonFunctions.getElementFromExcel("DiscountRange_CheckBox_Xpath_1"), CommonFunctions.getElementFromExcel("DiscountRange_CheckBox_Xpath_2"), 1, "CheckBoxSelectedCount",DiscountCheckBoxCount));
+		   for(int j=0;j<Discount;j++)
+			   if(AttributeValues.get(j).equals("m-checkbox-checked"))
+				   WebDriverCommonFunctions.PrintinLogAndHTMLReports("Selected CheckBox ="+(j+1));
+			   else
+				   WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Not Selected the required CheckBox ="+(j+1));
+		   
+		   WebDriverCommonFunctions.navigateBack(1);
+		   
+	   }
+		   if(i==5)
+		   {
+			   String ImageText= WebDriverCommonFunctions.element_getTextFromImage("MarketingPromos_Xpath_5", "Paints Image text obtained");
+			   //System.out.println(ImageText);
+			   
+			   if(ImageText.contains("Paints"))
+			       WebDriverCommonFunctions.PrintinLogAndHTMLReports("Paints Products Image Present");
+		       else
+			       WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Paints Products not present");
+			   
+			   WebDriverCommonFunctions.element_Click("MarketingPromos_Xpath_5", "Clicked on Paints Promo - Discount 57%");
+			   
+			   List<WebElement> elements=WebDriverCommonFunctions.element_Collection("DiscountRange_CheckBox_Xpath", 0, false, "Discount Filters Count");
+			   int DiscountCheckBoxCount=elements.size();
+			   
+			   int Dicountnumber=CommonFunctions.getNumber(ImageText);
+			   int Discount=CommonFunctions.get_SelectedDiscount_CheckBoxNumber(Dicountnumber);
+
+			   ArrayList<String> AttributeValues=(ArrayList<String>) (WebDriverCommonFunctions.Table_SearchForElement_Action(CommonFunctions.getElementFromExcel("DiscountRange_CheckBox_Xpath_1"), CommonFunctions.getElementFromExcel("DiscountRange_CheckBox_Xpath_2"), 1, "CheckBoxSelectedCount", DiscountCheckBoxCount));
+			   for(int j=0;j<Discount;j++)
+				   if(AttributeValues.get(j).equals("m-checkbox-checked"))
+					   WebDriverCommonFunctions.PrintinLogAndHTMLReports("Selected CheckBox ="+(j+1));
+				   else
+					   WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Not Selected the required CheckBox ="+(j+1));	
+			   
+			   WebDriverCommonFunctions.navigateBack(1);
+		   }
+		   if(i==6)
+		   {
+			   String ImageText= WebDriverCommonFunctions.element_getTextFromImage("MarketingPromos_Xpath_6", "Hardware Image text obtained");
+			   //System.out.println(ImageText);
+			   
+			   if(ImageText.contains("Hardware"))
+			       WebDriverCommonFunctions.PrintinLogAndHTMLReports("Hardware Products Image Present");
+		       else
+			       WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Hardware Products not present");
+			   
+			   WebDriverCommonFunctions.element_Click("MarketingPromos_Xpath_6", "Clicked on Hardware Promo - Discount 21%");
+			   
+			   List<WebElement> elements=WebDriverCommonFunctions.element_Collection("DiscountRange_CheckBox_Xpath", 0, false, "Discount Filters Count");
+			   int DiscountCheckBoxCount=elements.size();
+			   
+			   int Dicountnumber=CommonFunctions.getNumber(ImageText);
+			   int Discount=CommonFunctions.get_SelectedDiscount_CheckBoxNumber(Dicountnumber);
+
+			   ArrayList<String> AttributeValues=(ArrayList<String>) (WebDriverCommonFunctions.Table_SearchForElement_Action(CommonFunctions.getElementFromExcel("DiscountRange_CheckBox_Xpath_1"), CommonFunctions.getElementFromExcel("DiscountRange_CheckBox_Xpath_2"), 1, "CheckBoxSelectedCount", DiscountCheckBoxCount));
+			   for(int j=0;j<Discount;j++)
+				   if(AttributeValues.get(j).equals("m-checkbox-checked"))
+					   WebDriverCommonFunctions.PrintinLogAndHTMLReports("Selected CheckBox ="+(j+1));
+				   else
+					   WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Not Selected the required CheckBox ="+(j+1));	
+			   
+			   WebDriverCommonFunctions.navigateBack(1);
+		   }
+		   if(i==7)
+		   {
+			   String ImageText= WebDriverCommonFunctions.element_getTextFromImage("MarketingPromos_Xpath_7", "Plumbing Image text obtained");
+			   //System.out.println(ImageText);
+			   
+			   if(ImageText.contains("Plumbing"))
+			       WebDriverCommonFunctions.PrintinLogAndHTMLReports("Plumbing Products Image Present");
+		       else
+			       WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Plumbing Products not present");
+			   
+			   WebDriverCommonFunctions.element_Click("MarketingPromos_Xpath_7", "Clicked on Plumbing Promo - Discount 21%");
+			   
+			   List<WebElement> elements=WebDriverCommonFunctions.element_Collection("DiscountRange_CheckBox_Xpath", 0, false, "Discount Filters Count");
+			   int DiscountCheckBoxCount=elements.size();
+			   
+			   int Dicountnumber=CommonFunctions.getNumber(ImageText);
+			   int Discount=CommonFunctions.get_SelectedDiscount_CheckBoxNumber(Dicountnumber);
+
+			   ArrayList<String> AttributeValues=(ArrayList<String>) (WebDriverCommonFunctions.Table_SearchForElement_Action(CommonFunctions.getElementFromExcel("DiscountRange_CheckBox_Xpath_1"), CommonFunctions.getElementFromExcel("DiscountRange_CheckBox_Xpath_2"), 1, "CheckBoxSelectedCount", DiscountCheckBoxCount));
+			   for(int j=0;j<Discount;j++)
+				   if(AttributeValues.get(j).equals("m-checkbox-checked"))
+					   WebDriverCommonFunctions.PrintinLogAndHTMLReports("Selected CheckBox ="+(j+1));
+				   else
+					   WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Not Selected the required CheckBox ="+(j+1));	
+			   
+			   WebDriverCommonFunctions.navigateBack(1);
+		   } 
+		   
+		   if(i==8)
+		   {
+			   String ImageText= WebDriverCommonFunctions.element_getTextFromImage("MarketingPromos_Xpath_8", "Carpentry Image text obtained");
+			   //System.out.println(ImageText);
+			   
+			   if(ImageText.contains("Carpentry"))
+			       WebDriverCommonFunctions.PrintinLogAndHTMLReports("Carpentry Products Image Present");
+		       else
+			       WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Carpentry Products not present");
+			   
+			   WebDriverCommonFunctions.element_Click("MarketingPromos_Xpath_8", "Clicked on Carpentry Promo - Discount 33%");
+			   
+			   List<WebElement> elements=WebDriverCommonFunctions.element_Collection("DiscountRange_CheckBox_Xpath", 0, false, "Discount Filters Count");
+			   int DiscountCheckBoxCount=elements.size();
+			   
+			   
+			   int Dicountnumber=CommonFunctions.getNumber(ImageText);
+			   int Discount=CommonFunctions.get_SelectedDiscount_CheckBoxNumber(Dicountnumber);
+
+			   ArrayList<String> AttributeValues=(ArrayList<String>) (WebDriverCommonFunctions.Table_SearchForElement_Action(CommonFunctions.getElementFromExcel("DiscountRange_CheckBox_Xpath_1"), CommonFunctions.getElementFromExcel("DiscountRange_CheckBox_Xpath_2"), 1, "CheckBoxSelectedCount",DiscountCheckBoxCount));
+			   for(int j=0;j<Discount;j++)
+				   if(AttributeValues.get(j).equals("m-checkbox-checked"))
+					   WebDriverCommonFunctions.PrintinLogAndHTMLReports("Selected CheckBox ="+(j+1));
+				   else
+					   WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Not Selected the required CheckBox ="+(j+1));	
+			   
+			   WebDriverCommonFunctions.navigateBack(1);
+		   }
+	    
+	   
+	}
+}
+//========================================================================================================================================================================================================================================================================================================================
+/*Verify Header-1 links*/
+public static void Header1Verification() throws Throwable
+{
+	
+	//Verify Navigation Links
+	WebDriverCommonFunctions.element_MouseOver("Navigation_Shop_Xpath", "Mouse over on Navigation");
+	WebDriverCommonFunctions.element_Collection("Navigation_AllCategory_Xpath",15, true, "All categories Present");
+	WebDriverCommonFunctions.element_Selectproduct_Navigation(1,1,false,"Navigating to the Product list page");
+	try
+	{
+	  WebDriverCommonFunctions.element_EnterValuesToTextField("ZipCodePOPUP_Xpath","560064","Pincode Entered");
+	  WebDriverCommonFunctions.element_Click("ZipCodePOPUP_GoButton_Xpath", "Clicked on ZipCode Go Button");
+	}
+	catch(Exception e)
+	{
+		//do nothing
+	}
+	String Productname=WebDriverCommonFunctions.element_GetTextFromLabel("ProductName_Xpath");
+		
+	if(Productname.contains("BLOCK"))
+		WebDriverCommonFunctions.PrintinLogAndHTMLReports("Navigated to the Product details page");
+	else
+		WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Not Navigated to the Product details page ");
+			
+	WebDriverCommonFunctions.navigateBack(2);
+			
+	
+	//Check if Click on logo redirects to home Page
+	WebDriverCommonFunctions.element_Click("mSupply_Logo_Image_Xpath","Clicked on mSupply Logo");
+	WebDriverCommonFunctions.element_Collection("Eight_Category_Section_Xpath", 8,true, "All Eight category Section Present on WebPage");
+	
+	//Verify SearchBox
+	WebDriverCommonFunctions.element_Present("Search_Box_Xpath", "SearchBox Present", "SearchBox not Present");
+	WebDriverCommonFunctions.element_GetTextFromTextField("Search_Box_Xpath", "placeholder", "Because Quality Matters", "Ghost Text Present in SearchBox");
+//	WebDriverCommonFunctions.element_EnterValuesToTextField("Search_Box_Xpath", "Electrical", "Enetered Value Electrical in SearchBox");
+//	WebDriverCommonFunctions.element_Click("Search_Box_Button_Xpath", "Clicked on Search Box Button");
+//	WebDriverCommonFunctions.element_VerifyLinkTextAndAssert("PageName_Xpath", "Electrical", "Navigated to Electrical page");
+	
+	//Verify Contact
+	ArrayList<String> Contact=new ArrayList<String>();
+	Contact.add("Contact_Header_Xpath");
+	WebDriverCommonFunctions.element_MouseOver_TillElementClick(Contact, "Moved to Contact");
+    boolean Contact_1_status=WebDriverCommonFunctions.element_isVisible("Contact_Details_Xpath_1", "Drop Down");
+    boolean Contact_2_status=WebDriverCommonFunctions.element_isVisible("Contact_Details_Xpath_2", "Drop Down");
+    String Contatct_1_no=WebDriverCommonFunctions.element_GetTextFromLabel("Contact_Details_Xpath_1");
+    String Contatct_2_no=WebDriverCommonFunctions.element_GetTextFromLabel("Contact_Details_Xpath_2");
+	if(Contact_1_status==true && Contact_2_status==true&&!Contatct_1_no.equals(null)&&!Contatct_2_no.equals(null))
+        WebDriverCommonFunctions.PrintinLogAndHTMLReports("Contact Drop Down is Visible");
+	else
+		WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Contact Drop Down is not Visible");
+	
+    //Verify Email
+	ArrayList<String> Email=new ArrayList<String>();
+	Email.add("Email_Header_Xpath");
+	WebDriverCommonFunctions.element_MouseOver_TillElementClick(Email, "Moved to Email");
+    boolean Email_1_status=WebDriverCommonFunctions.element_isVisible("Email_Details_Xpath_1", "Email Header");
+    boolean Email_2_status=WebDriverCommonFunctions.element_isVisible("Email_Details_Xpath_2", "Email Header");
+    String Email_1=WebDriverCommonFunctions.element_GetTextFromLabel("Email_Details_Xpath_1");
+    String Email_2=WebDriverCommonFunctions.element_GetTextFromLabel("Email_Details_Xpath_2");
+    
+	if(Email_1_status==true&&Email_2_status==true&&!Email_1.equals(null)&&!Email_2.equals(null))
+        WebDriverCommonFunctions.PrintinLogAndHTMLReports("Email Drop Down is Visible");
+	else
+		WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Email Drop Down is not Visible");
 	
 	
-//	public LoginPage SelectProductsforKartVerification() throws InterruptedException
-//	{
-//		Scenario1Test.wdcf.waitForPageToLoad();
-//		closeIcon.click();
-//		log.info("............Clicked on Close Button.........");
-//		
-//		log.info("............Selecting Product from Search Box.........");
-//		SearchBox_electrical.sendKeys("electrical");
-//		log.info("Moved to : SearchBox and entering value Electrical");
-//		Thread.sleep(6000);
-//		SearchBox_Button.click();
-//		SearchBox_electrical_wire_black.click();
-//		log.info("Moved to : Click on a Product");
-//		Buildingmaterial_Blocks_ConcreteCover_15mm_zipcode_popup.sendKeys("560064");
-//		Buildingmaterial_Blocks_ConcreteCover_15mm_zipcode_popup_Go.click();
-//		Add_to_List.click();			
-//
-//		ShoppingCartPage.cart();
-//		
-//		return PageFactory.initElements(Scenario1Test.driver, LoginPage.class);
-//		
-//	}
-
+	//verify Account
+	ArrayList<String> Account=new ArrayList<String>();
+	Contact.add("HomePageAccount_Xpath");
+	WebDriverCommonFunctions.element_MouseOver_TillElementClick(Contact, "Moved to Account");
+	boolean Login_1_status=WebDriverCommonFunctions.element_isVisible("HomePageLogin_Xpath", "Drop Down");
+    boolean Signup_2_status=WebDriverCommonFunctions.element_isVisible("HomePageSignIn_Xpath", "Drop Down");
+    String Login=WebDriverCommonFunctions.element_GetTextFromLabel("HomePageLogin_Xpath");
+    String Signup=WebDriverCommonFunctions.element_GetTextFromLabel("HomePageSignIn_Xpath");
+    if(Login_1_status==true && Signup_2_status==true&&!Login.equals(null)&&!Signup.equals(null))
+        WebDriverCommonFunctions.PrintinLogAndHTMLReports("Account Drop Down is Visible");
+	else
+		WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Account Drop Down is not Visible");
+	
+	
+	//Verify LoginPopup
+	ArrayList<String> Loginelements=new ArrayList<String>();
+	Loginelements.add("HomePageAccount_Xpath");
+	Loginelements.add("HomePageLogin_Xpath");		
+	WebDriverCommonFunctions.element_MouseOver_TillElementClick(Loginelements, "Clicked on Login Button");
+	WebDriverCommonFunctions.element_VerifyTextAndAssert("LoginPOPUp_Header_Xpath", "Sign in", "Sign In popup present on the WebPage");
+	WebDriverCommonFunctions.element_Click("LoginPOPUp_CloseButton_Xpath", "Clicked on Close Button - LoginPopup");
+			
+	//Verify SignInpopup
+	ArrayList<String> NewAccountelements=new ArrayList<String>();
+	NewAccountelements.add("HomePageAccount_Xpath");
+	NewAccountelements.add("HomePageSignIn_Xpath");		
+	WebDriverCommonFunctions.element_MouseOver_TillElementClick(NewAccountelements, "Clicked on SigIn Button");
+	WebDriverCommonFunctions.element_VerifyTextAndAssert("SignIn_Header_Xpath", "Create New Account", "Create New Account popup present on the WebPage");
+	WebDriverCommonFunctions.element_Click("LoginPOPUp_CloseButton_Xpath", "Clicked on Close Button - Create New Account");
+			
+	//Verify Shopping Kart Page
+	WebDriverCommonFunctions.element_Click("HomePage_ShoppingKart_Xpath", "Clicked on Shopping kart Page");
+	WebDriverCommonFunctions.ExplicitWait();
+	WebDriverCommonFunctions.element_VerifyTextAndAssert("ShoppingKart_Header_Xpath","Your Shopping List is empty !", "Navigated to ShoppingKart Page");
+	WebDriverCommonFunctions.navigateBack(1);
 	
 }
+//======================================================================================================================================================================================================================================
+/*Verify Header-2 links*/
+public static void Header2verification() throws Throwable
+{
+	//Check Service provide link
+			WebDriverCommonFunctions.element_Click("HomePage_ServiceProvider_Xpath"," Clicked on Become Service Provider");
+			WebDriverCommonFunctions.element_SelectDropDown("HomePage_ServiceProvider_Logo_Xpath", "INDEX", 1, "", "Selected Fisrt Index from DropDown");
+			WebDriverCommonFunctions.ExplicitWait();
+			WebDriverCommonFunctions.element_VerifyTextAndAssert("ServiceProvider_Xpath", "Some of our Service Providers", "Navigated to Service provider page");
+			WebDriverCommonFunctions.navigateBack(1);
+			CommonFunctions.LoadPageExpicitWait();
+			
+			//Check GooglePlay Link 
+			WebDriverCommonFunctions.element_Click("Homepage_GooglePlay_Xpath", "clicked on GooglePlay");
+			WebDriverCommonFunctions.element_Window_SwitchToChild("Switched to GooglePlay Window");
+			Assert.assertEquals(Scenario1Test.driver.getTitle(),"mSupply – Android Apps on Google Play");
+			WebDriverCommonFunctions.element_Window_SwitchToParent("Switched to msupply HomePage - Download on GooglePlay navigating to the right page");
+					
+			//verify Become a Seller
+			WebDriverCommonFunctions.element_Click("HomePage_BecomeSeller_Xpath", "Clicked on Become a Seller");
+			WebDriverCommonFunctions.element_VerifyTextAndAssert("Seller_HeaderText_Xpath","Sell On mSupply","Navigated to - Sell on msupply page");
+			WebDriverCommonFunctions.navigateBack(1);
+			
+}
+
+//======================================================================================================================================================================================================================================
+/*Verify Footer-1 Links*/
+public static void msupplyAboutusFooter() throws Throwable
+{
+		List<WebElement> elements=WebDriverCommonFunctions.element_Collection("Footer_Links_1_Xpath", 0, false, "Got Links From Footer-1");
+		for(int i=0;i<elements.size();i++)
+		{				
+			if(i==0)
+			{
+				WebDriverCommonFunctions.element_Click("Footer_Links_1_Xpath_1", "Clicked on About us");
+				WebDriverCommonFunctions.element_VerifyTextAndAssert("Header_Xpath", "About Us", "About Us Page Verified");
+			}
+			if(i==1)
+			{
+				
+				WebDriverCommonFunctions.element_Click("Footer_Links_1_Xpath_2", "Clicked on Out Team");
+				WebDriverCommonFunctions.element_VerifyTextAndAssert("OurTeam_HeaderPage_Xpath","ISHWAR SUBRAMANIAN", "Our Team Verified");
+			}
+			if(i==2)
+			{
+				WebDriverCommonFunctions.element_Click("Footer_Links_1_Xpath_3", "Clicked on Our Investors");
+				WebDriverCommonFunctions.element_VerifyTextAndAssert("Header_Xpath", "Our Investors", "Our Investors Page Verified");
+			}
+			if(i==3)
+			{
+				WebDriverCommonFunctions.element_Click("Footer_Links_1_Xpath_4", "Clicked on Our Carrers");
+				WebDriverCommonFunctions.element_VerifyTextAndAssert("Header_Xpath", "Careers", "Careers Page Verified");
+			}
+			if(i==4)
+			{
+				WebDriverCommonFunctions.element_Click("Footer_Links_1_Xpath_5", "Clicked on msupply Blog");
+				WebDriverCommonFunctions.element_Window_SwitchToChild("Switched to Blog");
+				String Title=Scenario1Test.driver.getTitle();
+				Assert.assertEquals(Title, "mSupply Official Blog - Buy Construction & Interior Materials");
+				WebDriverCommonFunctions.element_Window_SwitchToParent("Switched to msupply Home Page");				
+			}
+			
+
+		}
+		
+		
+		List<WebElement> elements2=WebDriverCommonFunctions.element_Collection("Footer_Links_2_Xpath", 0, false, "Got Links From Footer-2");
+		
+		for(int i=0;i<elements2.size();i++)
+		{				
+			if(i==0)
+			{
+				WebDriverCommonFunctions.element_Click("Footer_Links_2_Xpath_1", "Clicked on Returns & Cancellations");
+				WebDriverCommonFunctions.element_VerifyTextAndAssert("Header_Xpath", "Returns and Cancellations", "Returns & Cancellations Page Verified");
+			}
+			if(i==1)
+			{
+				
+				WebDriverCommonFunctions.element_Click("Footer_Links_2_Xpath_2", "Clicked on Returns & Cancellations");
+				WebDriverCommonFunctions.element_VerifyTextAndAssert("Header_Xpath", "Terms and Conditions of Use", "Terms and Conditions of Use Page Verified");
+			}
+			if(i==2)
+			{
+				WebDriverCommonFunctions.element_Click("Footer_Links_2_Xpath_3", "Clicked on FAQs");
+				WebDriverCommonFunctions.element_VerifyTextAndAssert("Header_Xpath", "FAQs", "FAQs Page Verified");
+			}
+			if(i==3)
+			{
+				WebDriverCommonFunctions.element_Click("Footer_Links_2_Xpath_4", "Clicked on FAQs");
+				WebDriverCommonFunctions.element_VerifyTextAndAssert("Seller_HeaderText_Xpath", "Sell On mSupply", "Sell On mSupply Verified");
+			}
+			
+			if(i==4)
+			{
+				WebDriverCommonFunctions.element_Click("Footer_Links_2_Xpath_5", "Clicked on Contact Us");
+				WebDriverCommonFunctions.element_VerifyTextAndAssert("ContactUs_Xpath", "Contact Us", "Contact Us Page Verified");
+			}
+		}
+		
+		
+        List<WebElement> elements3=WebDriverCommonFunctions.element_Collection("SocialMediaLinks_Xpaths", 0, false, "Got Links From Footer-2");
+		
+		for(int i=0;i<elements3.size();i++)
+		{				
+			if(i==0)
+			{
+				WebDriverCommonFunctions.element_Click("SocialMediaLinks_Xpaths_1", "Clicked on Facebook");
+				WebDriverCommonFunctions.element_Window_SwitchToChild("Switched to Facebook Tab");
+				String Title=Scenario1Test.driver.getTitle();
+				Assert.assertEquals(Title, "mSupply | Facebook");
+				WebDriverCommonFunctions.element_Window_SwitchToParent("Switched to msupply Home Page");				
+		
+			}
+			
+			if(i==1)
+			{
+				WebDriverCommonFunctions.element_Click("SocialMediaLinks_Xpaths_2", "Clicked on Twitter");
+				WebDriverCommonFunctions.element_Window_SwitchToChild("Switched to Twitter Tab");
+				String Title=Scenario1Test.driver.getTitle();
+				Assert.assertEquals(Title, "mSupply (@mSupplydotcom) | Twitter");
+				WebDriverCommonFunctions.element_Window_SwitchToParent("Switched to msupply Home Page");				
+		
+			}
+			if(i==2)
+			{
+				WebDriverCommonFunctions.element_Click("SocialMediaLinks_Xpaths_3", "Clicked on Google+");
+				WebDriverCommonFunctions.element_Window_SwitchToChild("Switched to Google+ Tab");
+				String Title=Scenario1Test.driver.getTitle();
+				Assert.assertEquals(Title, "mSupply - Google+");
+				WebDriverCommonFunctions.element_Window_SwitchToParent("Switched to msupply Home Page");				
+		
+			}
+			if(i==3)
+			{
+				WebDriverCommonFunctions.element_Click("SocialMediaLinks_Xpaths_4", "Clicked on LinkedIn");
+				WebDriverCommonFunctions.element_Window_SwitchToChild("Switched to LinkedIn Tab");
+				String Title=Scenario1Test.driver.getTitle();
+				Assert.assertEquals(Title, "mSupply.com | LinkedIn");
+				WebDriverCommonFunctions.element_Window_SwitchToParent("Switched to msupply Home Page");				
+		
+			}
+			
+		}
+		
+		WebDriverCommonFunctions.element_Click("mSupply_Logo_Image_Xpath","Clicked on mSupply Logo");
+		
+		//Verify Reach Us Section
+		WebDriverCommonFunctions.element_VerifyTextAndAssert("ReachUs_Xpath", "Reach Us", "Reach Us Text Present on the Home Page");
+		
+		
+		//Verify address is present
+		String Address=WebDriverCommonFunctions.element_ReturnWebElement("ReachUs_Address_Xpath").getText();
+		if(Address.equals(null))
+			WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Address not present in the footer");
+		else
+			WebDriverCommonFunctions.PrintinLogAndHTMLReports("Address present in the footer");
+		
+		
+		
+		//Verify Contact No is present
+		String Contact=WebDriverCommonFunctions.element_ReturnWebElement("ReachUs_ContactNo_Xpath").getText();
+		if(Contact.equals(null))
+			WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Contact not present in the footer");
+		else
+			WebDriverCommonFunctions.PrintinLogAndHTMLReports("Contact present in the footer");
+						
+		
+		
+		//Verify Email is present
+		String Email=WebDriverCommonFunctions.element_ReturnWebElement("ReachUs_Email_Xpath").getText();
+		if(Email.equals(null))
+				WebDriverCommonFunctions.Print_WithException_inLogAndHTMLReports("Email not present in the footer");
+		else
+				WebDriverCommonFunctions.PrintinLogAndHTMLReports("Email present in the footer");
+										
+		
+		
+		
+		
+		
+     }
+//======================================================================================================================================================================================================================================
+public static void ProductQuickLinks() throws Throwable
+{
+		List<WebElement> elements=WebDriverCommonFunctions.element_Collection("ProductQuickLinks_Xpath", 0, false, "Got Links From Footer-2");
+		for(int i=1;i<=elements.size();i++)
+		{	
+			
+			    WebElement element=Scenario1Test.driver.findElement(By.xpath("(//div[@id='seo_section']/ul/li/a)["+i+"]"));
+			    CommonFunctions.SearchForElement(element);
+			    String LinkText=element.getText();
+			    element.click();
+			    CommonFunctions.LoadPageExpicitWait();
+			    
+			    try
+			    {
+			      if(i==6)
+				  {
+					WebDriverCommonFunctions.element_EnterValuesToTextField("ZipCodePOPUP_Xpath","560064","Pincode Entered");
+					WebDriverCommonFunctions.element_Click("ZipCodePOPUP_GoButton_Xpath", "Clicked on ZipCode Go Button");
+				  }
+			    }
+			    catch(Exception e)
+			    {
+			    	//do nothing
+			    }
+			    
+			    CommonFunctions.LoadPageExpicitWait();
+			    String HeaderText=Scenario1Test.driver.findElement(By.xpath("//div[@class='mb-breadcrumbs']//li[3]")).getText();
+                WebDriverCommonFunctions.Print_WithException_SoftAssert_inLogAndHTMLReports(LinkText, HeaderText,false);
+		    			
+		}
+}		
+
+//===================================================================================================================================================================================
+
+public static void ValidateLinks_HomePage() throws Throwable 
+{
+/* verify Header-1 links */
+ HomePage.Header1Verification();
+			
+/*Verify Header-2 links*/
+ HomePage.Header2verification();	
+			
+//Verify Sliders
+ HomePage.Sliders_ProductLink_Verification();
+	
+//Verify marketting promos
+ HomePage.Functional_MarketingPromos();
+
+//Verify footer-1 links
+ HomePage.msupplyAboutusFooter();
+	
+//Verify footer-1 Product category links
+ HomePage.ProductQuickLinks();
+
+}
+//===================================================================================================================================================================================
+
+
+}
+	
+

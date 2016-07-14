@@ -7,48 +7,87 @@
         <listener class-name="GenericLibrary.Listener"></listener>               
     </listeners>
 
- <test name="SanityTest_HomePage">
-  <parameter name="Production_URL"  value="http://www.msupply.com"/>
+  <test name="msupply_HomePage_FooterSections">
+   <classes>
+       <class name="Functional_TestCase_HomePage.msupply_HomePage_FooterSections_Test" />
+    </classes>
+  </test>
+
+
+ <test name="msupply_HomePage_HeroImage_And_MarketingPromos">
+    <classes>
+       <class name="Functional_TestCase_HomePage.msupply_HomePage_HeroImage_And_MarketingPromos_Test" />
+    </classes>
+ </test>
+
+
+ <test name="msupply_HomePage_Main_HeaderVerification">
+    <classes>
+       <class name="Functional_TestCase_HomePage.msupply_HomePage_Main_HeaderVerification_Test" />
+    </classes>
+  </test>
+
+
+ <test name="msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification">
+    <classes>
+       <class name="Functional_TestCase_HomePage.msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification_Test" />
+    </classes>
+  </test>
+  
+  
+  <test name="msupply_HomePage_SlidersVerification">
+    <classes>
+       <class name="Functional_TestCase_HomePage.msupply_HomePage_SlidersVerification_Test" />
+    </classes>
+  </test> 
+  
+  
+   <test name="msupply_HomePage_SubHeaderVerification">
+    <classes>
+       <class name="Functional_TestCase_HomePage.msupply_HomePage_SubHeaderVerification_Test" />
+    </classes>
+  </test> 
+  
+</suite>   
+
+<!-- 
+ <test name="SanityTest_HomePage_Verification">
     <classes>
        <class name="SanityTest.Homepage_Test" />
     </classes>
   </test>
   
-   <test name="SanityTest_AddProducts_To_cart">
-    <parameter name="Production_URL"  value="http://www.msupply.com"/>
+   <test name="SanityTest_AddProducts_To_cart_Verification">
     <classes>
        <class name="SanityTest.AddProductsToCart_Test" />
     </classes>
     </test> 
  
-  <test name="SanityTest">
-  <parameter name="STAGING_URL"  value="http://staging.msupply.com"/>
+  <test name="SanityTest_PlaceOrder_Cheque_Verification">
     <classes>
        <class name="SanityTest.PlaceOrder_Cheque_Test" />
     </classes>
   </test>  
 
-    <test name="SanityTest_MOQ_Verification">
-    <parameter name="Production_URL"  value="http://www.msupply.com"/>
+    <test name="SanityTest_MOQ_Verification_Verification">
     <classes>
        <class name="SanityTest.Product_MOQ_Verification_Test" />
     </classes>
   </test>  
 
-  <test name="SanityTest_cartPage">
-  <parameter name="Production_URL" value="http://www.msupply.com"/>
+  <test name="SanityTest_cartPage_Verification">
     <classes>
        <class name="SanityTest.ServiceChargeCalculation_KartPage_Test" />
     </classes>
   </test>  
 
-  <test name="SanityTest_PaymentMethods">
-  <parameter name="Production_URL" value="http://www.msupply.com"/>
+  <test name="SanityTest_PaymentMethods_Verification">
     <classes>
        <class name="SanityTest.PaymentMethods_Verification_Test" />
     </classes>
   </test>
+-->
 
-</suite> 
+
 
  	

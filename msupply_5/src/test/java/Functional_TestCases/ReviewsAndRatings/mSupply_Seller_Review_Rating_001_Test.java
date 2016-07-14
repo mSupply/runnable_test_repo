@@ -29,8 +29,9 @@ public class mSupply_Seller_Review_Rating_001_Test extends Scenario1Test
 		Credentials.url=CommonFunctions.readPropertiesFile("FuncationalReviewsRatings");
 		Scenario1Test.driver.get(Credentials.url);
 		WebDriverCommonFunctions.PrintinLogAndHTMLReports("TestCase - Seller Review");
-		WebDriverCommonFunctions.element_EnterValuesToTextField("ZipCodePOPUP_Xpath","560064","Pincode Entered");
-		WebDriverCommonFunctions.element_Click("ZipCodePOPUP_GoButton_Xpath", "Clicked on ZipCode Go Button");
+		WebDriverCommonFunctions.EnterZipCode();
+		
+		
 		WebDriverCommonFunctions.element_Click("closeIcon_xpath","Clicked on Close Icon POPUP");
 		   
 		Scenario1Test.homePageObj = PageFactory.initElements(Scenario1Test.driver, HomePage.class);
@@ -43,12 +44,13 @@ public class mSupply_Seller_Review_Rating_001_Test extends Scenario1Test
 		ProductPgobj.addProductTocart();
 		Kart.placeOrder();
 		CheckOut.placeorder_Cheque();
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 		WebDriverCommonFunctions.ExplicitWait();
+		CommonFunctions.LoadPageExpicitWait();
 		
 		//TestCase-2 and 3
 		ArrayList myOrders=new ArrayList();
-		myOrders.add("HomePage_Account_Xpath");
+		myOrders.add("HomePageAccount_Xpath");
 		myOrders.add("MyOrders_Xpath");
 		
 		WebDriverCommonFunctions.element_MouseOver_TillElementClick(myOrders, "Clicked on MyOrders");
