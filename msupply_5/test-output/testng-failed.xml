@@ -3,13 +3,177 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Functional_TestCase_HomePage.msupply_HomePage_Main_HeaderVerification_Test">
+      <class name="Functional_TestCases_Plumbing.mSupply_Plumbing_PipesFittings_017_Test">
+        <methods>
+          <include name="mSupply_Plumbing_PipesFittings_019"/>
+        </methods>
+      </class> <!-- Functional_TestCases_Plumbing.mSupply_Plumbing_PipesFittings_017_Test -->
+      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Product_Review_Rating_001_Test">
+        <methods>
+          <include name="mSupply_Product_Review_Rating_001"/>
+        </methods>
+      </class> <!-- Functional_TestCases.ReviewsAndRatings.mSupply_Product_Review_Rating_001_Test -->
+      <class name="SanityTest.PaymentMethods_Verification_Test">
+        <methods>
+          <include name="PaymentMethods_Verification"/>
+        </methods>
+      </class> <!-- SanityTest.PaymentMethods_Verification_Test -->
+      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Product_Review_Rating_006_Test">
+        <methods>
+          <include name="Reviews"/>
+          <include name="addReviewsToProduct"/>
+        </methods>
+      </class> <!-- Functional_TestCases.ReviewsAndRatings.mSupply_Product_Review_Rating_006_Test -->
+      <class name="Functional_TestCase_HomePage.msupply_HomePage_FooterSections_Test">
+        <methods>
+          <include name="msupply_HomePage_FooterSections"/>
+        </methods>
+      </class> <!-- Functional_TestCase_HomePage.msupply_HomePage_FooterSections_Test -->
+      <class name="Scenarios.LoginForRegisteredUsers">
+        <methods>
+          <include name="UserLogin"/>
+        </methods>
+      </class> <!-- Scenarios.LoginForRegisteredUsers -->
+      <class name="Demo.Demo">
         <methods>
           <include name="beforeTestCofig"/>
-          <include name="msupply_HomePage_Main_HeaderVerification"/>
+          <include name="main"/>
           <include name="tearDown"/>
         </methods>
+      </class> <!-- Demo.Demo -->
+      <class name="Functional_TestCase_HomePage.mSupply_HomePage_004_005_And_021_Test">
+        <methods>
+          <include name="mSupply_HomePage_004_005_And_021"/>
+        </methods>
+      </class> <!-- Functional_TestCase_HomePage.mSupply_HomePage_004_005_And_021_Test -->
+      <class name="Functional_TestCase_HomePage.msupply_HomePage_HeroImage_And_MarketingPromos_Test">
+        <methods>
+          <include name="msupply_HomePage_HeroImage_And_MarketingPromos"/>
+        </methods>
+      </class> <!-- Functional_TestCase_HomePage.msupply_HomePage_HeroImage_And_MarketingPromos_Test -->
+      <class name="Functional_TestCase_HomePage.msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification_Test">
+        <methods>
+          <include name="msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification"/>
+        </methods>
+      </class> <!-- Functional_TestCase_HomePage.msupply_HomePage_ServiceProvider_Brand_Testimonial_Verification_Test -->
+      <class name="Scenarios.AddProductLoginCheckoutTest_Cheque_Test">
+        <methods>
+          <include name="AddProductLoginCheckout"/>
+        </methods>
+      </class> <!-- Scenarios.AddProductLoginCheckoutTest_Cheque_Test -->
+      <class name="Scenarios.AddProductLoginCheckoutTest_CashOnDelivery_Test">
+        <methods>
+          <include name="AddProductLoginCheckout"/>
+        </methods>
+      </class> <!-- Scenarios.AddProductLoginCheckoutTest_CashOnDelivery_Test -->
+      <class name="Functional_TestCases_Plumbing.mSupply_Plumbing_PipesFittings_016_Test">
+        <methods>
+          <include name="mSupply_Plumbing_PipesFittings_016"/>
+        </methods>
+      </class> <!-- Functional_TestCases_Plumbing.mSupply_Plumbing_PipesFittings_016_Test -->
+      <class name="Functional_TestCases.ReviewsAndRatings.demo">
+        <methods>
+          <include name="fun"/>
+        </methods>
+      </class> <!-- Functional_TestCases.ReviewsAndRatings.demo -->
+      <class name="Functional_TestCase_HomePage.msupply_HomePage_SlidersVerification_Test">
+        <methods>
+          <include name="msupply_HomePage_SlidersVerification"/>
+        </methods>
+      </class> <!-- Functional_TestCase_HomePage.msupply_HomePage_SlidersVerification_Test -->
+      <class name="Functional_TestCase_HomePage.msupply_HomePage_SubHeaderVerification_Test">
+        <methods>
+          <include name="msupply_HomePage_SubHeaderVerification"/>
+        </methods>
+      </class> <!-- Functional_TestCase_HomePage.msupply_HomePage_SubHeaderVerification_Test -->
+      <class name="Functional_TestCase_HomePage.msupply_HomePage_Main_HeaderVerification_Test">
+        <methods>
+          <include name="msupply_HomePage_Main_HeaderVerification"/>
+        </methods>
       </class> <!-- Functional_TestCase_HomePage.msupply_HomePage_Main_HeaderVerification_Test -->
+      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Product_Review_Rating_005_Test">
+        <methods>
+          <include name="mSupply_Product_Review_Rating_005"/>
+        </methods>
+      </class> <!-- Functional_TestCases.ReviewsAndRatings.mSupply_Product_Review_Rating_005_Test -->
+      <class name="Scenarios.NewUserRegistration">
+        <methods>
+          <include name="UserRegistration"/>
+        </methods>
+      </class> <!-- Scenarios.NewUserRegistration -->
+      <class name="Functional_TestCase_HomePage.msupply_HomePage_BrokenLinks_Test">
+        <methods>
+          <include name="msupply_HomePage_BrokenLinks"/>
+        </methods>
+      </class> <!-- Functional_TestCase_HomePage.msupply_HomePage_BrokenLinks_Test -->
+      <class name="SanityTest.ServiceChargeCalculation_KartPage_Test">
+        <methods>
+          <include name="ServiceChargeCalculation_KartPage"/>
+        </methods>
+      </class> <!-- SanityTest.ServiceChargeCalculation_KartPage_Test -->
+      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Seller_Review_Rating_001_Test">
+        <methods>
+          <include name="mSupply_Seller_Review_Rating_001"/>
+        </methods>
+      </class> <!-- Functional_TestCases.ReviewsAndRatings.mSupply_Seller_Review_Rating_001_Test -->
+      <class name="Functional_TestCase_HomePage.mSupply_HomePage_001_003_And_009_Test">
+        <methods>
+          <include name="mSupply_HomePage_001_003_And_009"/>
+        </methods>
+      </class> <!-- Functional_TestCase_HomePage.mSupply_HomePage_001_003_And_009_Test -->
+      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Seller_Review_Rating_002_Test">
+        <methods>
+          <include name="mSupply_Seller_Review_Rating_002"/>
+        </methods>
+      </class> <!-- Functional_TestCases.ReviewsAndRatings.mSupply_Seller_Review_Rating_002_Test -->
+      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Product_Review_Rating_007_Test">
+        <methods>
+          <include name="mSupply_Product_Review_Rating_007"/>
+        </methods>
+      </class> <!-- Functional_TestCases.ReviewsAndRatings.mSupply_Product_Review_Rating_007_Test -->
+      <class name="Demo.Demo4">
+        <methods>
+          <include name="fun"/>
+        </methods>
+      </class> <!-- Demo.Demo4 -->
+      <class name="SanityTest.Homepage_Test">
+        <methods>
+          <include name="HomePage_verification"/>
+        </methods>
+      </class> <!-- SanityTest.Homepage_Test -->
+      <class name="Functional_TestCases_Plumbing.mSupply_Plumbing_PipesFittings_019_Test">
+        <methods>
+          <include name="mSupply_Plumbing_PipesFittings_019"/>
+        </methods>
+      </class> <!-- Functional_TestCases_Plumbing.mSupply_Plumbing_PipesFittings_019_Test -->
+      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Product_Review_Rating_002_Test">
+        <methods>
+          <include name="mSupply_Product_Review_Rating_002"/>
+        </methods>
+      </class> <!-- Functional_TestCases.ReviewsAndRatings.mSupply_Product_Review_Rating_002_Test -->
+      <class name="SanityTest.Product_MOQ_Verification_Test">
+        <methods>
+          <include name="Product_MOQ_Verification"/>
+        </methods>
+      </class> <!-- SanityTest.Product_MOQ_Verification_Test -->
+      <class name="Functional_TestCases.ReviewsAndRatings.mSupply_Product_Review_Rating_003_And_004_Test">
+        <methods>
+          <include name="getPendingReviews"/>
+          <include name="Reviews"/>
+          <include name="addReviewsToProduct"/>
+          <include name="ValidateNumberOfReviews"/>
+        </methods>
+      </class> <!-- Functional_TestCases.ReviewsAndRatings.mSupply_Product_Review_Rating_003_And_004_Test -->
+      <class name="Scenarios.AddProductLoginCheckoutTest_FirstFourOptions_Test">
+        <methods>
+          <include name="AddProductLoginCheckout"/>
+        </methods>
+      </class> <!-- Scenarios.AddProductLoginCheckoutTest_FirstFourOptions_Test -->
+      <class name="SanityTest.PlaceOrder_Cheque_Test">
+        <methods>
+          <include name="PlaceOrder_CashOnDelivery"/>
+        </methods>
+      </class> <!-- SanityTest.PlaceOrder_Cheque_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
