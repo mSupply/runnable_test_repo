@@ -29,7 +29,8 @@ public class CommonFunctions
    static String currentPath = System.getProperty("user.dir");
    static Logger log = LogReports.writeLog(CommonFunctions.class);
    public static int yPosition;
-
+   public static String sheetname;
+   
    public static int get_SelectedDiscount_CheckBoxNumber(int Dicountnumber) throws Throwable
    {
 	   if(Dicountnumber<=10)
@@ -173,7 +174,7 @@ public class CommonFunctions
 				File file = new File(filePath);
 				FileInputStream fis = new FileInputStream(file);
 				Workbook wb = WorkbookFactory.create(fis);
-				Sheet sht =  wb.getSheet("Data");
+				Sheet sht =  wb.getSheet(sheetname);
 				int LastRowExcel = sht.getLastRowNum();
 				String LocatorValue = null;
 				    for(int i=1;i<=LastRowExcel;i++)
@@ -198,7 +199,7 @@ public class CommonFunctions
 			File file = new File(filePath);
 			FileInputStream fis = new FileInputStream(file);
 			Workbook wb = WorkbookFactory.create(fis);
-			Sheet sht =  wb.getSheet("Data");
+			Sheet sht =  wb.getSheet(sheetname);
 			int LastRowExcel = sht.getLastRowNum();
 				
 			    for(int i=1;i<=LastRowExcel;i++)

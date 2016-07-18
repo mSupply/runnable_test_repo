@@ -24,6 +24,9 @@ public class mSupply_HomePage_004_005_And_021_Test extends Scenario1Test
 	{
 		Credentials.url=CommonFunctions.readPropertiesFile("Functional_HomePage");
 		Scenario1Test.driver.get(Credentials.url);
+		
+		
+		
 		WebDriverCommonFunctions.element_Click("closeIcon_xpath","Clicked on Close Icon POPUP");
 		HomePage.ValidateLinks_HomePage();	
 		HomePage.Pricing_In_SlidersVerification2();

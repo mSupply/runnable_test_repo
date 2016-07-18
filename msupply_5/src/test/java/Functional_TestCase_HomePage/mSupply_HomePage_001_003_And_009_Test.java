@@ -22,10 +22,13 @@ public class mSupply_HomePage_001_003_And_009_Test extends Scenario1Test
 	{
 		Credentials.url=CommonFunctions.readPropertiesFile("Functional_HomePage");
 		Scenario1Test.driver.get(Credentials.url);
+		CommonFunctions.sheetname=CommonFunctions.readPropertiesFile("Locators_Sandeep");
+		
+		
 		
 		//Check Popup is displayed
-		WebDriverCommonFunctions.element_Present("Popup_Xpath","Image is Displayed","Popup Image not Displayed");
-		WebDriverCommonFunctions.element_Click("closeIcon_xpath","Clicked on Close Icon POPUP");
+		//WebDriverCommonFunctions.element_Present("Popup_Xpath","Image is Displayed","Popup Image not Displayed");
+		//WebDriverCommonFunctions.element_Click("closeIcon_xpath","Clicked on Close Icon POPUP");
 		
 		//HomePage Header is Visble or not
 		boolean status1=WebDriverCommonFunctions.element_isVisible("HomePage_Header_Xpath", "Home Page Header");
