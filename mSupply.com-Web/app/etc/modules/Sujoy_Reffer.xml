@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <modules>
-        <Sujoy_Reffer>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Sujoy_Reffer>
-    </modules>
-</config>

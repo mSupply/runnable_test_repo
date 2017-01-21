@@ -1,9 +1,0 @@
-<?xml version="1.0" ?> 
-<config>
-	<modules>
-		<Celusion_SMSConneXion>
-			<active>true</active> 
-			<codePool>local</codePool> 
-		</Celusion_SMSConneXion>
-	</modules>
-</config>

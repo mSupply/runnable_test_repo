@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <modules>
-        <Msupply_Neft>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Msupply_Neft>
-    </modules>
-</config>

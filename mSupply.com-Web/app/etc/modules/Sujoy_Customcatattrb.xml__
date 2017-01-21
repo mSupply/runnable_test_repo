@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-  <modules>
-    <Sujoy_Customcatattrb>
-      <active>true</active>
-      <codePool>local</codePool>
-    </Sujoy_Customcatattrb>
-  </modules>
-</config>

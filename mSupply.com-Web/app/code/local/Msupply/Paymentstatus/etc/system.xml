@@ -1,30 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <sections>
-        <paymentstatus translate="label">
-            <label>Payment Trusted Option</label>
-            <tab>sales</tab>
-            <frontend_type>text</frontend_type>
-            <sort_order>600</sort_order>
-			<show_in_default>1</show_in_default>
-            <show_in_website>1</show_in_website>
-            <show_in_store>1</show_in_store>
-            <groups>
-                <paymentstatus_group translate="label">
-                    <label>Payment Trusted Option</label>
-                    <frontend_type>text</frontend_type>
-                    <sort_order>5</sort_order>
-                    <show_in_default>1</show_in_default>
-                    <show_in_website>1</show_in_website>
-                    <show_in_store>1</show_in_store>
-                    <fields>
-                        <paymenttrustedoption translate="label">
-                            <label>Payment Trusted Option</label>
-                            <frontend_type>select</frontend_type>							<comment>Set Yes to Enable Payment Trusted Option</comment>                            <sort_order>90</sort_order>                            <show_in_default>1</show_in_default>                            <show_in_website>1</show_in_website>                            <show_in_store>1</show_in_store>                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                        </paymenttrustedoption>
-                    </fields>
-                </paymentstatus_group>
-			</groups>            
-        </paymentstatus>
-    </sections>
-</config>
